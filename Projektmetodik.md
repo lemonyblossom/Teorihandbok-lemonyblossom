@@ -4,6 +4,9 @@ Studerande: Förnamn Efternamn
 ## PJ 1.1 Agila metoder (Scrum, Kanban, Extreme Programming)
 Beskriv rubriken nedan här
 
+   [Google](URL)
+   [Kursmaterial lektion 8.9]
+
 ## PJ 1.2 Icke-agila metoder
 Beskriv rubriken nedan här
 
