@@ -22,7 +22,8 @@ När vi pratar om att en metod inom programering är "vig" (agil) så innebär d
 > - Värderinggar och vad dem innebär.
 > - Vad fördelarna är
 >
-![alt text](img/scrum-values-transparent.png)
+
+<img src="/Img/scrum-values-transparent.png" alt="Lista över värderingar inom" style="height: 200px; width:300px;"/>
 
 ##### Hur ser processen ut?
 > - Daily scrum
@@ -35,10 +36,13 @@ När vi pratar om att en metod inom programering är "vig" (agil) så innebär d
 > blockquote Vad är Kanban?
 
 ### Kanban vs Scrum
+
 |  PROCESS  | SCRUM | KANBAN |
 | :-------: | :---: | :----: |
 |  Header   | Title |        |
 | Paragraph | Text  |        |
+
+
 
 ---
 #### Extreme programming
