@@ -133,10 +133,15 @@ Det underlättar att göra designförslag för specifika personas istället för
 
 ### Kanban vs Scrum
 
-| PROCESSER |    Kanban    | Scrum |
-| :-------: | :----------------: | :---: |
-|   **Arbetsmetod**   | Fokuserar på att optimera ett kontinuerligt <br /> arbetsflöde inom problemlösning, <br /> för att få arbetet flytade i en strömlinjeformad riktning. |       |
-|**Paragraph** |     Text     |       |
+|                 PROCESSER                 |                                                                                    Kanban                                                                                    |                                                                                             Scrum                                                                                              |
+| :---------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|              **Arbetsmetod**              |  Fokuserar på att optimera ett kontinuerligt <br /> arbetsflöde inom problemlösningsprossecen med issues, <br /> för att få arbetet flytade i en strömlinjeformad riktning.  |                                                      Scrum är en ramkverk som genom att jobba i korta inkriments <br /> ger en helt allat                                                      |
+|                **Tidsram**                | I Kanban arbetar teamet löpande med issues, vilket innebär att det inte finns en tidsram enligt Kanban som bör hållas även om det finns inom teamet och enligt prioritering. |                                                                       Sprints på 2-4 veckor där arbetsuppgiften slutförs                                                                       |
+|               **Planering**               |                                  PLanering sker löpande under projektet och besluten tas oftast med arbetsbörda och framsteg som underlag.                                   |                            Inför varje sprint i scrum så uförs en sprintplanering från backlogen med priorineringslista och det bestäms vem som tar vilket område.                             |
+|                **Roller**                 |     I Kanban jobbar man sällan med förutbestämda roller så som i scrum utan fokuserar på att hela teamet tillsammans strukturerar upp och sköter processen tillsammans.      | -  Product  Owner, Scrum Master, Development Team. Det är dock även här kutym att hela teamet ror projektet i hamn, det är ingen som iom sin roll har större ansvar för deploy än någon annan. |
+| **Granskning och retrospektivceremonier** |
+|  **Förändringar under pågående arbete**   |                             Uppmuntrar förändring under hela arbetets gång för att effektivisera framsteg eller krav som uppkommit efter start.                              |                                             Undviker förändring i arbetet under sprinten man befinner sig i. Ändringar görs under sprintplanering.                                             |
+
 
 
 
