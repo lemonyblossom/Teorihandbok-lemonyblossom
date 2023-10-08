@@ -4,16 +4,19 @@ Studerande: Emma Jensen
 ### PJ 1.1 Agila metoder (Scrum, Kanban, Extreme Programming)
 Ordet Agil betyder i sig lättrörlig och/eller vig. 
 När vi pratar om att en metod inom programering är "vig" (agil) så innebär det att en stor del av arbetet innebär att vara flexibel och planera...
-  - öppen för förändring och kommmunikation
+
+Var öppen för förändring och kommmunikation
 
   
 
-    Fyra viktigaste (Hannas lektion tis 3e okt)
-      1. individer och interaktioner framför processer och verktyg.    
-      2. användbart resulat framför omfattande dokumentation.
-      3. Kundsamarbete framför kontraktförhandling.
-      4. Var förberedd att göra ändringar under projektet.
-      5.  
+Fyra viktigaste riktlinjerna inom agila metoder
+*(Hannas lektion tis 3e okt)*
+
+1. individer och interaktioner framför processer och verktyg.    
+2. användbart resulat framför omfattande dokumentation.
+3. Kundsamarbete framför kontraktförhandling.
+4. Var förberedd att göra ändringar under projektet.
+  
 --- 
 > - Förståelse och tålamod kring att att det kan vara komplext och ibland rent av svårt att veta hur arbetet kommer att gå innan processen påbörjats.
 > - Injkuderande och iterativt arbete, 
@@ -29,27 +32,37 @@ Personas>User Stories>Arbetsuppgifter i pr
 <img src="/Img/scrum-values-transparent.png" alt="Lista över värderingar inom" style="height: 200px; width:300px;"/>
 
 ##### Hur ser processen ut?
+Ceremonier/Aktiviteter
+> - Sprint
+> - Sprintplanning
+> > - Daily scrum
+> - Sprint review/Sprint Demo
+> - Sprint retrospective
 
->Ceremonier
-> - Daily scrum
-> - 
+Artefakter
+> - Product backlog
+> - Sprint backlog
+> - Increment
+
+### Ceremonierna
 ##### Sprint
-  - 2-3 veckor
-  - Spelregler
+> - 2-4 veckor
+> - Spelregler
 
 ##### Sprintplanering
-  - Vilka kort tar vi ur backlogen för denna sprint?
+> - Vilka kort tar vi ur backlogen för denna sprint?
     - t.ex. feature 1,2 och 3.
-    - Man försöker sätta en velocity om hur många kort man kommer hinna med.
-
+  > - Man försöker sätta en velocity om hur många kort man kommer hinna med för att förutse hur lång tid allt kan tänkas ta.
+      - Anta alltid att ditt arbete tar ca 2-4 gånger så lång tid som du initiellt tror.
 ##### Daily scrum
-  15 min varje dag där man står upp och deltagarna berättar vad de ska göra, har fjort och hur det går.
+> 15 min varje dag där man står upp och deltagarna berättar vad de ska göra, har fjort och hur det går.
   Tanken är att teamet ska få en uppfattning för hur det går för alla och hur man ska planera dagen.
   Det går att omfördela resurser mellan personer men byter ej kort/arbetsuppgift för sprinten under sprinten pågår.
   Kanske väntar man på info eller material från andra aktörer för att kunna fortsätta arbetet.
 
-  ##### Sprint review/sprint demo
-    Informellt möte.
+
+   ##### Sprint review/sprint demo
+  > Informellt möte.
     Demo för eventuella features.
     Visar det som går att visa.
     "detta gick, detta gick inte"
@@ -57,9 +70,14 @@ Personas>User Stories>Arbetsuppgifter i pr
   ##### Sprint retrospective 
   Utvärderar en sprint, resurser, hantera problem, få erfarenhet, beröm eller annat.
 
+   ### Artefakter
+##### Product backlog
   ##### Sprint backlog
   Visualiserar de kort teamet åtagit sig under sprinten.
   (backlogen hanna visade på github)
+
+#####Increment
+### VERKTYG
 
 #### User Stories
 - Istället för att beskriva features och funktionalitet eller buggar så får endast backlog innehålla stories.
@@ -73,6 +91,7 @@ Om vi inte vet så använder vi inte user stories utan undersöker istället vå
 
 När vi har få personer att utgå ifrån gör vi istället *Personas* och hitta gemensamma faktorer.
 
+Steg för steg.
 1. Beskrivning
 2. Konversation - mer detalj
 3. Tester
@@ -80,7 +99,7 @@ När vi har få personer att utgå ifrån gör vi istället *Personas* och hitta
 ##### Persona
 Ett sätt att modellera, summera och kommunicerea insikter i en målgrupp genom en fiktiv person.
 
-Det underlättar att göra designförslag för specifika personas istället för generellt till "alla".
+Det underlättar att ta fram designförslag för specifika personas istället för generellt till "alla" då det blir mindre abstrakt och ger en känsla för sin målgrupp..
 
   ***En persona***
   En sidas dokument, fokus är förståelse av användaren och dessbehov.
@@ -120,9 +139,7 @@ Det underlättar att göra designförslag för specifika personas istället för
  - Ge varje story ett representativ värde mellan 1-12
  - där 1 är lågt och 12 är högt- Story points
  - en iteration får endast innehålla den mängd story points så länge velocity inte överskrids.
-  
 
-  ## När du estimerar din tid, dubbla till fyrdubbla den tid du tror att det tar!
 ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
 
 [Sebastians lektioner]
@@ -132,8 +149,7 @@ Det underlättar att göra designförslag för specifika personas istället för
 > 
 
 ### Kanban vs Scrum
-
-|                 PROCESSER                 |                                                                                    Kanban                                                                                    |                                                                                             Scrum                                                                                              |
+|                *PROCESSER*                |                                                                                   *Kanban*                                                                                   |                                                                                            *Scrum*                                                                                             |
 | :---------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |              **Arbetsmetod**              |  Fokuserar på att optimera ett kontinuerligt <br /> arbetsflöde inom problemlösningsprossecen med issues, <br /> för att få arbetet flytade i en strömlinjeformad riktning.  |                                                      Scrum är en ramkverk som genom att jobba i korta inkriments <br /> ger en helt allat                                                      |
 |                **Tidsram**                | I Kanban arbetar teamet löpande med issues, vilket innebär att det inte finns en tidsram enligt Kanban som bör hållas även om det finns inom teamet och enligt prioritering. |                                                                       Sprints på 2-4 veckor där arbetsuppgiften slutförs                                                                       |
@@ -150,8 +166,9 @@ Det underlättar att göra designförslag för specifika personas istället för
 #### Extreme programming
 
 > 	***Referenser:***
-[Shareitsolutions-](https://www.shareitsolutions.com/blog/agile-non-agile/)
-[Codeop-](https://codeop.tech/what-exactly-is-not-agile/)
+[- Shareitsolutions](https://www.shareitsolutions.com/blog/agile-non-agile/)
+[- Codeop](https://codeop.tech/what-exactly-is-not-agile/)
+[- Onbird](https://onbird.se/grunderna-i-scrum/?utm_term=&utm_campaign=I+-+Performance+Max+-+Konsult&utm_source=adwords&utm_medium=ppc&hsa_acc=5250760349&hsa_cam=19864017095&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad=1&gclid=Cj0KCQjwpompBhDZARIsAFD_Fp9ypqe75C9pRfBT-tiTinJcUAWPTIwUnKZaN4DUtQNbfMWEcVILV5AaAnfuEALw_wcB)
 [Kursmaterial lektion 8.9]
 --- 
 ### PJ 1.2 Icke-agila metoder
@@ -166,7 +183,7 @@ Beskriv rubriken nedan här
 
 ## PJ 1.4 Issue distribution and handling in a group
 Vad innebär det?
-> Vad ska ggöras och i vilken prio?
+> Vad ska göras och i vilken prio?
 > Vem gör vad?
 > Hur delar man upp i github? - backlog i projects, hur man skapar dem. 
 >  Skapa ej för stora tasks. T.ex. "create fronpage", skapa istället mindre som "Create navbar", "style footer", "create draft about section"
