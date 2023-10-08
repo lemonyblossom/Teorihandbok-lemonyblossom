@@ -12,8 +12,8 @@ Var öppen för förändring och kommmunikation
 Fyra viktigaste riktlinjerna inom agila metoder
 *(Hannas lektion tis 3e okt)*
 
-1. individer och interaktioner framför processer och verktyg.    
-2. användbart resulat framför omfattande dokumentation.
+1. Individer och interaktioner framför processer och verktyg.    
+2. Användbart resulat framför omfattande dokumentation.
 3. Kundsamarbete framför kontraktförhandling.
 4. Var förberedd att göra ändringar under projektet.
   
@@ -23,7 +23,7 @@ Fyra viktigaste riktlinjerna inom agila metoder
 > - utvärdering efter varje steg är centralt (daily scrums, retrospekt etc)
 #### SCRUM
 
-Personas>User Stories>Arbetsuppgifter i pr
+*Personas -> User Stories -> Arbetsuppgifter i pr?*
 ##### Vad är scrum?
 > - Värderinggar och vad dem innebär.
 > - Vad fördelarna är
@@ -31,15 +31,20 @@ Personas>User Stories>Arbetsuppgifter i pr
 
 <img src="/Img/scrum-values-transparent.png" alt="Lista över värderingar inom" style="height: 200px; width:300px;"/>
 
-##### Hur ser processen ut?
-Ceremonier/Aktiviteter
+#### Hur ser processen ut?
+
+###### Roller
+> - Product Owner
+> - Scrum Master
+> - Development Team
+###### Ceremonier/Aktiviteter
 > - Sprint
 > - Sprintplanning
-> > - Daily scrum
+>  - Daily scrum
 > - Sprint review/Sprint Demo
 > - Sprint retrospective
 
-Artefakter
+###### Artefakter
 > - Product backlog
 > - Sprint backlog
 > - Increment
@@ -76,13 +81,13 @@ Artefakter
   Visualiserar de kort teamet åtagit sig under sprinten.
   (backlogen hanna visade på github)
 
-#####Increment
+##### Increment
+---
 ### VERKTYG
 
 #### User Stories
-- Istället för att beskriva features och funktionalitet eller buggar så får endast backlog innehålla stories.
-
-- Kan även användas under sprint-planning
+> - Istället för att beskriva features och funktionalitet eller buggar så får endast backlog innehålla stories.
+> - Kan även användas under sprint-planning
 
 
 Utgå från andra människor iom funktionalitet och hur den ska implementeras.
@@ -91,15 +96,15 @@ Om vi inte vet så använder vi inte user stories utan undersöker istället vå
 
 När vi har få personer att utgå ifrån gör vi istället *Personas* och hitta gemensamma faktorer.
 
-Steg för steg.
-1. Beskrivning
-2. Konversation - mer detalj
-3. Tester
+##### Steg för steg.
+> 1. Beskrivning
+> 2. Konversation - mer detalj
+> 3. Tester
 
 ##### Persona
-Ett sätt att modellera, summera och kommunicerea insikter i en målgrupp genom en fiktiv person.
+Att skapa en *persona* är ett sätt att modellera, summera och kommunicerea insikter i en målgrupp genom en fiktiv person.
 
-Det underlättar att ta fram designförslag för specifika personas istället för generellt till "alla" då det blir mindre abstrakt och ger en känsla för sin målgrupp..
+Att ha en (eller fler) persona att anpassa önskemål, krav eller behov kring underlättar processen av att ta fram designförslag för specifika personas istället för generellt till "alla" då det blir mindre abstrakt och ger en känsla för sin målgrupp..
 
   ***En persona***
   En sidas dokument, fokus är förståelse av användaren och dessbehov.
@@ -143,11 +148,12 @@ Det underlättar att ta fram designförslag för specifika personas istället f�
 ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
 
 [Sebastians lektioner]
+
 --- 
 #### KANBAN
 > blockquote Vad är Kanban?
 > 
-
+---
 ### Kanban vs Scrum
 |                *PROCESSER*                |                                                                                   *Kanban*                                                                                   |                                                                                            *Scrum*                                                                                             |
 | :---------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -157,6 +163,22 @@ Det underlättar att ta fram designförslag för specifika personas istället f�
 |                **Roller**                 |     I Kanban jobbar man sällan med förutbestämda roller så som i scrum utan fokuserar på att hela teamet tillsammans strukturerar upp och sköter processen tillsammans.      | -  Product  Owner, Scrum Master, Development Team. Det är dock även här kutym att hela teamet ror projektet i hamn, det är ingen som iom sin roll har större ansvar för deploy än någon annan. |
 | **Granskning och retrospektivceremonier** |
 |  **Förändringar under pågående arbete**   |                             Uppmuntrar förändring under hela arbetets gång för att effektivisera framsteg eller krav som uppkommit efter start.                              |                                             Undviker förändring i arbetet under sprinten man befinner sig i. Ändringar görs under sprintplanering.                                             |
+
+Både Kanan och Scrum är agila ramverk för att på ett flexibelt sätt strukturera upp hur ett team arbetar. Det beror mest på arbetsuppgiftens karaktär vilket ramverk man väljer, alt på hur teamet arbetar bäst. 
+Den största skillnaden mellan just Scrum och Kanban är att Scrum har en tydligare struktur gällande roller, tidsramar och ceremonier medan Kanban är än mer flexibelt och fokuserar på att löpande optimera sin process under hela tiden arbetet pågår.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
