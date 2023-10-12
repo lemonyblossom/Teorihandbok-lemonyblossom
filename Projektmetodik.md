@@ -3,9 +3,9 @@ Studerande: Emma Jensen
 
 ### PJ 1.1 Agila metoder (Scrum, Kanban, Extreme Programming)
 Ordet Agil betyder i sig lättrörlig och/eller vig. 
-När vi pratar om att en metod inom programering är "vig" (agil) så innebär det att en stor del av arbetet innebär att vara flexibel och planera...
+När vi pratar om att en metod inom programering är "vig" (agil) så innebär det att en stor del av arbetet innebär att vara flexibel och planera för förändring under projektets gång.
 
-Var öppen för förändring och kommmunikation
+"Var öppen för förändring och kommmunicera"
 
   
 
@@ -18,36 +18,38 @@ Fyra viktigaste riktlinjerna inom agila metoder
 4. Var förberedd att göra ändringar under projektet.
   
 --- 
-> - Förståelse och tålamod kring att att det kan vara komplext och ibland rent av svårt att veta hur arbetet kommer att gå innan processen påbörjats.
-> - Injkuderande och iterativt arbete, 
-> - utvärdering efter varje steg är centralt (daily scrums, retrospekt etc)
+> - Förståelse och tålamod kring att att det kan vara komplext att planera och ibland rent av svårt att veta hur arbetet kommer att gå innan processen påbörjats.
+> - Inkluderande och iterativt arbete, 
+> - Utvärdering efter varje steg är centralt inom agila metoder (daily scrums, retrospekt etc).
 #### SCRUM
-
-*Personas -> User Stories -> Arbetsuppgifter i pr?*
-##### Vad är scrum?
-> - Värderinggar och vad dem innebär.
-> - Vad fördelarna är
-
-
+##### Scrum Values
 <img src="/Img/scrum-values-transparent.png" alt="Lista över värderingar inom" style="height: 200px; width:300px;"/>
 
-#### Hur ser processen ut?
-
-###### Roller
+#### Vad betyder det att arbeta i scrum och vilka delar ingår?
+##### Roller
 > - Product Owner
 > - Scrum Master
 > - Development Team
-###### Ceremonier/Aktiviteter
+
+ ##### Artefakter
+> - Product backlog
+> - Sprint backlog
+> - Increment
+##### Ceremonier/Aktiviteter
 > - Sprint
 > - Sprintplanning
 >  - Daily scrum
 > - Sprint review/Sprint Demo
 > - Sprint retrospective
 
-###### Artefakter
-> - Product backlog
-> - Sprint backlog
-> - Increment
+ ### Artefakter
+###### Product backlog
+###### Sprint backlog
+  Visualiserar de kort teamet åtagit sig under sprinten.
+  (backlogen hanna visade på github)
+
+###### Increment
+
 
 ### Ceremonierna
 ##### Sprint
@@ -75,84 +77,121 @@ Fyra viktigaste riktlinjerna inom agila metoder
   ##### Sprint retrospective 
   Utvärderar en sprint, resurser, hantera problem, få erfarenhet, beröm eller annat.
 
-   ### Artefakter
-##### Product backlog
-  ##### Sprint backlog
-  Visualiserar de kort teamet åtagit sig under sprinten.
-  (backlogen hanna visade på github)
-
-##### Increment
+  ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
 ---
 ### VERKTYG
 
-#### User Stories
-> - Istället för att beskriva features och funktionalitet eller buggar så får endast backlog innehålla stories.
+##### USER STORIES
+> - Istället för att beskriva features och funktionalitet eller buggar så får backlog endast innehålla stories.
 > - Kan även användas under sprint-planning
 
+Om vi inte har klar insikt i vår demografi så använder vi inte user stories utan undersöker istället vår användarbas genom intervjuer, tar reda på statistik, studier eller annat.
 
-Utgå från andra människor iom funktionalitet och hur den ska implementeras.
+När vi däremot har för få personer att utgå ifrån gör vi istället *Personas* och hitta gemensamma faktorer.
 
-Om vi inte vet så använder vi inte user stories utan undersöker istället vår användarbas genom intervjuer, ta reda på statistik, studier eller annat. (prova på THINK ALOUD)
-
-När vi har få personer att utgå ifrån gör vi istället *Personas* och hitta gemensamma faktorer.
-
-##### Steg för steg.
-> 1. Beskrivning
-> 2. Konversation - mer detalj
-> 3. Tester
-
-##### Persona
-Att skapa en *persona* är ett sätt att modellera, summera och kommunicerea insikter i en målgrupp genom en fiktiv person.
+##### PERSONA
+Att skapa en *persona* är att på ett visuellt sätt ge en representation av målgruppen man vill nå och kommunicerea insikter om den genom en fiktiv person.
 
 Att ha en (eller fler) persona att anpassa önskemål, krav eller behov kring underlättar processen av att ta fram designförslag för specifika personas istället för generellt till "alla" då det blir mindre abstrakt och ger en känsla för sin målgrupp..
 
-  ***En persona***
-  En sidas dokument, fokus är förståelse av användaren och dessbehov.
-    Det brukar stå lite detaljer(specs) och på vilket sätt personen behöver applikationer/features eller vad som är viktigt.
-###### CARD
-    - fysisk eller digital "post-it"
-    - Används för plannering
-    - Påminnelse under konversation (hålla sig på banan)
-    - Mer informellt
+ Vad är det?
+  : Det är ett en sida långt dokument där fokus ligger på att få förståelse för användaren och dess främsta behov, utmärkande detealjer, info om personens intressen och annat som kan vara viktigt för att kunna utforma optimal design och vilka features som är viktiga att inkludera i produkten.
+##### CARD
+   Ett card är en fysisk eller digital "post-it" som används under planeringsfasen.
+  Det fyller funktion som påminnelse för att hålla sig på banan och därför kunna möta personans behov.
+
+Frågor att ställa sig: "Vem, vad och varför?"
+ "As a **role** I want to **task** so that I can **goal**"
 
 
-  >1. "As a **role** I want to **task** so that I can **goal**"
-    Vem, vad och varför+
-  >2. Detaljer
+ Detaljnivå
+: En stor story är en indikation på att den behöver brytas ner i mindre delar då riktlinjen för en "bra" story är att den ska kunna kodas och testas inom 1/2 dag - 2 veckor.
+  Cards som går att utföra på en halv dag är fördelaktigt, då syns det även för produktägaren att projektet rör sig framåt och undivker osäkerhet eller frågor om varför det "står still" även när teamet jobbar för fullt.
+ En story som innefattar två eller fler storys kallas en *epic*, då delas de helst (och oftast) upp i flera mindre delar. En epic -> tre mindre stories.
 
-  ###### Detaljnivå
-  - En stor story är en indikation på att den behöver brytas ner i mindre delar
-  - En bra riktlinje är att en story ska kunna kodas och testas inom 1/2 dag - 2 veckor
-     - Kort som går att utföra på en halv dag är optimalt, då syns det även för produktägaren att projektet rör sig framåt.
-   - En story som innefattar två eller fler storys kallas en *epic* 
-     - Delas ofta upp i mindre stories
-       - Exempel 1.
-       - Exempel 2.
-       - Exempel 3.
+Konversation
+: ????
 
-###### Konversation
-  ????
+Konfirmation
+: I Planeringsfasen används baksidan av kortet för att hänvisa till acceptanstester.
 
-  ###### Konfirmation
-   - I Planeringsfasen används baksidan av kortet för att hänvisa till acceptanstester.
-  -  Ju tidigare man tänker på acceptanstester, desto bättre.
+Verksamhetstester och User Acceptance Test (UAT)
+: Beställarens/kundens roll vid testning är att utvärdera produktens helhetsintryck. Det man tittar på är att systemet är logiskt användbart i verkligea livet och att avgöra huruvida deras användare kommer trivas med slutresultatet.
 
-##### Scrum Poker
-  Estimera komplexiteten i utvecklingen.
-- Att göra detta är momentet som programerare har svårast med, utöver sin kod.
--  Istället för i tid- tänk komplexitet i utveckling
- - Ge varje story ett representativ värde mellan 1-12
- - där 1 är lågt och 12 är högt- Story points
- - en iteration får endast innehålla den mängd story points så länge velocity inte överskrids.
+: Teamets roll i testningen är att se över och testa funktioner under projektets gång och bör göra det med fokus på hur produkten kommer användas. Målet är att allt ska gå smidigt när systemet/produkten väl är i drift.
 
-![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
+: Detta görs löpande och kontinuerlig kommunikation med teamet/leverantören är väldigt viktigt för att undvika oväntade problem och slippa göra dubbelt jobb.
+  
 
-[Sebastians lektioner]
+Scrum Poker
+: "Estimera komplexiteten i utvecklingen"
+ Att göra detta är momentet som programerare har svårast med, utöver sin kod. 
+ Men man försöker avgöra komplexiteten i utförandet instället för att sätta det i ett perspektiv i tid. Då använder man sig av Storypoints på en skala 1-12 där 1 är lätt och 12 är svårt.
+ En iteration får endast innehålla den mängd Story Points som teamet klarar av.
+  Hur många poäng teamet klarade under föregående iteration blir teamet Velocity(score).
 
 --- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### KANBAN
-> blockquote Vad är Kanban?
-> 
+Vad är Kanban?
+: Kanban är en agil metod som fokuserar på att kontinuerligt optimera arbetet genom att effektivt hantera och visualisera arbetsflödet genom löpande uppdateringar och flerstegsfaser.
+
+####Kanban board
+
+
+Arbetsinnehåll:
+: - Vad ska göras? 
+: - Vad innebär uppgiften? Hur omfattande är den?
+: - Definera vilken kategori uppgiften går under. Bugg, underhåll, byggande, helt ny tillagd feature? etc.
+
+Priolista:
+: - Vilken prioritering har uppgiften?
+: - Hur tight är tidsramen? Är deadline nära?
+
+Arbetsstatus:
+: - Hur ligger det till med uppgiften just nu? status?
+: - Är uppgiften påbörjad? Om ja, hur långt har man kommit?
+: - Är uppgiften done eller done done?
+
+Beroenden:
+: - Väntar någon uppgift på att startas tills att denna är klar?
+: - Är denna uppgift beroende av någon annan slutförs innan? 
+
+Belastning:
+: - Är belastningen jämnt fördelad inom teamet?
+: - Hur många uppgifter har varje person?
+: - Är någon överbelastad och behöver något omfördelas?
+
+WIP :
+: - Hur många tasks är igång samtidigt?
+: - Finns det någon uttalad limit för WIP för att teamet eller systemet inte ska bli överbelastat? 
+
+Genomloppstid:
+: - Hur lång tid tar det för teamet från startgrop till målsnöre?
+: - Finns det några "bottlenecks" på boarden som stoppar upp flödet och förlänger processen. Vad gör vi åt det?
+
+
 ---
 ### Kanban vs Scrum
 |                *PROCESSER*                |                                                                                   *Kanban*                                                                                   |                                                                                            *Scrum*                                                                                             |
@@ -187,11 +226,6 @@ Den största skillnaden mellan just Scrum och Kanban är att Scrum har en tydlig
 ---
 #### Extreme programming
 
-> 	***Referenser:***
-[- Shareitsolutions](https://www.shareitsolutions.com/blog/agile-non-agile/)
-[- Codeop](https://codeop.tech/what-exactly-is-not-agile/)
-[- Onbird](https://onbird.se/grunderna-i-scrum/?utm_term=&utm_campaign=I+-+Performance+Max+-+Konsult&utm_source=adwords&utm_medium=ppc&hsa_acc=5250760349&hsa_cam=19864017095&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad=1&gclid=Cj0KCQjwpompBhDZARIsAFD_Fp9ypqe75C9pRfBT-tiTinJcUAWPTIwUnKZaN4DUtQNbfMWEcVILV5AaAnfuEALw_wcB)
-[Kursmaterial lektion 8.9]
 --- 
 ### PJ 1.2 Icke-agila metoder
 Beskriv rubriken nedan här
@@ -219,3 +253,10 @@ Vad är en issue?
 
 - Hur hanterar man issues i github?
 
+
+> 	***Referenser:***
+[- Shareitsolutions](https://www.shareitsolutions.com/blog/agile-non-agile/)
+[- Codeop](https://codeop.tech/what-exactly-is-not-agile/)
+[- Onbird](https://onbird.se/grunderna-i-scrum/?utm_term=&utm_campaign=I+-+Performance+Max+-+Konsult&utm_source=adwords&utm_medium=ppc&hsa_acc=5250760349&hsa_cam=19864017095&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad=1&gclid=Cj0KCQjwpompBhDZARIsAFD_Fp9ypqe75C9pRfBT-tiTinJcUAWPTIwUnKZaN4DUtQNbfMWEcVILV5AaAnfuEALw_wcB)
+[-Projektforum](https://projektforum.se/scrum-2/)
+-Kursmaterial-föreläsningar
