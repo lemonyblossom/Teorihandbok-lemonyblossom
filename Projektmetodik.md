@@ -203,6 +203,8 @@ Beskriv rubriken nedan här
 ## PJ 1.3 Entreprenörskap inom webbutveckling
 Beskriv rubriken nedan här
 
+de olika företagsformerna
+
 ## PJ 1.4 Issue distribution and handling in a group
 Vad innebär det?
 > Vad ska göras och i vilken prio?
