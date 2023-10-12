@@ -78,6 +78,7 @@ Fyra viktigaste riktlinjerna inom agila metoder
   Utvärderar en sprint, resurser, hantera problem, få erfarenhet, beröm eller annat.
 
   ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
+
 ---
 ### VERKTYG
 
@@ -88,7 +89,7 @@ Fyra viktigaste riktlinjerna inom agila metoder
 Om vi inte har klar insikt i vår demografi så använder vi inte user stories utan undersöker istället vår användarbas genom intervjuer, tar reda på statistik, studier eller annat.
 
 När vi däremot har för få personer att utgå ifrån gör vi istället *Personas* och hitta gemensamma faktorer.
-
+--- 
 ##### PERSONA
 Att skapa en *persona* är att på ett visuellt sätt ge en representation av målgruppen man vill nå och kommunicerea insikter om den genom en fiktiv person.
 
@@ -158,7 +159,12 @@ Vad är Kanban?
 : Kanban är en agil metod som fokuserar på att kontinuerligt optimera arbetet genom att effektivt hantera och visualisera arbetsflödet genom löpande uppdateringar och flerstegsfaser.
 
 ####Kanban board
+En Kanban board är ett fysiskt eller digitalt hjälpmedel som visualliserar omfattningingen, statusen, flödet och processen av ett projekt. 
 
+Det som beställaren har som "required features" läggs till backlogen där finns allt som projekten kommer att innehålla. Därefter läggs det antal stories/uppgifter/tasks som ska ske under denna iteration i en "input queue"(en to-do) som är redo att utvecklas.
+Kommande stadie är WIP( work in progress) och faller under två kategorier, planerat arbete, sås om en uppgift, eller "firefighting" när någonting oväntat uppstår inom projektet. Ofta något som andra uppgifter är beroende av.
+ ![Hur en Kanbanboard och dess flöde kan se ut.](img/pngtree-scrum-task-board-or-kanban-board-png-image_5976361.png)
+---
 
 Arbetsinnehåll:
 : - Vad ska göras? 
@@ -189,8 +195,27 @@ WIP :
 
 Genomloppstid:
 : - Hur lång tid tar det för teamet från startgrop till målsnöre?
-: - Finns det några "bottlenecks" på boarden som stoppar upp flödet och förlänger processen. Vad gör vi åt det?
+: - Finns det några "bottlenecks" på boarden som stoppar upp flödet och förlänger processen? Vad gör vi åt det?
 
+Blockeringar:
+: - Finns det något som blockerar arbetet och dess framsteg? Vad gör vi åt det?
+
+Feedback:
+: - Hur samlar vi in och dokumenterar feedback från alla parter? Kunder, samarbetspartners, kollegor osv.
+: - Vad vad vi provat och vad funkade?
+
+Kommunikation:
+: - Hur kommunicerar teamet kring arbetet, dess framsteg och utmaningar?
+: - Finns det nåfon rutin och schemalagda möten dör det ges utrymme för feedback?
+
+Visualisering:
+: - Används fysiska eller digitala boards för att ge en visuell överblick över arbetet och dess process?
+: - Är detta tillgänlgigt och tydligt för alla i teamet?
+
+Återkoppling:
+: - Hur ofta sker återkoppling och analys inom teamet?
+: - Hur ofta granskas prestanda?
+: - Vad gör vi med den info vi samlar in? Vilka åtgärder vidtas?
 
 ---
 ### Kanban vs Scrum
@@ -259,4 +284,5 @@ Vad är en issue?
 [- Codeop](https://codeop.tech/what-exactly-is-not-agile/)
 [- Onbird](https://onbird.se/grunderna-i-scrum/?utm_term=&utm_campaign=I+-+Performance+Max+-+Konsult&utm_source=adwords&utm_medium=ppc&hsa_acc=5250760349&hsa_cam=19864017095&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad=1&gclid=Cj0KCQjwpompBhDZARIsAFD_Fp9ypqe75C9pRfBT-tiTinJcUAWPTIwUnKZaN4DUtQNbfMWEcVILV5AaAnfuEALw_wcB)
 [-Projektforum](https://projektforum.se/scrum-2/)
+[-Nulab](https://nulab.com/learn/project-management/kanban-guide/)
 -Kursmaterial-föreläsningar
