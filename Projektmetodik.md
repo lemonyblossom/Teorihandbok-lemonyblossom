@@ -161,8 +161,14 @@ Vad är Kanban?
 ####Kanban board
 En Kanban board är ett fysiskt eller digitalt hjälpmedel som visualliserar omfattningingen, statusen, flödet och processen av ett projekt. 
 
-Det som beställaren har som "required features" läggs till backlogen där finns allt som projekten kommer att innehålla. Därefter läggs det antal stories/uppgifter/tasks som ska ske under denna iteration i en "input queue"(en to-do) som är redo att utvecklas.
-Kommande stadie är WIP( work in progress) och faller under två kategorier, planerat arbete, sås om en uppgift, eller "firefighting" när någonting oväntat uppstår inom projektet. Ofta något som andra uppgifter är beroende av.
+Det finns många sätt att strukturera en kanban board, beroende på projekt, detta är en generell beskrivning.
+
+Det som beställaren har som "required features" skapar en backlog, där finns allt som projekten kommer att innehålla. 
+Därefter läggs det antal stories/uppgifter/tasks som ska ske under denna iteration i en "input queue"(en to-do) som är redo att utvecklas.
+Kommande stadie är flow, vilket är processen av utveckling. Där är uppgifterna WIP( work in progress) och faller under två kategorier, planerat arbete, så som en skapad uppgift från backlog, eller "firefighting" när någonting oväntat uppstår inom projektet. Ofta kan det vara något som andra uppgifter är beroende av och behöver då lösas omgående.
+När uppgifterna är klara läggs dem i "done" för att bli dubbelcheckade. 
+När dem blivit godkända blir dem markerade som "done done".
+ 
  ![Hur en Kanbanboard och dess flöde kan se ut.](img/pngtree-scrum-task-board-or-kanban-board-png-image_5976361.png)
 ---
 
