@@ -168,7 +168,7 @@ Därefter läggs det antal stories/uppgifter/tasks som ska ske under denna itera
 Kommande stadie är flow, vilket är processen av utveckling. Där är uppgifterna WIP( work in progress) och faller under två kategorier, planerat arbete, så som en skapad uppgift från backlog, eller "firefighting" när någonting oväntat uppstår inom projektet. Ofta kan det vara något som andra uppgifter är beroende av och behöver då lösas omgående.
 När uppgifterna är klara läggs dem i "done" för att bli dubbelcheckade. 
 När dem blivit godkända blir dem markerade som "done done".
- 
+
  ![Hur en Kanbanboard och dess flöde kan se ut.](img/pngtree-scrum-task-board-or-kanban-board-png-image_5976361.png)
 ---
 
@@ -237,32 +237,45 @@ Visualisering:
 Både Kanan och Scrum är agila ramverk för att på ett flexibelt sätt strukturera upp hur ett team arbetar. Det beror mest på arbetsuppgiftens karaktär vilket ramverk man väljer, alt på hur teamet arbetar bäst. 
 Den största skillnaden mellan just Scrum och Kanban är att Scrum har en tydligare struktur gällande roller, tidsramar och ceremonier medan Kanban är än mer flexibelt och fokuserar på att löpande optimera sin process under hela tiden arbetet pågår.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-#### Extreme programming
-
 --- 
 ### PJ 1.2 Icke-agila metoder
-Beskriv rubriken nedan här
+Icke-agila metoder är till skillnad från agila metoder mycket mer strukturerade, rigida i sitt arbetssätt och sättet att arbeta inom dem är mer homogent. Det är ett linjärt sätt att arbeta på där hela teamet steg för steg arbetar mot ett gemensamt mål.
+Det kan tyckas låta svårt att arbeta så strikt, men det är väldigt fördelaktigt inom projekt där resultatet behöver vara totalt felfritt från deploy. 
+Exempel på detta kan vara infrastruktur eller system inom vård, medicinsk utrustning, tungt maskineri, rymdfarkoster, banksystem, övervakningssystem eller annat som är säkerhetskänsligt.
 
-> Vissa saker ska ske steg för steg. I situationer där något måste fungera felfritt vid första launch. T.ex. flygplansmjukvara, hjälpmedel inom sjukvård, hjärtstartare etc.
+En annan positiv aspekt av att arbeta icke-agilt är att det fullskaliga arbetet är kartlagt och att det är ytterst tydligt vilka förväntningar som finns på resultat och på teamet.
+
+Det är fördelaktigt av många anledningar. Det ger klara och stabila krav, det ger hög säkerhet inför deployment, om det är särskilt viktigt för kunden att systemet uppfyller särskilda förväntningar och när projekten har flera komponenter som är komplext beroende av varandra kan det vara mer effektivt att arbeta linjärt då det öppnar för nogrann planering.
+
+Baksidan av detta är just bristen på flexibilitet, det går t.ex. inte att implementera nya saker i mitten av ett projekt om en bättre lösning eller feature upptäcks.
+
+Det är därför av yttersta vikt att ha mycket statistik och data när man ska jobba icke-agilt, för att undvika situationer av dubbelarbete. Det är endast tillåtet att gå tillbaka för justering när hela nuvarande arbetsfasen är avklarad, och det kan även i sig kräva mer arbetskraft, tid och pengar om produkten inte är upp till standard pga bristfälligt insamlad data.
+
+Därför lämpar sig icke-agila metoder bäst för projekt där kraven är stabila och man inte kan förutse att det skulle ske ändringar under projektets gång.
+
+--- 
 #### Waterfall
+Waterfall är en arbtesmetod som sker fas för fas i sekvens. 
+
+Kravinsamling/Requirements:
+: - Projektteamet arbetar tillsammans med en partner, produktägare eller intressent för att kartlägga och dokumentera krav inför kommande projekt. Man dokumenterar alla krav för projektet, funktionella som icke-funktionella.
+
+Systemdesign:
+: - Här utformas och designas strukturen och funktionaliteten för systemet i detalj. Då gör man en teknisk plan för hur allt ska fungera och dess komponenter, hur dem är sammankopplade och samverka, samt hur all data tar sig/flödar genom systemet teamet ska utveckla.
+
+Implementering:
+: - Med input från systemdesignen så skapas systemet först i små grupperingar (units) som senare ska komma att intregreras i nästa steg, varje unit genomgår tester för funktionalitet. Detta kallas "Unit testing".
+
+Testning/Verification: 
+: - Efter testningen så integreras alla units in i ett system. När allt blivit integrerat så testas systemet. Man letar då både efter funktionalitet och ickefunktionalitet.
+
+Distribution/Deployment: 
+: - När allt är klart, så blir systemet deployed i kundens miljö eller såld ut på marknaden.
+
+Underhåll/Maintnence:
+: - När det uppstår problem så försöker man lösa det och släpper sedan "patches" och bättre versioner av systemet. Att underhålla är att implementera detta i kundens miljö.
+
+ ![Stegen inom waterfall.](img/waterfall-fancy.png)
 
 
 ## PJ 1.3 Entreprenörskap inom webbutveckling
@@ -270,8 +283,17 @@ Beskriv rubriken nedan här
 
 de olika företagsformerna
 
+---
+
 ## PJ 1.4 Issue distribution and handling in a group
 Vad innebär det?
+Kort förklarat är det på vilka sätt man väljer att delegera och hantera issues/tasks/uppgifter under ett projekt. 
+
+#### Github Actions
+I github finns *actions* för att automatisera uppfigterna i sitt arbete genom att skapa ett *workflow*.
+Det går både att ställa in så att ens worklflow agerar enligt ett schema eller reagerar på events, så som att skapas en issue, en kommentar skrivs eller en kedjereaktion 
+
+
 > Vad ska göras och i vilken prio?
 > Vem gör vad?
 > Hur delar man upp i github? - backlog i projects, hur man skapar dem. 
@@ -291,4 +313,5 @@ Vad är en issue?
 [- Onbird](https://onbird.se/grunderna-i-scrum/?utm_term=&utm_campaign=I+-+Performance+Max+-+Konsult&utm_source=adwords&utm_medium=ppc&hsa_acc=5250760349&hsa_cam=19864017095&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad=1&gclid=Cj0KCQjwpompBhDZARIsAFD_Fp9ypqe75C9pRfBT-tiTinJcUAWPTIwUnKZaN4DUtQNbfMWEcVILV5AaAnfuEALw_wcB)
 [-Projektforum](https://projektforum.se/scrum-2/)
 [-Nulab](https://nulab.com/learn/project-management/kanban-guide/)
+[-F8 Lunds tekniska högskola](https://fileadmin.cs.lth.se/cs/Education/EDAF45/2017/lectures/F08-2017.pdf)
 -Kursmaterial-föreläsningar
