@@ -277,11 +277,50 @@ Underhåll/Maintnence:
 
  ![Stegen inom waterfall.](img/waterfall-fancy.png)
 
+--- 
 
 ## PJ 1.3 Entreprenörskap inom webbutveckling
 Beskriv rubriken nedan här
 
-de olika företagsformerna
+#### De olika företagsformerna.
+
+Enskild näringsverksamhet/enskild firma:
+: En enskild näringsverksamhet är när man som ensam person äger och driver sitt företag med fullständigt ansvar och sitt eget personnummeristället för ett organisamtionsnummer. 
+Då är det den enskilda personen som står på hyresavtal, kontrakt och är jurudiskt ansvarig och skyldig i t.ex. en domstolsprocess.
+Det är viktigt att tänka på då företagets skulder också är dina privata skulder och därför bör man teckna en företagsförsäkring för att minska risken för ett sådant utfall.
+
+Som enskild firma behöver du ansöka för att bli godkänd för F-skatt och därmed även kunna registrera för moms. Om du vill ha anställda behöver du även registrera dig som arbetsgivare. Att registrera en enskild firma är gratis men det behövs ofta ett startkapital ändå för att sätta igång sin verksamhet.
+
+
+Aktiebolag:
+: I ett aktiebolag är delägarna inte personligen ansvariga för företagets skulder. Dock så krävs här, till skillnad från när man startar en enskild firma, ett kaptial på 25 000 kr, vilket benämns som *aktiekapital*.
+Det motsvarar värdet på aktierna delägarna äger och agerar som kvitto på att dem faktiskt äger bolaget.
+
+Inom aktiebolag har man en styrelse på minst tre personer, om delägarna som då är styrelseledamöter är färre än tre så behövs en styrelsesuppleant.
+
+Det finns både privata och publika aktiebolag, och inom ett publik bolag så måste det sitta en vd, inom privata uppmuntras det, men krävs inte.
+
+Publika aktiebolag ska även ha en revisor som granskar bolagets ekonomi och därmed deras årsredovisning, medan privata bolag kan välja att inte ha en. Men när man har en revisor så lämnar bolaget in en *revisioinsberättelse* ihop med sin årsredovisning som visar på företagets förhållanden och förvaltning.
+
+Handelsbolag/Kommanditbolag:
+: Handelsbolag är i sig en juridisk person, vilket innebär att man kan ingå avtal i bolagets namn, och vem som får göra det avgör bolagsmännen. 
+Dem är två eller flera delägare, och kan både vara privatpersoner eller företag.
+
+Inom ett handelsbolag finns ett solidariskt och juridiskt ansvar gentemot utomstående parter och detta går inte att avtala sig ifrån.
+Det betyder att alla delägare är ansvariga med sin privata ekonomi inför företagets avtal och eventuella skulder. 
+Om en person betalat någonting, medan de andra inte gjort det, så får hen kräva de andra delägarna/bolagsmännen på deras skuld till hen.
+
+Inom ett handelsbolag är det av yttersta vikt att skriva ett kompanjonavtal, även om något är överenskommet muntligt.
+Det finns inga strikta formella krav på avtalet, men dess syfte är att dokumentera hur ni ska fördela vinsten eller om någon vill köpas loss.
+
+###### Kommanditbolag 
+  Ett kommanditbolag är en särskild förgrening inom handelsbolag och innebär att vissa bolagsmän(kommanditdelägare) har begränsat ansvar i relation till vad de har satsat i bolaget. En kommanditdelägarna har sällan någon juridisk rätt att bestämma om styret inom företaget, därmed måste det även finnas minst en person med obegränsat ansvar, som då benämns *komplementär*
+
+
+
+Ekonomisk förening
+
+Ideel förening
 
 ---
 
@@ -315,3 +354,4 @@ Vad är en issue?
 [-Nulab](https://nulab.com/learn/project-management/kanban-guide/)
 [-F8 Lunds tekniska högskola](https://fileadmin.cs.lth.se/cs/Education/EDAF45/2017/lectures/F08-2017.pdf)
 -Kursmaterial-föreläsningar
+[-Verksamt](https://www.verksamt.se/fundera/valj-foretagsform)
