@@ -479,6 +479,6 @@ Och genom att detta dessutom möjliggör automatisering och feedback via @mentio
 [-Verksamt-räkna pris](https://www.verksamt.se/alla-e-tjanster/rakna-ut/rakna-ut-ditt-pris)
 [-Uptech Team](https://www.uptech.team/blog/software-development-costs)
 [-Standardbolag](https://www.standardbolag.se/information/valj-ratt-foretagsform?gclid=Cj0KCQjwm66pBhDQARIsALIR2zBXh2cufsBodrzE_vFoQhan6q6nYxoAt54i3zdnNwk6rr0ObNqj-5kaAvLZEALw_wcB)
-[Github-issue distribution](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+[-Github-issue distribution](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+[-Github-Quickstart](https://docs.github.com/en/get-started/quickstart/communicating-on-github#pull-requests)
 -Kursmaterial-föreläsningar
-[Github-Quickstart](https://docs.github.com/en/get-started/quickstart/communicating-on-github#pull-requests)
