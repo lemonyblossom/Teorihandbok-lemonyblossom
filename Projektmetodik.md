@@ -9,7 +9,7 @@ När vi pratar om att en metod inom programering är "vig" (agil) så innebär d
 
   
 
-Fyra viktigaste riktlinjerna inom agila metoder
+Fyra ==viktigaste== riktlinjerna inom agila metoder
 *(Hannas lektion tis 3e okt)*
 
 1. Individer och interaktioner framför processer och verktyg.    
@@ -279,71 +279,193 @@ Underhåll/Maintnence:
 
 --- 
 
-## PJ 1.3 Entreprenörskap inom webbutveckling
-Beskriv rubriken nedan här
 
-#### De olika företagsformerna.
+
+
+## PJ 1.3 Entreprenörskap inom webbutveckling
+<center> <h3>Inkomst</h3> </center>
+
+##### Ta betalt per timme
+Fördelar
+: 1. Säkerställer att man blir rättvist kompenserad och får betalt för hela arbetet. Detta är väldigt positivt om projektet är oförutsägbart i sin complexitet.
+   2. Det ger möjlighet för en utvecklare att vara flexibel i arbetet och att fakturera för alla delar inom projektet, även projektplanering och möten.
+
+   3. Det ger kunden en tydlig överblick över hur mycket tid som går åt under olika uppgifter och hur mycket de olika sakerna kostar.
+
+Nackdelar
+: 1. Kunden kan tycka att det känns oroligt att anställa när de inte vet huruvida projektet oväntat kan komma att dra ut på tiden.
+   2. Det kan innebära risk för att arbetet drar ut på tiden pga ekonomisk vinning och bekvämligheten att inte jobba under samma tidspress.
+
+#### Ta betalt per projekt
+
+Fördelar:
+: 1. Ett fastställt pris gällande projektets total ger kunden väldigt tydliga ramar och trygghet, vilket ofta lockar kund. Särskilt om dem har en oflexibel budget.
+  2. Motivationen att arbeta effektivt kan stiga när priset är fast då timtaxan blir "högre" ju kortare tid det tar.
+
+Nackdelar:
+: 1. Det kan vara riskabelt att sätta ett fast pris på ett komplext arbete, om det drar ut på tiden kan det innebära ojämn ersättning för det arbete som utförts.
+1. Eftersom priset redan är satt så kan det vara svårt att omförhandla och leda till oenigheter om ytterligare ersättning.
+
+<center> <h3>Utgifter</h3> </center>
+Saker att tänka på innan man startar sin resa som entreprenör inom webbutveckling.
+
+Startkapital
+: Det behövs ett startkapital för att täcka minst de första månaderna av driftkostnad innan intäkter från kunder kan täcka dem. Det kan vara saker som kontorsplats, utrustning, licenser och annat.
+
+Företagsform
+: Det finns många olika företagsformer och det är klokt att komma fram till vilken typ av företag som passar det man vill erbjuda. 
+   *Mer om det står nedan.*
+
+Licenser och mjukvara:
+:  Det är bra att undersöka vilka utvecklingsverktyg och licenser som behövs och eventuell månadskostnad för dem.
+
+Hårdvara:
+: Servrar, datorer och annat som behövs för t.ex. testning.
+
+Kontor eller Co working space:
+: Avgör om arbetet ska ske hemma, i ett co working space eller om det behövs budget för ett kontor.
+
+Försäkringar: 
+: Vilka försäkringar behöver tecknas? Se över företagsförsäkringar och ansvarsförsäkringar.
+  
+Marknadsföring
+: Budgetera för marknadsföringskostnader.
+  
+Skatter och bokföring
+: Förbereda ett stabilt bokföringssystem för att lätt kunna hantera skatter och deklarationer. 
+  Om man inte vill bokföra själv kan man anlita en revisor, och då behöver även det räknas in i budget.
+
+Kundrelationer och avtal
+  : Budgetera för eventuella advokattjänster, avtal eller kundavtal.
+
+  Eget arvode:
+  : Ens egen lön, den ska icke glömmas. Kom ihåg att planera för den och så att den täcker dina livskostnader.
+
+  Buffert:
+  : Lägg undan en buffert för oförutsedda kostnader.
+
+  Bokföring och ekonomisk planering:
+  : Skapa ordentliga rutiner tidigt i processen för nogrann bokföring. Det hjälper med att hålla koll på utgifter och inkomster, var budgeten behöver utökas och var den kan skäras ner.
+
+
+<center> <h3>De olika företagsformerna</h3> </center>
 
 Enskild näringsverksamhet/enskild firma:
-: En enskild näringsverksamhet är när man som ensam person äger och driver sitt företag med fullständigt ansvar och sitt eget personnummeristället för ett organisamtionsnummer. 
+: En enskild näringsverksamhet är när man som ensam person äger och driver sitt företag med fullständigt ansvar och sitt eget personnummer istället för ett organisationsnummer. 
 Då är det den enskilda personen som står på hyresavtal, kontrakt och är jurudiskt ansvarig och skyldig i t.ex. en domstolsprocess.
 Det är viktigt att tänka på då företagets skulder också är dina privata skulder och därför bör man teckna en företagsförsäkring för att minska risken för ett sådant utfall.
 
-Som enskild firma behöver du ansöka för att bli godkänd för F-skatt och därmed även kunna registrera för moms. Om du vill ha anställda behöver du även registrera dig som arbetsgivare. Att registrera en enskild firma är gratis men det behövs ofta ett startkapital ändå för att sätta igång sin verksamhet.
+: Som enskild firma behöver du ansöka för att bli godkänd för F-skatt och därmed även kunna registrera för moms. Om du vill ha anställda behöver du även registrera dig som arbetsgivare. Att registrera en enskild firma är gratis men det behövs ofta ett startkapital ändå för att sätta igång sin verksamhet.
 
 
 Aktiebolag:
 : I ett aktiebolag är delägarna inte personligen ansvariga för företagets skulder. Dock så krävs här, till skillnad från när man startar en enskild firma, ett kaptial på 25 000 kr, vilket benämns som *aktiekapital*.
 Det motsvarar värdet på aktierna delägarna äger och agerar som kvitto på att dem faktiskt äger bolaget.
 
-Inom aktiebolag har man en styrelse på minst tre personer, om delägarna som då är styrelseledamöter är färre än tre så behövs en styrelsesuppleant.
+: Inom aktiebolag har man en styrelse på minst tre personer, om delägarna som då är styrelseledamöter är färre än tre så behövs en styrelsesuppleant.
 
-Det finns både privata och publika aktiebolag, och inom ett publik bolag så måste det sitta en vd, inom privata uppmuntras det, men krävs inte.
+: Det finns både privata och publika aktiebolag, och inom ett publik bolag så måste det sitta en vd, inom privata uppmuntras det, men krävs inte.
 
-Publika aktiebolag ska även ha en revisor som granskar bolagets ekonomi och därmed deras årsredovisning, medan privata bolag kan välja att inte ha en. Men när man har en revisor så lämnar bolaget in en *revisioinsberättelse* ihop med sin årsredovisning som visar på företagets förhållanden och förvaltning.
+: Publika aktiebolag ska även ha en revisor som granskar bolagets ekonomi och därmed deras årsredovisning, medan privata bolag kan välja att inte ha en. Men när man har en revisor så lämnar bolaget in en *revisioinsberättelse* ihop med sin årsredovisning som visar på företagets förhållanden och förvaltning.
 
 Handelsbolag/Kommanditbolag:
 : Handelsbolag är i sig en juridisk person, vilket innebär att man kan ingå avtal i bolagets namn, och vem som får göra det avgör bolagsmännen. 
 Dem är två eller flera delägare, och kan både vara privatpersoner eller företag.
 
-Inom ett handelsbolag finns ett solidariskt och juridiskt ansvar gentemot utomstående parter och detta går inte att avtala sig ifrån.
+: Inom ett handelsbolag finns ett solidariskt och juridiskt ansvar gentemot utomstående parter och detta går inte att avtala sig ifrån.
 Det betyder att alla delägare är ansvariga med sin privata ekonomi inför företagets avtal och eventuella skulder. 
 Om en person betalat någonting, medan de andra inte gjort det, så får hen kräva de andra delägarna/bolagsmännen på deras skuld till hen.
 
-Inom ett handelsbolag är det av yttersta vikt att skriva ett kompanjonavtal, även om något är överenskommet muntligt.
+: Det av yttersta vikt att skriva ett kompanjonavtal inom ett handelsbolag, även om något är överenskommet muntligt.
 Det finns inga strikta formella krav på avtalet, men dess syfte är att dokumentera hur ni ska fördela vinsten eller om någon vill köpas loss.
 
-###### Kommanditbolag 
-  Ett kommanditbolag är en särskild förgrening inom handelsbolag och innebär att vissa bolagsmän(kommanditdelägare) har begränsat ansvar i relation till vad de har satsat i bolaget. En kommanditdelägarna har sällan någon juridisk rätt att bestämma om styret inom företaget, därmed måste det även finnas minst en person med obegränsat ansvar, som då benämns *komplementär*
+Kommanditbolag:
+:  Ett kommanditbolag är en särskild förgrening inom handelsbolag och innebär att vissa bolagsmän(kommanditdelägare) har begränsat ansvar i relation till vad de har satsat i bolaget. En kommanditdelägarna har sällan någon juridisk rätt att bestämma om styret inom företaget, därmed måste det även finnas minst en person med obegränsat ansvar, som då benämns *komplementär*
 
 
 
-Ekonomisk förening
+Ekonomisk förening:
+: En ekonomisk förening måste bestå av minst tre personer, juridiska som fysiska personer kan vara medlemmar. Alla betalar en medlemsinsats och får då rätt att tillsammans ta beslut inom föreningen och vilka grundläggande regler som gäller.
+Summan behöver vara minst 1 kr men har ingen övre maxgräns.
+Föreningen ska har fokus på att främja medlemmarnas ekonomiska intressen och ska fåå utbyte av att vara medlem. 
+Det kan t.ex. vara förmåneliga priser på produkter på en butik eller en bostadrättsförening.
 
-Ideel förening
 
+: En förening bestämmer var dem drar linjen för vilka medlemmar dem vill ha med och alla medlemmar ska på ett eller annat sätt delta i din ekonomiska verksamheten.
+Det kan vara genom att använda tjänster föreningen erbjuder eller att köpa produkter inom en viss kedja. Medlemmarna är dock inte ansvariga för föreningern och riskerar därför inte mer än den medlemsavgift dem betalar för att få vara med.
+
+: Något som är viktigt inom en ekonomisk förening är stadgar.
+Det är föreningens grundläggande regler.
+
+
+Ideell förening:
+: Till skillnad från en ekonomisk förening så är en ideell förenings syfte inte att främja sina medlemmars ekonomiska intressen, dess syfte är istället att verka för medlemmarnas bästa på andra sätt. T.ex. med syfte att motverka orättvisa i samhället, lära medlemmarna en viss färdighet eller bidra till känsla av gemenskap mellan personer.
+
+![Företagstyper](img/company-types.png)
 ---
 
 ## PJ 1.4 Issue distribution and handling in a group
-Vad innebär det?
-Kort förklarat är det på vilka sätt man väljer att delegera och hantera issues/tasks/uppgifter under ett projekt. 
+###### Vad innebär det?
+> Kort förklarat är det på vilka sätt man väljer att delegera, hantera och kommunicera kring uppgifter under ett projekt. 
 
-#### Github Actions
-I github finns *actions* för att automatisera uppfigterna i sitt arbete genom att skapa ett *workflow*.
+<center> <h3>Github</h3> </center>
+I en kontext där vi använder github så innebär Issue distribution att använda Github för att fördela och hantera ett arbete och låta teamet följa processen på ett enkelt sätt.
+
+Det ger möjlighet att samarbeta, följa arbetets status och säkerställa att inget glömt bort att genomföras. 
+
+Detta gör man genom att skapa en *issue*, vilket är en arbetsuppgift.
+Detta kan göras på flera sätt och en väljer själv det som passar en själv och ens *workflow*.
+
+ > När en *issue* nämns i en annan *issue* eller *pull  request* så syns dess tidslinje och tidigare arbete. 
+ Varje *issue* har en en uppsättning information. Där ingår en label, uppgiftsbeskrivning, namn på ansvarig person, var denna issue ligger på priolistan och eventuell annat material som behövs för att utföra uppgiften. T.ex. bilder och filer.
+
+Genom att skapa *projects* så går det att organisera och göra en priolista över sina *issues*.
+För att kategorisera relaterade *issues* används *labels* och *milestones* 
+För att spåra en *issue* inuti större *issues* anväds *task lists*. Detta är fördelaktigt då det bör undvikas att delegera för stora uppgifter och då är det bättre att bryta ner dem.
+Det går även att skapa *actions* för att automatisera uppgifterna i sitt arbete genom att skapa ett *workflow*.
 Det går både att ställa in så att ens worklflow agerar enligt ett schema eller reagerar på events, så som att skapas en issue, en kommentar skrivs eller en kedjereaktion 
 
+När pullrequests sedan mergas så försvinner dess issues per automatik.
 
-> Vad ska göras och i vilken prio?
-> Vem gör vad?
-> Hur delar man upp i github? - backlog i projects, hur man skapar dem. 
->  Skapa ej för stora tasks. T.ex. "create fronpage", skapa istället mindre som "Create navbar", "style footer", "create draft about section"
-> Hur kopplar man issues med commits?
-> delegera efter urgency.
->
-Vad är en issue?
-- En issue på github är en "arbetsuppgift"
+För att skicka en notis till/nämna en i teamet så använder man @mention.
+Då kan man även länka en *issue* till nämnda teammedlem med *"#"*
+På detta sätt kan du tilldela *issues* till teamet.
 
-- Hur hanterar man issues i github?
+##### Steg inom Github Issue Distribution
+1.  Skapa issues
+2. Tilldela issues
+3. Använda labels
+4. Tilldela milestones
+5. Använda project
+6. Kommunicera och följa upp
+7. Använda automatisering/actions
+8. Prioritera issues
+9. Stäng issues
+10. Följ upp
+
+#####Olika typer av discussions:
+
+Github Issues
+: - Är kopplat till *endast* ett specifikt repo och har oftast en specifik ägare.
+: - Bra att kommunicera detaljer så som att rapportera buggar eller förbättringar.
+: - Bra lämpat för att spåra tasks, buggar och förbättringar. Bra lämpat för feedback kring en specifik feature eller göra en bugg-rapport.
+
+Pull request
+: - Är också kopplat till *endast* ett repo.
+: - Tillåter dig att kommentera på ändringsförslag från andra.
+: - Tillåter dig att göra egna förslag på ändringar. 
+: - Bra lämpat för att fixa ett typo eller ändra i ett repo, fixa en issue eller kommentera på andras förslag.
+
+Github Discussion
+: - Sträcker sig över *flertal* repositories.
+: - Detta går att likna vid ett forum/kommentarsfält som passar bra där det behövs mycket samarbete som sker utanför kodbasen. Det ger möjligheter till att bolla idéer och utbyta kunskap och perspektiv.
+: - Detta forum har sällan en tydlig ägare.
+: - Lämpat för mer generella ämnen som inte är kopplade till specifika filer i repot.
+
+
+Så, att förstå och kunna använda Github issue distribution är en kritisk del i projektledning för att hålla ordning på allt som sker parallelt.
+Att kunna skapa, fördela, hålla koll på uppgifter och kommunicera med teamet på ett och samma ställe. Genom att använda labels och milestones är det lättare att prioritera och planera hela teamets arbete. 
+Och genom att detta dessutom möjliggör automatisering och feedback via @mentions gör detta till en väldigt användbart verktyg för att få projektet att smidigt röra sig framåt.
 
 
 > 	***Referenser:***
@@ -353,5 +475,10 @@ Vad är en issue?
 [-Projektforum](https://projektforum.se/scrum-2/)
 [-Nulab](https://nulab.com/learn/project-management/kanban-guide/)
 [-F8 Lunds tekniska högskola](https://fileadmin.cs.lth.se/cs/Education/EDAF45/2017/lectures/F08-2017.pdf)
+[-Verksamt-företagsform](https://www.verksamt.se/fundera/valj-foretagsform)
+[-Verksamt-räkna pris](https://www.verksamt.se/alla-e-tjanster/rakna-ut/rakna-ut-ditt-pris)
+[-Uptech Team](https://www.uptech.team/blog/software-development-costs)
+[-Standardbolag](https://www.standardbolag.se/information/valj-ratt-foretagsform?gclid=Cj0KCQjwm66pBhDQARIsALIR2zBXh2cufsBodrzE_vFoQhan6q6nYxoAt54i3zdnNwk6rr0ObNqj-5kaAvLZEALw_wcB)
+[Github-issue distribution](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 -Kursmaterial-föreläsningar
-[-Verksamt](https://www.verksamt.se/fundera/valj-foretagsform)
+[Github-Quickstart](https://docs.github.com/en/get-started/quickstart/communicating-on-github#pull-requests)
