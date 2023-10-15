@@ -77,7 +77,7 @@ Fyra ==viktigaste== riktlinjerna inom agila metoder
   ##### Sprint retrospective 
   Utvärderar en sprint, resurser, hantera problem, få erfarenhet, beröm eller annat.
 
-  ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.webp)
+  ![Hur Processen ser ut med alla dess steg.](img/scrum-transparent.png)
 
 ---
 ### VERKTYG
@@ -305,7 +305,7 @@ Fördelar:
 Nackdelar:
 : 1. Det kan vara riskabelt att sätta ett fast pris på ett komplext arbete, om det drar ut på tiden kan det innebära ojämn ersättning för det arbete som utförts.
 1. Eftersom priset redan är satt så kan det vara svårt att omförhandla och leda till oenigheter om ytterligare ersättning.
-
+ 
 <center> <h3>Utgifter</h3> </center>
 Saker att tänka på innan man startar sin resa som entreprenör inom webbutveckling.
 
@@ -347,6 +347,8 @@ Kundrelationer och avtal
   Bokföring och ekonomisk planering:
   : Skapa ordentliga rutiner tidigt i processen för nogrann bokföring. Det hjälper med att hålla koll på utgifter och inkomster, var budgeten behöver utökas och var den kan skäras ner.
 
+ ![clipboard](Img/icon-clipboard.png)
+---
 
 <center> <h3>De olika företagsformerna</h3> </center>
 
