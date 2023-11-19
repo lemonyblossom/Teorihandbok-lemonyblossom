@@ -169,7 +169,7 @@ Att följa och få sin tillgänglighet att uppnå WCAG AA är avgörande inom ut
 
 En Webbstandard utgör riktlinjer och rekommendationer från bl.a W3C gällande hur webbinnehåll ska tolkas och utvecklas för WWW.
 
-Dem bidrar till att säkerställa att det som är publicerat på webben är långsiktigt hållbart. 
+De bidrar till att säkerställa att det som är publicerat på webben är långsiktigt hållbart. 
 
 SGML *(Standard Generalized Markup Language)*
 utvecklades redan på 80-talet och används för att specificera reglerna för hur olika element kan användas för formatering, även om SGML inte används för formateringen i sig. 
@@ -238,7 +238,24 @@ Från det jag läser så verkar valet mellan SASS och SCSS handla om egen prefer
 
 
 ## HC 1.6 Optimering och validering av HTML & CSS
-Beskriv rubriken nedan här
+
+Att optimera HTML och CSS säkerställer att webbsidor är tillgängliga och effektiva. Detta för att behålla så många användare som möjligt när dem är på sidan. 
+
+Detta kan man göra i sin html-kod genom att ta bort onödiga kommentarer (även om det är viktigt att kommentera i sin kod) t.ex. om man kommenterat ut något för att felsöka. Den utkommenterade kommentaren har ingen anledning att ligga kvar i filen. 
+Att minska på radbrytningar, extra mellanslag etc är också ett sätt att minska filstorleken. Detta kan man göra genom att använda automatiserade verktyg och extensions, som t.ex. prettier. 
+
+Att använda rätt storlekar på bilder är även en viktig del av att optimera sin sida, det finns ingen anledningen att bilden har högre upplösning än den storlek och upplösning den kommer ha i sitt största format. Om bilder tar för mycket plats och kraft så sjunker prestandan på sidan och laddar långsammare. Bara någon sekund gör stor skillnad.
+![Attityd gentemot hemsidor pga loading time](Img/../Img-HTML-CSS/Skärmavbild%202023-11-19%20kl.%2023.04.56.png)
+
+Man kan även sammanfoga sina CSS och javascript-filer så att HTTP förfrågningarna blir så få som möjligt och minskar därför svarstiden.
+Asynkron inläsning av javascripten kan även hjälpa för att inte hindra/blockera sidans rendering och minska användarens upplevelse av att "sidan är trög".
+
+Utöver detta är det viktigt att validera sin HTML och CSS i en validator, som W3C Validation Service.
+ Detta för att kontrollera att alla element inte har stray tags eller saknar end tags. Detta gör annars HTML elementen ogiltiga och det kommer påverka strukturen på webbsidan.
+ Här ser vi också om Html-dokumentet är semantiskt korrekt. en validator varnar bla om det finns fler än en h1 eller om det kommer en h1 och en h3 men utan h2 mellan.
+
+När man validerar sin CSS så kontrollerar validatorn att alla attribut stämmer enligt CSS-reglerna och ger varningar vid t.ex. "non-valid value"
+
 
 
 Länkar:
@@ -250,3 +267,4 @@ Länkar:
  > [- Webbstandard XHTML](https://www.bestonline.se/datakurser/webbutveckling1/teori/internet%20webbstandard.php)
  > [- Webbstandard 2](https://webflow.com/blog/web-standards)
  > [- Sass](https://cleancommit.io/blog/what-are-the-benefits-of-sass-in-2022/)
+ >[- Laddningsstid på webben](https://www.diva-portal.org/smash/get/diva2:1177910/FULLTEXT01.pdf)
