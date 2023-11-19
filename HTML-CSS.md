@@ -199,10 +199,42 @@ Det ökar även tillgängligheten för t.ex. skärmläsarprogram.
 
 
 ## HC 1.5 CSS Pre-processorer (ex SASS/LESS)
-Sass *(Syntactically Awsome Stylesheets)* är en extension av vanlig css, men är inte bekgränsad till pure utan används även tillsammans med ramverk, och ger utvecklare möjlighet att ändra kod effektivt och slippa återanvända samma attribut och skriva ut kod i varje element för styling. Detta effektiviserar även att t.ex. Om allt som är rött på en sida är stylat med varibeln (exempel) $my-favorite-color: red;. Detta kan vara som border på artiklar och bakgrundsfärg på knappar, on hover för a etc etc, och ganska tradigt att skriva om på alla ställen, och då kan jag istället ändra $my-favorite-color:red; till $my-favorite-color:green;
+Sass *(Syntactically Awsome Stylesheets)* är en extension av vanlig css, men är inte bekgränsad till pure utan används även tillsammans med ramverk, och ger utvecklare möjlighet att ändra kod effektivt och slippa återanvända samma attribut och skriva ut kod i varje element för styling.
+
+ Detta effektiviserar även att t.ex. Om allt som är rött på en sida är stylat med varibeln (exempel) $my-favorite-color: red;. Detta kan vara som border på artiklar och bakgrundsfärg på knappar, on hover för a etc etc, och ganska tradigt, men framförallt tidskrävande, att skriva om på alla ställen, och då kan jag istället ändra $my-favorite-color:red; till $my-favorite-color:green;
 Och då blir alla element med färgen röd istället grön i bara en ändring. 
 Detta används för att också uppehålla en av de viktigaste motton en utvecklare bör följa: "Don't repeat yourself".
 
+Sass tillåter även att nästla CSS intuti varandra, det gr koden mer kompakt, mer lättläst och lättare att navigera sig i. Detta är i sig hjälpsamt när andra ska läsa ens kod. 
+
+Att Sass utöver att göra koden effektiv att använda och läsa så går den även att dela upp i mindre filer (partials) som även det kan göra strukturen mer överskådlig.
+
+SASS är däremot inte läsbart av HTML men går att kompilera till CSS.
+
+SCSS (Sassy CSS) har några syntaxskillnader från SASS. 
+SCSS använder bla {} och ;
+medan SASS använder varken.
+
+###### *SASS*
+
+```body
+  font: 
+    family: Arial, sans-serif
+  color: #333
+  ```
+
+###### *SCSS*
+``` body {
+  font: {
+    family: Arial, sans-serif;
+  }
+  color: #333;
+} 
+```
+De som gärna använder SCSS menar ofta på att det är mer lättläst då det liknar Css mer i sin syntax och de som använder SASS betonar den indenterade syntaxen är mer läslig och minskar onödig kod.
+SCSS används dock mer i moderna projekt.
+
+Från det jag läser så verkar valet mellan SASS och SCSS handla om egen preferens gällande syntax och projektets karaktär.
 
 
 ## HC 1.6 Optimering och validering av HTML & CSS
