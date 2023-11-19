@@ -274,12 +274,13 @@ När man validerar sin CSS så kontrollerar validatorn att alla attribut stämme
 
 
 Länkar:
->[- Best practise for Css Units](https://wpengine.com/resources/choose-css-unit-create-better-site-layouts-how-to/#Types_of_CSS_Units)
- > [- Webbdesign ur ett tillgänglihetsperspektiv-examensarbete](https://www.diva-portal.org/smash/get/diva2:1028248/FULLTEXT01.pdf)
- > [- Statistik om funktionsnedsättning](https://www.funka.com/funka--tillg%C3%A4nglighet/statistik/)
- > [- WCAG overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
- > [- Webbstandard](https://webperf.se/tag/webbstandard/)
- > [- Webbstandard XHTML](https://www.bestonline.se/datakurser/webbutveckling1/teori/internet%20webbstandard.php)
- > [- Webbstandard 2](https://webflow.com/blog/web-standards)
- > [- Sass](https://cleancommit.io/blog/what-are-the-benefits-of-sass-in-2022/)
- >[- Laddningsstid på webben](https://www.diva-portal.org/smash/get/diva2:1177910/FULLTEXT01.pdf)
+> [- Best practise for Css Units](https://wpengine.com/resources/choose-css-unit-create-better-site-layouts-how-to/#Types_of_CSS_Units)
+> [- Webbdesign ur ett tillgänglihetsperspektiv-examensarbete](https://www.diva-portal.org/smash/get/diva2:1028248/FULLTEXT01.pdf)
+> [- Statistik om funktionsnedsättning](https://www.funka.com/funka--tillg%C3%A4nglighet/statistik/)
+> [- WCAG overview]- w3(https://www.w3.org/WAI/standards-guidelines/wcag/)
+> [- Webbstandard- webperf](https://webperf.se/tag/webbstandard/)
+> [- Webbstandard XHTML- bestonline](https://www.bestonline.se/datakurser/webbutveckling1/teori/internet%20webbstandard.php)
+> [- Webbstandard- webflow](https://webflow.com/blog/web-standards)
+> [- Sass- clean commit](https://cleancommit.io/blog/what-are-the-benefits-of-sass-in-2022/)
+> [- Laddningsstid på webben- diva portal](https://www.diva-portal.org/smash/get/diva2:1177910/FULLTEXT01.pdf)
+> [- Optimering av HTML & CSS- raidboxes](https://raidboxes.io/sv/blog/hosting-performance/reduce-minify-css-html-javascript/)
