@@ -139,7 +139,9 @@ p {
 
 ##### HUR? 
 
-För att skapa en responsiv design är det hjälpsamt att använda sig av relativa mätvärden för att skapa en flexibel design. Om utvecklaren använder t.ex. pixlar för att sätta storlekar på avstånd eller sektioner så blir dessa värden fasta och reagerar därför inte när användaren zoomar in eller gör webbläsarfönstret mindre/större, vilket i sin tur kan skapa problem i relation till resten av webbsidan i andra enheter än den utvecklaren anpassat sina pixlar efter. Det kan bli problematiskt när målet är en dynamisk och flexibel design som ska vara tillgänglig och passa alla.
+För att skapa en responsiv design är det hjälpsamt att använda sig av relativa mätvärden för att skapa en flexibel design. Det kan vara att sätta containers bredd i procent(%) för att dem ska anpassa sig flexibelt. Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på avstånd eller sektioner så blir dessa värden fasta och reagerar därför inte när användaren zoomar in eller gör webbläsarfönstret mindre/större, vilket i sin tur kan skapa problem i relation till resten av webbsidan i andra enheter än den utvecklaren anpassat sina pixlar efter. Det kan bli problematiskt när målet är en dynamisk och flexibel design som ska vara tillgänglig och passa alla.
+
+F
 
 ## HC 1.3 Tillgänglighet inom webb
 Beskriv rubriken nedan här
