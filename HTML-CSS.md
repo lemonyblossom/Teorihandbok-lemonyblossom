@@ -86,7 +86,7 @@ p {
     color: purple;
 } 
 ```
-
+---
 ## HC 1.2 Responsiv design
 
 
@@ -144,6 +144,8 @@ För att skapa en responsiv design är det hjälpsamt att använda sig av relati
 
 Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på avstånd eller sektioner så blir dessa värden fasta och reagerar därför inte när användaren zoomar in eller gör webbläsarfönstret mindre/större, vilket i sin tur kan skapa problem i relation till resten av webbsidan i andra enheter än den utvecklaren anpassat sina pixlar efter. Det kan bli problematiskt när målet är en dynamisk och flexibel design som ska vara tillgänglig och passa alla.
 
+---
+
 ## HC 1.3 Tillgänglighet inom webb
 30% av världens befolkning har en funktionsnedsättning hemsidor och 11% har fler funktionsnedsättningar än en.
  Detta utgör en otrolig mängd användare som får svårt att använda en hemsida som inte är tillgänglig för alla. 
@@ -161,39 +163,47 @@ Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på av
 
 Att följa och få sin tillgänglighet att uppnå WCAG AA är avgörande inom utveckling då produktägare överallt vill ha en tillgänglig webbplats som gynnar alla, oavsett dess förutsättningar och nedsatta förmågor. 
 
-
+---
 
 ## HC 1.4 Aktuella webbstandarder (gällande och kommande standarder)
 
-En Webbstandard utgör riktlinjer och rekommendationer från bl.a W3C gällande hur webbinnehåll ska tolkas och utvecklas.
+En Webbstandard utgör riktlinjer och rekommendationer från bl.a W3C gällande hur webbinnehåll ska tolkas och utvecklas för WWW.
 
 Dem bidrar till att säkerställa att det som är publicerat på webben är långsiktigt hållbart. 
 
-#### Ett par exempel
 SGML *(Standard Generalized Markup Language)*
 utvecklades redan på 80-talet och används för att specificera reglerna för hur olika element kan användas för formatering, även om SGML inte används för formateringen i sig. 
 
 Till det använder vi HTML, som baseras på SGML och har den starkaste kopplingen till just Webbsidor. Html skapades i steg 1-4 mellan 1993 och 1998, och efter det lanserades HTML5s första utgåva 2008.
 HTML5 blev standard 28e oktober 2014 och den senaste versionen är HTML5.1 som lanserades 2016.
 
-Andra webbstandarer är XML och XHTML
-XML- *(extensible markup language)* är inget eget språk utan ett regelverk för hur andra språk kan utformas. Målet med detta är att i sinom tid kunna utföra alla uppgifter som HTML inta kan och då ersätta nuvarade html-standarder.
+XML- *(extensible markup language)* är inget eget språk utan ett regelverk för hur andra språk kan utformas. Det tillåter mer personliga definitioner av element istället för de fasta elementen i html. Pga detta används XML mestadels från maskin till maskin och sällan i webbläsare.
 Övergången från HTML till XML misslyckades dock då XML var mycket mer komplext. Då skapade man XHTML istället.
 
-XHTML-*(extensible hyper text markup language)* används i programvaror som både hanterar HTML och XML. XHTML ska göra dokument kompatibla både framåt och bakåt i versioner då det tog vid i sin första version där HTML4.1 slutar och var du XHTML 1.0, nu är den senaste versionen XHTML1.1
+XHTML-*(extensible hyper text markup language)* används i programvaror som både hanterar HTML och XML. Det blandar stillmallar, HTML4 och riktlinjer för tillgänglighet.
+ XHTML ska även göra dokument kompatibla både framåt och bakåt i versioner då det tog vid i sin första version där HTML4.1 slutar och var du XHTML 1.0, nu är den senaste versionen XHTML1.1 Det som utmärker XHTML är att det separerar struktur och presentation vilket gör det flexibelt att ändra i för olika enheter och webbläsare, med andra ord, toppen för tillgänglighet.
+
+ WCAG 2.0 - Web Content Accessability Guidelines
+ Dessa riktlinjer beskriver hur utvecklare ska göra webbplatser mer tillgängliga, se HC 1.3
 
  ![Html-Xhtml difference](Img/../Img-HTML-CSS/html-xhtml.png)
 
+
+######Uniform Resource Identifier (URI, aka URL)
+
+######HyperText Transfer Protocol (HTTP)
 
 Att använda aktuella webbstandarder effektiviserar webbplatsen i många aspekter. 
 att använda dem gör att sidorna laddar fortare, stöds av flera plattformar, är lättare för utomstående utvecklare att sätta sig in i, gör att webbsidan håller sig aktuell under längre tid då troligheten att den fungerar även under nästa standard är större än om du kör den tidigare versionen. 
 Det ökar även tillgängligheten för t.ex. skärmläsarprogram.
 
-##### Dagens standard
-
 
 ## HC 1.5 CSS Pre-processorer (ex SASS/LESS)
-Beskriv rubriken nedan här
+Sass *(Syntactically Awsome Stylesheets)* är en extension av vanlig css, men är inte bekgränsad till pure utan används även tillsammans med ramverk, och ger utvecklare möjlighet att ändra kod effektivt och slippa återanvända samma attribut och skriva ut kod i varje element för styling. Detta effektiviserar även att t.ex. Om allt som är rött på en sida är stylat med varibeln (exempel) $my-favorite-color: red;. Detta kan vara som border på artiklar och bakgrundsfärg på knappar, on hover för a etc etc, och ganska tradigt att skriva om på alla ställen, och då kan jag istället ändra $my-favorite-color:red; till $my-favorite-color:green;
+Och då blir alla element med färgen röd istället grön i bara en ändring. 
+Detta används för att också uppehålla en av de viktigaste motton en utvecklare bör följa: "Don't repeat yourself".
+
+
 
 ## HC 1.6 Optimering och validering av HTML & CSS
 Beskriv rubriken nedan här
@@ -206,3 +216,5 @@ Länkar:
  > [- WCAG overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
  > [- Webbstandard](https://webperf.se/tag/webbstandard/)
  > [- Webbstandard XHTML](https://www.bestonline.se/datakurser/webbutveckling1/teori/internet%20webbstandard.php)
+ > [- Webbstandard 2](https://webflow.com/blog/web-standards)
+ > [- Sass](https://cleancommit.io/blog/what-are-the-benefits-of-sass-in-2022/)
