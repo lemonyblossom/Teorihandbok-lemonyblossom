@@ -6,9 +6,10 @@ Studerande: Emma Jensen
 #### HTML *(Hypertext markup language)*
 HTML är språket som utgör strukturen och formaterar dokument på webbsidor, vilket gör att text konverteras till hypertext och återger sidor i browsern på ett korrekt sätt. HTML tillsammans med HTTP ( Hypertext Transfer Protocol- ett kommunikationsprotokoll ) grunden för World Wide Web.  
 Webbsidorna som skrivs i HTML överförs med HTTP över internet. 
-I html används taggar för att definiera olika delar av hemsidan, dessa benämns som element och kan vara rubriker, olika typer av stycken (såsom artiklar), listor, tabeller, formulär och många fler typer av strukturelement. 
+I HTML används taggar för att definiera olika delar av hemsidan, dessa benämns som element och kan vara rubriker, olika typer av stycken (såsom artiklar), listor, tabeller, formulär och många fler typer av strukturelement. 
 Genom dessa element kan developers strukturera innehållet av sin kod på ett lättöverskådligt, logiskt och förståeligt sätt. Både för sig själv men även för andra. 
-Att använda de globala element som finns i html5 istället för att göra divar som inte nödvändigtvis behövs, gör det dessutom mycket lättare för webbläsaren att förstå vad som finns på sidan, vilket i sin tur leder till att hemsidan blir mer tillgänglig för t.ex. läsverktyg för synskadade eller genom att bara kunna tabba sig genom sidan.
+
+Att använda de globala element som finns i HTML5 istället för att göra divar som inte nödvändigtvis behövs, gör det dessutom mycket lättare för webbläsaren att förstå vad som finns på sidan, vilket i sin tur leder till att hemsidan blir mer tillgänglig för t.ex. läsverktyg för synskadade eller genom att bara kunna tabba sig genom sidan.
 
 
 HTML är dock inte ett programmeringsspråk, utan är ett markeringsspråk som genom taggar har i uppgift att ge struktur för hela webbsidans text med styckeindelningar, listor, rubriker, avdelningar osv. 
@@ -174,7 +175,7 @@ De bidrar till att säkerställa att det som är publicerat på webben är lång
 SGML *(Standard Generalized Markup Language)*
 utvecklades redan på 80-talet och används för att specificera reglerna för hur olika element kan användas för formatering, även om SGML inte används för formateringen i sig. 
 
-Till det använder vi HTML, som baseras på SGML och har den starkaste kopplingen till just Webbsidor. Html skapades i steg 1-4 mellan 1993 och 1998, och efter det lanserades HTML5s första utgåva 2008.
+Till det använder vi HTML, som baseras på SGML och har den starkaste kopplingen till just Webbsidor. HTML skapades i steg 1-4 mellan 1993 och 1998, och efter det lanserades HTML5s första utgåva 2008.
 HTML5 blev standard 28e oktober 2014 och den senaste versionen är HTML5.1 som lanserades 2016.
 
 XML- *(extensible markup language)* är inget eget språk utan ett regelverk för hur andra språk kan utformas. Det tillåter mer personliga definitioner av element istället för de fasta elementen i html. Pga detta används XML mestadels från maskin till maskin och sällan i webbläsare.
@@ -189,27 +190,35 @@ XHTML-*(extensible hyper text markup language)* används i programvaror som båd
  ![Html-Xhtml difference](Img/../Img-HTML-CSS/html-xhtml.png)
 
 
-######Uniform Resource Identifier (URI, aka URL)
-
-######HyperText Transfer Protocol (HTTP)
-
 Att använda aktuella webbstandarder effektiviserar webbplatsen i många aspekter. 
 att använda dem gör att sidorna laddar fortare, stöds av flera plattformar, är lättare för utomstående utvecklare att sätta sig in i, gör att webbsidan håller sig aktuell under längre tid då troligheten att den fungerar även under nästa standard är större än om du kör den tidigare versionen. 
 Det ökar även tillgängligheten för t.ex. skärmläsarprogram.
 
+---
 
 ## HC 1.5 CSS Pre-processorer (ex SASS/LESS)
 Sass *(Syntactically Awsome Stylesheets)* är en extension av vanlig css, men är inte bekgränsad till pure utan används även tillsammans med ramverk, och ger utvecklare möjlighet att ändra kod effektivt och slippa återanvända samma attribut och skriva ut kod i varje element för styling.
 
- Detta effektiviserar även att t.ex. Om allt som är rött på en sida är stylat med varibeln (exempel) $my-favorite-color: red;. Detta kan vara som border på artiklar och bakgrundsfärg på knappar, on hover för a etc etc, och ganska tradigt, men framförallt tidskrävande, att skriva om på alla ställen, och då kan jag istället ändra $my-favorite-color:red; till $my-favorite-color:green;
-Och då blir alla element med färgen röd istället grön i bara en ändring. 
-Detta används för att också uppehålla en av de viktigaste motton en utvecklare bör följa: "Don't repeat yourself".
+ Detta effektiviserar även att t.ex. Om allt som är rött på en sida är stylat med varibeln 
+ ``` 
+ $my-favorite-color: red; 
+ ``` 
+ Detta kan vara som border på artiklar och bakgrundsfärg på knappar, on hover för a etc etc, och ganska tradigt, men framförallt tidskrävande, att skriva om på alla ställen, och då kan jag istället ändra 
+ ```
+ $my-favorite-color:red;
+ ```
+ till 
+
+ ```
+$my-favorite-color:green;
+````
+
+Och då blir alla element med färgen röd istället gröna i bara en ändring. 
+Detta används för att också uppehålla en av de viktigaste motton en utvecklare bör följa: ***"Don't repeat yourself"***.
 
 Sass tillåter även att nästla CSS intuti varandra, det gr koden mer kompakt, mer lättläst och lättare att navigera sig i. Detta är i sig hjälpsamt när andra ska läsa ens kod. 
 
-Att Sass utöver att göra koden effektiv att använda och läsa så går den även att dela upp i mindre filer (partials) som även det kan göra strukturen mer överskådlig.
-
-SASS är däremot inte läsbart av HTML men går att kompilera till CSS.
+Att Sass utöver att göra koden effektiv att använda och läsa så går den även att dela upp i mindre filer (partials) som även det kan göra strukturen mer överskådlig. Däremot är det inte direkt läsbart av HTML men går att kompilera till CSS.
 
 SCSS (Sassy CSS) har några syntaxskillnader från SASS. 
 SCSS använder bla {} och ;
@@ -217,14 +226,17 @@ medan SASS använder varken.
 
 ###### *SASS*
 
-```body
+```
+body
   font: 
     family: Arial, sans-serif
-  color: #333
+  color: #333 
   ```
-
+```
 ###### *SCSS*
-``` body {
+
+```
+ body {
   font: {
     family: Arial, sans-serif;
   }
@@ -234,15 +246,16 @@ medan SASS använder varken.
 De som gärna använder SCSS menar ofta på att det är mer lättläst då det liknar Css mer i sin syntax och de som använder SASS betonar den indenterade syntaxen är mer läslig och minskar onödig kod.
 SCSS används dock mer i moderna projekt.
 
-Från det jag läser så verkar valet mellan SASS och SCSS handla om egen preferens gällande syntax och projektets karaktär.
+Från det jag förstått så verkar valet mellan SASS och SCSS handla om egen preferens gällande syntax och projektets karaktär.
 
 
 ## HC 1.6 Optimering och validering av HTML & CSS
 
-Att optimera HTML och CSS säkerställer att webbsidor är tillgängliga och effektiva. Detta för att behålla så många användare som möjligt när dem är på sidan. 
+Att optimera HTML och CSS säkerställer att webbsidor är tillgängliga och effektiva. 
+Detta för att behålla så många användare som möjligt när dem är på sidan. 
 
-Detta kan man göra i sin html-kod genom att ta bort onödiga kommentarer (även om det är viktigt att kommentera i sin kod) t.ex. om man kommenterat ut något för att felsöka. Den utkommenterade kommentaren har ingen anledning att ligga kvar i filen. 
-Att minska på radbrytningar, extra mellanslag etc är också ett sätt att minska filstorleken. Detta kan man göra genom att använda automatiserade verktyg och extensions, som t.ex. prettier. 
+Detta kan man göra i sin HTML-kod genom att ta bort onödiga kommentarer (även om det är viktigt att kommentera i sin kod) t.ex. om man kommenterat ut något för att felsöka. Den utkommenterade kommentaren har ingen anledning att ligga kvar i filen och att minska på radbrytningar, extra mellanslag etc är också ett sätt att minska filstorleken. 
+Detta kan man göra genom att använda automatiserade verktyg och extensions, som t.ex. prettier. 
 
 Att använda rätt storlekar på bilder är även en viktig del av att optimera sin sida, det finns ingen anledningen att bilden har högre upplösning än den storlek och upplösning den kommer ha i sitt största format. Om bilder tar för mycket plats och kraft så sjunker prestandan på sidan och laddar långsammare. Bara någon sekund gör stor skillnad.
 ![Attityd gentemot hemsidor pga loading time](Img/../Img-HTML-CSS/Skärmavbild%202023-11-19%20kl.%2023.04.56.png)
@@ -252,9 +265,11 @@ Asynkron inläsning av javascripten kan även hjälpa för att inte hindra/block
 
 Utöver detta är det viktigt att validera sin HTML och CSS i en validator, som W3C Validation Service.
  Detta för att kontrollera att alla element inte har stray tags eller saknar end tags. Detta gör annars HTML elementen ogiltiga och det kommer påverka strukturen på webbsidan.
- Här ser vi också om Html-dokumentet är semantiskt korrekt. en validator varnar bla om det finns fler än en h1 eller om det kommer en h1 och en h3 men utan h2 mellan.
+ Här ser vi också om HTML-dokumentet är semantiskt korrekt. 
+ En validator varnar bla om det finns fler än en h1 eller om det kommer en h1 och en h3 men utan h2 mellan.
 
 När man validerar sin CSS så kontrollerar validatorn att alla attribut stämmer enligt CSS-reglerna och ger varningar vid t.ex. "non-valid value"
+
 
 
 
