@@ -159,11 +159,38 @@ Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på av
 >-  Att det är intuitivt och lätt att navigera sig på webbsidan. Det kan vara att följa hierarkin i rubriker, att rubrikerna är tydliga, att menyer är placerade intuitivt och lätta att förstå i sitt innehåll. Att använda sig av t.ex. förändring på hover hjälper användaren att se att dem är på rätt ställe och att elementet dem hovrar över är något dem kan interagera med. Var fokuset ligger är också viktigt då användaren eventuellt inte använder mus alls och behöver kunna navigera sig genom endast tangentbordet eller med andra hjälpmedel.
 > - Att alla bilder har en alt-text för att användaren ska få en syntolkning om vad bilder inehåller för kontext.
 
+Att följa och få sin tillgänglighet att uppnå WCAG AA är avgörande inom utveckling då produktägare överallt vill ha en tillgänglig webbplats som gynnar alla, oavsett dess förutsättningar och nedsatta förmågor. 
 
 
 
 ## HC 1.4 Aktuella webbstandarder (gällande och kommande standarder)
-Beskriv rubriken nedan här
+
+En Webbstandard utgör riktlinjer och rekommendationer från bl.a W3C gällande hur webbinnehåll ska tolkas och utvecklas.
+
+Dem bidrar till att säkerställa att det som är publicerat på webben är långsiktigt hållbart. 
+
+#### Ett par exempel
+SGML *(Standard Generalized Markup Language)*
+utvecklades redan på 80-talet och används för att specificera reglerna för hur olika element kan användas för formatering, även om SGML inte används för formateringen i sig. 
+
+Till det använder vi HTML, som baseras på SGML och har den starkaste kopplingen till just Webbsidor. Html skapades i steg 1-4 mellan 1993 och 1998, och efter det lanserades HTML5s första utgåva 2008.
+HTML5 blev standard 28e oktober 2014 och den senaste versionen är HTML5.1 som lanserades 2016.
+
+Andra webbstandarer är XML och XHTML
+XML- *(extensible markup language)* är inget eget språk utan ett regelverk för hur andra språk kan utformas. Målet med detta är att i sinom tid kunna utföra alla uppgifter som HTML inta kan och då ersätta nuvarade html-standarder.
+Övergången från HTML till XML misslyckades dock då XML var mycket mer komplext. Då skapade man XHTML istället.
+
+XHTML-*(extensible hyper text markup language)* används i programvaror som både hanterar HTML och XML. XHTML ska göra dokument kompatibla både framåt och bakåt i versioner då det tog vid i sin första version där HTML4.1 slutar och var du XHTML 1.0, nu är den senaste versionen XHTML1.1
+
+ ![Html-Xhtml difference](Img/../Img-HTML-CSS/html-xhtml.png)
+
+
+Att använda aktuella webbstandarder effektiviserar webbplatsen i många aspekter. 
+att använda dem gör att sidorna laddar fortare, stöds av flera plattformar, är lättare för utomstående utvecklare att sätta sig in i, gör att webbsidan håller sig aktuell under längre tid då troligheten att den fungerar även under nästa standard är större än om du kör den tidigare versionen. 
+Det ökar även tillgängligheten för t.ex. skärmläsarprogram.
+
+##### Dagens standard
+
 
 ## HC 1.5 CSS Pre-processorer (ex SASS/LESS)
 Beskriv rubriken nedan här
@@ -177,3 +204,5 @@ Länkar:
  > [- Webbdesign ur ett tillgänglihetsperspektiv-examensarbete](https://www.diva-portal.org/smash/get/diva2:1028248/FULLTEXT01.pdf)
  > [- Statistik om funktionsnedsättning](https://www.funka.com/funka--tillg%C3%A4nglighet/statistik/)
  > [- WCAG overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
+ > [- Webbstandard](https://webperf.se/tag/webbstandard/)
+ > [- Webbstandard XHTML](https://www.bestonline.se/datakurser/webbutveckling1/teori/internet%20webbstandard.php)
