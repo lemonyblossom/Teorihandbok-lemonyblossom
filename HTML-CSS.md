@@ -139,12 +139,28 @@ p {
 
 ##### HUR? 
 
-För att skapa en responsiv design är det hjälpsamt att använda sig av relativa mätvärden för att skapa en flexibel design. Det kan vara att sätta containers bredd i procent(%) för att dem ska anpassa sig flexibelt. Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på avstånd eller sektioner så blir dessa värden fasta och reagerar därför inte när användaren zoomar in eller gör webbläsarfönstret mindre/större, vilket i sin tur kan skapa problem i relation till resten av webbsidan i andra enheter än den utvecklaren anpassat sina pixlar efter. Det kan bli problematiskt när målet är en dynamisk och flexibel design som ska vara tillgänglig och passa alla.
+För att skapa en responsiv design är det hjälpsamt att använda sig av relativa mätvärden för att skapa en flexibel design. Det kan vara att använda em eller rem för att skala upp eller ner textstorlekar eller sätta containers bredd i procent(%) för att dem ska anpassa sig flexibelt.
+  *Något jag själv upplever att jag gärna gör är att tillsätta max-width:100%; på element som absolut inte får sträcka sig utanför dess parent, och ge mig knasiga sidomarginaler på bodyn jag inte bett o, då oftast på bilder.*
 
-F
+Om utvecklaren istället använder t.ex. pixlar för att sätta storlekar på avstånd eller sektioner så blir dessa värden fasta och reagerar därför inte när användaren zoomar in eller gör webbläsarfönstret mindre/större, vilket i sin tur kan skapa problem i relation till resten av webbsidan i andra enheter än den utvecklaren anpassat sina pixlar efter. Det kan bli problematiskt när målet är en dynamisk och flexibel design som ska vara tillgänglig och passa alla.
 
 ## HC 1.3 Tillgänglighet inom webb
-Beskriv rubriken nedan här
+30% av världens befolkning har en funktionsnedsättning hemsidor och 11% har fler funktionsnedsättningar än en.
+ Detta utgör en otrolig mängd användare som får svårt att använda en hemsida som inte är tillgänglig för alla. 
+ Det i sin tur innebär både att företaget var hemsida inte är tillgänglig förlorar 30% av sina potentiella kunder (därmed pengar) och anses dessutom vara exkluderande genteom funktionsnedsatta, och som grundvärdering ska alla ha samma möjligheter i största möjliga mån. 
+
+ För att göra en webbsida tillgänglig använder sig utvecklare av de WCAG.
+
+ ##### WCAG *(Web Content Accessibility Guidelines)* 
+ WCAG 1.0 har funnits sedan maj 1999 och har tre nivåer av guidelines med olika krav för sin tillgänlighet. A, AA och AAA. Nivåerna innebär att hemsidan uppfyller olika många av kriterierna för tillgänglighet. Medan WCAG 1.0 fokuserade främst på HTML så fokuserar WCAG 2.0, som släpptes december 2008, på att alla delar av en hemsida ska vara tillgänglig. WCAG 2.0 blev standard 5e oktober 2012 och ISO-standarden för hemsidor ligger på AA.
+
+>  ###### Några kriterier som är viktiga för att nå WCAG 2.0 AA är:
+> - Textkonstrast för att det höjer läsbarheten för användaren.
+>-  Att det är intuitivt och lätt att navigera sig på webbsidan. Det kan vara att följa hierarkin i rubriker, att rubrikerna är tydliga, att menyer är placerade intuitivt och lätta att förstå i sitt innehåll. Att använda sig av t.ex. förändring på hover hjälper användaren att se att dem är på rätt ställe och att elementet dem hovrar över är något dem kan interagera med. Var fokuset ligger är också viktigt då användaren eventuellt inte använder mus alls och behöver kunna navigera sig genom endast tangentbordet eller med andra hjälpmedel.
+> - Att alla bilder har en alt-text för att användaren ska få en syntolkning om vad bilder inehåller för kontext.
+
+
+
 
 ## HC 1.4 Aktuella webbstandarder (gällande och kommande standarder)
 Beskriv rubriken nedan här
@@ -157,4 +173,7 @@ Beskriv rubriken nedan här
 
 
 Länkar:
- > [Internetkunskap](-https://internetkunskap.se/artiklar/ordlista/http/)
+>[- Best practise for Css Units](https://wpengine.com/resources/choose-css-unit-create-better-site-layouts-how-to/#Types_of_CSS_Units)
+ > [- Webbdesign ur ett tillgänglihetsperspektiv-examensarbete](https://www.diva-portal.org/smash/get/diva2:1028248/FULLTEXT01.pdf)
+ > [- Statistik om funktionsnedsättning](https://www.funka.com/funka--tillg%C3%A4nglighet/statistik/)
+ > [- WCAG overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
