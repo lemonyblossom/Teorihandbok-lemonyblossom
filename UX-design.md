@@ -17,20 +17,41 @@ för att göra en webbsida visuellt tilltalande.
 #### Verktyg och tekniker
 - vilka verktyg går att använda för att skapa grafik och design på webben
 
+---
+
 ## UD 1.2 UX och användbarhet
 Beskriv rubriken här
 
+---
+
 ## UD 1.3 Riktlinjer för användbarhet
-Beskriv rubriken här
+
+
+---
 
 ## UD 1.4 Prototyping
-Beskriv rubriken här
+
+#### Att skapa protptyper
+- Processen av att skapa olika prototyper (lofi vs hifi). 
+- Vad är viktigt i en highfi?
+  - för teamet
+  - för kund
+  - för issuehantering och development
+
+#### Prototypverktyg och teknik
+- Figma
+
+---
 
 ## UD 1.5 Personas och målgruppsanalys
 Beskriv rubriken här
 
+---
+
 ## UD 1.6 Empiriska metoder
 Beskriv rubriken här
+
+---
 
 ## UD 1.7 Grundläggande kognitionspsykologi
 Beskriv rubriken här
