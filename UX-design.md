@@ -20,18 +20,31 @@ för att göra en webbsida visuellt tilltalande.
 ---
 
 ## UD 1.2 UX och användbarhet
-Beskriv rubriken här
+##### Användarfokuserad design
+- 
+
+##### Navigation och user interface
+- att användarens ska kunna se precis vart den kan få den information hen söker.
+
 
 ---
 
 ## UD 1.3 Riktlinjer för användbarhet
+##### Normer och standarder
 
+##### Principer gällande användbarhet
 
+###### Användarfeedback i utvecklingsprocess
+- a/b testning
+  - färg på knapp
+  - font
+  - layout
 ---
 
 ## UD 1.4 Prototyping
 
 ##### Att skapa protptyper
+-
 - Processen av att skapa olika prototyper (lofi vs hifi). 
 - Vad är viktigt i en highfi?
   - för teamet
