@@ -2,7 +2,7 @@
 Studerande: Emma Jensen
 
 ## UD 1.1 Grafik och design för webbsidor
-#### Design för webben
+##### Design för webben
 - Viktiga deignelement och principer.
   - Färgval
   - font
@@ -10,11 +10,11 @@ Studerande: Emma Jensen
   - hur man använder bilder ( upplösning osv)
 för att göra en webbsida visuellt tilltalande.
 
-#### Respnsiv design och användarupplevelse(UX)
+##### Respnsiv design och användarupplevelse(UX)
 - HUr ska designgen anpassas efter olika skärmstorlekar för att säkerställa att hemsidorna är lätttillgängliga och användarvänliga?
 
 
-#### Verktyg och tekniker
+##### Verktyg och tekniker
 - vilka verktyg går att använda för att skapa grafik och design på webben
 
 ---
@@ -31,20 +31,36 @@ Beskriv rubriken här
 
 ## UD 1.4 Prototyping
 
-#### Att skapa protptyper
+##### Att skapa protptyper
 - Processen av att skapa olika prototyper (lofi vs hifi). 
 - Vad är viktigt i en highfi?
   - för teamet
   - för kund
   - för issuehantering och development
 
-#### Prototypverktyg och teknik
+##### Prototypverktyg och teknik
 - Figma
 
 ---
 
 ## UD 1.5 Personas och målgruppsanalys
-Beskriv rubriken här
+
+##### Vad är en persona?
+- vad är det och vad är dem till för?
+- Hur används dem i designprocessen?
+
+##### Hur skapar man en persona?
+- cards/ user stories
+- personamaking
+
+  
+##### Målgrupp och behov
+- Förstå sin målgrupps beteende online, vilka deras behov är, vilka preferenser dem har, vad som är aversivt för dem och vad som gör att tålamodet tryter?
+- Vad behövs för att tillgodose deras krav?
+  
+
+
+
 
 ---
 
