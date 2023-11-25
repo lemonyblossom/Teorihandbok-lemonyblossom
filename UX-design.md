@@ -65,9 +65,27 @@ Beskriv rubriken här
 ---
 
 ## UD 1.6 Empiriska metoder
-Beskriv rubriken här
+##### Vad skiljer en empirisk metod från andra metoder?
+
+##### Datainsamling & Analys
+- Olika metoder för att samla in data. 
+  - användartestning
+  - enkäter
+  - användningsstatistik (om deploy redan varit eller testgrupp)
+
+##### Tolkning av data och hur den bör tillämpas.
+- Varför är det viktigt att analysera och tolka insamlad data? (för att ta informerade beslut gällande design)
+
+- Hur gör vi det?
+  
+- Hur gör vi i iterativa designprocesser?
 
 ---
 
 ## UD 1.7 Grundläggande kognitionspsykologi
-Beskriv rubriken här
+
+##### Vad innebär kognitionspsykologi?
+- Kognitiva processer gällande uppmärksamhet, minne (arbetsminne vs korttidsminne) och inlärning. Hur påverkar detta användarens interaktion med webben?
+
+##### Varför är det viktigt inom design på webb?
+- Hur kan kunskap om kognitiva mentala modeller och användarinteraktion vägleda designbeslut för att skapa mer intuitiva och användarvänliga produkter och webbplatser?
