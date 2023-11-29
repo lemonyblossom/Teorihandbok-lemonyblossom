@@ -1,5 +1,5 @@
 # Teorihandboken - Backendutveckling (BE)
-Studerande: Förnamn Efternamn
+Studerande: Emma Jensen
 
 ## BE 1.1 PHP
 Beskriv rubriken här
@@ -38,4 +38,5 @@ Beskriv rubriken här
 Beskriv rubriken här
 
 ## BE 1.13 Webbservrar
-Beskriv rubriken här
+
+##### Serverside serndering vs  Clientside renderering 
