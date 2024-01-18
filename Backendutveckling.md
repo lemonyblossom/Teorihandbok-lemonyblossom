@@ -50,7 +50,12 @@ föreläsning 16e januari
 Beskriv rubriken här
 
 ## BE 1.5 Wordpress
-Beskriv rubriken här
+#### Vad är Wordpress?
+#### Varför Wordpress?
+#### Skapa ett tema:
+#### Skapa ett plugin:
+
+
 
 ## BE 1.6 Heirarkiska databaser
 Beskriv rubriken här
@@ -71,7 +76,37 @@ Beskriv rubriken här
 Beskriv rubriken här
 
 ## BE 1.12 XML och andra dataformat
-Beskriv rubriken här
+#### XML
+eXtensible Markup Language
+alike html but carry and store data, do not display it.
+self descriptive
+Gör ingenting
+sender, reciever, heading, message(in body)
+
+FÖRDELAR: Lättläst, främst för att det är beskrivande men även för att det är luftigt.
+#### CSV
+Comma(character/colon) separated Values
+Används ofta i filformat t.ex. Excel
+
+(visar exempel i adminer där man kan exportera i CSV-format istället för t.ex. SQL)
+
+FÖRDELAR MED CSV:
+Då får vi all data som kommaseparerade värden
+   - enkelt att läsa för t.ex ett excel som förstår att varje komma innebär att den kommer sätta ut varje value i en enskid cell i en collumn.
+
+NACKDELAR: sparar kompakt och det är svårt att läsa med alla kommatecken mellan
+#### JSON
+
+Används för att beskriva objekt
+
+> "Textsträng (måste omges av citattecken)
+Tal
+JSON-objekt (måste omges av klammerparenteser)
+Array (måste omges av hakparenteser)
+Boolean
+Null"
+
+JSON blir ofta nestlat, det kan bli väldigt djupt. t.ex. objekt i objekt i objekt.
 
 ## BE 1.13 Webbservrar
 
