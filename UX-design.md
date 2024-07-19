@@ -2,7 +2,7 @@
 Studerande: Emma Jensen
 
 ## UD 1.1 Grafik och design för webbsidor
-##### Design för webben
+### Design för webben
 <!-- - Viktiga deignelement och principer.
   - Färgval
   - font
@@ -29,41 +29,88 @@ För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet 
 Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
 
 
-Att använda sig av negativt utrymme (white space) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Negativt utrymme ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
+Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
 
 Att ge ett element utrymme gör även att användarens uppmärksamhet lättare dras till elementen när det inte är annat närliggande innehåll som stör. Detta används ofta för t.ex. knappar, rubriker eller fristående paragrafer.
 
 White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
 
-##### Respnsiv design och användarupplevelse(UX)
+### Responsiv design och användarupplevelse(UX)
 <!-- - HUr ska designgen anpassas efter olika skärmstorlekar för att säkerställa att hemsidorna är lätttillgängliga och användarvänliga? -->
 
 
 
-##### Verktyg och tekniker
+### Verktyg och tekniker
 <!-- - vilka verktyg går att använda för att skapa grafik och design på webben
- -->
+-->
 
- För att skapa grafik och design för webben finns det flera verktyg att tillgå. Adobe Photoshop, Illustrator, Sketch och Figma är några av de mest använda programmen. Dessa, och andra verktyg likt dem, gör det möjligt att skapa och redigera grafik och design för webben.
-
- ##### Figma
-  Figma är webbbaserat design-vertyg som kan köras på alla plattformar som har en webbläsare. Att skapa design i Figma är otroligt fördelaktigt där det finns behov av att flera i ett team arbetar ihop med samma design samtidigt, då alla ändringar sker i realtid och syns för de andra medlemmarna. Detta underlättar även snabb feedback.
-
- Själv har jag endast använt mig av figma när jag planerat och skapat design för webb. Jag uppskattar att behovet av att skicka filer och bilder fram och tillbaka (alt pusha upp dem till github för pull) försvann helt, men även att det aldrig är en fråga om versioner på arbetet då alla arbetar på seaste versionen som uppdateras i realtid.
+För att skapa grafik och design för webben finns det många verktyg att använda beroende på mål och behov. Sketch, Figma, Adobe XD, Adobe Photoshop och Axure RP är några av de mest använda programmen. Dessa, och andra verktyg likt dem, gör det möjligt att skapa och redigera grafik och design för webben.
  
- I figma kan man även skapa komponenter som då kan återanvändas genomgående i projektet, vilket jag upplever underlättar konsekvent design och mindre arbete för medlemmarna i teamet.
-Något annat som underlättar och effektiviserar arbetsflödet är figmas bibliotek med plugins som både kan tillföra estetik men även funktionalitet. Detta kan vara att t.ex. skapa tabeller med redan ifylld data. 
 
- En av de största funktionerna i figma är deras prototype-verktyg. Detta gör det möjligt att skapa interaktiva appar direkt i designstadiet för att testa utseende och hur användaren kan komma att interagera med webbsidan utan att behva utveckla dem i kod.
+#### Figma 
+<img src="/img/figma.svg" height="50">
 
+Figma är ett webbaserat designverktyg byggt för UI/UX-design och samarbete i realtid och kan köras på alla plattformar med en webbläsare. 
+ Det är speciellt utformat för att underlätta skapandet av interaktiva prototyper och användarflöden för webb- och mobilapplikationer. Med Figma kan flera teammedlemmar arbeta samtidigt på samma designprojekt, vilket möjliggör snabb feedback och effektiv iterativ process. 
+
+Själv har jag endast använt Figma när jag planerat och skapat design för webb. Jag uppskattar att behovet av att skicka filer och bilder fram och tillbaka försvann helt, samt att det aldrig är en fråga om versioner på arbetet eftersom alla arbetar på den senaste versionen som uppdateras i realtid.
  
+I Figma kan man även skapa komponenter som kan återanvändas genomgående i projektet, vilket underlättar konsekvent design och minskar arbetsbelastningen för teammedlemmarna. Figma erbjuder också ett bibliotek med plugins som kan tillföra både estetik och funktionalitet, exempelvis att skapa tabeller med redan ifylld data.
+
+En av de största funktionerna i Figma är prototypverktyget. Det gör det möjligt att skapa interaktiva appar direkt i designstadiet för att testa utseende och användarinteraktion utan att behöva utveckla dem i kod.
+
+#### Sketch
+<img src="/img/sketch.svg" height="50">
+
+Sketch är ett vektorbaserat[^1] UI/UX-designverktyg för macOS, känt för sin användarvänlighet och omfattande utbud av plugins. Det är idealiskt för att skapa skalbara och responsiva layouter, med återanvändbara symboler och komponenter.
+
+#### Axure RP
+
+<img src="/img/XAxure.svg" height="50">
+
+Axure RP är ett vektorbaserat verktyg för att skapa interaktiva prototyper och wireframes för webb- och mobilapplikationer. Det gör det möjligt att bygga detaljerade prototyper utan kod och simulera realistiska användarflöden. Axure RP erbjuder dokumentationsfunktioner, såsom automatisk generering av specifikationer och detaljerade designanvisningar
+
+#### Adobe XD
+<img src="/img/adobe-xd.svg" height="50">
+
+*Adobe XD* är ett UI/UX-designverktyg fokuserat på att skapa interaktiva prototyper och användarflöden för webb- och mobilapplikationer. Det stöder vektorgrafik och interaktiv design, vilket gör det idealiskt för skalbara och responsiva layouter. Adobe XD möjliggör också realtidssamarbete, vilket underlättar snabb feedback och iterativ design, perfekt för team som behöver göra snabba ändringar baserat på användartester.
+
+#### Adobe Photoshop
+<img src="/img/adobe-ps.svg" height="50">
+
+*Adobe Photoshop* är ett **rasterbaserat* designverktyg som är bäst för bildmanipulation och fotoredigering. Historiskt sett har det varit populärt för webbdesign tack vare möjligheten att optimera bilder och skapa detaljrika mockups.
+
+Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som interaktiva prototyper, vilket numera är standard för att visa användarflöden
+
+
+|                    | Rasterbaserade verktyg                                               | Vektorbaserade verktyg                                    |
+| ------------------ | -------------------------------------------------------------------- | --------------------------------------------------------- |
+| **Representation** | Uppbyggda av pixlar                                                  | Uppbyggda av matematiska formler                          |
+| **Exempel**        | Adobe Photoshop                                                      | Adobe Illustrator, Sketch                                 |
+| **Fördelar**       | - Bra för fotoredigering<br>- Hanterar komplexa bilder               | - Skalbarhet utan kvalitetsförlust<br>- Mindre filstorlek |
+| **Nackdelar**      | - Förlorar kvalitet vid skalning<br>- Stora filer vid hög upplösning | - Mindre bra för detaljerade foton                        |
+| **Användning**     | Fotoredigering, digitala målningar, bildmanipulation                 | Logotyper, ikoner, illustrationer                         |
+| **Sammanfattning** | Idealisk för pixelbaserade bilder men förlorar kvalitet vid skalning | Perfekt för skalbar grafik men inte för detaljerade foton |
+
+[^1]: Vektorbaserat verktyg: För skalbar grafik som logotyper och ikoner, baserat på matematiska formler.
+
+[^2]: Rasterbaserat verktyg: För detaljrik fotoredigering och bildmanipulation, baserat på pixelrutor
+
+Referenser:
+[WCAG 101](https://wcag.com/resource/what-is-wcag/)
+[WCAG 2.1 Contrast Minimum Understanding](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+[WCAG 2.1 Use of Color Understanding](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+[UX Design Tools - Guide](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
+
+[word][reference text]
+
 ---
 
 ## UD 1.2 UX och användbarhet
 ##### Användarfokuserad design
 - 
 
-##### Navigation och user interface
+### Navigation och user interface
 - att användarens ska kunna se precis vart den kan få den information hen söker.
 
 
