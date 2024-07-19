@@ -22,33 +22,18 @@ Därmed är även font/typsnitt en otroligt viktig komponent. Stil och storlek k
 Webbsidans layout är i mitt tycke a och o för att skapa lättnavigerade, intuitiva och tilltalande webbsidor. En tydlig och välorganiserad layout hjälper användaren att hitta information lättare. Layouten bör strukturera information på ett logiskt sätt och guida användaren genom webbplatsen med tydliga visuella ledtrådar. Genom att använda t.ex. grid-system och tydlig hierarki kan designern skapa en balanserad och lättnavigerad webbplats.
 
 
-Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort. Det är viktigt att förstå målgruppens specifika behov och beteenden för att kunna skapa en design som möter deras förväntningar.  
-
-För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet att se alla sina möjliga val direkt på home landing page är att föredra. Gömd information kan kännas svår och det kräver att användaren kommer ihåg vart de klickat sig vidare och vilken information som finns under vilken rubrik. Äldre användare kan ha svårare att komma ihåg komplexa navigationsstrukturer och föredrar ofta mer direkt och enkel åtkomst till information.
-
-Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
-
-
-Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
-
-Att ge ett element utrymme gör även att användarens uppmärksamhet lättare dras till elementen när det inte är annat närliggande innehåll som stör. Detta används ofta för t.ex. knappar, rubriker eller fristående paragrafer.
-
-White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
-
 ### Responsiv design och användarupplevelse(UX)
 <!-- - HUr ska designgen anpassas efter olika skärmstorlekar för att säkerställa att hemsidorna är lätttillgängliga och användarvänliga? -->
-
-
+För att se till att en webbsida är lättillgänglig och användarvänlig på olika enheter och skärmstorlekar, måste designen anpassas. Detta kan uppnås genom tekniker som flexbox, media queries och adaptiv layout, som alla hjälper till att skapa en responsiv design som fungerar på smartphones så väl som på stora datorskärmar och ger en optimal användarupplevelse oavsett vilken enhet användaren har. 
 
 ### Verktyg och tekniker
 <!-- - vilka verktyg går att använda för att skapa grafik och design på webben
 -->
-
 För att skapa grafik och design för webben finns det många verktyg att använda beroende på mål och behov. Sketch, Figma, Adobe XD, Adobe Photoshop och Axure RP är några av de mest använda programmen. Dessa, och andra verktyg likt dem, gör det möjligt att skapa och redigera grafik och design för webben.
  
 
 #### Figma 
-<img src="/img/figma.svg" height="50">
+<img src="/Img/figma.svg" height="50">
 
 Figma är ett webbaserat designverktyg byggt för UI/UX-design och samarbete i realtid och kan köras på alla plattformar med en webbläsare. 
  Det är speciellt utformat för att underlätta skapandet av interaktiva prototyper och användarflöden för webb- och mobilapplikationer. Med Figma kan flera teammedlemmar arbeta samtidigt på samma designprojekt, vilket möjliggör snabb feedback och effektiv iterativ process. 
@@ -102,30 +87,57 @@ Referenser:
 [WCAG 2.1 Use of Color Understanding](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 [UX Design Tools - Guide](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
 
-[word][reference text]
-
 ---
 
 ## UD 1.2 UX och användbarhet
-##### Användarfokuserad design
-- 
+### Användarfokuserad design
+Designprocessen bör alltid sätta användarens behov och beteenden i centrum. Detta innebär att använda principer och metoder som säkerställer att designen är användarcentrerad, vilket i sin tur leder till bättre upplevelse och högre tillfredsställelse, vilket i sin tur leder till att trafiken på webbsidan ökar.
+
+En användarfokuserad design innebär att noggrant undersöka och förstå användarens mål, motivationer och problem. Genom att involvera användare i designprocessen på olika sätt och kontinuerligt samla in feedback kan man skapa applikationer som verkligen uppfyller användarnas behov och förväntningar.
 
 ### Navigation och user interface
-- att användarens ska kunna se precis vart den kan få den information hen söker.
+Att ha en navbar med tydligt markerade sektioner som "Hem", "Om oss" och "Kontakt" gör det enkelt för användaren att förstå webbplatsens struktur. Brödsmulenavigering visar var användaren befinner sig och hur de kan navigera tillbaka, vilket är särskilt användbart på större webbplatser. Drop-down menyer organiserar relaterade länkar under en huvudkategori, medan ett sökfält gör det möjligt att snabbt hitta specifik information.
 
+Call to Action-knappar , så som "logga in" och "registrera", är viktiga för att guida användarna till att utföra specifika åtgärder. Responsiv design ser till att navigationen fungerar bra på olika enheter och skärmstorlekar. På mindre skärmar används i regel hamburgermeny istället för en öppen nav, även om det numer blir vanligare att använda detta även på större skärmar.
+
+Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort. Det är viktigt att förstå målgruppens specifika behov och beteenden för att kunna skapa en design som möter deras förväntningar.  
+
+För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet att se alla sina möjliga val direkt på home landing page är att föredra. Gömd information kan kännas svår och det kräver att användaren kommer ihåg vart de klickat sig vidare och vilken information som finns under vilken rubrik. Äldre användare kan ha svårare att komma ihåg komplexa navigationsstrukturer och föredrar ofta mer direkt och enkel åtkomst till information.
+
+Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
+
+Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
+
+White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
 
 ---
 
 ## UD 1.3 Riktlinjer för användbarhet
-##### Normer och standarder
+### Normer och standarder
+Det finns etablerade normer och standarder inom webbdesign för att skapa tillgänliga appar. Det är viktigt att följa dessa för att säkerställa att webbplatsen är tillgänglig och användbar för så många som möjligt.
+
+#### WCAG
+Web Content Accessibility Guidelines (WCAG) är en uppsättning riktlinjer utvecklade för att göra webbinnehåll mer tillgängligt för alla användare, inklusive personer med funktionsnedsättningar. Riktlinjerna har tagits fram av World Wide Web Consortium (W3C), som är en internationell gemenskap där medlemsorganisationer, en fulltidspersonal och allmänheten arbetar tillsammans för att utveckla webbstandarder.
 
 ##### Principer gällande användbarhet
+WCAG är organiserade kring fyra huvudprinciper, förkortning = POUR.
+
+- Perceptible: Information och komponenter måste presenteras på sätt som användarna kan uppfatta. Det betyder att innehåll måste uppfattas av antingen syn eller hörsel, samt gå att översätta från det ena till det andra.
+
+- Operable: Användarna måste kunna använda gränssnittet, oavsett deras fysiska förmågor.
+  
+- Understandable: Information och användargränssnitt måste vara förståeliga. Användarna måste kunna förstå informationen och hur man använder gränssnittet.
+  
+- Robust: Innehåll måste vara robust nog att kunna tolkas tillförlitligt av en mängd olika användaragenter, inklusive hjälpmedel. Detta innebär även att applikationen måste förbli tillgängligt och användbart i takt med att teknologierna utvecklas.
+
 
 ###### Användarfeedback i utvecklingsprocess
 - a/b testning
   - färg på knapp
   - font
   - layout
+
+[the generation](https://thegeneration.se/vad-ar-wcag/)
 ---
 
 ## UD 1.4 Prototyping
@@ -139,7 +151,6 @@ Referenser:
   - för issuehantering och development
 
 ##### Prototypverktyg och teknik
-- Figma
 
 ---
 
