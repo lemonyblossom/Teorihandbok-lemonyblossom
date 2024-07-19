@@ -61,6 +61,41 @@ Beskriv rubriken här
 Beskriv rubriken här
 
 ## BE 1.7 Relationsdatabaser, SQL och ER-modellering
+Mapping går att skriva om här 
+eloquent går också att skriva om under laravel och objectorienteradprogrammering
+ > ORM stands for Object-Relational Mapping. It is a programming technique used in software development to bridge the gap between the object-oriented paradigm used in programming languages and the relational paradigm used in relational databases. ORM frameworks provide a way to interact with databases using programming language objects, allowing developers to work with databases in a more natural and object-oriented manner.
+
+> Here are some key concepts related to ORM:
+
+> 1. **Objects as Entities:**
+  > - In an object-oriented programming language, you work with objects that represent entities in your application, such as users, products, or orders.
+   > - ORM allows you to map these objects directly to corresponding tables in a relational database.
+
+> 2. **Classes as Tables:**
+  >  - ORM frameworks often use classes to represent database tables.
+  >  - Class attributes typically correspond to table columns.
+
+> 3. **Relationships:**
+  > - ORM frameworks support defining relationships between objects/classes, such as one-to-one, one-to-many, and many-to-many relationships.
+  >  - These relationships are translated into corresponding relationships between database tables.
+
+> 4. **CRUD Operations:**
+   > - ORM provides an abstraction layer for performing CRUD (Create, Read, Update, Delete) operations on the database using object-oriented syntax.
+  >  - Instead of writing SQL queries, developers can use methods provided by the ORM framework to interact with the database.
+
+> 5. **Data Integrity:**
+  >  - ORM frameworks often include features to ensure data integrity, such as validation and automatic generation of appropriate database constraints.
+
+> 6. **Portability:**
+  >  - ORM helps in making the code more portable across different database systems. Developers can often switch between databases with minimal code changes because the ORM framework abstracts the database-specific details.
+
+> Popular ORM frameworks in different programming languages include:
+> - **Java:** Hibernate, EclipseLink
+> - **Python:** SQLAlchemy, Django ORM
+> - **.NET:** Entity Framework (EF)
+> - **PHP:** Doctrine, Eloquent (Laravel)
+
+> Using ORM can lead to more maintainable and readable code, as developers can focus on the application's logic without having to write complex SQL queries. However, it's essential to understand the underlying database structure and how the ORM framework translates between objects and the database to optimize performance and avoid potential pitfalls.
 Beskriv rubriken här
 
 ## BE 1.8 OAuth i backend
