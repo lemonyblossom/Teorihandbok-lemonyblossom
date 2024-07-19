@@ -26,6 +26,110 @@ Webbsidans layout är i mitt tycke a och o för att skapa lättnavigerade, intui
 <!-- - HUr ska designgen anpassas efter olika skärmstorlekar för att säkerställa att hemsidorna är lätttillgängliga och användarvänliga? -->
 För att se till att en webbsida är lättillgänglig och användarvänlig på olika enheter och skärmstorlekar, måste designen anpassas. Detta kan uppnås genom tekniker som flexbox, media queries och adaptiv layout, som alla hjälper till att skapa en responsiv design som fungerar på smartphones så väl som på stora datorskärmar och ger en optimal användarupplevelse oavsett vilken enhet användaren har. 
 
+
+Referenser:
+[WCAG 101](https://wcag.com/resource/what-is-wcag/)
+[WCAG 2.1 Contrast Minimum Understanding](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+[WCAG 2.1 Use of Color Understanding](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+[UX Design Tools - Guide](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
+
+---
+
+## UD 1.2 UX och användbarhet
+### Användarfokuserad design
+Det är viktigt att förstå målgruppens specifika behov och beteenden för att kunna skapa en design som möter deras förväntningar.
+Designprocessen bör alltid sätta användarens behov och beteenden i centrum. Detta innebär att använda principer och metoder som säkerställer att designen är användarcentrerad, vilket i sin tur leder till bättre upplevelse och högre tillfredsställelse, vilket i sin tur leder till att trafiken på webbsidan ökar.
+
+En användarfokuserad design innebär att noggrant undersöka och förstå användarens mål, motivationer och problem. Genom att involvera användare i designprocessen på olika sätt och kontinuerligt samla in feedback kan man skapa applikationer som verkligen uppfyller användarnas behov och förväntningar.
+
+### Navigation och user interface
+Att ha en navbar med tydligt markerade sektioner som "Hem", "Om oss" och "Kontakt" gör det enkelt för användaren att förstå webbplatsens struktur. Brödsmulenavigering visar var användaren befinner sig och hur de kan navigera tillbaka, vilket är särskilt användbart på större webbplatser. Drop-down menyer organiserar relaterade länkar under en huvudkategori, medan ett sökfält gör det möjligt att snabbt hitta specifik information.
+
+Call to Action-knappar , så som "logga in" och "registrera", är viktiga för att guida användarna till att utföra specifika åtgärder. Responsiv design ser till att navigationen fungerar bra på olika enheter och skärmstorlekar. På mindre skärmar används i regel hamburgermeny istället för en öppen nav, även om det numer blir vanligare att använda detta även på större skärmar.
+
+##### Luftig design
+Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
+
+White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
+
+##### Kommunicerade behov
+Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort.   
+
+För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet att se alla sina möjliga val direkt på home landing page är att föredra. Gömd information kan kännas svår och det kräver att användaren kommer ihåg vart de klickat sig vidare och vilken information som finns under vilken rubrik. Äldre användare kan ha svårare att komma ihåg komplexa navigationsstrukturer och föredrar ofta mer direkt och enkel åtkomst till information.
+
+Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
+
+---
+
+## UD 1.3 Riktlinjer för användbarhet
+### Normer och standarder
+Det finns etablerade normer och standarder inom webbdesign för att skapa tillgänliga appar. Det är viktigt att följa dessa för att säkerställa att webbplatsen är tillgänglig och användbar för så många som möjligt.
+
+#### WCAG
+Web Content Accessibility Guidelines (WCAG) är en uppsättning riktlinjer utvecklade för att göra webbinnehåll mer tillgängligt för alla användare, inklusive personer med funktionsnedsättningar. Riktlinjerna har tagits fram av World Wide Web Consortium (W3C), som är en internationell gemenskap där medlemsorganisationer, en fulltidspersonal och allmänheten arbetar tillsammans för att utveckla webbstandarder.
+
+#### Principer gällande användbarhet
+WCAG är organiserade kring fyra huvudprinciper, förkortning = **POUR**
+
+> **Perceptible:** Information och komponenter måste presenteras på sätt som användarna kan uppfatta. Det betyder att innehåll måste uppfattas av antingen syn eller hörsel, samt gå att översätta från det ena till det andra.
+
+> **Operable:** Användarna måste kunna använda gränssnittet, oavsett deras fysiska förmågor.
+  
+> **Understandable:** Information och användargränssnitt måste vara förståeliga. Användarna måste kunna förstå informationen och hur man använder gränssnittet.
+  
+> **Robust:**  Innehåll måste vara robust nog att kunna tolkas tillförlitligt av en mängd olika användaragenter, inklusive hjälpmedel. Detta innebär även att applikationen måste förbli tillgängligt och användbart i takt med att teknologierna utvecklas.
+
+
+#### WCAG-nivåer
+Riktlinjerna är också indelade i tre nivåer av överensstämmelse: A, AA och AAA.
+
+**Nivå A:** Grundläggande tillgänglighetsfunktioner som alla webbplatser måste ha för att vara tillgängliga.
+**Nivå AA:**  Ytterligare funktioner som förbättrar tillgängligheten och som de flesta webbplatser bör ha som standard.
+**Nivå AAA:** De högsta och mest omfattande kraven som vissa webbplatser kan implementera för att uppnå maximal tillgänglighet.
+
+#### Viktiga Riktlinjer
+Några av de centrala riktlinjerna inom WCAG inkluderar:
+
+**Textalternativ för Icke-text Innehåll:** Till exempel, ge textbeskrivningar för bilder så att de kan förstås av skärmläsare.
+**Tidsbaserade Medier:** Erbjuda alternativ för tidsbaserade medier som ljud och video, såsom undertexter eller transkript.
+**Användarstyrd Timing:** Se till att användare kan förlänga, stoppa eller justera tidsgränser när det behövs.
+**Läsbarhet och Förutsägbarhet:** Innehåll ska vara läsbart och förutsägbart. Användare ska kunna förutse vad som händer när de utför en viss åtgärd.
+
+Att följa WCAGs riktlinjer innebär inte bara att webbplatsen blir mer tillgänglig för personer med funktionsnedsättningar, utan det förbättrar också den övergripande användarupplevelsen och kan bidra till bättre SEO-resultat
+
+###### Användarfeedback i utvecklingsprocess
+- a/b testning
+  - färg på knapp
+  - font
+  - layout
+
+[the generation](https://thegeneration.se/vad-ar-wcag/)
+---
+
+## UD 1.4 Prototyping
+
+##### Att skapa prototyper
+<!-- -
+- Processen av att skapa olika prototyper (lofi vs hifi). 
+- Vad är viktigt i en highfi?
+  - för teamet
+  - för kund
+  - för issuehantering och development -->
+  
+  Prototyping är en viktig del av designprocessen som låter oss visualisera och testa våra idéer innan vi går vidare till fullskalig utveckling. Genom att skapa prototyper kan vi identifiera och åtgärda problem tidigt, vilket sparar tid och resurser i längden
+
+##### Lofi
+LoFi (lofi fidelity) prototyper är enkla och snabba att skapa. De består ofta av skisser på papper eller enklare digitala frames. Huvudsyftet med en lofi-prototyp är att snabbt visualisera grundläggande idéer och funktioner utan att fastna i detaljer och vill utforska olika koncept och samla initial feedback från användare och/eller teamet.
+Eftersom de är så grundläggande, kan fokus läggas på funktionalitet och layout snarare än visuella detaljer, vilket hjälper teamet att snabbt komma överens om de stora dragen i projektet.
+
+##### HiFi
+Hifi (High fidelity) protptyper är långt mer detaljerade än Lofi och bör vara mycket lik slutprodukten. Den bör därför inkludera grafiska element, satt färgschema, fonts och interaktiva funktioner. Dem kan ofta simulera en realistisk användarupplevelse.
+
+Detta hjälper teamet att visualisera den slutgiltiga produkten och säkerställa att alla är med på de beslut som tagits kring designen. En välgjord Hifi effektiviserar även utvecklingsprocessen då den kan användas som referens för utvecklingsteamet. Det minskar därför antal tillfällen där medlemmarna behöver kommunicera kring missöfrstånd eller förtydligande gällande design och funktion.
+
+En Hifi möjligör även användartester och att få feedback gällande visuella detaljer eller interaktiva element, vilket ger ytterligare möjlighet att hitta problem i ett tidigare skede i processen, innan utvecklingen börjat.
+
+##### Prototypverktyg och teknik
 ### Verktyg och tekniker
 <!-- - vilka verktyg går att använda för att skapa grafik och design på webben
 -->
@@ -80,77 +184,6 @@ Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som i
 [^1]: Vektorbaserat verktyg: För skalbar grafik som logotyper och ikoner, baserat på matematiska formler.
 
 [^2]: Rasterbaserat verktyg: För detaljrik fotoredigering och bildmanipulation, baserat på pixelrutor
-
-Referenser:
-[WCAG 101](https://wcag.com/resource/what-is-wcag/)
-[WCAG 2.1 Contrast Minimum Understanding](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-[WCAG 2.1 Use of Color Understanding](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
-[UX Design Tools - Guide](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
-
----
-
-## UD 1.2 UX och användbarhet
-### Användarfokuserad design
-Designprocessen bör alltid sätta användarens behov och beteenden i centrum. Detta innebär att använda principer och metoder som säkerställer att designen är användarcentrerad, vilket i sin tur leder till bättre upplevelse och högre tillfredsställelse, vilket i sin tur leder till att trafiken på webbsidan ökar.
-
-En användarfokuserad design innebär att noggrant undersöka och förstå användarens mål, motivationer och problem. Genom att involvera användare i designprocessen på olika sätt och kontinuerligt samla in feedback kan man skapa applikationer som verkligen uppfyller användarnas behov och förväntningar.
-
-### Navigation och user interface
-Att ha en navbar med tydligt markerade sektioner som "Hem", "Om oss" och "Kontakt" gör det enkelt för användaren att förstå webbplatsens struktur. Brödsmulenavigering visar var användaren befinner sig och hur de kan navigera tillbaka, vilket är särskilt användbart på större webbplatser. Drop-down menyer organiserar relaterade länkar under en huvudkategori, medan ett sökfält gör det möjligt att snabbt hitta specifik information.
-
-Call to Action-knappar , så som "logga in" och "registrera", är viktiga för att guida användarna till att utföra specifika åtgärder. Responsiv design ser till att navigationen fungerar bra på olika enheter och skärmstorlekar. På mindre skärmar används i regel hamburgermeny istället för en öppen nav, även om det numer blir vanligare att använda detta även på större skärmar.
-
-Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort. Det är viktigt att förstå målgruppens specifika behov och beteenden för att kunna skapa en design som möter deras förväntningar.  
-
-För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet att se alla sina möjliga val direkt på home landing page är att föredra. Gömd information kan kännas svår och det kräver att användaren kommer ihåg vart de klickat sig vidare och vilken information som finns under vilken rubrik. Äldre användare kan ha svårare att komma ihåg komplexa navigationsstrukturer och föredrar ofta mer direkt och enkel åtkomst till information.
-
-Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
-
-Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
-
-White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
-
----
-
-## UD 1.3 Riktlinjer för användbarhet
-### Normer och standarder
-Det finns etablerade normer och standarder inom webbdesign för att skapa tillgänliga appar. Det är viktigt att följa dessa för att säkerställa att webbplatsen är tillgänglig och användbar för så många som möjligt.
-
-#### WCAG
-Web Content Accessibility Guidelines (WCAG) är en uppsättning riktlinjer utvecklade för att göra webbinnehåll mer tillgängligt för alla användare, inklusive personer med funktionsnedsättningar. Riktlinjerna har tagits fram av World Wide Web Consortium (W3C), som är en internationell gemenskap där medlemsorganisationer, en fulltidspersonal och allmänheten arbetar tillsammans för att utveckla webbstandarder.
-
-##### Principer gällande användbarhet
-WCAG är organiserade kring fyra huvudprinciper, förkortning = POUR.
-
-- Perceptible: Information och komponenter måste presenteras på sätt som användarna kan uppfatta. Det betyder att innehåll måste uppfattas av antingen syn eller hörsel, samt gå att översätta från det ena till det andra.
-
-- Operable: Användarna måste kunna använda gränssnittet, oavsett deras fysiska förmågor.
-  
-- Understandable: Information och användargränssnitt måste vara förståeliga. Användarna måste kunna förstå informationen och hur man använder gränssnittet.
-  
-- Robust: Innehåll måste vara robust nog att kunna tolkas tillförlitligt av en mängd olika användaragenter, inklusive hjälpmedel. Detta innebär även att applikationen måste förbli tillgängligt och användbart i takt med att teknologierna utvecklas.
-
-
-###### Användarfeedback i utvecklingsprocess
-- a/b testning
-  - färg på knapp
-  - font
-  - layout
-
-[the generation](https://thegeneration.se/vad-ar-wcag/)
----
-
-## UD 1.4 Prototyping
-
-##### Att skapa protptyper
--
-- Processen av att skapa olika prototyper (lofi vs hifi). 
-- Vad är viktigt i en highfi?
-  - för teamet
-  - för kund
-  - för issuehantering och development
-
-##### Prototypverktyg och teknik
 
 ---
 
