@@ -215,21 +215,44 @@ Denna ständiga process av förbättring och anpassning säkerställer att produ
 ---
 
 ## UD 1.6 Empiriska metoder
-##### Vad skiljer en empirisk metod från andra metoder?
+#### Vad skiljer en empirisk metod från andra metoder?
 
-##### Datainsamling & Analys
-- Olika metoder för att samla in data. 
+Empiriska metoder bygger på observation och erfarenhet, och de är utformade för att samla in och analysera data på ett systematiskt sätt. Detta skiljer dem från teoretiska metoder, som i högre grad förlitar sig på logik och antaganden, och intuitiva metoder, som baseras på känsla eller subjektiva uppfattningar. Empiriska metoder ger objektiva och verifierbara resultat, vilket gör dem särskilt värdefulla inom design och användbarhet, där förståelse för verkliga användares beteenden och behov är avgörande.
+
+| Metod                | Beskrivning                                                                                         | Användning                                                      |
+| -------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Empiriska metoder    | Bygger på observation och erfarenhet; samlar in och analyserar data systematiskt.                   | Används för att förstå verkliga användares beteenden och behov. |
+| Teoretiska metoder   | Bygger på abstrakta principer och modeller; utvecklar och testar hypoteser utan direkt observation. | Används för att skapa ramverk och teorier för vidare forskning. |
+| Intuitiva metoder    | Baserar sig på subjektiva uppfattningar, erfarenheter och magkänsla.                                | Används i kreativa och konstnärliga processer.                  |
+| Kvalitativa metoder  | Fokuserar på att förstå fenomen genom att samla in djupgående, icke-numerisk data.                  | Används för att få djupare insikt i användarnas upplevelser.    |
+| Kvantitativa metoder | Använder numerisk data och statistisk analys för att identifiera mönster och samband.               | Används för att generalisera resultat och testa hypoteser.      |
+
+
+#### Datainsamling & Analys
+<!-- - Olika metoder för att samla in data. 
   - användartestning
   - enkäter
-  - användningsstatistik (om deploy redan varit eller testgrupp)
+  - användningsstatistik (om deploy redan varit eller testgrupp) -->
+  
+  Att samla in data är en central del av den empiriska metoden, och det finns flera olika tekniker för att göra detta:
+
+  **Användartestning:** Här handlar det om att titta på hur riktiga användare interagerar med en produkt eller tjänst. Det kan ge oss insikter och avslöja problem som vi kanske inte upptäcker på andra sätt. Testerna kan vara väldigt enkla, som att använda pappersprototyper, eller mer avancerade med högfidelityprototyper och specialiserade verktyg.
+
+**Enkäter:** Enkäter är ett smidigt sätt att få feedback från många användare samtidigt. Genom att ställa rätt frågor kan vi få en bra bild av användarnas attityder, preferenser och erfarenheter. Eftersom enkäter kan skickas ut online, når vi enkelt en bred publik.
+
+**Användningsstatistik:** Om produkten redan finns ute på marknaden kan vi använda data om hur folk faktiskt använder den. Vi kan se hur ofta olika funktioner används, var folk brukar avbryta sina sessioner och mycket annat. Den här statistiken är guld värd för att hitta mönster och trender som kan hjälpa oss att förbättra produkten framöver.
 
 ##### Tolkning av data och hur den bör tillämpas.
-- Varför är det viktigt att analysera och tolka insamlad data? (för att ta informerade beslut gällande design)
+<!-- - Varför är det viktigt att analysera och tolka insamlad data? (för att ta informerade beslut gällande design)
 
 - Hur gör vi det?
   
-- Hur gör vi i iterativa designprocesser?
+- Hur gör vi i iterativa designprocesser? -->
+Analysering och tolkning av insamlad data är avgörande för att förstå användarnas behov och beteenden. Utan detta kan designbeslut baseras på gissningar, vilket kan leda till att produkten inte uppfyller användarnas förväntningar. Genom att använda empirisk data säkerställer vi att designen är användarcentrerad och effektiv.
 
+Dataanalys kan ske med olika verktyg och metoder. Kvalitativ data analyseras genom att identifiera mönster och teman, medan kvantitativ data analyseras med statistiska metoder för att hitta trender. Visuella verktyg som grafer underlättar förståelsen.
+
+Efter att ha samlat in och analyserat data från en iteration, används insikterna för att göra justeringar och förbättringar i designen. Detta innebär att varje iteration bygger på den föregående, vilket gradvis förbättrar användarupplevelsen och funktionaliteten.
 ---
 
 ## UD 1.7 Grundläggande kognitionspsykologi
