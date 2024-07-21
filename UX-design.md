@@ -190,20 +190,26 @@ Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som i
 ## UD 1.5 Personas och målgruppsanalys
 
 ##### Vad är en persona?
-- vad är det och vad är dem till för?
-- Hur används dem i designprocessen?
+<!-- - vad är det och vad är dem till för?
+- Hur används dem i designprocessen? -->
+Personas är databaserade fiktiva karaktärer som representerar olika användargrupper för en produkt. De skapas i ett tidigt skede av produktionen och används som underlag för att kartlägga målgruppens behov.
+Genom att skapa detaljerade, träffsäkra och realistiska personas kan teamet lättare identifiera och förstå sin målgrupp och dess behov. 
 
 ##### Hur skapar man en persona?
-- cards/ user stories
-- personamaking
+Att skapa en persona innebär att samla in och analysera data om verkliga användare genom metoder som intervjuer, enkäter och användartester och sedan sammanställer datan som karaktäristika och data för personas, vilket ofta innefattar användarmål, behov, beteenden, tekniska kunskaper och eventuella utmananingar samt funktionsnedsättningar.
 
-  
+Dessa används sedan som grund för beslut kring vilka funktioner som bör prioriteras samt hålla fokus på produktens verkliga målgrupp och dess behov för att undkomma situationer där teamet behöver ta beslut utifrån egna perferenser och antaganden.
+
+###### User Stories
+User stories är en viktig del av UX/UI-design och agila metoder. De är korta och enkla beskrivningar av vad en användare vill göra och varför. 
+En typisk user story ser ut så här: "Som en [typ av användare] vill jag (vad användaren vill göra) så att (anledning/mål)." 
+
+Dessa används för att kartlägga krav och förstå vad användarna vill ha, varför och vad det innebär. Dem gör det även lättare att dela upp projektet i mindre delar som sedan kan prioriteras för att säkerställa att de viktigaste key funktionerna utvecklas först. Det hjälper även alla partner inom produktionen att förstå vad och varför som ska byggas. 
+
 ##### Målgrupp och behov
-- Förstå sin målgrupps beteende online, vilka deras behov är, vilka preferenser dem har, vad som är aversivt för dem och vad som gör att tålamodet tryter?
-- Vad behövs för att tillgodose deras krav?
-  
+Att noggrant analysera målgruppens beteende online är avgörande för att skapa en användarcentrerad design. Detta inkluderar att identifiera deras behov, preferenser och vad som kan vara aversivt för dem.  För att uppnå detta är det viktigt att kontinuerligt samla in feedback och justera designen baserat på användarnas reaktioner och upplevelser.
 
-
+Denna ständiga process av förbättring och anpassning säkerställer att produkten förblir relevant och användarvänlig, vilket leder till högre användartillfredsställelse och engagemang.
 
 
 ---
