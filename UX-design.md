@@ -244,21 +244,42 @@ Empiriska metoder bygger på observation och erfarenhet, och de är utformade f�
 
 ##### Tolkning av data och hur den bör tillämpas.
 <!-- - Varför är det viktigt att analysera och tolka insamlad data? (för att ta informerade beslut gällande design)
-
 - Hur gör vi det?
-  
 - Hur gör vi i iterativa designprocesser? -->
 Analysering och tolkning av insamlad data är avgörande för att förstå användarnas behov och beteenden. Utan detta kan designbeslut baseras på gissningar, vilket kan leda till att produkten inte uppfyller användarnas förväntningar. Genom att använda empirisk data säkerställer vi att designen är användarcentrerad och effektiv.
 
-Dataanalys kan ske med olika verktyg och metoder. Kvalitativ data analyseras genom att identifiera mönster och teman, medan kvantitativ data analyseras med statistiska metoder för att hitta trender. Visuella verktyg som grafer underlättar förståelsen.
+Dataanalys kan ske med olika verktyg och metoder. Kvalitativ data analyseras genom att identifiera mönster och teman, medan kvantitativ data analyseras med statistiska metoder för att hitta trender. Visuella verktyg som grafer underlättar förståelsen
 
 Efter att ha samlat in och analyserat data från en iteration, används insikterna för att göra justeringar och förbättringar i designen. Detta innebär att varje iteration bygger på den föregående, vilket gradvis förbättrar användarupplevelsen och funktionaliteten.
+
 ---
 
 ## UD 1.7 Grundläggande kognitionspsykologi
 
 ##### Vad innebär kognitionspsykologi?
-- Kognitiva processer gällande uppmärksamhet, minne (arbetsminne vs korttidsminne) och inlärning. Hur påverkar detta användarens interaktion med webben?
+<!-- - Kognitiva processer gällande uppmärksamhet, minne (arbetsminne vs korttidsminne) och inlärning. Hur påverkar detta användarens interaktion med webben? -->
+
+Kognitionspsykologi är en gren av psykologin som fokuserar på hur människor uppfattar, tänker, lär och minns. Den studerar de mentala processer som ligger bakom uppfattning, uppmärksamhet, språk, problemlösning, beslutsfattande och minne.
+Ett centralt koncept inom kognitionspsykologin är informationsbearbetning. Människor ses som informationsprocessorer, där hjärnan fungerar som en dator som tar emot, lagrar och bearbetar information. Denna analogi har lett till utvecklingen av olika modeller som beskriver hur information flödar genom kognitiva system.
+
+Tillämpningar av kognitionspsykologi är många och omfattar områden som utbildning, där förståelse för kognitiva processer kan förbättra inlärningsmetoder, samt inom artificiell intelligens, där kognitiva modeller inspirerar utvecklingen av intelligenta system. Sammanfattningsvis är kognitionspsykologi en vital del av psykologin som ger insikt i de komplexa mentala processer som formar vårt beteende och våra upplevelser.
+
+Inom kognitionspsykologi är uppmärksamhet, minne och inlärning centrala begrepp. Dessa processer samverkar och är grundläggande för vårt tänkande och vår förmåga att navigera i vardagen.
+
+#### Uppmärksamhet
+Uppmärksamhet är förmågan att fokusera på specifik information medan annan ignoreras. Den delas upp i selektiv uppmärksamhet, som fokuserar på en uppgift, och delad uppmärksamhet, som hanterar flera uppgifter samtidigt. Uppmärksamhet avgör vilka stimuli som behandlas vidare.
+
+#### Minne
+Minne innebär lagring och återkallande av information. Här fokuserar vi på arbetsminne och korttidsminne.
+
+##### Arbetsminne
+Arbetsminne lagrar och bearbetar information temporärt för kognitiva uppgifter. Det är dynamiskt och har en begränsad kapacitet på cirka 7 ± 2 enheter. Det är viktigt för problemlösning, beslutsfattande och språk.
+
+##### Korttidsminne
+Korttidsminne håller en liten mängd information under kort tid, från sekunder till minuter. Det är en del av arbetsminnet men utan aktiv bearbetning. Information kan överföras till långtidsminnet genom repetition.
+
+
+<img src="/Img/memory-tree.jpg" width=200>
 
 ##### Varför är det viktigt inom design på webb?
 - Hur kan kunskap om kognitiva mentala modeller och användarinteraktion vägleda designbeslut för att skapa mer intuitiva och användarvänliga produkter och webbplatser?
