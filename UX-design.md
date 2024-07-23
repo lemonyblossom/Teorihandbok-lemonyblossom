@@ -28,10 +28,10 @@ För att se till att en webbsida är lättillgänglig och användarvänlig på o
 
 
 Referenser:
-[WCAG 101](https://wcag.com/resource/what-is-wcag/)
-[WCAG 2.1 Contrast Minimum Understanding](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-[WCAG 2.1 Use of Color Understanding](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
-[UX Design Tools - Guide](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
+[- WCAG 101 | wcag](https://wcag.com/resource/what-is-wcag/)
+[- WCAG 2.1 Contrast Minimum Understanding | w3schools](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+[- WCAG 2.1 Use of Color Understanding | w3schools](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+
 
 ---
 
@@ -47,10 +47,16 @@ Att ha en navbar med tydligt markerade sektioner som "Hem", "Om oss" och "Kontak
 
 Call to Action-knappar , så som "logga in" och "registrera", är viktiga för att guida användarna till att utföra specifika åtgärder. Responsiv design ser till att navigationen fungerar bra på olika enheter och skärmstorlekar. På mindre skärmar används i regel hamburgermeny istället för en öppen nav, även om det numer blir vanligare att använda detta även på större skärmar.
 
-##### Luftig design
-Att använda sig av vita ytor/ tomma ytor (*white space*, ej att förväxla med *negative space*) hjälper användaren att visuellt separera olika sektioner och innehåll och kan därmed fokusera lättare på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
 
-White space tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det gör det även lättare att implementera responsiv design då vi kan manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis manipulera innehållet mer än nödvändigt för läsbarheten. Användning av white space bidrar däför till en renare och mer användarvänlig design och underlättar anpassning för olika enheter och skärmstorlekar.
+##### Luftig design
+Att använda sig av vita ytor/ tomma ytor (white space, ej att förväxla med negative space) hjälper användaren att visuellt separera olika sektioner och innehåll, vilket gör det lättare att fokusera på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
+
+**White space** tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det underlättar dessutom implementeringen av responsiv design genom att göra det möjligt att manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis justera innehållet. Detta bidrar till en renare och mer användarvänlig design som fungerar bra på olika enheter och skärmstorlekar.
+
+**Microspace och Macrospace:** Inom webbdesign refererar microspace till de små mellanrummen mellan individuella element som text, bilder och knappar, vilket förbättrar läsbarheten och tydligheten. Macrospace, å andra sidan, syftar på de större mellanrummen som separerar huvudsektionerna av en sida, såsom rubriker, stycken och bildsektioner. Båda typerna av utrymme är viktiga för att skapa en balanserad, estetiskt tilltalande och funktionell design som leder användarens öga genom innehållet på ett naturligt och logiskt sätt.
+
+<img src="/Img/microspace-vs-macrospace.png" height="200">
+
 
 ##### Kommunicerade behov
 Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort.   
@@ -59,6 +65,11 @@ För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet 
 
 Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snitt och kreativ UI har premierats för att webbsidan ska kännas mer tilltalande och väljer därför ofta gömd navigation, drop downs, sliders och annat för att se sin information. Yngre användare är ofta mer tekniskt kunniga och uppskattar modern och innovativ design som erbjuder en mer interaktiv och engagerande upplevelse.
 
+[- White space in design | north47](https://www.north-47.com/white-space-in-design/)
+[- Smooth navigation | bootcamp/uxdesign](https://bootcamp.uxdesign.cc/smooth-navigation-captivating-experience-a-ui-ux-design-guide-for-effective-layout-and-navigation-d7e20386f73a)
+
+
+
 ---
 
 ## UD 1.3 Riktlinjer för användbarhet
@@ -66,7 +77,7 @@ Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snit
 Det finns etablerade normer och standarder inom webbdesign för att skapa tillgänliga appar. Det är viktigt att följa dessa för att säkerställa att webbplatsen är tillgänglig och användbar för så många som möjligt.
 
 #### WCAG
-Web Content Accessibility Guidelines (WCAG) är en uppsättning riktlinjer utvecklade för att göra webbinnehåll mer tillgängligt för alla användare, inklusive personer med funktionsnedsättningar. Riktlinjerna har tagits fram av World Wide Web Consortium (W3C), som är en internationell gemenskap där medlemsorganisationer, en fulltidspersonal och allmänheten arbetar tillsammans för att utveckla webbstandarder.
+Web Content Accessibility Guidelines (*WCAG*) är en uppsättning riktlinjer utvecklade för att göra webbinnehåll mer tillgängligt för alla användare, inklusive personer med funktionsnedsättningar. Riktlinjerna har tagits fram av World Wide Web Consortium (*W3C*), som är en internationell gemenskap där medlemsorganisationer, en fulltidspersonal och allmänheten arbetar tillsammans för att utveckla webbstandarder.
 
 #### Principer gällande användbarhet
 WCAG är organiserade kring fyra huvudprinciper, förkortning = **POUR**
@@ -97,13 +108,16 @@ Några av de centrala riktlinjerna inom WCAG inkluderar:
 
 Att följa WCAGs riktlinjer innebär inte bara att webbplatsen blir mer tillgänglig för personer med funktionsnedsättningar, utan det förbättrar också den övergripande användarupplevelsen och kan bidra till bättre SEO-resultat
 
-###### Användarfeedback i utvecklingsprocess
-- a/b testning
-  - färg på knapp
-  - font
-  - layout
+#### Användarfeedback i utvecklingsprocess
+Användarfeedback är avgörande för att skapa användarvänliga webbplatser. A/B-testning, som används av cirka 60% av företag för att förbättra landningssidor, innebär att jämföra två versioner av en sida för att se vilken som fungerar bäst. Genom att ändra ett nyckelelement och jämföra resultaten kan man fatta datadrivna beslut.
 
-[the generation](https://thegeneration.se/vad-ar-wcag/)
+Andra metoder inkluderar användartester där användare utför specifika uppgifter medan deras beteenden observeras, samt enkäter och intervjuer för att samla in kvalitativ feedback. Dessa metoder hjälper till att kontinuerligt justera och förbättra designen för att möta användarnas behov och förväntningar.
+
+[-Vad är WCAG? | The generation](https://thegeneration.se/vad-ar-wcag/)
+[- Användarfeedback | AB testing](https://www.semrush.com/blog/a-b-testing-landing-pages/?kw=&cmp=NE_SRCH_DSA_Blog_EN&label=dsa_pagefeed&Network=g&Device=c&utm_content=683809893010&kwid=dsa-2263819780239&cmpid=18350115241&agpid=153751696982&BU=Core&extid=143281117828&adpos=&gad_source=1&gclid=CjwKCAjwqf20BhBwEiwAt7dtddndX3bqXbUoAixk8P39esTviEPZtpHAHr3ZZDpWFv6bPjMd9lPkthoC3ZcQAvD_BwE)
+
+
+
 ---
 
 ## UD 1.4 Prototyping
@@ -167,7 +181,7 @@ Axure RP är ett vektorbaserat verktyg för att skapa interaktiva prototyper och
 #### Adobe Photoshop
 <img src="/img/adobe-ps.svg" height="50">
 
-*Adobe Photoshop* är ett **rasterbaserat* designverktyg som är bäst för bildmanipulation och fotoredigering. Historiskt sett har det varit populärt för webbdesign tack vare möjligheten att optimera bilder och skapa detaljrika mockups.
+*Adobe Photoshop* är ett rasterbaserat[^2] designverktyg som är bäst för bildmanipulation och fotoredigering. Historiskt sett har det varit populärt för webbdesign tack vare möjligheten att optimera bilder och skapa detaljrika mockups.
 
 Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som interaktiva prototyper, vilket numera är standard för att visa användarflöden
 
@@ -184,6 +198,10 @@ Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som i
 [^1]: Vektorbaserat verktyg: För skalbar grafik som logotyper och ikoner, baserat på matematiska formler.
 
 [^2]: Rasterbaserat verktyg: För detaljrik fotoredigering och bildmanipulation, baserat på pixelrutor
+
+[- Why prototyping is essential | webfx](https://www.webfx.com/blog/web-design/prototyping-is-essential/)
+[- UX Design Tools | interaction design](https://www.interaction-design.org/literature/article/ux-design-tools-definitive-guide)
+[- Raster vs Vektor | Adobe](https://www.adobe.com/se/creativecloud/file-types/image/comparison/raster-vs-vector.html)
 
 ---
 
@@ -202,7 +220,7 @@ Dessa används sedan som grund för beslut kring vilka funktioner som bör prior
 
 ###### User Stories
 User stories är en viktig del av UX/UI-design och agila metoder. De är korta och enkla beskrivningar av vad en användare vill göra och varför. 
-En typisk user story ser ut så här: "Som en [typ av användare] vill jag (vad användaren vill göra) så att (anledning/mål)." 
+En typisk user story ser ut så här: "Som en (typ av användare) vill jag (vad användaren vill göra) så att (anledning/mål)." 
 
 Dessa används för att kartlägga krav och förstå vad användarna vill ha, varför och vad det innebär. Dem gör det även lättare att dela upp projektet i mindre delar som sedan kan prioriteras för att säkerställa att de viktigaste key funktionerna utvecklas först. Det hjälper även alla partner inom produktionen att förstå vad och varför som ska byggas. 
 
@@ -211,6 +229,10 @@ Att noggrant analysera målgruppens beteende online är avgörande för att skap
 
 Denna ständiga process av förbättring och anpassning säkerställer att produkten förblir relevant och användarvänlig, vilket leder till högre användartillfredsställelse och engagemang.
 
+[Varför personas | metamatrix](https://www.metamatrix.se/lasvart/personas-gor-malgruppen-levande/)
+[Why personas fail | nngroup](https://www.nngroup.com/articles/why-personas-fail/)
+[Personas, what and why? | scorpion](https://www.scorpion.co/articles/expert-tips/marketing/what-are-user-personas-and-why-do-you-need-them-/)
+[user stories | w3schools](https://www.geeksforgeeks.org/user-stories-in-agile-software-development/)
 
 ---
 
@@ -252,6 +274,8 @@ Dataanalys kan ske med olika verktyg och metoder. Kvalitativ data analyseras gen
 
 Efter att ha samlat in och analyserat data från en iteration, används insikterna för att göra justeringar och förbättringar i designen. Detta innebär att varje iteration bygger på den föregående, vilket gradvis förbättrar användarupplevelsen och funktionaliteten.
 
+[- Empiriska metoder vs andra metoder | Läroportalen](https://larportalen.skolverket.se/api/resource/P03WCPLAR099377)
+
 ---
 
 ## UD 1.7 Grundläggande kognitionspsykologi
@@ -281,7 +305,7 @@ Korttidsminne håller en liten mängd information under kort tid, från sekunder
 
 #### Långtidsminne
 Långtidsminne lagrar information från timmar till hela livet och har en nästan obegränsad kapacitet. Det är avgörande för att bevara erfarenheter, kunskaper och färdigheter. Information överförs genom repetition, meningsfull bearbetning och association. Långtidsminnet inkluderar explicit minne för fakta och händelser, samt implicit minne för färdigheter och vanor.
-<img src="/Img/memory-tree.jpg" width=200>
+<img src="/Img/memory-tree.jpg" height=200>
 
 #### Inlärning
 Inlärning är processen där vi lär oss nya färdigheter, kunskaper eller beteenden. Det kräver både uppmärksamhet och minne. Vi lär oss på olika sätt, genom klassisk betingning, där vi associerar en sak med en annan, och operant betingning, där vi lär oss genom belöningar och straff. Observativ inlärning, där vi ser och imiterar andra, är också viktig, särskilt i sociala sammanhang.
@@ -294,3 +318,7 @@ Inlärning är processen där vi lär oss nya färdigheter, kunskaper eller bete
 Kognitionspsykologi är viktigt inom webbdesign eftersom det hjälper oss att förstå hur användare tänker, uppfattar och bearbetar information. Genom att tillämpa kunskaper om kognitiva processer kan vi skapa webbplatser som är mer intuitiva och användarvänliga.
 
 Tydliga visuella hierarkier, konsekvent användning av ikoner och färger, samt omedelbar feedback på användarens handlingar minskar kognitiv belastning och ökar användbarheten. Dessa principer gör att webbplatser inte bara ser bra ut, utan också fungerar på ett sätt som känns naturligt och enkelt för användarna.
+
+[Kognitiv psykologi | SU](https://www.su.se/forskning/forsknings%C3%A4mnen/psykologi/kognitiv-psykologi)
+[Kognitionspsykologi för Människa-datorinteraktion | UU - Jan Gulliksen](https://www2.it.uu.se/edu/course/homepage/hcidist/vt02/F2.pdf)
+[Inlärningsteori - begrepp | psykologiguiden](https://www.psykologiguiden.se/psykologilexikon/?Lookup=kognitiv+inl%C3%A4rningsteori)
