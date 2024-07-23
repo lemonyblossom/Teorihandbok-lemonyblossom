@@ -2,15 +2,7 @@
 Studerande: Emma Jensen
 
 ## UD 1.1 Grafik och design för webbsidor
-### Design för webben
-<!-- - Viktiga deignelement och principer.
-  - Färgval
-  - font
-  - layout
-  - hur man använder bilder ( upplösning osv)
-för att göra en webbsida visuellt tilltalande. -->
-
-
+#### Design för webben
 När man designar applikationer för webben är det viktigt att få med centrala designelement och principer. Dessa element och principer utgör grunden för en användarvänlig och estetiskt tilltalande webbapplikation.
 
 Färgval spelar en avgörande roll i hur användaren upplever appen, vilka intryck den får och vilken känsla som infinner sig. Att välja rätt färgschema kan skapa en känsla av professionalism och tillförlitlighet, medan fel färgval kan ge ett oorganiserat och rörigt intryck. Det är också viktigt att tänka på psykologiska aspekter av färger, eftersom olika färger kan framkalla olika känslor och beteenden hos användare. Exempelvis kan blått ge en känsla av lugn och tillit, medan rött kan skapa en känsla av brådska eller fara.
@@ -22,8 +14,7 @@ Därmed är även font/typsnitt en otroligt viktig komponent. Stil och storlek k
 Webbsidans layout är i mitt tycke a och o för att skapa lättnavigerade, intuitiva och tilltalande webbsidor. En tydlig och välorganiserad layout hjälper användaren att hitta information lättare. Layouten bör strukturera information på ett logiskt sätt och guida användaren genom webbplatsen med tydliga visuella ledtrådar. Genom att använda t.ex. grid-system och tydlig hierarki kan designern skapa en balanserad och lättnavigerad webbplats.
 
 
-### Responsiv design och användarupplevelse(UX)
-<!-- - HUr ska designgen anpassas efter olika skärmstorlekar för att säkerställa att hemsidorna är lätttillgängliga och användarvänliga? -->
+#### Responsiv design och användarupplevelse(UX)
 För att se till att en webbsida är lättillgänglig och användarvänlig på olika enheter och skärmstorlekar, måste designen anpassas. Detta kan uppnås genom tekniker som flexbox, media queries och adaptiv layout, som alla hjälper till att skapa en responsiv design som fungerar på smartphones så väl som på stora datorskärmar och ger en optimal användarupplevelse oavsett vilken enhet användaren har. 
 
 
@@ -36,19 +27,19 @@ Referenser:
 ---
 
 ## UD 1.2 UX och användbarhet
-### Användarfokuserad design
+#### Användarfokuserad design
 Det är viktigt att förstå målgruppens specifika behov och beteenden för att kunna skapa en design som möter deras förväntningar.
 Designprocessen bör alltid sätta användarens behov och beteenden i centrum. Detta innebär att använda principer och metoder som säkerställer att designen är användarcentrerad, vilket i sin tur leder till bättre upplevelse och högre tillfredsställelse, vilket i sin tur leder till att trafiken på webbsidan ökar.
 
 En användarfokuserad design innebär att noggrant undersöka och förstå användarens mål, motivationer och problem. Genom att involvera användare i designprocessen på olika sätt och kontinuerligt samla in feedback kan man skapa applikationer som verkligen uppfyller användarnas behov och förväntningar.
 
-### Navigation och user interface
+#### Navigation och user interface
 Att ha en navbar med tydligt markerade sektioner som "Hem", "Om oss" och "Kontakt" gör det enkelt för användaren att förstå webbplatsens struktur. Brödsmulenavigering visar var användaren befinner sig och hur de kan navigera tillbaka, vilket är särskilt användbart på större webbplatser. Drop-down menyer organiserar relaterade länkar under en huvudkategori, medan ett sökfält gör det möjligt att snabbt hitta specifik information.
 
 Call to Action-knappar , så som "logga in" och "registrera", är viktiga för att guida användarna till att utföra specifika åtgärder. Responsiv design ser till att navigationen fungerar bra på olika enheter och skärmstorlekar. På mindre skärmar används i regel hamburgermeny istället för en öppen nav, även om det numer blir vanligare att använda detta även på större skärmar.
 
 
-##### Luftig design
+#### Luftig design
 Att använda sig av vita ytor/ tomma ytor (white space, ej att förväxla med negative space) hjälper användaren att visuellt separera olika sektioner och innehåll, vilket gör det lättare att fokusera på det de interagerar med just nu. Vita ytor ger ögat möjlighet att vila och minskar risken för att användaren blir överväldigad av för mycket information på en gång.
 
 **White space** tillför även till estetiken och kan få appen att uppfattas som professionell, genomtänkt och balanserad. Det underlättar dessutom implementeringen av responsiv design genom att göra det möjligt att manipulera utrymmet relativt till skärmens storlek utan att nödvändigtvis justera innehållet. Detta bidrar till en renare och mer användarvänlig design som fungerar bra på olika enheter och skärmstorlekar.
@@ -58,7 +49,7 @@ Att använda sig av vita ytor/ tomma ytor (white space, ej att förväxla med ne
 <img src="/Img/microspace-vs-macrospace.png" height="200">
 
 
-##### Kommunicerade behov
+#### Kommunicerade behov
 Behovet ser ofta otroligt olika ut beroende på målgrupp men det som jag upplever gemensamt är att möjligheten till att nå information helst inte ska vara mer än två knapptryck bort.   
 
 För en äldre målgrupp upplever jag dock att öppen navigation med möjlighet att se alla sina möjliga val direkt på home landing page är att föredra. Gömd information kan kännas svår och det kräver att användaren kommer ihåg vart de klickat sig vidare och vilken information som finns under vilken rubrik. Äldre användare kan ha svårare att komma ihåg komplexa navigationsstrukturer och föredrar ofta mer direkt och enkel åtkomst till information.
@@ -73,7 +64,7 @@ Jag upplever däremot att en yngre publik gärna ser att luftiga vyer, rena snit
 ---
 
 ## UD 1.3 Riktlinjer för användbarhet
-### Normer och standarder
+#### Normer och standarder
 Det finns etablerade normer och standarder inom webbdesign för att skapa tillgänliga appar. Det är viktigt att följa dessa för att säkerställa att webbplatsen är tillgänglig och användbar för så många som möjligt.
 
 #### WCAG
@@ -123,13 +114,6 @@ Andra metoder inkluderar användartester där användare utför specifika uppgif
 ## UD 1.4 Prototyping
 
 ##### Att skapa prototyper
-<!-- -
-- Processen av att skapa olika prototyper (lofi vs hifi). 
-- Vad är viktigt i en highfi?
-  - för teamet
-  - för kund
-  - för issuehantering och development -->
-  
   Prototyping är en viktig del av designprocessen som låter oss visualisera och testa våra idéer innan vi går vidare till fullskalig utveckling. Genom att skapa prototyper kan vi identifiera och åtgärda problem tidigt, vilket sparar tid och resurser i längden
 
 ##### Lofi
@@ -143,10 +127,7 @@ Detta hjälper teamet att visualisera den slutgiltiga produkten och säkerställ
 
 En Hifi möjligör även användartester och att få feedback gällande visuella detaljer eller interaktiva element, vilket ger ytterligare möjlighet att hitta problem i ett tidigare skede i processen, innan utvecklingen börjat.
 
-##### Prototypverktyg och teknik
-### Verktyg och tekniker
-<!-- - vilka verktyg går att använda för att skapa grafik och design på webben
--->
+#### Prototypverktyg och teknik
 För att skapa grafik och design för webben finns det många verktyg att använda beroende på mål och behov. Sketch, Figma, Adobe XD, Adobe Photoshop och Axure RP är några av de mest använda programmen. Dessa, och andra verktyg likt dem, gör det möjligt att skapa och redigera grafik och design för webben.
  
 
@@ -154,7 +135,7 @@ För att skapa grafik och design för webben finns det många verktyg att använ
 <img src="/Img/figma.svg" height="50">
 
 Figma är ett webbaserat designverktyg byggt för UI/UX-design och samarbete i realtid och kan köras på alla plattformar med en webbläsare. 
- Det är speciellt utformat för att underlätta skapandet av interaktiva prototyper och användarflöden för webb- och mobilapplikationer. Med Figma kan flera teammedlemmar arbeta samtidigt på samma designprojekt, vilket möjliggör snabb feedback och effektiv iterativ process. 
+Det är speciellt utformat för att underlätta skapandet av interaktiva prototyper och användarflöden för webb- och mobilapplikationer. Med Figma kan flera teammedlemmar arbeta samtidigt på samma designprojekt, vilket möjliggör snabb feedback och effektiv iterativ process. 
 
 Själv har jag endast använt Figma när jag planerat och skapat design för webb. Jag uppskattar att behovet av att skicka filer och bilder fram och tillbaka försvann helt, samt att det aldrig är en fråga om versioner på arbetet eftersom alla arbetar på den senaste versionen som uppdateras i realtid.
  
@@ -168,7 +149,6 @@ En av de största funktionerna i Figma är prototypverktyget. Det gör det möjl
 Sketch är ett vektorbaserat[^1] UI/UX-designverktyg för macOS, känt för sin användarvänlighet och omfattande utbud av plugins. Det är idealiskt för att skapa skalbara och responsiva layouter, med återanvändbara symboler och komponenter.
 
 #### Axure RP
-
 <img src="/img/XAxure.svg" height="50">
 
 Axure RP är ett vektorbaserat verktyg för att skapa interaktiva prototyper och wireframes för webb- och mobilapplikationer. Det gör det möjligt att bygga detaljerade prototyper utan kod och simulera realistiska användarflöden. Axure RP erbjuder dokumentationsfunktioner, såsom automatisk generering av specifikationer och detaljerade designanvisningar
@@ -208,8 +188,6 @@ Photoshop har dock begränsningar jämfört med verktyg byggda för UI/UX, som i
 ## UD 1.5 Personas och målgruppsanalys
 
 ##### Vad är en persona?
-<!-- - vad är det och vad är dem till för?
-- Hur används dem i designprocessen? -->
 Personas är databaserade fiktiva karaktärer som representerar olika användargrupper för en produkt. De skapas i ett tidigt skede av produktionen och används som underlag för att kartlägga målgruppens behov.
 Genom att skapa detaljerade, träffsäkra och realistiska personas kan teamet lättare identifiera och förstå sin målgrupp och dess behov. 
 
@@ -238,7 +216,6 @@ Denna ständiga process av förbättring och anpassning säkerställer att produ
 
 ## UD 1.6 Empiriska metoder
 #### Vad skiljer en empirisk metod från andra metoder?
-
 Empiriska metoder bygger på observation och erfarenhet, och de är utformade för att samla in och analysera data på ett systematiskt sätt. Detta skiljer dem från teoretiska metoder, som i högre grad förlitar sig på logik och antaganden, och intuitiva metoder, som baseras på känsla eller subjektiva uppfattningar. Empiriska metoder ger objektiva och verifierbara resultat, vilket gör dem särskilt värdefulla inom design och användbarhet, där förståelse för verkliga användares beteenden och behov är avgörande.
 
 | Metod                | Beskrivning                                                                                         | Användning                                                      |
@@ -251,23 +228,15 @@ Empiriska metoder bygger på observation och erfarenhet, och de är utformade f�
 
 
 #### Datainsamling & Analys
-<!-- - Olika metoder för att samla in data. 
-  - användartestning
-  - enkäter
-  - användningsstatistik (om deploy redan varit eller testgrupp) -->
-  
-  Att samla in data är en central del av den empiriska metoden, och det finns flera olika tekniker för att göra detta:
+Att samla in data är en central del av den empiriska metoden, och det finns flera olika tekniker för att göra detta:
 
-  **Användartestning:** Här handlar det om att titta på hur riktiga användare interagerar med en produkt eller tjänst. Det kan ge oss insikter och avslöja problem som vi kanske inte upptäcker på andra sätt. Testerna kan vara väldigt enkla, som att använda pappersprototyper, eller mer avancerade med högfidelityprototyper och specialiserade verktyg.
+**Användartestning:** Här handlar det om att titta på hur riktiga användare interagerar med en produkt eller tjänst. Det kan ge oss insikter och avslöja problem som vi kanske inte upptäcker på andra sätt. Testerna kan vara väldigt enkla, som att använda pappersprototyper, eller mer avancerade med högfidelityprototyper och specialiserade verktyg.
 
 **Enkäter:** Enkäter är ett smidigt sätt att få feedback från många användare samtidigt. Genom att ställa rätt frågor kan vi få en bra bild av användarnas attityder, preferenser och erfarenheter. Eftersom enkäter kan skickas ut online, når vi enkelt en bred publik.
 
 **Användningsstatistik:** Om produkten redan finns ute på marknaden kan vi använda data om hur folk faktiskt använder den. Vi kan se hur ofta olika funktioner används, var folk brukar avbryta sina sessioner och mycket annat. Den här statistiken är guld värd för att hitta mönster och trender som kan hjälpa oss att förbättra produkten framöver.
 
 ##### Tolkning av data och hur den bör tillämpas.
-<!-- - Varför är det viktigt att analysera och tolka insamlad data? (för att ta informerade beslut gällande design)
-- Hur gör vi det?
-- Hur gör vi i iterativa designprocesser? -->
 Analysering och tolkning av insamlad data är avgörande för att förstå användarnas behov och beteenden. Utan detta kan designbeslut baseras på gissningar, vilket kan leda till att produkten inte uppfyller användarnas förväntningar. Genom att använda empirisk data säkerställer vi att designen är användarcentrerad och effektiv.
 
 Dataanalys kan ske med olika verktyg och metoder. Kvalitativ data analyseras genom att identifiera mönster och teman, medan kvantitativ data analyseras med statistiska metoder för att hitta trender. Visuella verktyg som grafer underlättar förståelsen
@@ -281,7 +250,7 @@ Efter att ha samlat in och analyserat data från en iteration, används insikter
 ## UD 1.7 Grundläggande kognitionspsykologi
 
 ##### Vad innebär kognitionspsykologi?
-<!-- - Kognitiva processer gällande uppmärksamhet, minne (arbetsminne vs korttidsminne) och inlärning. Hur påverkar detta användarens interaktion med webben? -->
+
 
 Kognitionspsykologi är en gren av psykologin som fokuserar på hur människor uppfattar, tänker, lär och minns. Den studerar de mentala processer som ligger bakom uppfattning, uppmärksamhet, språk, problemlösning, beslutsfattande och minne.
 Ett centralt koncept inom kognitionspsykologin är informationsbearbetning. Människor ses som informationsprocessorer, där hjärnan fungerar som en dator som tar emot, lagrar och bearbetar information. Denna analogi har lett till utvecklingen av olika modeller som beskriver hur information flödar genom kognitiva system.
@@ -313,8 +282,7 @@ Inlärning är processen där vi lär oss nya färdigheter, kunskaper eller bete
 
 
 ##### Varför är det viktigt inom design på webb?
-<!-- - Hur kan kunskap om kognitiva mentala modeller och användarinteraktion vägleda designbeslut för att skapa mer intuitiva och användarvänliga produkter och webbplatser?
- -->
+
 Kognitionspsykologi är viktigt inom webbdesign eftersom det hjälper oss att förstå hur användare tänker, uppfattar och bearbetar information. Genom att tillämpa kunskaper om kognitiva processer kan vi skapa webbplatser som är mer intuitiva och användarvänliga.
 
 Tydliga visuella hierarkier, konsekvent användning av ikoner och färger, samt omedelbar feedback på användarens handlingar minskar kognitiv belastning och ökar användbarheten. Dessa principer gör att webbplatser inte bara ser bra ut, utan också fungerar på ett sätt som känns naturligt och enkelt för användarna.
