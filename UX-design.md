@@ -279,7 +279,18 @@ Arbetsminne lagrar och bearbetar information temporärt för kognitiva uppgifter
 Korttidsminne håller en liten mängd information under kort tid, från sekunder till minuter. Det är en del av arbetsminnet men utan aktiv bearbetning. Information kan överföras till långtidsminnet genom repetition.
 
 
+#### Långtidsminne
+Långtidsminne lagrar information från timmar till hela livet och har en nästan obegränsad kapacitet. Det är avgörande för att bevara erfarenheter, kunskaper och färdigheter. Information överförs genom repetition, meningsfull bearbetning och association. Långtidsminnet inkluderar explicit minne för fakta och händelser, samt implicit minne för färdigheter och vanor.
 <img src="/Img/memory-tree.jpg" width=200>
 
+#### Inlärning
+Inlärning är processen där vi lär oss nya färdigheter, kunskaper eller beteenden. Det kräver både uppmärksamhet och minne. Vi lär oss på olika sätt, genom klassisk betingning, där vi associerar en sak med en annan, och operant betingning, där vi lär oss genom belöningar och straff. Observativ inlärning, där vi ser och imiterar andra, är också viktig, särskilt i sociala sammanhang.
+
+
+
 ##### Varför är det viktigt inom design på webb?
-- Hur kan kunskap om kognitiva mentala modeller och användarinteraktion vägleda designbeslut för att skapa mer intuitiva och användarvänliga produkter och webbplatser?
+<!-- - Hur kan kunskap om kognitiva mentala modeller och användarinteraktion vägleda designbeslut för att skapa mer intuitiva och användarvänliga produkter och webbplatser?
+ -->
+Kognitionspsykologi är viktigt inom webbdesign eftersom det hjälper oss att förstå hur användare tänker, uppfattar och bearbetar information. Genom att tillämpa kunskaper om kognitiva processer kan vi skapa webbplatser som är mer intuitiva och användarvänliga.
+
+Tydliga visuella hierarkier, konsekvent användning av ikoner och färger, samt omedelbar feedback på användarens handlingar minskar kognitiv belastning och ökar användbarheten. Dessa principer gör att webbplatser inte bara ser bra ut, utan också fungerar på ett sätt som känns naturligt och enkelt för användarna.
