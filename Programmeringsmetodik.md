@@ -1,8 +1,109 @@
 # Teorihandboken - Programmeringsmetodik (PG)
-Studerande: Förnamn Efternamn
+Studerande: Emma Jensen
 
 ## PG 1.1 Versionshantering (Git)
-Beskriv rubriken här
+Att versionshatera innebär att använda ett system som ordnar och håller reda på ändringar i en fil eller i en mapp / samling filer och mappar över tid. Detta gör att de sparade versionerna går att återkalla senare för att kunna återställa, ändra eller felsöka i just den versionen.
+
+#### GIT
+Git är ett versionshanteringssystem som spårar sparade ändringar i källkod under utvecklingens gång och gör det möjligt för flera utvecklare att arbeta tillsammans på samma projekt utan att störa varandras arbete men även för en ensam utvecklare att hålla reda på sina ändringar och möjligöra att testa att utveckla och modifiera features i arbetet utan att ta sönder det som redan fungerar. 
+
+Ett par exempel på de absolut mest grundläggande git kommandon är **git init** i en mapp för att initiera att den mappen blir ett nytt lokalt repository, **git add** för att lägga till ändrade filer (*stagea*) inför att spara filen i repot, **git commit** sparar ändringarna i ditt lokala repo.
+
+
+````
+# Initiera ett nytt Git-repository
+git init
+````
+
+````
+# Lägg till en fil i staging-området
+git add minTeorihandbok.txt
+````
+
+````
+# Committa ändringar med ett meddelande
+git commit -m "Lade minTeorihandbok.txt"
+````
+````
+# Visa status för lokala ändringar
+git status
+````
+````
+# Visa loggen över commits
+git log
+````
+````
+# Stasha dina ändringar
+git stash
+````
+````
+# Poppa dina stashade ändringar
+git stash pop
+````
+
+
+
+
+#### Varför använder vi git?
+Det gör vi för att förbättra samarbetet och minimera riskerna att förstöra vårt eget eller andras arbete, samt för att säkerställa versionskontroll och förenkla arbetsflödet genom det. 
+
+Ett par kommandon som används mycket i sammarbeten och som jag själv upplever har använts mycket under våra gruppprojekt är:
+
+````
+# Klona ett repository
+git clone <repository-url>
+````
+
+````
+# Byt till en feature-branch
+git checkout feature-branch
+````
+````
+# Skapa en ny branch och byta till den
+git checkout -b new-feature-branch
+````
+````
+# Push ändringar till den delade feature-branchen
+git push origin feature-branch
+````
+````
+# Fetch senaste ändringarna från remote
+git fetch origin
+````
+
+````
+# Pull de senaste ändringarna och slå ihop dem
+git pull origin feature-branch
+````
+````
+# Merge en annan branch in i din nuvarande branch
+git merge annan-branch
+````
+````
+# Aborta en pågående merge (om något går fel)
+git merge --abort
+````
+````
+# Rebase din branch på toppen av en annan branch
+git rebase master
+````
+````
+# Abort en pågående rebase
+git rebase --abort
+````
+````
+# Fortsätt en pågående rebase efter att ha löst konflikter
+git rebase --continue
+````
+
+Jag upplevde att vissa av dessa kommandon kändes snarlika varandra tills att jag insåg konsekvenserna av hur jag använder dem. 
+
+| **Kommando** | **Beskrivning**                                                                           | **Fördelar**                                                                                                                                                    | **Nackdelar**                                                                                                                                                                                                                                                                           |
+| ------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pull**     | Hämtar de senaste ändringarna från remote och slår samman dem med din nuvarande branch.   | - Enkel att använda och kombinerar två steg i ett kommando.                                                                                                     | - Kan skapa problem om det uppstår konflikter, eftersom ändringarna slås ihop direkt efter hämtning. Eftersom pull automatiskt gör en merge efter att ha hämtat ändringarna, tvingas du lösa konflikter omedelbart, vilket kan vara besvärligt om du inte är förberedd.                 |
+| **Fetch**    | Hämtar de senaste ändringarna från remote utan att slå ihop dem med din nuvarande branch. | - Ger dig kontroll över när och hur du vill slå ihop ändringarna.<br>- Minskar risken för konflikter genom att låta dig se ändringarna innan du integrerar dem. | - Kräver ett extra steg för att integrera de hämtade ändringarna. Efter att ha använt fetch måste du manuellt slå ihop dem med din lokala branch genom att köra antingen **merge** eller **rebase**, vilket kan vara mindre effektivt och kräver mer arbete.                            |
+| **Merge**    | Slår ihop ändringar från en branch till en annan och skapar en merge-commit.              | - Bevarar hela historiken och visar tydligt när en branch har blivit mergead.<br>- Enkel och säker metod för att slå ihop arbete från olika branches.           | - Detta kan leda till en komplex och otydlig commit-historik, eftersom varje merge skapar en extra commit. Historiken kan bli svår att läsa med många merge-commits och förgreningar, vilket kan orsaka förvirring och göra det svårt att spåra ändringar.                              |
+| **Rebase**   | Flyttar eller kombinerar commits till en ny bascommit.                                    | - Ren och linjär commit-historik.<br>- Ingen merge-commit skapas, vilket gör historiken lättare att följa.                                                      | - Eftersom rebase omskriver commit-historiken, kan det skapa problem vid delade branches genom att ändra commits som andra utvecklare arbetar med, vilket leder till förvirring och felaktig historik. Detta gör rebase mindre lämpligt för branches som delas mellan flera utvecklare. |
 
 ## PG 1.2 Benchmarking
 Beskriv rubriken här
