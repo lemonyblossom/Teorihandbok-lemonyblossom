@@ -106,7 +106,30 @@ Jag upplevde att vissa av dessa kommandon kändes snarlika varandra tills att ja
 | **Rebase**   | Flyttar eller kombinerar commits till en ny bascommit.                                    | - Ren och linjär commit-historik.<br>- Ingen merge-commit skapas, vilket gör historiken lättare att följa.                                                      | - Eftersom rebase omskriver commit-historiken, kan det skapa problem vid delade branches genom att ändra commits som andra utvecklare arbetar med, vilket leder till förvirring och felaktig historik. Detta gör rebase mindre lämpligt för branches som delas mellan flera utvecklare. |
 
 ## PG 1.2 Benchmarking
-Beskriv rubriken här
+Benchmarking är processen av att mäta och utvärdera prestandan av en programvara. Detta gör man genom standardiserade tester som kan inkludera att mäta svarstid, minnesanvändning, genomströmmning, uppstartstid och failovertid, men även många andra viktiga mått. 
+>**Svarstid** (*Latency*): Tiden det tar för systemet att svara på en förfrågan.
+>**Genomströmning** (*Throughput*): Antalet förfrågningar eller transaktioner systemet kan hantera per tidsenhet
+>**Minnesanvändning** (*memory usage*): Mängden minne som används av systemet under olika belastningar.
+>**Failover-tid** (*failover time*): Tiden det tar för systemet att starta upp och bli operativt.
+
+Andra mått är: *CPU usage, disk I/O, network latency, error rate, maximum concurrent users, startup time, garbage collection, thread usage, queue length, bandwidth usage, cache-hit ratio, energy or power consumption, response time under load, failover time, and throughput per process.*
+
+#### Hur och varför?
+Benchmarking utförs genom att köra specifika testscenarion och sedan samla in data, denna analyseras i tur för att identifiera *bottle necks* och då kunna optimera systmet som testas. 
+
+Det är en viktig del av att utveckla applikationer för att säkerställa att prestandakraven och belsatningsnivå matchar förväntningarna för appen. Genom att göra detta regelbundet genom utvecklingen så ger vi oss själva chans att upptäcka och identifiera eventuella problem innan användarna gör det och blir påverkade. 
+
+#### Verktyg för benchmarking
+
+#### Frontend
+
+**Lighthouse** är ett open-source verktyg från Google som hjälper utvecklare att förbättra kvaliteten på webbsidor. Det kan köras mot vilken webbsida som helst, offentlig eller kräver autentisering, och ger insikter om prestanda, tillgänglighet, bästa praxis och SEO.
+
+**GTmetrix** är ett annat verktyg för att analysera webbprestanda. Det kombinerar data från Google Lighthouse och andra källor för att ge en detaljerad analys av webbplatsens hastighet och förslag på förbättringar.
+
+#### Backend
+**Apache JMeter** är ett populärt verktyg för att utföra belastningstester på webbapplikationer. Det kan simulera ett stort antal användare som gör förfrågningar till en server och ger inblick om svarstider, fel och serverprestanda.
+
 
 ## PG 1.3 Testdriven utveckling
 Beskriv rubriken här
