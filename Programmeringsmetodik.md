@@ -132,11 +132,20 @@ Det är en viktig del av att utveckla applikationer för att säkerställa att p
 
 
 ## PG 1.3 Testdriven utveckling
-Testdriven utveckling innefattar att använda sig av utvecklingsmetodik där tester skrivs innan själva koden skrivs. Därmed definieras varje funktionalitet genom tester som initialt misslyckas, därefter utvecklas funktionen för att klara testet.
+Testdriven utveckling är en metodik som fokuserar på skriva tester före implementering av funktionalitet.
+   Därmed definieras varje funktionalitet genom tester som initialt misslyckas, därefter utvecklas funktionen för att klara testet.
 
-Ett enhetstest för en specifik funktion, som ej finns än, skrivs av en utvecklare som sedan körs och misslyckas, Sedan skrivs funktionen baserat på testet för att klara av det. Testet körs igen och förväntas gå igenom utan misslyckande och när funktionen beter sig som väntat så refaktoreras koden vid behov för att förbättra kodstrukturen. 
+Ett enhetstest för en specifik funktion eller förbättring, som ej finns än, skrivs av en utvecklare, testet körs och förväntas misslyckas då funktionliteten inte finns tillgänlig för testet.
+ Sedan implementeras funktionen för att passera testet. När testet passerar och funktionen beter sig som väntat så refaktoreras koden vid behov för att förbättra kodstrukturen. 
+
 Detta tillvägagångssätt gör att vi kan säkerställa att varje enkild funktion beter sig som förväntat.
 
+#### Hur TDD?
+TDD-processen kan sammanfattas i tre steg, ofta kallade "Red-Green-Refactor":
+
+**Red:** Skriv ett enhetstest som misslyckas eftersom funktionen ännu inte är implementerad.
+**Green:** Implementera den minsta mängd kod som behövs för att passera testet.
+**Refactor:** Förbättra koden utan att ändra dess beteende, säkerställ att alla tester fortfarande passerar.
 #### Jest
 Jest är ett testverktyg för JavaScript och TypeScript, utvecklat av Facebook. Det används för att skriva enhetstester och integrera tester för att säkerställa kodkvalitet med hjälp av funktioner som snapshot-testning, parallell körning av tester och inbyggd support för mockning av moduler
 
@@ -199,16 +208,31 @@ module.exports = { add };
 
 Processen involverar att bygga applikationen, köra tester, och sedan flytta den till produktionsservrar.
 
-**Staging** är en mellanliggande miljö där applikationen testas för att säkerställa att den fungerar korrekt innan den deployas till produktion.
+**Staging** är en mellanliggande miljö där applikationen testas innan den deployas till produktion. Stagingmiljön, som speglar produktionsmiljön, används för att simulera hur applikationen kommer att bete sig i produktion. Detta inkluderar att köra applikationen med samma databaser, konfigurationer och tjänster som i produktionsmiljön.
 
- Stagingmiljön är en kopia av produktionsmiljön och används för att simulera hur applikationen kommer att bete sig i produktion. Detta inkluderar att köra applikationen med samma databaser, konfigurationer och tjänster som i produktionsmiljön.
+Genom att utföra sista minuten-testning i stagingmiljön kan buggar eller andra problem identifieras och åtgärdas innan de når användarna. Detta hjälper till att förebygga driftstopp och andra oväntade problem som kan påverka användarna i produktion.
 
-Den används för att utföra sista minuten-testning i syfte att identifiera och åtgärda buggar eller andra problem innan de når användarna. Detta hjälper att förebygga risken för driftstopp och andra oväntade problem som kanske inte uppstår i utvecklingsmiljön, men som kan påverka användarna i den färdiga produkten.
+Det är viktigt att följa best practices vid deployment, inklusive användning av versionskontroll, kontinuerlig integration och kontinuerlig leverans (*CI/CD*), samt ha dokumenterade rollback-strategier på plats ifall något går fel. En väl utförd deployment bidrar till en smidigare och säkrare övergång till produktion, vilket resulterar i en bättre användarupplevelse och minskad stress för utvecklarna.
 
-Det är också viktigt att följa best practise vid deployment, vilket inkluderar att använda versionskontroll, utföra kontinuerlig integration och kontinuerlig leverans (CI/CD), och att ha dokumenterade strategier för rollback på plats ifall något går fel.
+#### Continuous Deployment
+Continuous Deployment innebär att alla kodändringar som passerar automatiserade tester omedelbart deployas till produktion. Detta minskar tiden mellan utveckling och leverans till användare, men kräver starka tester och övervakning för att undvika att buggar når produktionen.
 
-Sammantaget bidrar en väl utförd deployment till en smidigare och säkrare övergång till produktion, vilket resulterar i en bättre användarupplevelse och minskad stress för utvecklarna.
+Continuous Integration *(CI)* och Continuous Delivery/Deployment *(CD)* är metodologier som automatiserar stegen i mjukvaruutveckling för att möjliggöra snabbare och pålitligare leveranser.
+| **Term**                        | **Beskrivning**                                                                                             | **Fördelar**                                                                                               |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Continuous Integration (CI)** | Utvecklare sammanfogar kod regelbundet. Automatiserade bygg- och testprocesser körs för varje integration.  | Tidig felupptäckt, förbättrad kodkvalitet, minskad risk för integrationsproblem                            |
+| **Continuous Delivery (CD)**    | Kod är alltid i releasbart tillstånd efter tester och byggprocesser. Deployment till produktion är manuell. | Snabbare och pålitligare releaser, minskad risk för fel vid release, flexibilitet att släppa när som helst |
+| **Continuous Deployment (CD)**  | Utökning av Continuous Delivery där kod automatiskt deployas till produktion efter godkända tester.         | Omedelbar leverans av uppdateringar, snabbare feedback från användare, ökad releasefrekvens                |
 
+
+#### Rollback Strategier
+Rollback-strategier är metoder för att återställa en tidigare stabil version av en applikation om en ny release orsakar problem. Vanliga strategier inkluderar *blue-green deployment* och *canary releases*.
+
+#### <span style="color:CornflowerBlue">B</span>lue-<span style="color:MediumSeaGreen">G</span>reen Deployment
+Blue-green deployment innebär att ha två identiska miljöer, en är <span style="color:CornflowerBlue">blue</span> och en <span style="color:MediumSeaGreen">green</span>. Uppdateringar deployas till <span style="color:MediumSeaGreen"> green</span> medan <span style="color:CornflowerBlue">blue</span> hanterar trafiken. 
+
+#### Canary Releases
+Canary releases innebär att löpande rulla ut nya funktioner till en liten del av användarna innan de når alla. Detta gör det möjligt att upptäcka och åtgärda problem i en kontrollerad miljö utan att påverka alla användare samtidigt.
 
 ## PG 1.5 Debugging
 Beskriv rubriken här
