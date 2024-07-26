@@ -132,10 +132,83 @@ Det är en viktig del av att utveckla applikationer för att säkerställa att p
 
 
 ## PG 1.3 Testdriven utveckling
-Beskriv rubriken här
+Testdriven utveckling innefattar att använda sig av utvecklingsmetodik där tester skrivs innan själva koden skrivs. Därmed definieras varje funktionalitet genom tester som initialt misslyckas, därefter utvecklas funktionen för att klara testet.
+
+Ett enhetstest för en specifik funktion, som ej finns än, skrivs av en utvecklare som sedan körs och misslyckas, Sedan skrivs funktionen baserat på testet för att klara av det. Testet körs igen och förväntas gå igenom utan misslyckande och när funktionen beter sig som väntat så refaktoreras koden vid behov för att förbättra kodstrukturen. 
+Detta tillvägagångssätt gör att vi kan säkerställa att varje enkild funktion beter sig som förväntat.
+
+#### Jest
+Jest är ett testverktyg för JavaScript och TypeScript, utvecklat av Facebook. Det används för att skriva enhetstester och integrera tester för att säkerställa kodkvalitet med hjälp av funktioner som snapshot-testning, parallell körning av tester och inbyggd support för mockning av moduler
+
+Exempel på test Jest för Javascript:
+
+Test som väntas misslyckas då funktinalitet saknas.
+```js
+const { add } = require('./calculator');
+
+test('adds 2 + 3 to equal 5', () => {
+    
+    expect(add(2, 3)).toBe(5);
+});
+
+// Detta test kommer att misslyckas eftersom funktionen 'add' ännu inte är definierad.
+```
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+module.exports = { add };
+
+//Här har koden skrivits som förväntas passera testet ovan
+```
+
+```js
+const { add } = require('./calculator');
+
+test('adds 2 + 3 to equal 5', () => {
+    expect(add(2, 3)).toBe(5);
+});
+
+test('adds -1 + 1 to equal 0', () => {
+    expect(add(-1, 1)).toBe(0);
+});
+
+test('adds 0 + 0 to equal 0', () => {
+    expect(add(0, 0)).toBe(0);
+});
+
+test('adds -2 + -3 to equal -5', () => {
+    expect(add(-2, -3)).toBe(-5);
+});
+
+
+```
+```js
+function add(a, b) {
+    return a + b;
+}
+
+module.exports = { add };
+```
+
 
 ## PG 1.4 Deploy och staging
-Beskriv rubriken här
+**Deploying** innebär att föra över applikationen från utvecklingsmiljön till produktionsmiljön, där den blir tillgänglig för användare.Denna process är avgörande för att säkerställa att applikationen fungerar korrekt och pålitligt under verkliga förhållanden.
+
+Processen involverar att bygga applikationen, köra tester, och sedan flytta den till produktionsservrar.
+
+**Staging** är en mellanliggande miljö där applikationen testas för att säkerställa att den fungerar korrekt innan den deployas till produktion.
+
+ Stagingmiljön är en kopia av produktionsmiljön och används för att simulera hur applikationen kommer att bete sig i produktion. Detta inkluderar att köra applikationen med samma databaser, konfigurationer och tjänster som i produktionsmiljön.
+
+Den används för att utföra sista minuten-testning i syfte att identifiera och åtgärda buggar eller andra problem innan de når användarna. Detta hjälper att förebygga risken för driftstopp och andra oväntade problem som kanske inte uppstår i utvecklingsmiljön, men som kan påverka användarna i den färdiga produkten.
+
+Det är också viktigt att följa best practise vid deployment, vilket inkluderar att använda versionskontroll, utföra kontinuerlig integration och kontinuerlig leverans (CI/CD), och att ha dokumenterade strategier för rollback på plats ifall något går fel.
+
+Sammantaget bidrar en väl utförd deployment till en smidigare och säkrare övergång till produktion, vilket resulterar i en bättre användarupplevelse och minskad stress för utvecklarna.
+
 
 ## PG 1.5 Debugging
 Beskriv rubriken här
