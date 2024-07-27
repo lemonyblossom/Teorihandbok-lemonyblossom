@@ -151,28 +151,7 @@ Jest är ett testverktyg för JavaScript och TypeScript, utvecklat av Facebook. 
 
 Exempel på test Jest för Javascript:
 
-Test som väntas misslyckas då funktinalitet saknas.
-```js
-const { add } = require('./calculator');
-
-test('adds 2 + 3 to equal 5', () => {
-    
-    expect(add(2, 3)).toBe(5);
-});
-
-// Detta test kommer att misslyckas eftersom funktionen 'add' ännu inte är definierad.
-```
-
-```js
-function add(a, b) {
-    return a + b;
-}
-
-module.exports = { add };
-
-//Här har koden skrivits som förväntas passera testet ovan
-```
-
+*En funktion som förväntas korrekt utföra matematisk addition och ge korrekt resultat.*
 ```js
 const { add } = require('./calculator');
 
@@ -194,6 +173,26 @@ test('adds -2 + -3 to equal -5', () => {
 
 
 ```
+<br>
+
+*Detta test kommer att misslyckas eftersom funktionen 'add' ännu inte är definierad.*
+
+
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+module.exports = { add };
+
+
+```
+<br>
+
+*Här har koden skrivits som förväntas passera testet ovan*
+
+
 ```js
 function add(a, b) {
     return a + b;
@@ -235,7 +234,36 @@ Blue-green deployment innebär att ha två identiska miljöer, en är <span styl
 Canary releases innebär att löpande rulla ut nya funktioner till en liten del av användarna innan de når alla. Detta gör det möjligt att upptäcka och åtgärda problem i en kontrollerad miljö utan att påverka alla användare samtidigt.
 
 ## PG 1.5 Debugging
-Beskriv rubriken här
+ Debugging är processen att hitta och fixa buggar i programvaran.
+ Buggar kan vara allt från syntaxfel till logiska fel som orsakar oväntade beteenden i applikationen.
+ Detta kan ske manuellt eller med hjälp av verktyg som integrerade utvecklingsmiljöer *(IDEs)*, debugger- och loggningsverktyg. 
+
+ Vanligtvis innefattar debugging dessa steg:
+
+ - *Identifiera* att buggen existerar genom att antingen observera oväntat beteende eller få ett felmeddelande/error.
+
+ - *Reproducera* buggen genom att återskapa en situation är buggen visar sig konsekvent för att förstå kontexten kring varför detta uppstår.
+
+ - *Analysera* koden genom att använda debugger-verktyg för att steg för steg genom koden inspektera syntax, radavstånd och tillstånd.
+
+ - *Fixa* buggen genom att modifiera koden att bete sig som vi väntar oss.
+
+ - *Verifiera* genom att testa koden och därmed säkerställa att buggen är fixad och att dessa ändringar inte skapat ytterligare buggar. 
+  
+
+#### Varför?
+Debugging används främst för att vi inte lyckas implementera den funktionalitet som fungerar som förväntat och behöver då lösa detta. 
+
+Att löpande och systematiskt identifiera och fixa buggar när dem uppstår bidrar även till att koden är stabil och fungerar korrekt. 
+Det effektiviserar utvecklingen då det hjälper med att identifiera och åtgärda problem snabbt vilket kan ta lång tid att åtgärda när det finns flera buggar än en och det då är svårare att identifiera orsaken och åtgärda problemet. 
+
+Utöver detta så leder en buggfri applikation till att användarupplevelsen blir bättre, att användarna är nöjda i högre grad och att supportärenden till följd av det blir färre.
+Då behöver även utvecklarna inte störa arbetsflödet för "fire fighting" i efterhand med funktionalitet de trodde var avklarad. Debugging bidrar därmed till en mer effektiv utvecklingsprocess och en mer robust slutprodukt.
+
+#### Debugger Verktyg
+
+
+
 
 ## PG 1.6 Dokumentation
 Beskriv rubriken här
