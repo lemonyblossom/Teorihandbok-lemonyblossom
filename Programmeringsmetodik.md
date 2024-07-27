@@ -273,8 +273,42 @@ Med det hoppas jag kunna identifiera och åtgärda problem i koden snabbare, eff
 [- Debugging | Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
 [- Debugging | Node.js](https://nodejs.org/en/learn/getting-started/debugging)
 
+___
+
 ## PG 1.6 Dokumentation
-Dokumentation är en av de mest kritiska aspekterna av webbutveckling och programmering.
+Dokumentation är en av de mest kritiska aspekterna av webbutveckling och programmering och fungerar som en detaljerad guide och referens för utvecklare, användare och andra intressenter.
+Dokumentation säkerställer att alla som är involverade i ett projekt kan förstå hur programvaran fungerar, hur den ska användas, och hur den kan underhållas och utvecklas vidare.
+
+#### Vad är Dokumentation inom webbutveckling?
+Inom programmering och webbutveckling avser den skriftliga och ibland visuella information som beskriver aspekter av ett program eller en applikation.
+Den inkluderar detaljer om kodens struktur, funktionalitet, användningssätt, och underhåll. 
+
+Dokumentation kan skapas under utvecklingsprocessen eller efter att en viss del av projektet är slutförd och kan dokumenteras. 
+
+Det finns två huvudsakliga typer av dokumentation: *intern* och *extern*.
+
+#### Intern Dokumentation
+**Intern dokumentation** riktar sig till utvecklare och andra tekniska teammedlemmar. 
+Den kan inkludera:
+
+***Kodkommentarer*** är korta beskrivningar i själva kodfilen som förklarar vad specifika delar av koden gör. Kommentarer hjälper utvecklare att snabbt förstå och navigera genom koden, det är dock viktigt att inte dokumentera för mycket i koden då det kan göra den svårläst.
+
+***ReadMe-filer*** finns vanligtvis i projektets root och ger en översikt över projektet, hur man installerar och använder det, samt annan relevant information.
+
+***API-dokumentation*** beskriver detaljerat funktioner, metoder och klasser i ett API *(Application Programming Interface)*. API-dokumentation är avgörande för utvecklare som behöver integrera eller använda APIs.
+
+***Tekniska specifikationer*** är dokument som innehåller detaljerad information om arkitektur, databasmodeller, flödesdiagram och andra tekniska aspekter av projektet.
+
+#### Extern dokumentation
+***Extern dokumentation*** riktar sig till slutanvändare och icke-tekniska intressenter. Den kan inkludera:
+
+***Användarhandböcker*** guidar och hjälper användare att förstå hur man använder applikationen. De kan innehålla steg-för-steg-instruktioner, skärmbilder och problemlösningstips.
+
+***Installationsguider*** instruerar användare att installera programvaran på sina system. De kan inkludera systemkrav, installationssteg och konfigurationsanvisningar.
+
+***FAQ*** (Frequently Asked Questions) är en samling av vanliga frågor och svar som hjälper användare att snabbt hitta lösningar på vanliga problem.
+
+***Utbildningsmaterial*** som kan inkludera tutorials, videor och annan pedagogisk information som hjälper användare att ta till sig information och lära sig använda programvaran effektivt.
 
 ## PG 1.7 Struktur av kod i projekt
 Beskriv rubriken här
