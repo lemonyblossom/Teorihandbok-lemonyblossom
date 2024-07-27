@@ -255,8 +255,10 @@ Då behöver även utvecklarna inte störa arbetsflödet för "fire fighting" i 
 
 **Google Chrome DevTools** är ett inbyggt debugger-verktyg i Google Chrome som erbjuder många verktyg för att bland annat debugga, inspektera nätverkstrafik, analysera och optimera prestanda. DevTools används främst för frontend då verktyget är väl utvecklat för att felsöka HTML, CSS och JavaScript direkt i webbläsaren i realtid.
 
+
 Något jag finner oerhört hjälpsamt är att DevTools inkluderar ett verktyg för nätverksinspektion som visar alla förfrågningar och svar, vilket gör det möjligt att se vad som händer bakom kulisserna i realtid och kunna identifiera oväntat beteende. Detta är särskilt användbart för att felsöka API-anrop och laddningstider.
-De verktyg jag använder oftast är konsolen genom t.ex. console.log() och console.error(), för att se att data tas in, uppdateras och ges tillbaka som förväntat, samt *elements panel* +  *inspect* för att inspektera och redigera i *DOM-träd* och *CSS*.
+De verktyg jag använder oftast är *console* samt *elements panel* +  *inspect* för att inspektera och redigera i *DOM-träd* och *CSS*.
+<img src="/Img/Skärmavbild 2024-07-27 kl. 17.40.54.png" alt="exempel på att skapa element i  DevTools console">
 
 
 **VS Code Debugger - Node.js**
@@ -266,10 +268,13 @@ Den inbyggda terminalen och möjligheten att ansluta till fjärrservrar gör fel
 Två funktioner jag vill lära mig att använda mer är *call stack inspection*, som visar den aktuella platsen i koden och vilka funktioner som anropats fram till denna punkt, samt *watch expression* som gör att man kan välja vissa variabler eller uttryck i koden och kontinuerligt se deras aktuella värden under körning.
 Med det hoppas jag kunna identifiera och åtgärda problem i koden snabbare, effektivisera processen och höja kvaliteten på den slutliga applikationen.
 
-
+[- Chrome DevTools DOM | Google](https://developer.chrome.com/docs/devtools/dom)
+[- Chrome DevTools CSS | Google](https://developer.chrome.com/docs/devtools/css)
 [- Debugging | Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
+[- Debugging | Node.js](https://nodejs.org/en/learn/getting-started/debugging)
+
 ## PG 1.6 Dokumentation
-Beskriv rubriken här
+Dokumentation är en av de mest kritiska aspekterna av webbutveckling och programmering.
 
 ## PG 1.7 Struktur av kod i projekt
 Beskriv rubriken här
