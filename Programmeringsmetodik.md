@@ -53,24 +53,10 @@ Ett par kommandon som används mycket i sammarbeten och som jag själv upplever 
 # Klona ett repository
 git clone <repository-url>
 ````
-
-````
-# Byt till en feature-branch
-git checkout feature-branch
-````
-````
-# Skapa en ny branch och byta till den
-git checkout -b new-feature-branch
-````
-````
-# Push ändringar till den delade feature-branchen
-git push origin feature-branch
-````
 ````
 # Fetch senaste ändringarna från remote
 git fetch origin
 ````
-
 ````
 # Pull de senaste ändringarna och slå ihop dem
 git pull origin feature-branch
@@ -105,6 +91,7 @@ Jag upplevde att vissa av dessa kommandon kändes snarlika varandra tills att ja
 | **Merge**    | Slår ihop ändringar från en branch till en annan och skapar en merge-commit.              | - Bevarar hela historiken och visar tydligt när en branch har blivit mergead.<br>- Enkel och säker metod för att slå ihop arbete från olika branches.           | - Detta kan leda till en komplex och otydlig commit-historik, eftersom varje merge skapar en extra commit. Historiken kan bli svår att läsa med många merge-commits och förgreningar, vilket kan orsaka förvirring och göra det svårt att spåra ändringar.                              |
 | **Rebase**   | Flyttar eller kombinerar commits till en ny bascommit.                                    | - Ren och linjär commit-historik.<br>- Ingen merge-commit skapas, vilket gör historiken lättare att följa.                                                      | - Eftersom rebase omskriver commit-historiken, kan det skapa problem vid delade branches genom att ändra commits som andra utvecklare arbetar med, vilket leder till förvirring och felaktig historik. Detta gör rebase mindre lämpligt för branches som delas mellan flera utvecklare. |
 
+---
 ## PG 1.2 Benchmarking
 Benchmarking är processen av att mäta och utvärdera prestandan av en programvara. Detta gör man genom standardiserade tester som kan inkludera att mäta svarstid, minnesanvändning, genomströmmning, uppstartstid och failovertid, men även många andra viktiga mått. 
 >**Svarstid** (*Latency*): Tiden det tar för systemet att svara på en förfrågan.
@@ -130,6 +117,7 @@ Det är en viktig del av att utveckla applikationer för att säkerställa att p
 #### Backend
 **Apache JMeter** är ett populärt verktyg för att utföra belastningstester på webbapplikationer. Det kan simulera ett stort antal användare som gör förfrågningar till en server och ger inblick om svarstider, fel och serverprestanda.
 
+___
 
 ## PG 1.3 Testdriven utveckling
 Testdriven utveckling är en metodik som fokuserar på skriva tester före implementering av funktionalitet.
@@ -201,6 +189,7 @@ function add(a, b) {
 module.exports = { add };
 ```
 
+___
 
 ## PG 1.4 Deploy och staging
 **Deploying** innebär att föra över applikationen från utvecklingsmiljön till produktionsmiljön, där den blir tillgänglig för användare.Denna process är avgörande för att säkerställa att applikationen fungerar korrekt och pålitligt under verkliga förhållanden.
@@ -233,6 +222,8 @@ Blue-green deployment innebär att ha två identiska miljöer, en är <span styl
 #### Canary Releases
 Canary releases innebär att löpande rulla ut nya funktioner till en liten del av användarna innan de når alla. Detta gör det möjligt att upptäcka och åtgärda problem i en kontrollerad miljö utan att påverka alla användare samtidigt.
 
+___
+
 ## PG 1.5 Debugging
  Debugging är processen att hitta och fixa buggar i programvaran.
  Buggar kan vara allt från syntaxfel till logiska fel som orsakar oväntade beteenden i applikationen.
@@ -262,9 +253,21 @@ Då behöver även utvecklarna inte störa arbetsflödet för "fire fighting" i 
 
 #### Debugger Verktyg
 
+**Google Chrome DevTools** är ett inbyggt debugger-verktyg i Google Chrome som erbjuder många verktyg för att bland annat debugga, inspektera nätverkstrafik, analysera och optimera prestanda. DevTools används främst för frontend då verktyget är väl utvecklat för att felsöka HTML, CSS och JavaScript direkt i webbläsaren i realtid.
+
+Något jag finner oerhört hjälpsamt är att DevTools inkluderar ett verktyg för nätverksinspektion som visar alla förfrågningar och svar, vilket gör det möjligt att se vad som händer bakom kulisserna i realtid och kunna identifiera oväntat beteende. Detta är särskilt användbart för att felsöka API-anrop och laddningstider.
+De verktyg jag använder oftast är konsolen genom t.ex. console.log() och console.error(), för att se att data tas in, uppdateras och ges tillbaka som förväntat, samt *elements panel* +  *inspect* för att inspektera och redigera i *DOM-träd* och *CSS*.
 
 
+**VS Code Debugger - Node.js**
+Visual Studio Code stödjer debugging för många fler språk än bara JavaScript, Python och språk som transpileras till JavaScript. Verktyget kan också debuggera språk som C#, Java, Ruby, PHP, Go och många fler, beroende på installerade tillägg.
+Den inbyggda terminalen och möjligheten att ansluta till fjärrservrar gör felsökning på olika miljöer smidig.
 
+Två funktioner jag vill lära mig att använda mer är *call stack inspection*, som visar den aktuella platsen i koden och vilka funktioner som anropats fram till denna punkt, samt *watch expression* som gör att man kan välja vissa variabler eller uttryck i koden och kontinuerligt se deras aktuella värden under körning.
+Med det hoppas jag kunna identifiera och åtgärda problem i koden snabbare, effektivisera processen och höja kvaliteten på den slutliga applikationen.
+
+
+[- Debugging | Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
 ## PG 1.6 Dokumentation
 Beskriv rubriken här
 
