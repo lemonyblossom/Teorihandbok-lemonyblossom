@@ -282,7 +282,6 @@ Dokumentation säkerställer att alla som är involverade i ett projekt kan för
 #### Vad är Dokumentation inom webbutveckling?
 Inom programmering och webbutveckling avser den skriftliga och ibland visuella information som beskriver aspekter av ett program eller en applikation.
 Den inkluderar detaljer om kodens struktur, funktionalitet, användningssätt, och underhåll. 
-
 Dokumentation kan skapas under utvecklingsprocessen eller efter att en viss del av projektet är slutförd och kan dokumenteras. 
 
 Det finns två huvudsakliga typer av dokumentation: *intern* och *extern*.
@@ -309,6 +308,7 @@ Den kan inkludera:
 ***FAQ*** (Frequently Asked Questions) är en samling av vanliga frågor och svar som hjälper användare att snabbt hitta lösningar på vanliga problem.
 
 ***Utbildningsmaterial*** som kan inkludera tutorials, videor och annan pedagogisk information som hjälper användare att ta till sig information och lära sig använda programvaran effektivt.
+
 
 ## PG 1.7 Struktur av kod i projekt
 Beskriv rubriken här
