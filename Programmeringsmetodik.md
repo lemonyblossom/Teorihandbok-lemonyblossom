@@ -311,7 +311,117 @@ Den kan inkludera:
 
 
 ## PG 1.7 Struktur av kod i projekt
-Beskriv rubriken här
+
+Genom att följa etablerade programmeringsmetodiker, använda designmönster, CI/CD-processer, versionshanteringssystem och kodstandarder, kan utvecklingsteam skapa en kodbas som är lätt att förstå, underhålla och vidareutveckla. 
+En välstrukturerad kodbas är lättare att förstå, underhålla och vidareutveckla, vilket sparar tid och minskar risken för fel.
+
+
+En av de grundläggande principerna för att strukturera kod är att dela upp funktionalitet i separata moduler. Moduler är självständiga enheter som ansvarar för en specifik del av applikationens funktionalitet, vilket är centralt i metodiker som modulär programmering och *object-oriented programming (OOP)*.
+
+***I modulär programmering*** delas koden in i små, återanvändbara delar. Varje modul har ett tydligt definierat ansvar, vilket gör det enkelt att förstå vad modulen gör och hur den kan användas i olika delar av projektet. *OOP* tar detta ett steg vidare genom att organisera kod i klasser och objekt, vilket möjliggör inkapsling, arv och polymorfism.
+Detta gör att relaterade funktioner och data grupperas tillsammans och bidra till att koden blir mer logiskt strukturerad och lättare att följa. 
+
+```js
+// Exempel på modulär kod i JavaScript
+// math.js
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+
+// main.js
+import { add, subtract } from './math.js';
+
+console.log(add(5, 3));
+console.log(subtract(5, 3)); 
+```
+
+***Objektorienterad Programmering (OOP)*** är en metodik som organiserar programvaran runt objekt, vilket hjälper till att skapa en tydlig och strukturerad kodbas. OOP använder sig av klasser och objekt för att representera data och funktionalitet.
+> ***Inkapsling:*** Detta innebär att samla data och metoder som manipulerar denna data inom samma enhet, eller klass.
+
+> ***Arv*** tillåter en klass att ärva egenskaper och metoder från en annan klass. Detta främjar återanvändbarhet och kan minska duplicering av kod. Genom att använda arv kan utvecklare skapa nya klasser baserade på befintliga, vilket gör koden mer flexibel och skalbar.
+> 
+> Arv bör användas när det finns en klar "is-a" relation mellan bas- och underklassen, som när en *Roman* är en typ av *Bok*.
+Däremot bör arv undvikas när relationen inte är en "is-a" relation eller när det kan leda till tight koppling, som när en *Roman* har en *Författare* och därför har en "has-a" relation.
+
+Exempel på ***"is-a"*** relation
+```ts
+// Bok.ts
+class Bok {
+    titel: string;
+
+    constructor(titel: string) {
+        this.titel = titel;
+    }
+
+    läs(): void {
+        console.log(`Läser boken: ${this.titel}`);
+    }
+}
+
+// Roman.ts
+class Roman extends Bok {
+    genre: string;
+
+    constructor(titel: string, genre: string) {
+        super(titel);
+        this.genre = genre;
+    }
+
+    läs(): void {
+        console.log(`Läser romanen: ${this.titel}, Genre: ${this.genre}`);
+    }
+}
+
+const minRoman = new Roman("Utvandrarna", "Klassiker");
+minRoman.läs();  // Output: Läser romanen: Utvandrarna, Genre: Klassiker
+```
+
+Exempel på ***"has-a"*** relatioin
+```ts
+// Författare.ts
+class Författare {
+    namn: string;
+
+    constructor(namn: string) {
+        this.namn = namn;
+    }
+
+    skrivBok(): void {
+        console.log(`${this.namn} skriver en ny bok.`);
+    }
+}
+
+// Roman.ts
+class Roman {
+    titel: string;
+    författare: Författare;
+
+    constructor(titel: string, författare: Författare) {
+        this.titel = titel;
+        this.författare = författare;
+    }
+
+    läs(): void {
+        console.log(`Läser romanen: ${this.titel} av ${this.författare.namn}`);
+    }
+}
+
+
+const minFörfattare = new Författare("Vilhelm Moberg");
+const minRoman = new Roman("Utvandrarna", minFörfattare);
+minRoman.läs();  // Output: Läser romanen: Utvandrarna av Vilhelm Moberg
+minFörfattare.skrivBok();  // Output: Vilhelm Moberg skriver en ny bok.
+```
+
+
+> ***Polymorfism*** gör det möjligt för objekt att behandlas som exempel på deras bas-klass snarare än deras faktiska klass. Detta förenklar interaktionen mellan olika klasser och objekt, vilket gör koden mer dynamisk och anpassningsbar.
+
+> ***Abstraktion*** innebär att exponera endast nödvändiga detaljer och dölja implementeringsdetaljer. Genom att använda abstrakta klasser och gränssnitt kan utvecklare definiera gemensamma egenskaper och beteenden utan att avslöja komplexa implementationer
+
 
 ## PG 1.8 Automatisering av arbetsflöde
 Beskriv rubriken här
