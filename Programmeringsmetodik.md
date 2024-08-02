@@ -192,7 +192,7 @@ module.exports = { add };
 ___
 
 ## PG 1.4 Deploy och staging
-**Deploying** innebär att föra över applikationen från utvecklingsmiljön till produktionsmiljön, där den blir tillgänglig för användare.Denna process är avgörande för att säkerställa att applikationen fungerar korrekt och pålitligt under verkliga förhållanden.
+**Deploying** innebär att föra över applikationen från utvecklingsmiljön till produktionsmiljön, där den blir tillgänglig för användare. Denna process är avgörande för att säkerställa att applikationen fungerar korrekt och pålitligt under verkliga förhållanden.
 
 Processen involverar att bygga applikationen, köra tester, och sedan flytta den till produktionsservrar.
 
@@ -424,7 +424,18 @@ minFörfattare.skrivBok();  // Output: Vilhelm Moberg skriver en ny bok.
 
 
 ## PG 1.8 Automatisering av arbetsflöde
-Beskriv rubriken här
+Inom programmering och webbutveckling innebär detta att man skapar processer som automatiserar repetitiva och tidskrävande uppgifter. Detta kan omfatta allt från kodgranskning och testning till deployment och övervakning. Automatisering hjälper utvecklare att fokusera på mer komplexa och kreativa aspekter av utvecklingen, minskar risken för mänskliga fel, sparar tid och ökar därmed effektiviteten.
+Automatisering kan tillämpas på flera delar av utvecklingsprocessen, inklusive bygg, testning och kodgranskning.
+
+Genom att automatisera byggprocessen kan utvecklare skapa script som sammanställer och optimerar JavaScript, CSS och andra resurser.
+Till exempel kan man konfigurera en byggprocess som automatiskt minifierar och sammanfogar filer varje gång en ändring görs för att förbättra laddningstiden.
+
+Testautomatisering är en annan viktig del av arbetsflödet där utvecklaren skapar och kör automatiserade tester för att snabbt identifiera buggar och säkerställa att nya ändringar inte påverkar befintlig funktionalitet. 
+Dessa kan vara enhetstester, integrationstester och end-to-end-tester som körs varje gång ny kod checkas in i versionskontrollsystemet. Detta gör att eventuella felaktigheter eller buggar identifieras omedelbart efter en ändring, vilket minskar risken för att problem går obemärkt förbi och påverkar produktionen.
+
+Automatisering kan också tillämpas på infrastrukturella uppgifter. Genom att använda script för att konfigurera och hantera servrar kan utvecklare skapa konsekventa och reproducerbara miljöer. Till exempel kan man automatisera installationen av program och konfigureringen av tjänster, vilket minskar risken för konfigurationsfel och ser till att alla miljöer är identiska.
+
+TODO: Fortsätt texten om automatisering! Kodgranskning och sammanfattning 
 
 ## PG 1.9 Virtualisering av utvecklingsmiljö
 Beskriv rubriken här
