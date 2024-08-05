@@ -427,13 +427,13 @@ minFörfattare.skrivBok();  // Output: Vilhelm Moberg skriver en ny bok.
 Inom programmering och webbutveckling innebär detta att man skapar processer som automatiserar repetitiva och tidskrävande uppgifter. Detta kan omfatta allt från kodgranskning och testning till deployment och övervakning. Automatisering hjälper utvecklare att fokusera på mer komplexa och kreativa aspekter av utvecklingen, minskar risken för mänskliga fel, sparar tid och ökar därmed effektiviteten.
 Automatisering kan tillämpas på flera delar av utvecklingsprocessen, inklusive bygg, testning och kodgranskning.
 
-Genom att automatisera byggprocessen kan utvecklare skapa script som sammanställer och optimerar JavaScript, CSS och andra resurser.
+Genom att automatisera byggprocessen kan utvecklare skapa skript som sammanställer och optimerar JavaScript, CSS och andra resurser.
 Till exempel kan man konfigurera en byggprocess som automatiskt minifierar och sammanfogar filer varje gång en ändring görs för att förbättra laddningstiden.
 
 Testautomatisering är en annan viktig del av arbetsflödet där utvecklaren skapar och kör automatiserade tester för att snabbt identifiera buggar och säkerställa att nya ändringar inte påverkar befintlig funktionalitet. 
 Dessa kan vara enhetstester, integrationstester och end-to-end-tester som körs varje gång ny kod checkas in i versionskontrollsystemet. Detta gör att eventuella felaktigheter eller buggar identifieras omedelbart efter en ändring, vilket minskar risken för att problem går obemärkt förbi och påverkar produktionen.
 
-Automatisering kan också tillämpas på infrastrukturella uppgifter. Genom att använda script för att konfigurera och hantera servrar kan utvecklare skapa konsekventa och reproducerbara miljöer. Till exempel kan man automatisera installationen av program och konfigureringen av tjänster, vilket minskar risken för konfigurationsfel och ser till att alla miljöer är identiska.
+Automatisering kan också tillämpas på infrastrukturella uppgifter. Genom att använda skript för att konfigurera och hantera servrar kan utvecklare skapa konsekventa och reproducerbara miljöer. Till exempel kan man automatisera installationen av program och konfigureringen av tjänster, vilket minskar risken för konfigurationsfel och ser till att alla miljöer är identiska.
 
 En annan aspekt av arbetsflödesautomatisering är hantering av kodgranskningar. Genom att använda automatiserade verktyg kan kodgranskningar genomföras snabbt och effektivt, vilket säkerställer att kodstandarder följs och att kodkvaliteten bibehålls om kontroller sker innan koden godkänns för sammanslagning.
 
@@ -497,5 +497,28 @@ Fördelen utöver den förbättrade laddningstiden är att utvecklare inte behö
 ___
 
 ## PG 1.11 Terminalinterface
-Beskriv rubriken här
+Ett terminalinterface/CLI *(Command line interface)* är en typ av UI där användaren interagerar direkt med datorns OS genom att skriva kommandon i text i terminalen eller en annan kommandotolk. Till skillnad från grafiska användargränssnitt (GUI), där användaren interagerar med ikoner och visuella indikatorer, förlitar sig CLI på att användaren skriver specifika kommandon för att utföra olika uppgifter. Användaren kan redigera filer, navigera sig i filsystemet, installera- och tom skapa program.
+Kommandona skrivs manuellt av användaren och blir besvarade i text-output.
 
+Exempel på två små roliga program att köra via CLI:
+
+***FIGLET***
+FIGLET är ett program som omvandlar vanlig text till ASCII-konst.
+<img src="/Img/install-figlet.png" alt="installation av figlet">
+<img src="/Img/figlet-sebseb.png" alt="Hejsan Sebseb!">
+
+***COWSAY***
+COWSAY är ett program som visar text i en pratbubbla tillsammans med en ASCII-konstko eller andra djur. 
+<img src="/Img/install-cowsay.png" alt="installation av Cowsay">
+<img src="/Img/cow-dragon-cowsay.png" alt="cow and dragon">
+
+Att arbeta med CLI kräver viss inlärning och minne eftersom användaren måste känna till de specifika kommandon och syntax som behövs för att utföra olika uppgifter.
+Till exempel, för att navigera i filsystemet används kommandon som cd (change directory) för att byta katalog, ls (list) för att lista filer i en mapp, och mkdir (make directory) för att skapa en ny mapp.
+
+CLI är ett verktyg som erbjuder en hög grad av kontroll och precision. För utvecklare och systemadministratörer är det ofta en nödvändighet, eftersom det möjliggör snabb och effektiv hantering av systemuppgifter. Det är också möjligt att skriva skript i kommandoradsmiljöer för att automatisera repetitiva uppgifter, vilket ökar effektiviteten och minskar risken för fel.
+
+CLI är mycket resurseffektivt eftersom det inte kräver de grafiska resurser som ett GUI gör. Detta gör det möjligt att arbeta på fjärrsystem med begränsade resurser eller att utföra uppgifter snabbare på äldre hårdvara.
+
+En av de största utmaningarna med att använda CLI är inlärningskurvan. Det kräver att användaren lär sig ett stort antal kommandon och dess syntax. Det finns inga visuella ledtrådar eller verktygstips, så användaren måste veta exakt vad de vill göra och hur de ska skriva kommandot. Detta kan göra felsökning svårare, särskilt om man gör ett misstag i syntaxen.
+
+Förutom de grundläggande kommandona finns det flertal verktyg och skript som kan göra användningen av CLI smidigare och enklare. Verktyg som *grep*, *awk* och *sed* för att söka och manipulera textdata. Paket- och versionshanterare som *apt*, *yum* och *brew* gör det enkelt att installera och uppdatera programvara direkt från kommandoraden. Dessutom kan du anpassa din CLI-miljö med konfigurationsfiler som .bashrc eller .zshrc kan du anpassa hur din kommandotolk fungerar och ser ut bla genom att lägga till mappar till ens `PATH`-variabel för att kunna köra program från dessa var man än befinner sig i filsystemet.
