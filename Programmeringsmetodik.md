@@ -262,7 +262,7 @@ De verktyg jag använder oftast är *console* samt *elements panel* +  *inspect*
 
 
 **VS Code Debugger - Node.js**
-Visual Studio Code stödjer debugging för många fler språk än bara JavaScript, Python och språk som transpileras till JavaScript. Verktyget kan också debuggera språk som C#, Java, Ruby, PHP, Go och många fler, beroende på installerade tillägg.
+Visual Studio Code stödjer debugging för många fler språk än bara JavaScript, Python och språk som transpileras till JavaScript. Verktyget kan också debuggera språk som C#, Java, Ruby, PHP och många fler, beroende på installerade tillägg.
 Den inbyggda terminalen och möjligheten att ansluta till fjärrservrar gör felsökning på olika miljöer smidig.
 
 Två funktioner jag vill lära mig att använda mer är *call stack inspection*, som visar den aktuella platsen i koden och vilka funktioner som anropats fram till denna punkt, samt *watch expression* som gör att man kan välja vissa variabler eller uttryck i koden och kontinuerligt se deras aktuella värden under körning.
@@ -442,7 +442,7 @@ En annan aspekt av arbetsflödesautomatisering är hantering av kodgranskningar.
 Virtualisering av utvecklingsmiljö innebär att skapa isolerade och reproducerbara miljöer där utvecklare kan arbeta utan att påverka varandra eller produktionssystemet.
 
 #### Docker
-***Docker***  är ett av de mest använda verktygen för detta. Med Docker kan applikationer och deras beroenden paketeras i lättviktscontainrar. Dessa containrar är isolerade från varandra och innehåller allt som behövs för att köra applikationen, inklusive kod, runtime och bibliotek. Detta gör det enkelt att snabbt sätta upp och stänga ner utvecklingsmiljöer, vilket sparar tid och minskar risken för problem.
+***Docker***  är ett av de mest använda verktygen för detta. Med Docker kan applikationer och deras dependencies paketeras i lättviktscontainrar. Dessa containrar är isolerade från varandra och innehåller allt som behövs för att köra applikationen, inklusive kod, runtime och bibliotek. Detta gör det enkelt att snabbt sätta upp och stänga ner utvecklingsmiljöer, vilket sparar tid och minskar risken för problem.
 
 En ***Docker container*** är en körbar instans av en ***Docker image***, den faktiska enheten som körs i en isolerad miljö med egna processer, nätverksgränssnitt och filsystem. En ***Dockerfile*** är en textfil med instruktioner för att bygga en Docker image, som är ett exekverbart paket med allt som behövs för att köra en applikation. Till exempel, kommandot ```FROM node:14``` i en Dockerfile använder en färdig Docker image med Node.js version 14 från Docker Hub, vilket eliminerar behovet av manuell installation.
 
@@ -452,11 +452,12 @@ För att bygga en image används kommandot ```docker build -t emmas-app``` . i t
 
 Compose-filen följer Compose-specifikationen och placeras vanligtvis i arbetskatalogen som compose.yaml. För att stoppa och ta bort tjänster används ```docker compose down```.
 
-Eftersom varje container körs isolerat minskar risken för konflikter mellan beroenden och miljövariabler Docker-containrar kan köras på vilken plattform som helst som stödjer Docker, vilket gör det enkelt att flytta applikationer mellan olika miljöer. Containrar delar operativsystemets kärna, vilket gör dem mer resurseffektiva än traditionella virtuella maskiner. Detta leder till snabbare uppstartstider och lägre resursanvändning.
+Eftersom varje container körs isolerat minskar risken för konflikter mellan dependencies och miljövariabler Docker-containrar kan köras på vilken plattform som helst som stödjer Docker, vilket gör det enkelt att flytta applikationer mellan olika miljöer. Containrar delar operativsystemets kärna, vilket gör dem mer resurseffektiva än traditionella virtuella maskiner. Detta leder till snabbare uppstartstider och lägre resursanvändning.
 
 ***Docker Desktop***
 Docker Desktop är en enkel applikation för som låter dig bygga, dela och köra containeriserade applikationer. 
-Det inkluderar *Docker Engine*, *Docker CLI*, *Docker Compose* och andra verktyg, vilket gör det enkelt att hantera containrar och bilder via ett användavänligt GUI. Docker Desktop minskar tiden för komplexa inställningar och uppdateras regelbundet med buggfixar och säkerhetsuppdateringar.
+Det inkluderar *Docker Engine*, *Docker CLI*, *Docker Compose* och andra verktyg, vilket gör det enkelt att hantera containrar och bilder via ett användavänligt GUI.
+ Docker Desktop minskar tiden för komplexa inställningar och uppdateras regelbundet med buggfixar och säkerhetsuppdateringar.
 
 
 [Docker Desktop | docs.docker](https://docs.docker.com/desktop/)
@@ -465,8 +466,34 @@ Det inkluderar *Docker Engine*, *Docker CLI*, *Docker Compose* och andra verktyg
 ___
 
 ## PG 1.10 Bundeling-verktyg
-Beskriv rubriken här
+***Bundling-verktyg*** samlar ihop, eller "bundlar", olika resurser som JavaScript, CSS och bilder till en enda fil eller ett mindre antal filer.
+Detta minskar antalet HTTP-förfrågningar som behövs för att ladda en webbsida, vilket resulterar i snabbare laddning och högre prestanda. Målet är att minska antalet filer som behöver laddas av webbläsaren och att optimera dessa filer för snabbare leverans, vilket innefatta bla minifiering, som tar bort onödiga tecken från koden, och tree shaking, som tar bort oanvänd/redundant kod.
 
+***Minifiering***
+- **Borttagning av blanksteg och radbrytningar:** Alla onödiga blanksteg, radbrytningar och tabbar tas bort för att minska filstorleken.
+- **Borttagning av kommentarer:** Alla kommentarer i koden, som ofta används för att förklara eller dokumentera kod, tas bort.
+- **Förkortning av variabelnamn:** Variabelnamn och funktionsnamn kan förkortas för att ytterligare minska storleken på koden.
+- **Eliminering av onödig kod:** Oanvänd kod eller kod som inte bidrar till funktionaliteten kan tas bort.
+
+NPM (Node Package Manager)
+NPM är en pakethanterare för JavaScript som gör det möjligt att hantera och ladda ner alla de olika bibliotek och moduler som en applikation behöver för att fungera. NPM är också ett verktyg för att hantera dependencies och skript för att automatisera utvecklingsuppgifter.
+
+***Beroendehantering (Dependency management):*** Installerar och hanterra dependencies genom kommandot npm install, som laddar ner och installerar alla deklarerade dependencies i projektets node_modules-mapp. De specificeras sedan i en package.json-fil, där alla nödvändiga bibliotek och dess versioner listas.
+
+***Skript och Automatisering:*** NPM kan användas för att definiera och köra skript för olika utvecklingsuppgifter. I package.json-filen kan man under sektionen scripts definiera skript som kan köras med kommandot npm run. Detta gör det enkelt att automatisera uppgifter som byggprocesser, testkörningar och distribution.
+
+***Versionshantering:*** Utvecklare kan specificera versioner av dependencies för att säkerställa att rätt version används, vilket minskar risken för kompatibilitetsproblem när olika versioner av ett bibliotek används i olika projekt.
+
+***Webpack***
+Webpack kan hantera JavaScript, CSS, bilder och HTML-filer. Webpack använder 'dedependecy manager' som skapar ett 'dependency tree' av alla moduler i din applikation och genererar en eller flera bundle-filer.
+
+***Beroendehantering:*** I Webpack innebär detta att applikationen först analyseras utifrån huvudfilen (entry point) och skapar ett träd över dependencies. Detta görs genom att analysera alla *imports* och *requires* i ingångspunkten. Därefter packas alla dependencies ihop i moduler som har tillgång till dem de specifikt behöver. Slutligen skapar Webpack bundles som innehåller alla moduler och deras dependencies, vilket optimerar laddningstiden för applikationen.
+
+***Skript och Automatisering:*** Webpack kan användas för att definiera och köra byggprocesser automatiskt genom att konfigurera regler och plugins i en konfigurationsfil. Detta gör det möjligt att automatisera uppgifter som minifiering, bundle-skapande och koddelning.
+
+***Plugins:*** Webpack har ett system för plugins som gör det möjligt att utöka och anpassa bundling-processen ytterligare. Plugins kan användas för att optimera bundles, hantera tillgångar som bilder och fonts, generera HTML-filer och mycket mer. Detta gör Webpack flexibelt och anpassningsbart för olika typer av projekt.
+
+Fördelen utöver den förbättrade laddningstiden är att utvecklare inte behöver hantera och inkludera varje bibliotek manuellt i varje fil, utan kan istället deklarera dependencies i sina källfiler som Webpack samlar i bundle-filer.
 ___
 
 ## PG 1.11 Terminalinterface
