@@ -435,13 +435,39 @@ Dessa kan vara enhetstester, integrationstester och end-to-end-tester som körs 
 
 Automatisering kan också tillämpas på infrastrukturella uppgifter. Genom att använda script för att konfigurera och hantera servrar kan utvecklare skapa konsekventa och reproducerbara miljöer. Till exempel kan man automatisera installationen av program och konfigureringen av tjänster, vilket minskar risken för konfigurationsfel och ser till att alla miljöer är identiska.
 
-TODO: Fortsätt texten om automatisering! Kodgranskning och sammanfattning 
+En annan aspekt av arbetsflödesautomatisering är hantering av kodgranskningar. Genom att använda automatiserade verktyg kan kodgranskningar genomföras snabbt och effektivt, vilket säkerställer att kodstandarder följs och att kodkvaliteten bibehålls om kontroller sker innan koden godkänns för sammanslagning.
+
 
 ## PG 1.9 Virtualisering av utvecklingsmiljö
-Beskriv rubriken här
+Virtualisering av utvecklingsmiljö innebär att skapa isolerade och reproducerbara miljöer där utvecklare kan arbeta utan att påverka varandra eller produktionssystemet.
+
+#### Docker
+***Docker***  är ett av de mest använda verktygen för detta. Med Docker kan applikationer och deras beroenden paketeras i lättviktscontainrar. Dessa containrar är isolerade från varandra och innehåller allt som behövs för att köra applikationen, inklusive kod, runtime och bibliotek. Detta gör det enkelt att snabbt sätta upp och stänga ner utvecklingsmiljöer, vilket sparar tid och minskar risken för problem.
+
+En ***Docker container*** är en körbar instans av en ***Docker image***, den faktiska enheten som körs i en isolerad miljö med egna processer, nätverksgränssnitt och filsystem. En ***Dockerfile*** är en textfil med instruktioner för att bygga en Docker image, som är ett exekverbart paket med allt som behövs för att köra en applikation. Till exempel, kommandot ```FROM node:14``` i en Dockerfile använder en färdig Docker image med Node.js version 14 från Docker Hub, vilket eliminerar behovet av manuell installation.
+
+För att bygga en image används kommandot ```docker build -t emmas-app``` . i terminalen. Detta skapar en Docker image från Dockerfilen och taggar den som "emmas-app". För att starta en container från imagen används ```docker run -d -p 3000:3000 emmas-app```. Detta kör applikationen i bakgrunden och mappar port 3000 lokalt till port 3000 i containern. Det är viktigt att komma ihåg att en image inte kan ändras när den väl har skapats.
+
+***Docker Compose*** är ett verktyg för att definiera och köra applikationer med flera containrar. Det förenklar hanteringen av hela applikationsstacken genom att definiera tjänster, nätverk och volymer i en enda YAML-konfigurationsfil. Genom att använda kommandot ```docker-compose up -d``` kan alla tjänster som definieras i docker-compose.yml startas med ett enda kommando. 
+
+Compose-filen följer Compose-specifikationen och placeras vanligtvis i arbetskatalogen som compose.yaml. För att stoppa och ta bort tjänster används ```docker compose down```.
+
+Eftersom varje container körs isolerat minskar risken för konflikter mellan beroenden och miljövariabler Docker-containrar kan köras på vilken plattform som helst som stödjer Docker, vilket gör det enkelt att flytta applikationer mellan olika miljöer. Containrar delar operativsystemets kärna, vilket gör dem mer resurseffektiva än traditionella virtuella maskiner. Detta leder till snabbare uppstartstider och lägre resursanvändning.
+
+***Docker Desktop***
+Docker Desktop är en enkel applikation för som låter dig bygga, dela och köra containeriserade applikationer. 
+Det inkluderar *Docker Engine*, *Docker CLI*, *Docker Compose* och andra verktyg, vilket gör det enkelt att hantera containrar och bilder via ett användavänligt GUI. Docker Desktop minskar tiden för komplexa inställningar och uppdateras regelbundet med buggfixar och säkerhetsuppdateringar.
+
+
+[Docker Desktop | docs.docker](https://docs.docker.com/desktop/)
+[Docker Compose | docs.docker](https://docs.docker.com/compose/)
+[Vad är Docker? | kinsta.com](https://kinsta.com/se/kunskapsbas/vad-ar-docker/#vad-r-docker)
+___
 
 ## PG 1.10 Bundeling-verktyg
 Beskriv rubriken här
+
+___
 
 ## PG 1.11 Terminalinterface
 Beskriv rubriken här
