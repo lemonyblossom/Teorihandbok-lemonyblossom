@@ -18,7 +18,21 @@ Studerande: Emma Jensen
  JavaScript och ECMAScript utvecklas ständigt, med nya versioner som släpps regelbundet för att förbättra språkets funktionalitet och prestanda. Detta gör det möjligt för utvecklare att dra nytta av de senaste teknologierna och bästa praxis för att bygga moderna webbapplikationer.
 
 ## JS 1.2 JavaScript-ramverk och -bibliotek
-Beskriv rubriken här
+JavaScript-ramverk och -bibliotek är verktyg som gör det enklare att utveckla webbapplikationer. Ramverk ger en struktur och riktlinjer för hur man bygger applikationer, medan bibliotek innehåller färdiga funktioner och komponenter för att lösa specifika problem.
+
+
+#### Ramverk 
+***Angular:*** Utvecklat av Google och är super för att bygga stora, dynamiska applikationer. Angular använder TypeScript, vilket innebär att du får en hel del stöd av typen och kan undvika vissa typer av buggar. Den har tvåvägsdatabindning, vilket betyder att när du ändrar något i modellen så uppdateras vyn automatiskt och vice versa. Du bygger applikationer med komponenter, vilket gör det lätt att återanvända delar av koden.
+
+
+***React:*** Skapat av Facebook och är perfekt för att bygga användargränssnitt. React delar upp applikationen i små delar som kallas komponenter, vilket gör koden mer hanterbar. Det använder enkelriktad datatrafik, så data flödar i en riktning, vilket kan göra det lättare att förstå hur data rör sig genom din applikation. React använder en virtuell DOM som gör att uppdateringar blir snabba och effektiva.
+
+***Vue.js*** är ett progressivt ramverk, vilket betyder att du kan införa det gradvis i ett projekt. Vue kombinerar det bästa av Angular och React, och är både flexibelt och lätt att lära sig. Det är känt för sin enkla syntax och är bra för både små och stora projekt.
+
+
+
+#### Bibliotek
+***jQuery*** gör det enkelt att välja och manipulera DOM-element. Med jQuery kan du skriva kort och koncis kod, vilket gör den lätt att läsa och underhålla. Det hjälper också till med att hantera skillnader mellan olika webbläsare, så att din kod fungerar överallt. jQuery gör det också enkelt att binda och hantera events som click, mouseover och keypress. Dessutom kan du skapa både enkla och komplexa animationer för att förbättra användarupplevelsen. En av de bästa sakerna med jQuery är hur det förenklar asynkrona HTTP requests med AJAX, vilket gör det lättare att ladda och skicka data utan att behöva ladda om sidan.
 
 ## JS 1.3 Promises
 Beskriv rubriken här
