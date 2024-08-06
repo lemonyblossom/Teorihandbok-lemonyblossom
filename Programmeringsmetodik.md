@@ -91,6 +91,9 @@ Jag upplevde att vissa av dessa kommandon kändes snarlika varandra tills att ja
 | **Merge**    | Slår ihop ändringar från en branch till en annan och skapar en merge-commit.              | - Bevarar hela historiken och visar tydligt när en branch har blivit mergead.<br>- Enkel och säker metod för att slå ihop arbete från olika branches.           | - Detta kan leda till en komplex och otydlig commit-historik, eftersom varje merge skapar en extra commit. Historiken kan bli svår att läsa med många merge-commits och förgreningar, vilket kan orsaka förvirring och göra det svårt att spåra ändringar.                              |
 | **Rebase**   | Flyttar eller kombinerar commits till en ny bascommit.                                    | - Ren och linjär commit-historik.<br>- Ingen merge-commit skapas, vilket gör historiken lättare att följa.                                                      | - Eftersom rebase omskriver commit-historiken, kan det skapa problem vid delade branches genom att ändra commits som andra utvecklare arbetar med, vilket leder till förvirring och felaktig historik. Detta gör rebase mindre lämpligt för branches som delas mellan flera utvecklare. |
 
+[- Git, What is it? | atlassian.com](https://www.atlassian.com/git/tutorials/what-is-git)
+[- Git guide | github.blog ](https://github.blog/developer-skills/programming-languages-and-frameworks/what-is-git-our-beginners-guide-to-version-control/)
+
 ---
 ## PG 1.2 Benchmarking
 Benchmarking är processen av att mäta och utvärdera prestandan av en programvara. Detta gör man genom standardiserade tester som kan inkludera att mäta svarstid, minnesanvändning, genomströmmning, uppstartstid och failovertid, men även många andra viktiga mått. 
@@ -117,6 +120,8 @@ Det är en viktig del av att utveckla applikationer för att säkerställa att p
 #### Backend
 **Apache JMeter** är ett populärt verktyg för att utföra belastningstester på webbapplikationer. Det kan simulera ett stort antal användare som gör förfrågningar till en server och ger inblick om svarstider, fel och serverprestanda.
 
+[- Lighthouse](https://developer.chrome.com/docs/lighthouse)
+[- Apache jmetertm](https://jmeter.apache.org/)
 ___
 
 ## PG 1.3 Testdriven utveckling
@@ -188,7 +193,10 @@ function add(a, b) {
 
 module.exports = { add };
 ```
-
+[- Testdriven utveckling | consid](https://www.consid.com/sv/insikter/artiklar/testdriven-utveckling-skriv-test-forst-och-kod-sen-med-tdd-metoden/)
+[- OOP | geeksforgeeks](https://www.consid.com/sv/insikter/artiklar/testdriven-utveckling-skriv-test-forst-och-kod-sen-med-tdd-metoden/)
+[- Jest | jestjs.io](https://jestjs.io/)
+[- Jest test example inspo](https://medium.com/@dirussogaetano/unit-tests-javascript-jest-4f792124e136)
 ___
 
 ## PG 1.4 Deploy och staging
@@ -222,6 +230,9 @@ Blue-green deployment innebär att ha två identiska miljöer, en är <span styl
 #### Canary Releases
 Canary releases innebär att löpande rulla ut nya funktioner till en liten del av användarna innan de når alla. Detta gör det möjligt att upptäcka och åtgärda problem i en kontrollerad miljö utan att påverka alla användare samtidigt.
 
+[- CI/CD | limetta.se](https://limetta.se/tips-metoder-for-digitala-projekt/Vad-ar-CI-CD--Continuous-Integration-och-Delivery/)
+[- CI/CD | gitlab](https://about.gitlab.com/topics/ci-cd/)
+[- Deployment strategies | harness.io](https://www.harness.io/blog/blue-green-canary-deployment-strategies)
 ___
 
 ## PG 1.5 Debugging
@@ -272,6 +283,7 @@ Med det hoppas jag kunna identifiera och åtgärda problem i koden snabbare, eff
 [- Chrome DevTools CSS | Google](https://developer.chrome.com/docs/devtools/css)
 [- Debugging | Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
 [- Debugging | Node.js](https://nodejs.org/en/learn/getting-started/debugging)
+[- debugging in software engineering | geeksforgeeks](https://www.geeksforgeeks.org/software-engineering-debugging/)
 
 ___
 
@@ -309,7 +321,11 @@ Den kan inkludera:
 
 ***Utbildningsmaterial*** som kan inkludera tutorials, videor och annan pedagogisk information som hjälper användare att ta till sig information och lära sig använda programvaran effektivt.
 
+[- Documentation types | altexsoft.com](https://www.altexsoft.com/blog/technical-documentation-in-software-development-types-best-practices-and-tools/)
+[- External docs  document360.com](https://document360.com/blog/external-documentation/)
+[- Importance of Documentation | edu.edu](http://www.cs.ecu.edu/karl/3300/spr16/Notes/Documentation/documentation.html)
 
+---
 ## PG 1.7 Struktur av kod i projekt
 
 Genom att följa etablerade programmeringsmetodiker, använda designmönster, CI/CD-processer, versionshanteringssystem och kodstandarder, kan utvecklingsteam skapa en kodbas som är lätt att förstå, underhålla och vidareutveckla. 
@@ -322,21 +338,36 @@ En av de grundläggande principerna för att strukturera kod är att dela upp fu
 Detta gör att relaterade funktioner och data grupperas tillsammans och bidra till att koden blir mer logiskt strukturerad och lättare att följa. 
 
 ```js
-// Exempel på modulär kod i JavaScript
-// math.js
-export function add(a, b) {
-  return a + b;
+// auth.js - Modul för user auth
+export function login(username, password) {
+  return (username === "user" && password === "pass");
 }
 
-export function subtract(a, b) {
-  return a - b;
+// session.js - Modul för sessionshantering
+let currentUser = null;
+
+export function setSession(user) {
+  currentUser = user;
 }
 
-// main.js
-import { add, subtract } from './math.js';
+export function getSession() {
+  return currentUser;
+}
 
-console.log(add(5, 3));
-console.log(subtract(5, 3)); 
+// main.js - entry point som importerar och använder modulerna
+import { login } from './auth.js';
+import { setSession, getSession } from './session.js';
+
+const username = "user";
+const password = "pass";
+
+if (login(username, password)) {
+  setSession(username);
+  console.log("User logged in:", getSession());
+} else {
+  console.log("Invalid credentials");
+}
+
 ```
 
 ***Objektorienterad Programmering (OOP)*** är en metodik som organiserar programvaran runt objekt, vilket hjälper till att skapa en tydlig och strukturerad kodbas. OOP använder sig av klasser och objekt för att representera data och funktionalitet.
@@ -422,6 +453,11 @@ minFörfattare.skrivBok();  // Output: Vilhelm Moberg skriver en ny bok.
 
 > ***Abstraktion*** innebär att exponera endast nödvändiga detaljer och dölja implementeringsdetaljer. Genom att använda abstrakta klasser och gränssnitt kan utvecklare definiera gemensamma egenskaper och beteenden utan att avslöja komplexa implementationer
 
+[- Modular programmering | tiny.cloud](https://www.tiny.cloud/blog/modular-programming-principle/)
+[- Polymorphism vs Inheritance | shiksha.com](https://www.shiksha.com/online-courses/articles/difference-between-inheritance-and-polymorphism-blogId-153349)
+[- Inheritance vs Abstraktion in OOP | medium.com](https://medium.com/nerd-for-tech/exploring-inheritance-and-abstraction-in-object-oriented-programming-1b23b68b1736)
+
+---
 
 ## PG 1.8 Automatisering av arbetsflöde
 Inom programmering och webbutveckling innebär detta att man skapar processer som automatiserar repetitiva och tidskrävande uppgifter. Detta kan omfatta allt från kodgranskning och testning till deployment och övervakning. Automatisering hjälper utvecklare att fokusera på mer komplexa och kreativa aspekter av utvecklingen, minskar risken för mänskliga fel, sparar tid och ökar därmed effektiviteten.
@@ -436,6 +472,11 @@ Dessa kan vara enhetstester, integrationstester och end-to-end-tester som körs 
 Automatisering kan också tillämpas på infrastrukturella uppgifter. Genom att använda skript för att konfigurera och hantera servrar kan utvecklare skapa konsekventa och reproducerbara miljöer. Till exempel kan man automatisera installationen av program och konfigureringen av tjänster, vilket minskar risken för konfigurationsfel och ser till att alla miljöer är identiska.
 
 En annan aspekt av arbetsflödesautomatisering är hantering av kodgranskningar. Genom att använda automatiserade verktyg kan kodgranskningar genomföras snabbt och effektivt, vilket säkerställer att kodstandarder följs och att kodkvaliteten bibehålls om kontroller sker innan koden godkänns för sammanslagning.
+
+[- Workflow automation, why? | atlassian.com](https://www.atlassian.com/agile/project-management/workflow-automation)
+[- Workflow automation 2024 guide | pipefy.com](https://www.pipefy.com/blog/what-is-workflow-automation/)
+
+---
 
 
 ## PG 1.9 Virtualisering av utvecklingsmiljö
@@ -475,15 +516,6 @@ Detta minskar antalet HTTP-förfrågningar som behövs för att ladda en webbsid
 - **Förkortning av variabelnamn:** Variabelnamn och funktionsnamn kan förkortas för att ytterligare minska storleken på koden.
 - **Eliminering av onödig kod:** Oanvänd kod eller kod som inte bidrar till funktionaliteten kan tas bort.
 
-NPM (Node Package Manager)
-NPM är en pakethanterare för JavaScript som gör det möjligt att hantera och ladda ner alla de olika bibliotek och moduler som en applikation behöver för att fungera. NPM är också ett verktyg för att hantera dependencies och skript för att automatisera utvecklingsuppgifter.
-
-***Beroendehantering (Dependency management):*** Installerar och hanterra dependencies genom kommandot npm install, som laddar ner och installerar alla deklarerade dependencies i projektets node_modules-mapp. De specificeras sedan i en package.json-fil, där alla nödvändiga bibliotek och dess versioner listas.
-
-***Skript och Automatisering:*** NPM kan användas för att definiera och köra skript för olika utvecklingsuppgifter. I package.json-filen kan man under sektionen scripts definiera skript som kan köras med kommandot npm run. Detta gör det enkelt att automatisera uppgifter som byggprocesser, testkörningar och distribution.
-
-***Versionshantering:*** Utvecklare kan specificera versioner av dependencies för att säkerställa att rätt version används, vilket minskar risken för kompatibilitetsproblem när olika versioner av ett bibliotek används i olika projekt.
-
 ***Webpack***
 Webpack kan hantera JavaScript, CSS, bilder och HTML-filer. Webpack använder 'dedependecy manager' som skapar ett 'dependency tree' av alla moduler i din applikation och genererar en eller flera bundle-filer.
 
@@ -494,6 +526,20 @@ Webpack kan hantera JavaScript, CSS, bilder och HTML-filer. Webpack använder 'd
 ***Plugins:*** Webpack har ett system för plugins som gör det möjligt att utöka och anpassa bundling-processen ytterligare. Plugins kan användas för att optimera bundles, hantera tillgångar som bilder och fonts, generera HTML-filer och mycket mer. Detta gör Webpack flexibelt och anpassningsbart för olika typer av projekt.
 
 Fördelen utöver den förbättrade laddningstiden är att utvecklare inte behöver hantera och inkludera varje bibliotek manuellt i varje fil, utan kan istället deklarera dependencies i sina källfiler som Webpack samlar i bundle-filer.
+
+***Rollup:*** Rollup är ett modulärt bundling-verktyg som ofta används för att paketera JavaScript-bibliotek och -moduler. Det fokuserar på att skapa små och effektiva bundles och stödjer tree-shaking för att ta bort oanvänd kod.
+
+***Parcel:*** Parcel är ett annat bundling-verktyg som är känt för sin snabbhet och enkelhet. Det kräver minimal konfiguration och har inbyggt stöd för många typer av filer och moderna JavaScript-funktioner.
+
+
+#### Package manager
+NPM (Node Package Manager) är inte ett bundling-verktyg i sig, men har en stor roll i bundling-processen genom att hantera och installera de paket och moduler som behövs för att bundling-verktygen ska fungera. 
+Många bundling-verktyg som *Webpack*, *Rollup* och *Parcel* använder NPM för att installera och hantera deras plugins och dependencies.
+ NPM hanterar bibliotek och moduler som används av bundling-verktyg, inklusive både huvudverktyget och dess tillägg eller plugins som kan behövas för specifika funktioner. Det kan också definiera skript i *package.json-filen* som kör bundling-processer, till exempel kommandon för att köra Webpack eller Parcel för att bygga projektet.
+
+[Comparing JS bundlers: Rollup vs Webpack vs Parcel | kinsta.com](https://kinsta.com/blog/rollup-vs-webpack-vs-parcel/)
+[- Webpack | webpack.js.org](https://webpack.js.org/concepts/)
+[- 5 different bundelling tools | amplication.com](https://amplication.com/blog/5-different-tools-to-bundle-nodejs-apps)
 ___
 
 ## PG 1.11 Terminalinterface
@@ -522,3 +568,6 @@ CLI är mycket resurseffektivt eftersom det inte kräver de grafiska resurser so
 En av de största utmaningarna med att använda CLI är inlärningskurvan. Det kräver att användaren lär sig ett stort antal kommandon och dess syntax. Det finns inga visuella ledtrådar eller verktygstips, så användaren måste veta exakt vad de vill göra och hur de ska skriva kommandot. Detta kan göra felsökning svårare, särskilt om man gör ett misstag i syntaxen.
 
 Förutom de grundläggande kommandona finns det flertal verktyg och skript som kan göra användningen av CLI smidigare och enklare. Verktyg som *grep*, *awk* och *sed* för att söka och manipulera textdata. Paket- och versionshanterare som *apt*, *yum* och *brew* gör det enkelt att installera och uppdatera programvara direkt från kommandoraden. Dessutom kan du anpassa din CLI-miljö med konfigurationsfiler som .bashrc eller .zshrc kan du anpassa hur din kommandotolk fungerar och ser ut bla genom att lägga till mappar till ens `PATH`-variabel för att kunna köra program från dessa var man än befinner sig i filsystemet.
+
+[- CLI | freecodecamp.org](https://www.freecodecamp.org/news/how-to-use-the-cli-beginner-guide/)
+[- CLI over GUI? | hostinger.com](https://www.hostinger.com/tutorials/what-is-cli)
