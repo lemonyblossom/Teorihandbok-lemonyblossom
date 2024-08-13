@@ -137,9 +137,9 @@ Du bygger applikationer med komponenter, vilket gör det lätt att återanvända
 ***React:*** Skapat av Facebook och är perfekt för att bygga användargränssnitt.
  React delar upp applikationen i små delar som kallas komponenter, vilket gör koden mer hanterbar. 
  Det använder enkelriktad datatrafik, så data flödar i en riktning, vilket kan göra det lättare att förstå hur data rör sig genom din applikation. 
- React använder en virtuell DOM som gör att uppdateringar blir snabba och effektiva.
+ React använder en virtuell DOM *(JS 1.5)* som gör att uppdateringar blir snabba och effektiva.
 
-***Vue.js*** är ett progressivt ramverk, vilket betyder att du kan införa det gradvis i ett projekt. Vue kombinerar det bästa av Angular och React, och är både flexibelt och lätt att lära sig. Det är känt för sin enkla syntax och är bra för både små och stora projekt.
+***Vue.js*** är ett progressivt ramverk, vilket betyder att du kan införa det gradvis i ett projekt. Vue kombinerar det bästa av Angular och React, och är både flexibelt och lätt att lära sig pga sin enkla syntax, och är bra för både små och stora projekt.
 
 
 
@@ -249,11 +249,67 @@ function makeAnimalSpeak(animal) {
 
 makeAnimalSpeak(dog); // Output: Rex barks.
 makeAnimalSpeak(cat); // Output: Whiskers meows.
-````
+```
+
 Ovan har vi en bas-klass Animal och två subklasser Dog och Cat som overrides metoden speak. Funktionen makeAnimalSpeak accepterar vilket djur som helst och anropar dess speak-metod.
 
+
 ## JS 1.5 DOM-manipulation
-Beskriv rubriken här
+Document Object Model (DOM) är en programmeringsgränssnitt för HTML och XML-dokument. Det representerar dokumentet som en trädstruktur där varje nod är en del av dokumentet, såsom element, attribut och text.
+DOM gör det möjligt för programmerare att interagera med och manipulera dokumentets struktur, stil och innehåll dynamiskt.
+
+JavaScript används för att manipulera DOM för att dynamiskt uppdatera innehållet och utseendet på en webbsida. 
+
+Genom att använda metoder som getElementById, querySelector, appendChild och removeChild kan utvecklare lägga till, ändra eller ta bort element från dokumentet.
+
+*Hämta ett element med `getElementById `och ändra dess innehåll:*
+```js
+let element = document.getElementById('myElement');
+element.innerHTML = 'Nytt innehåll';
+```
+*Lägg till ett nytt element med `createElement` och `appendChild`:*
+
+```js
+let newElement = document.createElement('div');
+newElement.innerHTML = 'Jag är ett nytt element';
+document.body.appendChild(newElement);
+```
+
+*Ta bort ett element med `removeChild`*
+```js
+let parentElement = document.getElementById('parentElement');
+let childElement = document.getElementById('childElement');
+parentElement.removeChild(childElement);
+```
+DOM-manipulation gör det möjligt att skapa dynamiska och interaktiva webbsidor, där innehåll kan uppdateras utan att hela sidan behöver laddas om. Detta förbättrar användarupplevelsen genom att ge snabb och responsiv interaktion.
+
+Ett vanligt användningsområde för DOM-manipulation är att hantera händelser som från användaren. Genom att binda event listeners till element kan utvecklare skapa interaktivitet på sina webbsidor.
+
+*Här binder vi ett click event till en knapp med id myButton. När knappen klickas visas en alert.*
+```js 
+let button = document.getElementById('myButton');
+button.addEventListener('click', () => {
+    alert('Button was clicked!');
+});
+```
+
+Modern JavaScript erbjuder också verktyg som gör DOM-manipulation enklare och mer effektiv. Exempel på sådana verktyg är jQuery och moderna ramverk som React och Vue.js.
+Dessa verktyg och ramverk tar bort mycket av den komplexitet som kommer med direkt DOM-manipulation och erbjuder mer deklarativa sätt att bygga användargränssnitt.
+
+***jQuery*** är ett JavaScript-bibliotek som gör det enklare att välja och manipulera DOM-element. Med jQuery kan du skriva kort och koncis kod, vilket gör den lätt att läsa och underhålla.
+ Det hjälper också till med att hantera skillnader mellan olika webbläsare, så att koden fungerar överallt.
+
+ ```js
+ // Ändra innehållet i ett element 
+$('#myElement').html('Nytt innehåll');
+
+// Lägg till ett nytt element
+$('<div>Jag är ett nytt element</div>').appendTo('body');
+
+// Ta bort ett element
+$('#childElement').remove();
+```
+
 
 ## JS 1.6 HTTP-requests
 Beskriv rubriken här
