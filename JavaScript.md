@@ -312,10 +312,68 @@ $('#childElement').remove();
 
 
 ## JS 1.6 HTTP-requests
-Beskriv rubriken här
+HTTP-requests gör det möjligt att hämta data från och skicka data till en server.  Detta kan göras med hjälp av XMLHttpRequest-objektet eller Fetch API för att skapa dynamiska och interaktiva webbapplikationer som kan kommunicera med backend-tjänster utan att behöva ladda om sidan.
+
+*XMLHttpRequest* (XHR) är ett gammalt men bra verktyg för att göra HTTP-förfrågningar. Här är ett exempel på hur man använder XMLHttpRequest för att hämta data från en server:
+```js
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        console.log(xhr.responseText);
+    } else {
+        console.error('Ett fel uppstod: ' + xhr.status);
+    }
+};
+xhr.send();
+```
+*Här skapas en ny XMLHttpRequest, öppnas en GET-förfrågan till en API-endpoint, och skickas förfrågan. När svaret har laddats, loggas det ut i konsolen om statuskoden är 200 (OK).*
+
+*Fetch API* är ett modernt gränssnitt som ger ett enklare och mer kraftfullt sätt att göra HTTP-förfrågningar. Det returnerar en promise som löser upp till svaret från servern, vilket gör det lättare att arbeta med asynkrona operationer.
+```jsfetch('https://api.example.com/data')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Nätverksresponsen var inte OK');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Det uppstod ett problem med fetch operationen:', error);
+    });
+```
+*Här skickas en GET-förfrågan till en API-endpoint, svaret konverteras till JSON, och loggas. Om det uppstår ett fel, fångas det med catch och loggar ett felmeddelande.*
+
+***Async/await*** används för att hantera asynkrona operationer som gör koden mer läsbar och lättare att skriva. Det är ett syntactic sugar[^1] över promises som ger ett strukturerat sätt att skriva asynkron kod.
+
+[^1]: *"Syntactic sugar"* är syntax i ett programmeringsspråk som gör koden lättare att läsa och skriva utan att tillföra nya funktioner.
+
+```js
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.superbradata.com/data');
+        if (!response.ok) {
+            throw new Error('Nätverksresponsen inte OK');
+        }
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Det uppstod ett problem med fetch operationen:', error);
+    }
+}
+
+fetchData();
+```
+*Här definieras en asynkron funktion fetchData som använder await för att vänta på att fetch-operationen och JSON-konverteringen ska slutföras innan resultatet loggas. Felsökning hanteras med en try...catch-block.*
+
+Med HTTP-förfrågningar kan utvecklare bygga applikationer som interagerar med externa tjänster, API
+och servrar för att hämta och skicka data, vilket möjliggör dynamiska och data-drivna applikationer.
 
 ## JS 1.7 Lexical scope
-Beskriv rubriken här
+Lexical scope i JavaScript hänvisar till hur variabler och block är organiserade och åtkomliga i koden. 
+Scope definieras av kodens struktur och avgör varifrån variabler kan nås.
 
 ## JS 1.8 Event handling
 Beskriv rubriken här
