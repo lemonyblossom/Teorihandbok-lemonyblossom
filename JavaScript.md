@@ -373,7 +373,57 @@ och servrar för att hämta och skicka data, vilket möjliggör dynamiska och da
 
 ## JS 1.7 Lexical scope
 Lexical scope i JavaScript hänvisar till hur variabler och block är organiserade och åtkomliga i koden. 
-Scope definieras av kodens struktur och avgör varifrån variabler kan nås.
+Scope definieras av kodens struktur och avgör varifrån variabler kan nås. 
+
+I JavaScript finns två huvudtyper av scope: globalt scope och lokalt scope och det har, som namnen tyder på, olika stora omfång.
+
+Variabler som deklareras utanför en funktion har global scope och kan nås var som helst i koden. 
+Dessa variabler finns i det globala objektet (window i webbläsare eller global i Node.js).
+
+Variabler som deklareras inuti en funktion har lokatl scope och kan endast nås inom den funktionen. Detta hjälper till att undvika att namn krockar och att hålla koden organiserad.
+
+```js
+let globalVar = 'Global variabel, hejhej!';
+
+function lilpFunction() {
+    let localVar = 'Lokal Variabel, hejhej!';
+    console.log(globalVar); // 'Global variable, hejhej!'
+    console.log(localVar);  // 'Local Variable, hejhej!'
+}
+
+lilpFunction();
+console.log(localVar); // ReferenceError: localVar is not defined
+```
+*Här är globalVar global och kan nås både inom och utanför funktionen lilpFunction. localVar är lokal för lilpFunction och kan inte nås utanför den funktionen.*
+
+Med *ES6* introducerades *block-scope* variabler med `let` och `const`. Dessa variabler är endast tillgängliga inom det block där de deklareras, vilket ger en mer granular kontroll över variablers livstid och tillgänglighet.
+
+```js
+function blockScopeExample() {
+    if (true) {
+        let blockVar = 'Ett block-scope';
+        const blockConst = 'Också ett block-scope';
+        console.log(blockVar); // 'Ett block-scope'
+        console.log(blockConst); // 'Också ett block-scope'
+    }
+    console.log(blockVar); // ReferenceError: blockVar is not defined
+    console.log(blockConst); // ReferenceError: blockConst is not defined
+}
+
+blockScopeExample();
+```
+*blockVar och blockConst är endast tillgängliga inom if-blocket där de deklareras och kan inte nås utanför det.*
+
+##### Note to self
+- Undvik att deklarera för många globala variabler. Globala variabler kan lätt orsaka namnkollisioner och svårare felsökning eftersom de är tillgängliga överallt i koden. Använd istället lokala och block-scoped variabler för att begränsa variablernas synlighet.
+
+- Med let och const från ES6 kan du deklarera variabler med block-scope. Detta ger bättre kontroll över variablers tillgänglighet och hjälper till att undvika oavsiktliga variabelöverskrivningar.
+
+- Variabler deklarerade med var har funktion-scope, vilket kan leda till oväntade beteenden om de används inom block som if eller loopar. Använd let och const för att undvika dessa problem.
+
+- Deklarera variabler så nära deras användning som möjligt och använd meningsfulla namn. Detta gör koden mer läsbar och underlättar underhåll.
+
+- När funtioiner defineras inom andra funktioner, kom ihåg att den inre funktionen har tillgång till variablerna i den yttre funktionen. Detta kan vara kraftfullt men kan också leda till komplexa beroenden om det inte hanteras korrekt.
 
 ## JS 1.8 Event handling
 Beskriv rubriken här
