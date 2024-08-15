@@ -283,15 +283,8 @@ parentElement.removeChild(childElement);
 ```
 DOM-manipulation gör det möjligt att skapa dynamiska och interaktiva webbsidor, där innehåll kan uppdateras utan att hela sidan behöver laddas om. Detta förbättrar användarupplevelsen genom att ge snabb och responsiv interaktion.
 
-Ett vanligt användningsområde för DOM-manipulation är att hantera händelser som från användaren. Genom att binda event listeners till element kan utvecklare skapa interaktivitet på sina webbsidor.
+Ett vanligt användningsområde för DOM-manipulation är att hantera händelser som från användaren. Genom att binda event listeners till element kan utvecklare skapa interaktivitet på sina webbsidor *(JS 1.8)*
 
-*Här binder vi ett click event till en knapp med id myButton. När knappen klickas visas en alert.*
-```js 
-let button = document.getElementById('myButton');
-button.addEventListener('click', () => {
-    alert('Button was clicked!');
-});
-```
 
 Modern JavaScript erbjuder också verktyg som gör DOM-manipulation enklare och mer effektiv. Exempel på sådana verktyg är jQuery och moderna ramverk som React och Vue.js.
 Dessa verktyg och ramverk tar bort mycket av den komplexitet som kommer med direkt DOM-manipulation och erbjuder mer deklarativa sätt att bygga användargränssnitt.
@@ -426,7 +419,57 @@ blockScopeExample();
 - När funtioiner defineras inom andra funktioner, kom ihåg att den inre funktionen har tillgång till variablerna i den yttre funktionen. Detta kan vara kraftfullt men kan också leda till komplexa beroenden om det inte hanteras korrekt.
 
 ## JS 1.8 Event handling
-Beskriv rubriken här
+Event handling refererar till processen att fånga och reagera på händelser som sker i webbläsaren.
+Händelser kan vara allt från användarinteraktioner som klick och tangenttryckningar till systemhändelser som laddning av en sida eller ändringar i dokumentets tillstånd.
+I JavaScript kan händelser hanteras genom att binda event listeners till HTML-element. 
+
+Detta görs vanligtvis med metoden addEventListener, som tillåter utvecklare att specifikt definiera vilken typ av händelse de vill lyssna på och vilken funktion som ska köras när händelsen inträffar.
+
+*Ett click event binds till en knapp med id knappKnapp. Klick visar en alert.*
+```js 
+let button = document.getElementById('knappKnapp');
+button.addEventListener('click', () => {
+    alert('Button was clicked!');
+});
+```
+
+Det finns många händelser som kan fångas upp i Javascrirpt, såsom click (ovan), mouseover, mouseout, keydown, keyup, submit, och många fler.
+För var händelse finns specifika egenskaper och metoder som kan användas för att få detaljerad information om händelsen.
+
+Något man kan göra med händelsehantering är att ändra stil eller innehåll på en sida som svar på användarens interaktioner.
+Här är ett exempel på hur man ändrar bakgrundsfärgen på ett element när muspekaren förs över det och återställer färgen när muspekaren lämnar elementet:
+
+```js
+let element = document.getElementById('myElement');
+element.addEventListener('mouseover', () => {
+    element.style.backgroundColor = 'pink';
+});
+element.addEventListener('mouseout', () => {
+    element.style.backgroundColor = '';
+});
+```
+
+##### Viktigt att tänka på vid event handling
+Se till att undvika minnesläckor genom att ta bort event listeners när de inte längre behövs. Använd removeEventListener för att avregistrera händelser och var försiktig med att skapa för många listeners på samma element för att undvika prestandaproblem.
+
+Prestandaproblem kan uppstå vid event handling på grund av:
+
+**För många event listeners**: Att lägga till många listeners, särskilt på händelser som mousemove eller scroll, kan göra webbläsaren långsam.
+
+**Komplexa event handlers**: Tung logik i event handlers kan göra gränssnittet oresponsivt.
+
+**Minnesläckor**: Om event listeners inte tas bort korrekt kan de leda till minnesläckor genom att hålla kvar referenser till DOM-element.
+
+**Direkta listeners**: Att binda listeners till många individuella element istället för att använda event delegation kan vara ineffektivt.
+
+```js
+document.getElementById('parentElement').addEventListener('click', (event) => {
+    if (event.target && event.target.matches('.childElement')) {
+        console.log('Child element clicked');
+    }
+});
+```
+*Event delegation binder en listener till ett parent element och hanterar händelser för dess children, vilket är mer effektivt än individuella listeners.*
 
 ## JS 1.9 Prototype inheritance
 Beskriv rubriken här
