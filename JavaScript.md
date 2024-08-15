@@ -93,7 +93,7 @@ Msg: 'Hej från internt JavaScript!'
 function showMessage() {
     alert('Hej från externt JavaScript!');
 }
-````
+```
 
 Detta hade visats på webb som:
 <!DOCTYPE html>
@@ -168,7 +168,7 @@ let myPromise = new Promise((resolve, reject) => {
         reject("Operationen misslyckades!");
     }
 });
-```
+
 myPromise.then((message) => {
     console.log(message);
 }).catch((error) => {
@@ -179,10 +179,11 @@ myPromise.then((message) => {
 
 ## JS 1.4 OOP i JavaScript
 Objektorienterad programmering (OOP) i JavaScript innebär att man organiserar koden i objekt som innehåller både data och funktioner. JavaScript använder en prototypbaserad arvmodell, vilket skiljer sig från klassbaserade språk som Java eller C++. I en prototypbaserad modell ärver objekt direkt från andra objekt.
+ Detta skiljer sig från klassbaserade språk som Java eller C++, där arv sker genom klasser.
 
-Med ES6 introducerades klasser till prototypbaserat arv, vilket gör det enklare att definiera och arbeta med objektorienterade strukturer. Klasser i JavaScript är faktiskt funktioner som fungerar som konstruktörer för objekt och kan definiera både instansmetoder och statiska metoder.
+Med ES6 introducerades klasser till JavaScript, vilket ger en mer strukturerad syntax för att definiera och arbeta med objektorienterade strukturer.
 
-En klass definieras med nyckelordet class, och en konstruktor definieras med nyckelordet constructor. Här är ett exempel på hur man definierar och använder en klass i JavaScript:
+En klass definieras med nyckelordet `class`, och en konstruktor definieras med nyckelordet `constructor`. Här är ett exempel på hur man definierar och använder en klass i JavaScript:
 
 ```js
 class Person {
@@ -200,58 +201,49 @@ class Person {
     }
 }
 
-let person1 = new Person('Alice', 30);
+let person1 = new Person('Emma', 30);
 person1.greet();
 console.log(Person.species());
 ```
-I exemplet definieras en klass Person med en konstruktor som tar två parametrar: name och age. En instansmetod greet definieras också, som skriver ut en hälsning. Den statiska metoden species kan anropas direkt på klassen utan att skapa en instans.
+*Här definieras en klass Person med en konstruktor som tar två parametrar: name och age. En instansmetod greet definieras också, som skriver ut en hälsning. Den statiska metoden species kan anropas direkt på klassen utan att skapa en instans.*
 
 Inkapsling innebär att samla data och metoder som manipulerar denna data inom samma enhet, eller klass. Detta gör koden mer modulär och lättare att underhålla eftersom detaljerna i en klass kan döljas från omvärlden och bara relevanta delar exponeras.
 
 Polymorfism gör det möjligt för objekt att behandlas som exempel på deras bas-klass snarare än deras faktiska klass. Detta förenklar interaktionen mellan olika klasser och objekt, vilket gör koden mer dynamisk och anpassningsbar.
 
-Abstraktion innebär att exponera endast nödvändiga detaljer och dölja implementeringsdetaljer. Genom att använda abstrakta klasser och gränssnitt kan utvecklare definiera gemensamma egenskaper och beteenden utan att avslöja komplexa implementationer. Detta leder till tydligare och mer fokuserad kod, där endast relevanta delar av en klass eller ett objekt är synliga för användaren.
-
+Abstraktion innebär att exponera endast nödvändiga detaljer och dölja implementeringsdetaljer. Genom att använda abstrakta klasser och gränssnitt kan utvecklare definiera gemensamma egenskaper och beteenden utan att avslöja komplexa implementationer. Detta leder till tydligare och mer fokuserad kod.
 exempel på inkapsling och polymorfism:
 
 ```js
-class Animal {
-    constructor(name) {
-        this.name = name;
+class Vehicle {
+    constructor(type) {
+        this.type = type;
     }
 
-    speak() {
-        console.log(`${this.name} makes a noise.`);
-    }
-}
-
-class Dog extends Animal {
-    speak() {
-        console.log(`${this.name} barks.`);
+    move() {
+        console.log(`${this.type} is moving.`);
     }
 }
 
-class Cat extends Animal {
-    speak() {
-        console.log(`${this.name} meows.`);
+class Car extends Vehicle {
+    move() {
+        console.log(`The car is driving.`);
     }
 }
 
-let dog = new Dog('Rex');
-let cat = new Cat('Whiskers');
-
-dog.speak(); // Output: Rex barks.
-cat.speak(); // Output: Whiskers meows.
-
-function makeAnimalSpeak(animal) {
-    animal.speak();
+class Boat extends Vehicle {
+    move() {
+        console.log(`The boat is sailing.`);
+    }
 }
 
-makeAnimalSpeak(dog); // Output: Rex barks.
-makeAnimalSpeak(cat); // Output: Whiskers meows.
+let car = new Car('Car');
+let boat = new Boat('Boat');
+
+car.move(); // Output: The car is driving.
+boat.move(); // Output: The boat is sailing.
+
 ```
-
-Ovan har vi en bas-klass Animal och två subklasser Dog och Cat som overrides metoden speak. Funktionen makeAnimalSpeak accepterar vilket djur som helst och anropar dess speak-metod.
 
 
 ## JS 1.5 DOM-manipulation
@@ -472,7 +464,67 @@ document.getElementById('parentElement').addEventListener('click', (event) => {
 *Event delegation binder en listener till ett parent element och hanterar händelser för dess children, vilket är mer effektivt än individuella listeners.*
 
 ## JS 1.9 Prototype inheritance
-Beskriv rubriken här
+Prototypbaserat arv i JavaScript innebär att ett objekt kan ärva egenskaper och metoder från andra objekt.
+Till skillnad från klassbaserade språk som använder klasser för att definiera objektens struktur och arv, använder JavaScript prototyper för att skapa arv. Varje JavaScript-objekt har en inbyggd egenskap som kallas prototype, vilket refererar till ett annat objekt som det ärver från.
+
+När man försöker få tillgång till en egenskap eller metod på ett objekt, och den egenskapen inte finns direkt på objektet, kommer JavaScript att leta efter den i objektets prototypkedja. Denna kedja fortsätter uppåt tills slutet av kedjan nås (där prototypen är null).
+
+```js 
+let animal = {
+    speak() {
+        console.log('The animal makes a sound.');
+    }
+};
+
+let dog = Object.create(animal);
+dog.bark = function() {
+    console.log('The dog barks.');
+};
+
+dog.speak(); // Output: The animal makes a sound.
+dog.bark();  // Output: The dog barks.
+```
+*Exempel: Hur man skapar ett objekt och använder prototypbaserat arv:*
+
+```js
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} makes a sound.`);
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+    }
+}
+
+let dog = new Dog('Rex');
+dog.speak(); // Output: Rex barks.
+```
+*Med ES6 introducerades klasser, vilket gjorde det enklare att definiera och arbeta med arvstrukturer*
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.greet = function() {
+    console.log(`Hej, jag heter ${this.name}.`);
+};
+
+let person1 = new Person('Alice');
+person1.greet(); // Output: Hej, jag heter Alice.
+```
+*Här skapas en konstruktorfunktionen `Person`, och en metod `greet` läggs till prototypen. Alla instanser av `Person` kommer att ärva denna metod.*
+
+Prototypbaserat arv är gör JavaScript väldigt flexibelt och dynamiskt. 
+Genom att förstå och utnyttja prototypkedjan kan utvecklare skapa komplexa arvshierarkier och effektivt återanvända kod.
+Möjligheten att dela metoder och egenskaper mellan objekt minskar minnesanvändningen och förbättrar prestandan, vilket gör det möjligt att skapa av stora applikationer med effektiv minneshantering. JavaScript tillåter också dynamisk ändring av prototypen för ett objekt efter att det har skapats. Detta bidrar med flexibilitet men kan bli stökigt om man inte är noggrann. Det kan bli svårt att följa varifrån metoder oche genskaper kommer ifrån, vilken i sin tur gör det svårt att avgöra vilken del av koden som ansvarar för funktionen/beteendet.
 
 ## JS 1.10 Higher-order functions
 Beskriv rubriken här
