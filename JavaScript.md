@@ -250,7 +250,7 @@ boat.move(); // Output: The boat is sailing.
 Document Object Model (DOM) är en programmeringsgränssnitt för HTML och XML-dokument. Det representerar dokumentet som en trädstruktur där varje nod är en del av dokumentet, såsom element, attribut och text.
 DOM gör det möjligt för programmerare att interagera med och manipulera dokumentets struktur, stil och innehåll dynamiskt.
 
-JavaScript används för att manipulera DOM för att dynamiskt uppdatera innehållet och utseendet på en webbsida. 
+JavaScript används för att manipulera DOM för att uppdatera innehållet och utseendet på en webbsida. 
 
 Genom att använda metoder som getElementById, querySelector, appendChild och removeChild kan utvecklare lägga till, ändra eller ta bort element från dokumentet.
 
@@ -522,12 +522,82 @@ person1.greet(); // Output: Hej, jag heter Alice.
 ```
 *Här skapas en konstruktorfunktionen `Person`, och en metod `greet` läggs till prototypen. Alla instanser av `Person` kommer att ärva denna metod.*
 
-Prototypbaserat arv är gör JavaScript väldigt flexibelt och dynamiskt. 
+Prototypbaserat arv gör JavaScript väldigt flexibelt och dynamiskt. 
 Genom att förstå och utnyttja prototypkedjan kan utvecklare skapa komplexa arvshierarkier och effektivt återanvända kod.
-Möjligheten att dela metoder och egenskaper mellan objekt minskar minnesanvändningen och förbättrar prestandan, vilket gör det möjligt att skapa av stora applikationer med effektiv minneshantering. JavaScript tillåter också dynamisk ändring av prototypen för ett objekt efter att det har skapats. Detta bidrar med flexibilitet men kan bli stökigt om man inte är noggrann. Det kan bli svårt att följa varifrån metoder oche genskaper kommer ifrån, vilken i sin tur gör det svårt att avgöra vilken del av koden som ansvarar för funktionen/beteendet.
+Möjligheten att dela metoder och egenskaper mellan objekt minskar minnesanvändningen och förbättrar prestandan, vilket gör det möjligt att skapa av stora applikationer med effektiv minneshantering. 
+JavaScript tillåter också dynamisk ändring av prototypen för ett objekt efter att det har skapats. 
+Detta bidrar med flexibilitet men kan bli stökigt om man inte är noggrann. 
+Det kan bli svårt att följa varifrån metoder oche genskaper kommer ifrån, vilken i sin tur gör det svårt att avgöra vilken del av koden som ansvarar för funktionen/beteendet.
+
+Det finns viss risk för prestandaproblem. För även om prototypbaserat arv kan förbättra minnesanvändningen, kan frekventa dynamiska ändringar av prototypen leda till prestandaförsämringar eftersom JavaScript-motorn måste omvärdera objektets struktur och dess prototypkedja.
 
 ## JS 1.10 Higher-order functions
-Beskriv rubriken här
+Higher-order functions i JavaScript är funktioner som antingen tar en eller flera funktioner som argument eller returnerar en funktion som resultat, vilket gör det möjligt att skriva mer abstrakt och återanvändbar kod.
+
+Ett exempel är `Array.prototype.map`, som tar en callback-funktion som argument och returnerar en ny array med resultaten av att anropa callbacken på varje element i den ursprungliga arrayen.
+
+```js
+Kopiera kod
+let numbers = [1, 2, 3, 4];
+let doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8]
+```
+*map-funktionen taren anonym funktion (num => num 2) som argument, som sedan appliceras på varje element i numbers-arrayen för att skapa en ny array, doubled.*
+
+Prototypkedjan kan också utökas genom att lägga till metoder till `prototype`-egenskapen direkt:
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.greet = function() {
+    console.log(`Hej, jag heter ${this.name}.`);
+};
+
+let person1 = new Person('Alice');
+person1.greet(); // Output: Hej, jag heter Alice.
+```
+*I detta exempel skapas en konstruktorfunktion `Person`, och en metod greet läggs till prototypen. Alla instanser av `Person` kommer att ärva denna metod.*
+
+
+`Array.prototype.filter` används för att skapa en ny array med alla element som passerar ett test som implementeras av den givna funktionen.
+```js
+let numbers = [1, 2, 3, 4, 5, 6];
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4, 6]
+```
+*`filter`-funktionen tar en anonym funktion (num => num % 2 === 0) som argument, som sedan appliceras på varje element i numbers-arrayen för att skapa en ny array av de element som uppfyller villkoret.*
+
+ `reduce` används för att ackumulera värdena i en array till ett enda värde:
+ ```js
+ let numbers = [1, 2, 3, 4];
+let sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // Output: 10
+```
+*`reduce`-funktionen tar en callback-funktion (total, num => total + num) och ett initvärde (0), som används för att lägga ihop värdena i numbers-arrayen till en enda summa.*
+
+***Currying*** är en teknik som använder högre ordningens funktioner för att omvandla en funktion med flera argument till en serie av funktioner med ett argument vardera:
+````js
+function curry(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn(...args);
+        } else {
+            return function(...nextArgs) {
+                return curried(...args, ...nextArgs);
+            };
+        }
+    };
+}
+
+function multiply(a, b, c) {
+    return a * b * c;
+}
+
+let curriedMultiply = curry(multiply);
+console.log(curriedMultiply(2)(3)(4)); // Output: 24
+```
 
 ## JS 1.11 Single-thread programming
 Beskriv rubriken här
