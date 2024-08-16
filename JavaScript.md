@@ -116,7 +116,7 @@ JavaScript skiljer sig från många andra programmeringsspråk eftersom det är 
 
 Att skriva JavaScript-kod som följer ECMAScript-standarden innebär att använda den syntax och de funktioner som standarden föreskriver. För utvecklare innebär detta att man kan skriva kod som fungerar konsekvent över olika plattformar och webbläsare, vilket i sin tur förbättrar både utvecklingsupplevelsen och slutanvändarens upplevelse.
 
-JavaScript och ECMAScript utvecklas ständigt, med nya versioner som släpps regelbundet för att förbättra språkets funktionalitet och prestanda. Detta gör det möjligt för utvecklare att dra nytta av de senaste teknologierna och bästa praxis för att bygga moderna webbapplikationer. Med de senaste uppdateringarna i ECMAScript-standarderna kan utvecklare utnyttja nya funktioner som async/await för asynkron programmering, decorators för metaprogrammering och mycket mer.
+JavaScript och ECMAScript utvecklas ständigt, med nya versioner som släpps regelbundet för att förbättra språkets funktionalitet och prestanda. Med de senaste uppdateringarna i ECMAScript-standarderna kan utvecklare utnyttja nya funktioner som async/await för asynkron programmering, decorators för metaprogrammering och mycket mer.
 
 **Summering**: Sammanfattningsvis är ECMAScript en viktig del av JavaScript som definierar hur språket fungerar och utvecklas. Genom att följa ECMAScript-standarderna kan utvecklare skapa robusta, effektiva och framtidssäkra webbapplikationer.
 
@@ -180,7 +180,7 @@ myPromise.then((message) => {
 
 ## JS 1.4 OOP i JavaScript
 Objektorienterad programmering (OOP) i JavaScript innebär att man organiserar koden i objekt som innehåller både data och funktioner. JavaScript använder en prototypbaserad arvmodell, vilket skiljer sig från klassbaserade språk som Java eller C++. I en prototypbaserad modell ärver objekt direkt från andra objekt.
- Detta skiljer sig från klassbaserade språk som Java eller C++, där arv sker genom klasser.
+ Det här skiljer sig från klassbaserade språk som Java eller C++, där arv sker genom klasser.
 
 Med ES6 introducerades klasser till JavaScript, vilket ger en mer strukturerad syntax för att definiera och arbeta med objektorienterade strukturer.
 
@@ -210,7 +210,7 @@ console.log(Person.species());
 
 Inkapsling innebär att samla data och metoder som manipulerar denna data inom samma enhet, eller klass. Detta gör koden mer modulär och lättare att underhålla eftersom detaljerna i en klass kan döljas från omvärlden och bara relevanta delar exponeras.
 
-Polymorfism gör det möjligt för objekt att behandlas som exempel på deras bas-klass snarare än deras faktiska klass. Detta förenklar interaktionen mellan olika klasser och objekt, vilket gör koden mer dynamisk och anpassningsbar.
+Polymorfism gör det möjligt för objekt att behandlas som exempel på deras bas-klass snarare än deras faktiska klass och förenklar interaktionen mellan olika klasser och objekt, vilket gör koden mer dynamisk och anpassningsbar.
 
 Abstraktion innebär att exponera endast nödvändiga detaljer och dölja implementeringsdetaljer. Genom att använda abstrakta klasser och gränssnitt kan utvecklare definiera gemensamma egenskaper och beteenden utan att avslöja komplexa implementationer. Detta leder till tydligare och mer fokuserad kod.
 exempel på inkapsling och polymorfism:
@@ -275,7 +275,7 @@ let parentElement = document.getElementById('parentElement');
 let childElement = document.getElementById('childElement');
 parentElement.removeChild(childElement);
 ```
-DOM-manipulation gör det möjligt att skapa dynamiska och interaktiva webbsidor, där innehåll kan uppdateras utan att hela sidan behöver laddas om. Detta förbättrar användarupplevelsen genom att ge snabb och responsiv interaktion.
+DOM-manipulation gör det möjligt att skapa dynamiska och interaktiva webbsidor, där innehåll kan uppdateras utan att hela sidan behöver laddas om. Det förbättrar användarupplevelsen genom att ge snabb och responsiv interaktion.
 
 Ett vanligt användningsområde för DOM-manipulation är att hantera händelser som från användaren. Genom att binda event listeners till element kan utvecklare skapa interaktivitet på sina webbsidor *(JS 1.8)*
 
@@ -367,7 +367,7 @@ I JavaScript finns två huvudtyper av scope: globalt scope och lokalt scope och 
 Variabler som deklareras utanför en funktion har global scope och kan nås var som helst i koden. 
 Dessa variabler finns i det globala objektet (window i webbläsare eller global i Node.js).
 
-Variabler som deklareras inuti en funktion har lokatl scope och kan endast nås inom den funktionen. Detta hjälper till att undvika att namn krockar och att hålla koden organiserad.
+Variabler som deklareras inuti en funktion har lokatl scope och kan endast nås inom den funktionen och hjälper till att undvika att namn krockar och att hålla koden organiserad.
 
 ```js
 let globalVar = 'Global variabel, hejhej!';
@@ -404,13 +404,13 @@ blockScopeExample();
 ##### Note to self
 - Undvik att deklarera för många globala variabler. Globala variabler kan lätt orsaka namnkollisioner och svårare felsökning eftersom de är tillgängliga överallt i koden. Använd istället lokala och block-scoped variabler för att begränsa variablernas synlighet.
 
-- Med let och const från ES6 kan du deklarera variabler med block-scope. Detta ger bättre kontroll över variablers tillgänglighet och hjälper till att undvika oavsiktliga variabelöverskrivningar.
+- Med let och const från ES6 kan du deklarera variabler med block-scope. Det ger bättre kontroll över variablers tillgänglighet och hjälper till att undvika oavsiktliga variabelöverskrivningar.
 
 - Variabler deklarerade med var har funktion-scope, vilket kan leda till oväntade beteenden om de används inom block som if eller loopar. Använd let och const för att undvika dessa problem.
 
-- Deklarera variabler så nära deras användning som möjligt och använd meningsfulla namn. Detta gör koden mer läsbar och underlättar underhåll.
+- Deklarera variabler så nära deras användning som möjligt och använd meningsfulla namn, vilket gör koden mer läsbar och underlättar underhåll.
 
-- När funtioiner defineras inom andra funktioner, kom ihåg att den inre funktionen har tillgång till variablerna i den yttre funktionen. Detta kan vara kraftfullt men kan också leda till komplexa beroenden om det inte hanteras korrekt.
+- När funtioiner defineras inom andra funktioner, kom ihåg att den inre funktionen har tillgång till variablerna i den yttre funktionen. Detta kan vara effektivt men kan också leda till komplexa beroenden om det inte hanteras korrekt.
 
 ---
 
@@ -419,7 +419,7 @@ Event handling refererar till processen att fånga och reagera på händelser so
 Händelser kan vara allt från användarinteraktioner som klick och tangenttryckningar till systemhändelser som laddning av en sida eller ändringar i dokumentets tillstånd.
 I JavaScript kan händelser hanteras genom att binda event listeners till HTML-element. 
 
-Detta görs vanligtvis med metoden addEventListener, som tillåter utvecklare att specifikt definiera vilken typ av händelse de vill lyssna på och vilken funktion som ska köras när händelsen inträffar.
+Det här hanteras vanligtvis med metoden addEventListener, som tillåter utvecklare att specifikt definiera vilken typ av händelse de vill lyssna på och vilken funktion som ska köras när händelsen inträffar.
 
 *Ett click event binds till en knapp med id knappKnapp. Klick visar en alert.*
 ```js 
@@ -465,7 +465,7 @@ document.getElementById('parentElement').addEventListener('click', (event) => {
     }
 });
 ```
-*Event delegation binder en listener till ett parent element och hanterar händelser för dess children, vilket är mer effektivt än individuella listeners.*
+*Event delegation binder en listener till ett parent element och hanterar händelser för dess children och är mer effektivt än individuella listeners.*
 
 ---
 
@@ -531,8 +531,7 @@ person1.greet(); // Output: Hej, jag heter Alice.
 Prototypbaserat arv gör JavaScript väldigt flexibelt och dynamiskt. 
 Genom att förstå och utnyttja prototypkedjan kan utvecklare skapa komplexa arvshierarkier och effektivt återanvända kod.
 Möjligheten att dela metoder och egenskaper mellan objekt minskar minnesanvändningen och förbättrar prestandan, vilket gör det möjligt att skapa av stora applikationer med effektiv minneshantering. 
-JavaScript tillåter också dynamisk ändring av prototypen för ett objekt efter att det har skapats. 
-Detta bidrar med flexibilitet men kan bli stökigt om man inte är noggrann. 
+JavaScript tillåter också dynamisk ändring av prototypen för ett objekt efter att det har skapats och bidrar med flexibilitet men kan bli stökigt om man inte är noggrann. 
 Det kan bli svårt att följa varifrån metoder oche genskaper kommer ifrån, vilken i sin tur gör det svårt att avgöra vilken del av koden som ansvarar för funktionen/beteendet.
 
 Det finns viss risk för prestandaproblem. För även om prototypbaserat arv kan förbättra minnesanvändningen, kan frekventa dynamiska ändringar av prototypen leda till prestandaförsämringar eftersom JavaScript-motorn måste omvärdera objektets struktur och dess prototypkedja.
@@ -664,12 +663,12 @@ async function exampleFunction() {
 
 exampleFunction();
 ```
- *Koden väntar på att someAsyncOperation ska slutföras innan den fortsätter till nästa rad. Detta gör det möjligt att hantera asynkrona operationer på ett mer intuitivt sätt jämfört med kedjade .then-anrop i promises.*
+ *Koden väntar på att someAsyncOperation ska slutföras innan den fortsätter till nästa rad och gör det möjligt att hantera asynkrona operationer på ett mer intuitivt sätt jämfört med kedjade .then-anrop i promises.*
 
 
 Trots fördelarna med single-threaded programmering så har det vissa begränsningar.
 
-***Race conditions*** uppstår när resultatet av en operation beror på den exakta tidpunkten då flera asynkrona operationer körs. Detta kan leda till oförutsägbara resultat eller buggar i programmet.
+***Race conditions*** uppstår när resultatet av en operation beror på den exakta tidpunkten då flera asynkrona operationer körs. Det kan leda till oförutsägbara resultat eller buggar i programmet.
  När två eller flera asynkrona operationer försöker få tillgång till eller ändra samma resurs samtidigt utan korrekt synkronisering, kan de "tävla" om att bli färdiga först.
 
 Eftersom Javascript endast har en thread kan användaren uppleva att applikationen "fryser" om en uppgift blockerar main thread för länge. Därför är det viktigt att undvika exempelvis tunga beräkningar i main thread. 
@@ -737,8 +736,7 @@ const userProfile = await userProfileResponse.json();
 console.log(userProfile);
 ```
 
-Ett av de mest använda flödena inom OAuth 2.0 är Authorization Code Flow med PKCE (Proof Key for Code Exchange). 
-Detta flöde är särskilt utformat för att förbättra säkerheten genom att förhindra attacker som kan uppstå när en auktoriseringskod fångas upp av en obehörig part.Användaren omdirigeras först till authservern där de loggar in och beviljar åtkomst. Därefter skickas en authkod tillbaka till klientapplikatioinen, som byter ut denna kod mot en åtkomsttoken via en säker kommunikation med servern.
+Ett av de mest använda flödena inom OAuth 2.0 är Authorization Code Flow med PKCE (Proof Key for Code Exchange) och är särskilt utformat för att förbättra säkerheten genom att förhindra attacker som kan uppstå när en auktoriseringskod fångas upp av en obehörig part.Användaren omdirigeras först till authservern där de loggar in och beviljar åtkomst. Därefter skickas en authkod tillbaka till klientapplikatioinen, som byter ut denna kod mot en åtkomsttoken via en säker kommunikation med servern.
 
 Med åtkomsttoken kan applikationen sedan göra förfrågningar till API
 för att få tillgång till användarens resurser, exempelvis för att hämta användarens profilinformation.
@@ -748,5 +746,20 @@ Det är viktigt att använda HTTPS i detta flöde för att säkerställa att tok
 
 
 ## JS 1.13 Websockets
-Beskriv rubriken här
+WebSockets möjliggör realtidskommunikation mellan en klient, som en webbläsare, och en server genom en ihållande och tvåvägsanslutning.
+Till skillnad från traditionella HTTP-förfrågningar, där klienten måste initiera varje begäran och vänta på ett svar, tillåter WebSockets både klienten och servern att skicka meddelanden till varandra när som helst utan att vänta på en ny förfrågan.
+Detta skapar en fullständig duplex-kommunikation som är särskilt lämplig för applikationer där snabb och kontinuerlig dataöverföring är avgörande, såsom i chattprogram, onlinespel och finansiella tjänster.
 
+WebSocket-processen inleds med att klienten skickar en HTTP-förfrågan till servern för att etablera anslutningen.
+När anslutningen är gjord, byter kommunikationen från HTTP till WebSocket-protokollet, vilket etablerar en ihållande anslutning mellan klienten och servern.
+fter detta kan båda parter skicka och ta emot data när som helst, vilket möjliggör omedelbara uppdateringar med minimal fördröjning.
+
+För att använda WebSockets i en JavaScript-applikation nyttjar man WebSocket API. Genom att skapa en WebSocket-anslutning kan man hantera olika händelser, såsom när anslutningen öppnas, när ett meddelande tas emot, när anslutningen stängs eller när ett fel inträffar.
+Till exempel kan man skapa en anslutning till en server med följande kod: `const socket = new WebSocket('wss://example.com/socket');`.
+När anslutningen är etablerad, kan klienten både skicka meddelanden till servern och ta emot dem i realtid.
+
+En av de stora fördelarna med WebSockets är deras effektivitet jämfört med traditionella HTTP-baserade tekniker, där upprepade förfrågningar behövs för att hålla sig uppdaterad med servern.
+Med WebSockets hålls en enda anslutning öppen, vilket minskar både nätverks- och serverbelastningen och förbättrar användarupplevelsen genom snabbare dataöverföring.
+
+Det är dock viktigt att vara medveten om vissa utmaningar med WebSockets, särskilt när det gäller säkerhet och anslutningsstabilitet.
+Det är avgörande att använda wss://-protokollet för att skydda anslutningen mot potentiella attacker.
