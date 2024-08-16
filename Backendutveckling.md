@@ -155,41 +155,46 @@ För att minimera risken bör applikationer ha robusta loggnings- och övervakni
 ---
 
 
-### Applikatioinssäkerhet
-#### Sårbarheter
-SE OWASP.ORG!!
-
-Cross-site Scripting (XSS)
-är en svaghet som uppstår när en app innehåller opålitlig data i en ny sida utan validering (validering av vad?)
-
-Användning av komponenter med kända säkerhetsbrister- När bibliotek, ramverk etc. som har kända säkerhetsbrister utnyttjas. Kan resultera i förlorande av data eller t.o.m. övertagning av server.
-
-Otillräcklig loggning och övervakning - När loggar ch övervakning är bristande kan attacker fortsätta obekmärkt och på sikt lyckas manipulera, få ut eller radera data. De flesta studier visar på att det tar över 200 dagar att upptäcka intrång. Vilket ofta innebär att 
-
-
-En xss attack låter en hackare att köra script..
-
-Vi använder PHP 8.3 vilket är den senaste versionen av php, 8< är safe. Ett bra sätt att skydda sig är att kontinuerligt uppdatera sin php.  
-För att kunna uppdatera behöver allt testas (PHP UNIT TEST) igen. phpUNIT 10 kräver 8.1 or later. 
-Ett problem kan vara att din server supplier inte har php 8 eller senare. 
-
-VPS- innebär att man får en server som man kan ställa in servern själv
-
-
-##### Hur gör man för att en lista på allas användernamn oc lösen ska bli oanvändbara?
-> HASHing innebär att göra en ny sträng av t.ex. ett lösen, som då inte går att hitta med hjälp av den strängen som gets. 
-> Rainbow tables: 
-> Salt: är random data som läggs in för att försvåra lösenorden. En salt "något bullshit" läggs till på ditt lösen innan hashen gör sin sträng för att göra hashen unik.
-> Peppar: ?
-> Krav på lösen för användare. MINST men inte längst
->
-> Password_hash() skapar lösen med säker has algoritm (bycrypt som default)
-
-
+> ### Applikatioinssäkerhet>
+> #### Sårbarheter
+> SE OWASP.ORG!!
 
 
 ## BE 1.4 MVC
-Beskriv rubriken här
+***MVC***, som står för *Model-View-Controller,* är en designmönster som används för att organisera och strukturera applikationer genom att separera applikationens data, användargränssnitt och affärslogik i tre huvudkomponenter och hjälper till att skapa en tydlig och hanterbar arkitektur, särskilt i större projekt.
+
+***Model*** representerar applikationens data och affärslogik. Den är ansvarig för att hantera data och reglerna för hur data kan ändras.
+Modellen interagerar direkt med databasen och andra datakällor.
+I en Laravel-app skulle en modell representera en databasentitet, som en användare eller en produkt, och innehålla metoder för att hämta och manipulera data.
+
+```php
+class Product extends Model {
+    protected $table = 'products';
+    protected $fillable = ['name', 'description', 'price', 'quantity'];
+}
+```
+
+***View*** är ansvarig för att presentera data för användaren.
+Den innehåller all HTML och presentationens logik för att visa information från modellen.
+I laravel används *Blade* för att skapa views.
+```php
+<!-- resources/views/product.blade.php -->
+<h1>{{ $product->name }}</h1>
+<p>{{ $product->description }}</p>
+<p>Pris: {{ $product->price }} kr</p>
+```
+***Controller*** fungerar som en mellanhand mellan model och view. Den hanterar user inputs, bearbetar dem och updaterar model eller view baserat på behov. I laravel skulle en controller t.ex. ta emot en request om update på en produkt, updatera model och sedan återge en updaterad view.
+```php
+class ProductController extends Controller {
+    public function show($id) {
+        $product = Product::findOrFail($id);
+        return view('product', ['product' => $product]);
+    }
+}
+```
+MVC används främst för att separera applikationens logik och användargränssnitt, vilket gör det enklare att underhålla, utveckla och testa applikationen.
+Genom att dela upp applikationen i tre distinkta komponenter kan utvecklare arbeta på olika delar av applikationen samtidigt utan att behöva oroa sig för att störa andra delar av koden.
+
 
 ## BE 1.5 Wordpress
 #### Vad är Wordpress?
