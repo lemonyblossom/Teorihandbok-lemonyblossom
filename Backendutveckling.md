@@ -195,14 +195,32 @@ class ProductController extends Controller {
 MVC används främst för att separera applikationens logik och användargränssnitt, vilket gör det enklare att underhålla, utveckla och testa applikationen.
 Genom att dela upp applikationen i tre distinkta komponenter kan utvecklare arbeta på olika delar av applikationen samtidigt utan att behöva oroa sig för att störa andra delar av koden.
 
+---
 
 ## BE 1.5 Wordpress
-#### Vad är Wordpress?
-#### Varför Wordpress?
-#### Skapa ett tema:
-#### Skapa ett plugin:
+WordPress är ett innehållshanteringssystem (CMS) byggt på PHP och MySQL. Det är en av de mest populära plattformarna för att skapa och hantera webbplatser och bloggar.
+WordPress är open-source, vilket innebär att källkoden är fritt tillgänglig för alla att använda, modifiera och förbättra.
 
 
+Idag används WordPress för att driva en stor andel av webbplatserna på internet. 
+Det används av allt från personliga bloggar till stora företagswebbplatser och e-handelsbutiker.
+WordPress kan anpassas för att passa olika typer av projekt genom användning av teman och plugins.
+
+Utvecklare kan också skapa egna teman och plugins för att uppfylla specifika behov. Detta gör WordPress till ett väldigt användbart verktyg för att snabbt och enkelt bygga webbplatser med komplex funktionalitet.
+
+#### Tema
+Att skapa ett tema i WordPress innebär att utveckla en anpassad design och layout för en webbplats. Teman i WordPress består av en samling filer som tillsammans styr hur innehåll presenteras för användaren. Grundläggande komponenter i ett tema inkluderar index.php, som fungerar som huvudfilen, style.css för att definiera utseendet, och functions.php där man kan lägga till egna funktioner och hooks. 
+För att börja utveckla ett tema, placeras dessa filer i en ny mapp under wp-content/themes. I style.css inkluderas även metadata som beskriver temat, såsom namn, författare och version. Genom att utnyttja WordPress-template tags och loop-funktionen kan utvecklare anpassa hur inlägg, sidor och andra innehållstyper visas på webbplatsen. 
+Temat aktiveras via WordPress-admin dashboard, där det sedan tillämpas på hela webbplatsen.
+
+#### Plugin
+Att skapa ett plugin i WordPress innebär att utveckla en modul som lägger till eller utökar funktionaliteten på en webbplats utan att ändra kärnprogramvaran.
+Ett plugin börjar med en enkel PHP-fil som placeras i en mapp under `wp-content/plugins`. 
+
+Denna fil innehåller ett block med metadata som beskriver pluginet, såsom namn, beskrivning och version.
+Ett plugin kan till exempel skapa nya anpassade posttyper, lägga till widgetar, eller integrera tredjepartstjänster.
+Pluginet aktiveras sedan även det via WordPress-admin dashboard.
+Eftersom pluginet är modulärt och fristående kan det enkelt distribueras och återanvändas på andra WordPress-webbplatser.
 
 ## BE 1.6 Heirarkiska databaser
 Beskriv rubriken här
@@ -292,4 +310,4 @@ JSON blir ofta nestlat, det kan bli väldigt djupt. t.ex. objekt i objekt i obje
 
 ## BE 1.13 Webbservrar
 
-##### Serverside serndering vs  Clientside renderering 
+##### Serverside rendering vs  Clientside renderering 
