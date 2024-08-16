@@ -98,7 +98,51 @@ echo $admin->getRole(); // Output: Administrator
 
 
 ## BE 1.3 Säkerhet i PHP
-Beskriv rubriken här
+Säkerhet är en kritisk aspekt inom PHP-utveckling, eftersom webbapplikationer ofta är måltavlor för olika typer av attacker. Det är avgörande för utvecklare att förstå och implementera säkerhetsåtgärder för att skydda både applikationer och användardata.
+
+#### Vanliga hot och åtgärder
+***SQL-injektion*** är en av de vanligaste attackerna där en angripare infogar skadlig SQL-kod i en applikation för att manipulera databasfrågor.
+För att skydda sig mot SQL-injektioner bör utvecklare använda förberedda uttalanden och parametriserade frågor med PDO eller mysqli.
+```php
+$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+$stmt->execute(['email' => $email]);
+```
+***Cross-Site Scripting (XSS)*** XSS-attacker tillåter angripare att injicera skadlig kod i en webbsida som sedan körs i andra användares webbläsare. För att förhindra detta bör alla data som visas på webbsidor vara korrekt sanitiserade.
+
+```php 
+$clean_input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+```
+***Cross-Site Request Forgery*** (*CSRF*)-attacker tvingar användare att oavsiktligt skicka skadliga förfrågningar. Användning av CSRF-tokens i formulär hjälper till att förhindra denna typ av attacker. 
+```php
+echo '<input type="hidden" name="csrf_token" value="'.$csrf_token.'">';
+```
+
+***Lösenordshantering***
+ Lösenord bör aldrig lagras i klartext, utan istället hashas med starka algoritmer innan de sparas i databasen.
+ PHP erbjuder inbyggda funktioner för säker lösenordshantering, såsom `password_hash()` och `password_verify()`.
+
+```php
+// hashat lösenord
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+// Verifiera lösenordet
+if (password_verify($input_password, $hashed_password)) {
+    // Lösenordet korrekt
+} else {
+    // Lösenordet fel
+}
+```
+Genom att använda `password_hash()` säkerställs att lösenorden hashas med en säker algoritm som även inkluderar en unik saltning för varje lösenord, vilket gör det svårare för angripare att knäcka lösenorden även om databasen skulle äventyras.
+
+***Implementering av HTTPS***
+För att säkerställa att data som överförs mellan användare och server är skyddad från avlyssning och manipulation, bör utvecklare alltid implementera HTTPS.
+Genom att använda SSL/TLS-certifikat kan data krypteras under överföringen, vilket skyddar känslig information som inloggningsuppgifter och betalningsinformation. 
+
+***Felmeddelanden och undantagshantering*** bör hanteras på ett sätt som inte avslöjar känslig information om applikationen. 
+Att visa detaljerade felmeddelanden för användarna kan ge angripare insikt i applikationens struktur och potentiella svagheter
+
+
+
 ### Applikatioinssäkerhet
 #### Sårbarheter
 SE OWASP.ORG!!
