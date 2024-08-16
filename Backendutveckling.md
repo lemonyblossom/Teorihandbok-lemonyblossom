@@ -2,7 +2,30 @@
 Studerande: Emma Jensen
 
 ## BE 1.1 PHP
-Beskriv rubriken här
+PHP, som står för "Hypertext Preprocessor", är ett skriptspråk som körs på serversidan och används för att skapa dynamiska webbplatser och webbaserade applikationer.
+Det är särskilt populärt för sin enkelhet och flexibilitet, vilket gör det lätt att integrera med HTML och att kommunicera med databaser som MySQL och PostgreSQL.
+PHP är ett tolkat språk, vilket innebär att koden exekveras direkt av servern utan att behöva kompileras, vilket underlättar snabb utveckling.
+
+PHP används ofta i webbapplikationer där interaktion med databaser är nödvändig, till exempel för att hantera inloggningssystem, e-handelsplattformar och innehållshanteringssystem (CMS) som WordPress.
+Dess stora community och omfattande bibliotek gör det till ett väldigt användbart verktyg för utvecklare, vilket underlättar skapandet av robusta och skalbara applikationer.
+
+En fördel med PHP är dess kompatibilitet med olika operativsystem, inklusive Windows, Linux och macOS, vilket gör det till ett mångsidigt verktyg för webbutveckling.
+PHP
+öppen källkod-karaktär har också bidragit till dess utbredda användning, eftersom det är gratis att använda och att källkoden är tillgänglig för alla att modifiera.
+
+PHP används brett inom webbutveckling, och en av de mest kända plattformarna som använder PHP är WordPress, som driver en stor del av alla webbplatser på internet.
+PHP används också för att bygga e-handelsplattformar som *Magento* och *WooCommerce*, och det är ett populärt val för att utveckla API
+och webbapplikationer som kräver en solid backendstruktur.
+
+Den senaste versionen av PHP, *PHP 8*, har introducerat flera förbättringar som ökad prestanda och nya språkliga funktioner som underlättar kodunderhåll.
+PHP fortsätter att vara ett relevant verktyg för utvecklare tack vare sin flexibilitet och kraft, vilket gör det till ett självklart val för många utvecklingsprojekt.
+
+PHP kräver en medvetenhet om säkerhet och att skydda PHP-applikationer från attacker som SQL-injektioner och Cross-Site Scripting *(XSS)* är avgörande.
+SQL-injektioner kan exempelvis förebyggas genom att använda förberedda uttalanden med PDO eller mysqli, vilket säkerställer att inmatade data behandlas som rena strängar och inte som körbar kod.
+Användningen av `password_hash()` för att säkra lösenord är också en grundläggande säkerhetsåtgärd.
+
+För att förhindra XSS-attacker bör all data som ska presenteras för användaren valideras och sanitiseras, ofta med hjälp av funktioner som htmlspecialchars(). 
+
 
 ## BE 1.2 OOP i PHP
 Beskriv rubriken här
