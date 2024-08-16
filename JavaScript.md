@@ -680,15 +680,10 @@ Flera asynkrona operationer samtidigt kan leda till bottle necks om resurser int
 ---
 
 ## JS 1.12 OAuth från frontend
-OAuth är en standardprotokoll för autentisering och auktorisering som används för att ge applikationer säker tillgång till användarresurser utan att behöva dela användarens inloggningsuppgifter direkt.
-Det är särskilt användbart för webbapplikationer som behöver interagera med externa tjänster och API
-, som exempelvis Google eller Facebook.
+OAuth är ett standardprotokoll för autentisering och auktorisering som gör det möjligt för webbapplikationer att få säker åtkomst till användarresurser på en extern server utan att direkt exponera användarens inloggningsuppgifter. I frontend-sammanhang innebär detta att applikationen hanterar användarens interaktion med tredjeparts autentiserings- och auktoriseringstjänster som Google, Facebook eller GitHub.
 
-I ett typiskt OAuth-flöde från frontend initierar applikationen processen genom att omdirigera användaren till en auktoriseringsserver, ofta av en tredjepartstjänst.
-Användaren loggar sedan in på denna server och ger applikationen tillstånd att få tillgång till specifika resurser, 
-till exempel deras profilinformation eller e-postadress. 
-När användaren har godkänt begäran, returnerar servern en åtkomstkod eller token tillbaka till applikationen. 
-Denna token används sedan av applikationen för att göra autentiserade API-anrop till den externa tjänsten.
+
+I frontend-appar initieras OAuth-flödet genom att omdirigera användaren till en auktoriseringsserver där de kan logga in och ge applikationen åtkomst till specifika resurser. När användaren har godkänt åtkomsten, returneras en auktoriseringskod till frontend-applikationen, som sedan skickar denna kod till backend-servern för vidare hantering..
 
 #### OAuth-flow exempel
  **Initiera OAuth-processen:** 

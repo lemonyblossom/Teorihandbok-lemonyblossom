@@ -223,51 +223,136 @@ Pluginet aktiveras sedan även det via WordPress-admin dashboard.
 Eftersom pluginet är modulärt och fristående kan det enkelt distribueras och återanvändas på andra WordPress-webbplatser.
 
 ## BE 1.6 Heirarkiska databaser
-Beskriv rubriken här
+Hierarkiska databaser är en typ av databassystem där data organiseras i en trädstruktur, med en tydlig hierarki av parent-child-relationer mellan posterna.
+Denna modell var en av de tidigaste databasmodellerna och används fortfarande i vissa specifika applikationer där hierarkiska datarelationer är dominerande.
+
+
+Ett vanligt exempel på en hierarkisk databas kan vara en organisation där strukturen är strikt hierarkisk. Till exempel kan en databas för en skola se ut så här:
+
+- Skola
+    - Klass 1
+      - Elev A
+      - Elev B
+    - Klass 2
+      - Elev C
+      - Elev D
+      - 
+*Här representerar skolan roten i trädet, med klasser som childnoder och elever som children till respektive klass. Detta upplägg är enkelt att förstå och navigera, vilket gör hierarkiska databaser mycket användbara i sammanhang där data naturligt organiseras i en hierarkisk struktur.*
+
+
+
+En av de största fördelarna med hierarkiska databaser är deras enkelhet när det gäller att navigera i data. Sökningar och uppdateringar kan göras snabbt, eftersom den hierarkiska strukturen är väldigt tydlig och data är lättåtkomlig om sökvägen är känd.
+Men det finns också betydande nackdelar. Hierarkiska databaser är mindre flexibla när det gäller att hantera mer komplexa relationer som inte passar in i en strikt hierarkisk struktur. Till exempel är det svårt att modellera many-to-many-relationer, och databasen kan bli ineffektiv om hierarkin förändras ofta eller om flera poster behöver dela en förälder.
+
+Dessutom kan hierarkiska databaser vara svåra att skala och anpassa när organisationen av data behöver förändras. Om hierarkin i data behöver modifieras, kan det krävas omfattande omstrukturering av hela databasen, vilket kan vara både tids- och resurskrävande.
+
+Trots dessa begränsningar har hierarkiska databaser specifika användningsområden där deras struktur är fördelaktig. Till exempel används de ofta i operativsystemens filhanteringssystem, där deras fasta struktur gör det enkelt att organisera och hantera filer och mappar på ett logiskt sätt.
 
 ## BE 1.7 Relationsdatabaser, SQL och ER-modellering
-Mapping går att skriva om här 
-eloquent går också att skriva om under laravel och objectorienteradprogrammering
- > ORM stands for Object-Relational Mapping. It is a programming technique used in software development to bridge the gap between the object-oriented paradigm used in programming languages and the relational paradigm used in relational databases. ORM frameworks provide a way to interact with databases using programming language objects, allowing developers to work with databases in a more natural and object-oriented manner.
+Relationsdatabaser är den dominerande modellen för datalagring i moderna applikationer. Denna databasmodell bygger på konceptet att organisera data i tabeller, där varje tabell representerar en specifik entitet, såsom en användare eller en produkt. Tabellen består av rader och kolumner, där varje rad motsvarar en enskild post, och varje kolumn representerar ett attribut hos denna post. Relationer mellan olika tabeller definieras genom användning av primärnycklar och främmande nycklar, vilket gör det möjligt att skapa komplexa strukturer för att spegla verkliga samband mellan olika dataenheter.
 
-> Here are some key concepts related to ORM:
+***SQL*** *(Structured Query Language)* är det huvudsakliga språket som används för att interagera med relationsdatabaser. Med SQL kan utvecklare skapa, hämta, uppdatera och radera data från databasen genom kraftfulla och flexibla frågor. En grundläggande SQL-fråga som används för att hämta alla poster från en tabell kan se ut så här:
+```sql
+SELECT * FROM users;
+```
+*Denna request returnerar alla rader från tabellen "users".*
 
-> 1. **Objects as Entities:**
-  > - In an object-oriented programming language, you work with objects that represent entities in your application, such as users, products, or orders.
-   > - ORM allows you to map these objects directly to corresponding tables in a relational database.
+SQL är inte bara användbart för att hämta data; det kan också användas för att skapa och ändra strukturen på databaser, såsom att lägga till nya tabeller eller kolumner, och för att hantera användarbehörigheter och säkerhet.
 
-> 2. **Classes as Tables:**
-  >  - ORM frameworks often use classes to represent database tables.
-  >  - Class attributes typically correspond to table columns.
+***ER-modellering*** *(Entity-Relationship modellering)* är en metod som används i designfasen av en relationsdatabas för att skapa en visuell representation av systemets entiteter och de relationer som finns mellan dem. I en ER-modell representeras entiteter, som exempelvis "Kund" eller "Produkt", som rektanglar, och relationerna mellan dem representeras av linjer som förbinder dessa rektanglar. ER-modellen fungerar som en karta över databasen och hjälper till att säkerställa att alla relevanta entiteter och deras relationer är korrekt identifierade innan den fysiska databasen skapas.
 
-> 3. **Relationships:**
-  > - ORM frameworks support defining relationships between objects/classes, such as one-to-one, one-to-many, and many-to-many relationships.
-  >  - These relationships are translated into corresponding relationships between database tables.
+***Objekt-relationell mapping*** *(ORM)* används för att brygga över skillnaderna mellan den objektorienterade världen i programmering och den relationsbaserade världen i databaser. 
+Genom att använda ett ORM-ramverk kan utvecklare hantera databasposter som om de vore objekt i deras programmeringsspråk, vilket förenklar arbetet med data och minskar behovet av att skriva rå SQL-kod. 
+Ett exempel på ett ORM-verktyg i PHP är Eloquent, som ingår i Laravel-ramverket. Med Eloquent kan utvecklare skriva kod som följande:
 
-> 4. **CRUD Operations:**
-   > - ORM provides an abstraction layer for performing CRUD (Create, Read, Update, Delete) operations on the database using object-oriented syntax.
-  >  - Instead of writing SQL queries, developers can use methods provided by the ORM framework to interact with the database.
+```php$user = User::find(1);
+$user->name = 'Emma';
+$user->save();
+```
+*En användare med ID 1 från databasen hämtas, användarens namn ändras till 'Emma', och ändringen sparas – allt utan att utvecklaren behöver skriva SQL.*
 
-> 5. **Data Integrity:**
-  >  - ORM frameworks often include features to ensure data integrity, such as validation and automatic generation of appropriate database constraints.
+ORM-ramverk innehåller ofta funktioner för att validera data och automatiskt skapa lämpliga databasbegränsningar
 
-> 6. **Portability:**
-  >  - ORM helps in making the code more portable across different database systems. Developers can often switch between databases with minimal code changes because the ORM framework abstracts the database-specific details.
+Portabilitet är en annan fördel med ORM. Eftersom ORM-ramverk abstraherar databasspecifika detaljer kan utvecklare byta mellan olika databassystem med minimal kodändring. Detta gör applikationer mer flexibla och lättare att underhålla.
 
-> Popular ORM frameworks in different programming languages include:
-> - **Java:** Hibernate, EclipseLink
-> - **Python:** SQLAlchemy, Django ORM
-> - **.NET:** Entity Framework (EF)
-> - **PHP:** Doctrine, Eloquent (Laravel)
 
-> Using ORM can lead to more maintainable and readable code, as developers can focus on the application's logic without having to write complex SQL queries. However, it's essential to understand the underlying database structure and how the ORM framework translates between objects and the database to optimize performance and avoid potential pitfalls.
-Beskriv rubriken här
+En typisk sekvens i backend kan vara:
+
+- Ta emot auktoriseringskoden: Backend tar emot auktoriseringskoden från frontend-applikationen.
+- Utbyte av auktoriseringskoden mot en access-token: Backend skickar en förfrågan till auktoriseringsservern för att byta ut auktoriseringskoden mot en access-token.
+- Lagring och hantering av access-token: Access-token lagras säkert i backend för framtida användning när applikationen behöver interagera med externa API
+.
+- Gör API-anrop med access-token: Backend använder access-token för att göra autentiserade API-anrop till externa tjänster å användarens vägnar.
+
+```php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "https://oauth2.googleapis.com/token");
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+    'code' => $authorization_code,
+    'client_id' => $client_id,
+    'client_secret' => $client_secret,
+    'redirect_uri' => $redirect_uri,
+    'grant_type' => 'authorization_code',
+]));
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$token_data = json_decode($response, true);
+$access_token = $token_data['access_token'];
+
+```
+
+En av de viktigaste aspekterna i backend är att säkert hantera access-tokens. Tokens bör behandlas som känslig data och lagras på ett säkert sätt, till exempel i en krypterad databas. Tokens har vanligtvis en begränsad livslängd, vilket innebär att backend också måste hantera token-förnyelse (refresh tokens) för att bibehålla åtkomsten till användarresurser över tid.
+```php
+// Exempel på lagring av en token
+saveTokenToDatabase($user_id, $access_token, $refresh_token, $expires_in);
+
+```
+
+
+Säkerheten är central när man hanterar OAuth i backend. Det är viktigt att alla förfrågningar och dataöverföringar som involverar tokens görs över HTTPS för att förhindra avlyssning och manipulation. Dessutom bör åtkomstkontroller implementeras för att säkerställa att endast auktoriserade delar av backend-applikationen kan interagera med dessa tokens.
+
+
+Backend-servern bör också vara ansvarig för att automatisera processen med att förnya access-tokens när de löper ut. Detta kan göras genom att använda en scheduler eller cron-jobb som regelbundet kontrollerar tokenens giltighet och förnyar dem vid behov.
+```php
+if (isTokenExpired($token)) {
+    $newTokenData = refreshToken($refresh_token, $client_id, $client_secret);
+    updateTokenInDatabase($user_id, $newTokenData['access_token'], $newTokenData['refresh_token'], $newTokenData['expires_in']);
+}
+```
+
+
+
+
+--- 
 
 ## BE 1.8 OAuth i backend
-Beskriv rubriken här
+***OAuth*** *(Open Authorization)* är ett standardprotokoll som används för att tillhandahålla säkra delegerade åtkomster, vilket innebär att en 
+  applikation kan få begränsad åtkomst till användarresurser på en annan server utan att exponera användarens inloggningsuppgifter.
+ I backend-konteksten är hanteringen av OAuth av avgörande betydelse eftersom det är backend-servern som hanterar de flesta säkerhetskritiska operationer, såsom hantering av tokens, autentisering, och interaktion med externa API.
+ Detta innebär att backend-servern måste hantera alla känsliga operationer med hög säkerhet och noggrannhet för att skydda användarens data.
+
+
+I backend-flödet börjar processen vanligtvis efter att frontend har erhållit en auktoriseringskod från en auktoriseringsserver (till exempel Google eller Facebook). Denna kod skickas sedan till backend-servern, som byter ut den mot en access-token genom att göra ett säkert API-anrop till auktoriseringsservern och byta ut auktoriseringskoden mot en access-token. Access-token är den nyckel som tillåter backend-servern att autentisera sig mot den externa tjänsten och få tillgång till användarens resurser på ett säkert sätt.
+
+
+Backend-servern hanterar också förnyelsen av access-tokens när de löper ut, vilket görs genom att använda en refresh-token. Refresh-tokens ger möjlighet att erhålla nya access-tokens utan att användaren behöver autentisera sig på nytt, vilket förbättrar användarupplevelsen och säkerställer att applikationen kan fortsätta att interagera med externa API
+utan avbrott. 
+Det är avgörande att dessa tokens lagras säkert, ofta i en krypterad databas, och att de hanteras med strikta säkerhetsåtgärder för att förhindra otillåten åtkomst.
 
 ## BE 1.9 HTTP-protokollet
-Beskriv rubriken här
+***HTTP*** (*Hypertext Transfer Protocol *) är grundpelaren för dataöverföring på webben. Det är ett protokoll som definierar hur meddelanden formuleras och överförs mellan klienter och servrar. När en användare besöker en webbplats sker en mängd HTTP-förfrågningar och -svar i bakgrunden, vilket möjliggör laddning av sidor, nedladdning av filer och interaktion med webbapplikationer. HTTP är ett stateless protokoll, vilket innebär att varje förfrågan behandlas oberoende av tidigare förfrågningar. Detta gör HTTP enkelt och effektivt, men det kräver att utvecklare använder tekniker som sessionshantering för att behålla tillståndet mellan förfrågningar.
+
+HTTP använder en rad metoder för att definiera den typ av åtgärd som klienten vill utföra. De vanligaste metoderna inkluderar GET, POST, PUT och DELETE. GET används för att hämta data från en server, medan POST skickar data till servern för att skapa eller uppdatera en resurs. PUT används för att uppdatera en resurs och DELETE för att ta bort en resurs. Dessa metoder utgör grunden för RESTful API
+, där resurser hanteras genom en standardiserad uppsättning HTTP-metoder.
+
+Säkerhet är en viktig aspekt av HTTP, och detta hanteras ofta genom HTTPS, en säker version av HTTP som använder SSL/TLS för att kryptera data under överföringen. Detta skyddar data från att avlyssnas eller manipuleras under överföring. I dagens webbutveckling är HTTPS en grundläggande del av att skydda användardata och förhindra säkerhetsöverträdelser. 
+
 
 ## BE 1.10 cURL
 Beskriv rubriken här
