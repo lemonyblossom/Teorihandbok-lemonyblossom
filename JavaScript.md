@@ -176,6 +176,7 @@ myPromise.then((message) => {
 });
 ```
 
+---
 
 ## JS 1.4 OOP i JavaScript
 Objektorienterad programmering (OOP) i JavaScript innebär att man organiserar koden i objekt som innehåller både data och funktioner. JavaScript använder en prototypbaserad arvmodell, vilket skiljer sig från klassbaserade språk som Java eller C++. I en prototypbaserad modell ärver objekt direkt från andra objekt.
@@ -245,6 +246,7 @@ boat.move(); // Output: The boat is sailing.
 
 ```
 
+---
 
 ## JS 1.5 DOM-manipulation
 Document Object Model (DOM) är en programmeringsgränssnitt för HTML och XML-dokument. Det representerar dokumentet som en trädstruktur där varje nod är en del av dokumentet, såsom element, attribut och text.
@@ -295,6 +297,7 @@ $('<div>Jag är ett nytt element</div>').appendTo('body');
 $('#childElement').remove();
 ```
 
+---
 
 ## JS 1.6 HTTP-requests
 HTTP-requests gör det möjligt att hämta data från och skicka data till en server.  Detta kan göras med hjälp av XMLHttpRequest-objektet eller Fetch API för att skapa dynamiska och interaktiva webbapplikationer som kan kommunicera med backend-tjänster utan att behöva ladda om sidan.
@@ -331,9 +334,6 @@ xhr.send();
 ```
 *Här skickas en GET-förfrågan till en API-endpoint, svaret konverteras till JSON, och loggas. Om det uppstår ett fel, fångas det med catch och loggar ett felmeddelande.*
 
-***Async/await*** används för att hantera asynkrona operationer som gör koden mer läsbar och lättare att skriva. Det är ett syntactic sugar[^1] över promises som ger ett strukturerat sätt att skriva asynkron kod.
-
-[^1]: *"Syntactic sugar"* är syntax i ett programmeringsspråk som gör koden lättare att läsa och skriva utan att tillföra nya funktioner.
 
 ```js
 async function fetchData() {
@@ -355,6 +355,8 @@ fetchData();
 
 Med HTTP-förfrågningar kan utvecklare bygga applikationer som interagerar med externa tjänster, API
 och servrar för att hämta och skicka data, vilket möjliggör dynamiska och data-drivna applikationer.
+
+---
 
 ## JS 1.7 Lexical scope
 Lexical scope i JavaScript hänvisar till hur variabler och block är organiserade och åtkomliga i koden. 
@@ -410,6 +412,8 @@ blockScopeExample();
 
 - När funtioiner defineras inom andra funktioner, kom ihåg att den inre funktionen har tillgång till variablerna i den yttre funktionen. Detta kan vara kraftfullt men kan också leda till komplexa beroenden om det inte hanteras korrekt.
 
+---
+
 ## JS 1.8 Event handling
 Event handling refererar till processen att fånga och reagera på händelser som sker i webbläsaren.
 Händelser kan vara allt från användarinteraktioner som klick och tangenttryckningar till systemhändelser som laddning av en sida eller ändringar i dokumentets tillstånd.
@@ -462,6 +466,8 @@ document.getElementById('parentElement').addEventListener('click', (event) => {
 });
 ```
 *Event delegation binder en listener till ett parent element och hanterar händelser för dess children, vilket är mer effektivt än individuella listeners.*
+
+---
 
 ## JS 1.9 Prototype inheritance
 Prototypbaserat arv i JavaScript innebär att ett objekt kan ärva egenskaper och metoder från andra objekt.
@@ -531,6 +537,8 @@ Det kan bli svårt att följa varifrån metoder oche genskaper kommer ifrån, vi
 
 Det finns viss risk för prestandaproblem. För även om prototypbaserat arv kan förbättra minnesanvändningen, kan frekventa dynamiska ändringar av prototypen leda till prestandaförsämringar eftersom JavaScript-motorn måste omvärdera objektets struktur och dess prototypkedja.
 
+---
+
 ## JS 1.10 Higher-order functions
 Higher-order functions i JavaScript är funktioner som antingen tar en eller flera funktioner som argument eller returnerar en funktion som resultat, vilket gör det möjligt att skriva mer abstrakt och återanvändbar kod.
 
@@ -578,7 +586,7 @@ console.log(sum); // Output: 10
 *`reduce`-funktionen tar en callback-funktion (total, num => total + num) och ett initvärde (0), som används för att lägga ihop värdena i numbers-arrayen till en enda summa.*
 
 ***Currying*** är en teknik som använder högre ordningens funktioner för att omvandla en funktion med flera argument till en serie av funktioner med ett argument vardera:
-````js
+```js
 function curry(fn) {
     return function curried(...args) {
         if (args.length >= fn.length) {
@@ -598,9 +606,79 @@ function multiply(a, b, c) {
 let curriedMultiply = curry(multiply);
 console.log(curriedMultiply(2)(3)(4)); // Output: 24
 ```
+---
 
 ## JS 1.11 Single-thread programming
-Beskriv rubriken här
+JavaScript är ett single-threaded programmeringsspråk, vilket innebär att det endast kan utföra en sak åt gången i en enda thread. Trots detta kan JavaScript hantera asynkrona operationer effektivt genom en event loop, vilket ger intrycket av parallell exekvering.
+
+#### Event loop and Callback
+Event loopen är hur JavaScript hanterar asynkrona uppgifter. När en asynkron operation (som en HTTP-förfrågan) påbörjas, skickas den till webbläsarens API. När operationen är klar, läggs callback-funktionen i händelseloopen för att köras när main thread är ledig.
+
+```js
+console.log('Start');
+
+setTimeout(() => {
+    console.log('Timeout completed');
+}, 2000);
+
+console.log('End');
+```
+*"Start" och "End" kommer att loggas först, medan "Timeout completed" loggas efter 2 sekunder*
+
+Event loopen tillåter JavaScript att hantera flera uppgifter utan att blockera main thread. Det möjliggör att köra kod, samla och bearbeta händelser samt utföra underhållsarbete mellan uppgifterna.
+
+***Web Workers*** gör det möjligt att köra skript i bakgrunden, vilket förbättrar prestandan för tunga uppgifter utan att blockera main thread. Web Workers har dock begränsningar, till exempel kan de inte manipulera DOM direkt.
+```js
+let worker = new Worker('worker.js');
+
+worker.onmessage = function(event) {
+    console.log('Message from worker: ' + event.data);
+};
+
+worker.postMessage('Start working');
+```
+
+```js
+self.onmessage = function(event) {
+    if (event.data === 'Start working') {
+        self.postMessage('Work completed');
+    }
+};
+```
+Web Workers ger möjlighet att utföra parallella uppgifter utan att belasta main thread. De är användbara för komplexa beräkningar och bakgrundsarbete.
+
+***Async/await*** används för att hantera asynkrona operationer som gör koden mer läsbar och lättare att skriva. Det är ett syntactic sugar[^1] över promises som ger ett strukturerat sätt att skriva asynkron kod. Detta introducerades i ES8.
+Genom att använda async och await kan utvecklare skriva asynkron kod som om den vore synkron.
+
+
+
+```js
+async function exampleFunction() {
+    try {
+        const result = await someAsyncOperation();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+exampleFunction();
+```
+ *Koden väntar på att someAsyncOperation ska slutföras innan den fortsätter till nästa rad. Detta gör det möjligt att hantera asynkrona operationer på ett mer intuitivt sätt jämfört med kedjade .then-anrop i promises.*
+
+
+Trots fördelarna med single-threaded programmering så har det vissa begränsningar.
+
+***Race conditions*** uppstår när resultatet av en operation beror på den exakta tidpunkten då flera asynkrona operationer körs. Detta kan leda till oförutsägbara resultat eller buggar i programmet.
+ När två eller flera asynkrona operationer försöker få tillgång till eller ändra samma resurs samtidigt utan korrekt synkronisering, kan de "tävla" om att bli färdiga först.
+
+Eftersom Javascript endast har en thread kan användaren uppleva att applikationen "fryser" om en uppgift blockerar main thread för länge. Därför är det viktigt att undvika exempelvis tunga beräkningar i main thread. 
+Flera asynkrona operationer samtidigt kan leda till bottle necks om resurser inte hanteras korrekt.
+
+
+[^1]: *"Syntactic sugar"* är syntax i ett programmeringsspråk som gör koden lättare att läsa och skriva utan att tillföra nya funktioner.
+
+---
 
 ## JS 1.12 OAuth från frontend
 Beskriv rubriken här
