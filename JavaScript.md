@@ -763,3 +763,13 @@ Med WebSockets hålls en enda anslutning öppen, vilket minskar både nätverks-
 
 Det är dock viktigt att vara medveten om vissa utmaningar med WebSockets, särskilt när det gäller säkerhet och anslutningsstabilitet.
 Det är avgörande att använda wss://-protokollet för att skydda anslutningen mot potentiella attacker.
+
+[Javascript technologies overbiew | Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
+[Javascript frameworks | codeinstitute](https://codeinstitute.net/se/blog/javascript-framework/)
+[Javascript OOP | medium](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
+[Javascript OOP | freecodecamp](https://www.freecodecamp.org/news/object-oriented-programming-javascript/)
+[What does it mean by Javascript is single threaded? | medium](https://medium.com/swlh/what-does-it-mean-by-javascript-is-single-threaded-language-f4130645d8a9)
+[Javascript OAuth | medium](https://medium.com/@katelynvan152/simplifying-oauth-implementation-in-javascript-a-step-by-step-guide-15509b7919cf)
+[Higher order functions JS | freecodecamp](https://www.freecodecamp.org/news/higher-order-functions-explained/)
+[Javascript Promises | w3schools](https://www.w3schools.com/js/js_promise.asp)
+[Javascript ES6 | w3schools](https://www.w3schools.com/js/js_es6.asp)
