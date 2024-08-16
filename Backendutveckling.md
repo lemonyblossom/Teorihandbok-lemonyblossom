@@ -151,14 +151,6 @@ Studier visar att det i genomsnitt tar över 200 dagar att upptäcka ett intrån
 För att minimera risken bör applikationer ha robusta loggnings- och övervakningssystem på plats som kan identifiera och varna om misstänkta aktiviteter.
 
 ---
----
----
-
-
-> ### Applikatioinssäkerhet>
-> #### Sårbarheter
-> SE OWASP.ORG!!
-
 
 ## BE 1.4 MVC
 ***MVC***, som står för *Model-View-Controller,* är en designmönster som används för att organisera och strukturera applikationer genom att separera applikationens data, användargränssnitt och affärslogik i tre huvudkomponenter och hjälper till att skapa en tydlig och hanterbar arkitektur, särskilt i större projekt.
@@ -222,6 +214,8 @@ Ett plugin kan till exempel skapa nya anpassade posttyper, lägga till widgetar,
 Pluginet aktiveras sedan även det via WordPress-admin dashboard.
 Eftersom pluginet är modulärt och fristående kan det enkelt distribueras och återanvändas på andra WordPress-webbplatser.
 
+---
+
 ## BE 1.6 Heirarkiska databaser
 Hierarkiska databaser är en typ av databassystem där data organiseras i en trädstruktur, med en tydlig hierarki av parent-child-relationer mellan posterna.
 Denna modell var en av de tidigaste databasmodellerna och används fortfarande i vissa specifika applikationer där hierarkiska datarelationer är dominerande.
@@ -247,6 +241,8 @@ Men det finns också betydande nackdelar. Hierarkiska databaser är mindre flexi
 Dessutom kan hierarkiska databaser vara svåra att skala och anpassa när organisationen av data behöver förändras. Om hierarkin i data behöver modifieras, kan det krävas omfattande omstrukturering av hela databasen, vilket kan vara både tids- och resurskrävande.
 
 Trots dessa begränsningar har hierarkiska databaser specifika användningsområden där deras struktur är fördelaktig. Till exempel används de ofta i operativsystemens filhanteringssystem, där deras fasta struktur gör det enkelt att organisera och hantera filer och mappar på ett logiskt sätt.
+
+---
 
 ## BE 1.7 Relationsdatabaser, SQL och ER-modellering
 Relationsdatabaser är den dominerande modellen för datalagring i moderna applikationer. Denna databasmodell bygger på konceptet att organisera data i tabeller, där varje tabell representerar en specifik entitet, såsom en användare eller en produkt. Tabellen består av rader och kolumner, där varje rad motsvarar en enskild post, och varje kolumn representerar ett attribut hos denna post. Relationer mellan olika tabeller definieras genom användning av primärnycklar och främmande nycklar, vilket gör det möjligt att skapa komplexa strukturer för att spegla verkliga samband mellan olika dataenheter.
@@ -345,6 +341,8 @@ Backend-servern hanterar också förnyelsen av access-tokens när de löper ut, 
 utan avbrott. 
 Det är avgörande att dessa tokens lagras säkert, ofta i en krypterad databas, och att de hanteras med strikta säkerhetsåtgärder för att förhindra otillåten åtkomst.
 
+---
+
 ## BE 1.9 HTTP-protokollet
 ***HTTP*** (*Hypertext Transfer Protocol *) är grundpelaren för dataöverföring på webben. Det är ett protokoll som definierar hur meddelanden formuleras och överförs mellan klienter och servrar. När en användare besöker en webbplats sker en mängd HTTP-förfrågningar och -svar i bakgrunden, vilket möjliggör laddning av sidor, nedladdning av filer och interaktion med webbapplikationer. HTTP är ett stateless protokoll, vilket innebär att varje förfrågan behandlas oberoende av tidigare förfrågningar. Detta gör HTTP enkelt och effektivt, men det kräver att utvecklare använder tekniker som sessionshantering för att behålla tillståndet mellan förfrågningar.
 
@@ -353,46 +351,72 @@ HTTP använder en rad metoder för att definiera den typ av åtgärd som kliente
 
 Säkerhet är en viktig aspekt av HTTP, och detta hanteras ofta genom HTTPS, en säker version av HTTP som använder SSL/TLS för att kryptera data under överföringen. Detta skyddar data från att avlyssnas eller manipuleras under överföring. I dagens webbutveckling är HTTPS en grundläggande del av att skydda användardata och förhindra säkerhetsöverträdelser. 
 
+---
 
 ## BE 1.10 cURL
-Beskriv rubriken här
+***cURL*** är ett kommandoradsverktyg och en bibliotek som används för att göra HTTP-förfrågningar och överföra data till och från en server. Det är extremt mångsidigt och stöder flera protokoll, inklusive HTTP, HTTPS, FTP och många fler. Inom PHP och annan server-side utveckling används cURL ofta för att interagera med externa API
+, skicka och ta emot data, samt automatisera och testa webbapplikationer.
+
+Ett typiskt användningsområde för cURL i PHP är att skicka en HTTP-förfrågan till en extern server. Detta kan vara en GET-förfrågan för att hämta data, en POST-förfrågan för att skicka data, eller mer komplexa förfrågningar som kräver autentisering eller hantering av sessionsdata. Exempelvis kan en cURL-baserad förfrågan se ut så här:
+```php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.example.com/data");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+```
+
+I detta exempel initieras en cURL-session, en URL anges, och sedan utförs förfrågan. Slutligen stängs sessionen och svaret från servern sparas i variabeln $response. Detta ger utvecklare möjlighet att programatiskt interagera med webbtjänster, vilket är särskilt användbart när man arbetar med RESTful API.
+
+cURL erbjuder också avancerade funktioner som hantering av cookies, uppladdning av filer, och stöd för SSL-certifikat för säkra förbindelser.
+
+---
 
 ## BE 1.11 REST
-Beskriv rubriken här
+***REST***, eller *Representational State Transfer*, är en arkitekturstil som används för att skapa skalbara och lätta webbtjänster. RESTful API
+bygger på HTTP-protokollet och använder dess metoder – GET, POST, PUT och DELETE – för att hantera resurser på en server. I en RESTful arkitektur är resurser, som exempelvis användare, produkter eller artiklar, identifierade genom URL
+, och dessa resurser kan manipuleras genom de olika HTTP-metoderna.
+
+En av styrkorna med REST är dess enkelhet och flexibilitet. Eftersom det använder standard HTTP-metoder och statuskoder, är det lätt att integrera och felsöka RESTful API
+. RESTful tjänster är också designade för att vara stateless, vilket innebär att varje förfrågan från klienten till servern måste innehålla all information som behövs för att förstå och bearbeta förfrågan. Detta gör att RESTful tjänster kan skalas effektivt, eftersom varje förfrågan behandlas oberoende av tidigare förfrågningar.
+
+Ett exempel på en RESTful förfrågan är att hämta data om en specifik användare från en server:
+
+``` http
+GET /users/1 HTTP/1.1
+Host: example.com
+```
+
+Denna request hämtar information om användaren med ID 1. Svaret från servern returneras vanligtvis i ett format som JSON eller XML, som är lätt att parsa och använda i applikationer. *REST* har blivit standarden för API-design på grund av dess enkelhet och kompatibilitet med moderna webbutvecklingsverktyg.
+
+***REST*** är inte en strikt standard, utan en uppsättning riktlinjer som gör det möjligt för utvecklare att skapa flexibla och skalbara API
+. RESTful API
+används ofta i samarbete med andra tekniker som OAuth för autentisering, och de kan effektivt användas för att skapa applikationer som är både användarvänliga och säkra. REST fortsätter att vara en hörnsten inom modern webbutveckling och API-design.
+
+---
 
 ## BE 1.12 XML och andra dataformat
 #### XML
-eXtensible Markup Language
-alike html but carry and store data, do not display it.
-self descriptive
-Gör ingenting
-sender, reciever, heading, message(in body)
+Dataformat spelar en kritisk roll i webbutveckling, särskilt när det gäller att överföra information mellan system. ***XML*** (*eXtensible Markup Language*) är ett av de äldsta och mest använda formaten för att strukturera och lagra data. Till skillnad från HTML, som används för att presentera data, används XML för att beskriva och transportera data. XML är självbeskrivande, vilket innebär att varje dataelement omges av taggar som beskriver dess innehåll. Detta gör XML lättläst och förståelig för både människor och maskiner, men det kan också göra XML-filer stora och svårhanterliga i jämförelse med modernare format.
 
-FÖRDELAR: Lättläst, främst för att det är beskrivande men även för att det är luftigt.
-#### CSV
-Comma(character/colon) separated Values
-Används ofta i filformat t.ex. Excel
+***JSON*** (*JavaScript Object Notation*) har på senare år blivit det mest populära dataformatet, särskilt i samband med webbaserade API
+. JSON är lättare och mer läsbart än XML, vilket gör det till det föredragna formatet för många utvecklare. JSON använder en struktur av nyckel-värde-par och kan lätt representera komplexa data genom att nästla objekt och arrayer. Detta gör JSON särskilt användbart för att skicka och ta emot data mellan klient och server i webbaserade applikationer.
 
-(visar exempel i adminer där man kan exportera i CSV-format istället för t.ex. SQL)
+***CSV*** (*Comma-Separated Values*) är ett annat vanligt dataformat som används för att representera tabulär data, såsom data från kalkylblad eller databaser. CSV är enkelt att skapa och läsa, men det har begränsningar när det gäller att representera komplexa datatyper. Varje rad i en CSV-fil representerar en post, och varje värde separeras av kommatecken, vilket gör det enkelt att importera och exportera data mellan olika system.
 
-FÖRDELAR MED CSV:
-Då får vi all data som kommaseparerade värden
-   - enkelt att läsa för t.ex ett excel som förstår att varje komma innebär att den kommer sätta ut varje value i en enskid cell i en collumn.
+Varje dataformat har sina styrkor och svagheter, och valet av format beror ofta på applikationens specifika behov. XML är kraftfullt för dokumentcentrerad data, JSON är idealiskt för webbtjänster och API
+, och CSV är perfekt för enkla, tabulära datauppgifter.
 
-NACKDELAR: sparar kompakt och det är svårt att läsa med alla kommatecken mellan
-#### JSON
-
-Används för att beskriva objekt
-
-> "Textsträng (måste omges av citattecken)
-Tal
-JSON-objekt (måste omges av klammerparenteser)
-Array (måste omges av hakparenteser)
-Boolean
-Null"
-
-JSON blir ofta nestlat, det kan bli väldigt djupt. t.ex. objekt i objekt i objekt.
+---
 
 ## BE 1.13 Webbservrar
 
-##### Serverside rendering vs  Clientside renderering 
+Webbservrar spelar en central roll i webbutveckling, då de är ansvariga för att hantera inkommande HTTP-förfrågningar från klienter (som webbläsare) och svara med rätt innehåll, oftast i form av HTML, CSS, JavaScript eller andra dataformat som JSON och XML. Webbservrar kan vara både hårdvara och mjukvara. När vi talar om en webbserver i utvecklingssammanhang, syftar vi oftast på mjukvaran som lyssnar på nätverksförfrågningar, behandlar dem och skickar tillbaka ett svar.
+
+Det finns flera populära webbservermjukvaror, inklusive Apache, Nginx, och Microsoft's Internet Information Services (IIS). Apache och Nginx är två av de mest använda webbservrarna på internet och är kända för sin stabilitet, flexibilitet och kraftfulla konfigurationsmöjligheter. Dessa servrar kan hantera allt från små personliga bloggar till stora, skalbara applikationer med miljontals användare.
+
+En av de grundläggande koncepten inom webbservrar är ***server-side rendering*** *(SSR)* kontra ***client-side rendering*** *(CSR)*. Vid SSR bearbetas hela webbsidans innehåll på servern innan det skickas till klienten. Detta innebär att HTML-koden genereras på servern och skickas som en fullständig sida till klientens webbläsare. Fördelen med SSR är att det ofta resulterar i snabbare laddningstider och bättre prestanda på äldre enheter, eftersom klientens webbläsare inte behöver göra lika mycket arbete.
+
+Å andra sidan innebär CSR att större delen av sidan renderas på klientens sida med hjälp av JavaScript. Detta tillvägagångssätt har blivit vanligare med utvecklingen av JavaScript-ramverk som React, Angular, och Vue.js, som möjliggör dynamiska och interaktiva användarupplevelser. Med CSR laddas en grundläggande HTML-sida initialt, och sedan fylls innehållet på genom JavaScript-baserade förfrågningar till servern. Detta kan resultera i snabbare interaktioner efter den första sidladdningen men kan leda till längre initiala laddningstider.
+
+Valet mellan SSR och CSR beror på applikationens behov och användningsscenario. I vissa fall kombineras de två för att dra nytta av fördelarna från båda teknikerna, vilket kallas hybrid rendering. Det är också viktigt att notera att webbservrar måste konfigureras och optimeras för att stödja den valda renderingsmetoden effektivt, vilket innefattar hantering av cachning, säkerhet och skalbarhet för att möta applikationens krav.
