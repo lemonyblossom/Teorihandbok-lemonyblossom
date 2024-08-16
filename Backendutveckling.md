@@ -116,6 +116,10 @@ $clean_input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
 ```php
 echo '<input type="hidden" name="csrf_token" value="'.$csrf_token.'">';
 ```
+En annan kritisk sårbarhet är användningen av bibliotek, ramverk eller andra komponenter som har kända säkerhetsbrister. Om dessa inte uppdateras regelbundet kan de utsätta applikationen för allvarliga risker, såsom dataläckage eller övertagande av hela servern. 
+För att undvika detta är det avgörande att kontinuerligt hålla alla komponenter uppdaterade och säkerställa att de inte innehåller kända sårbarheter. 
+Vi använder till exempel PHP 8.3, vilket är den senaste versionen av PHP, och det är viktigt att fortsätta uppdatera till nyare versioner när de släpps. 
+Vid uppdatering av PHP-versionen är det också viktigt att återigen testa hela applikationen med enhetstester, exempelvis med PHPUnit 10, som kräver PHP 8.1 eller senare.
 
 ***Lösenordshantering***
  Lösenord bör aldrig lagras i klartext, utan istället hashas med starka algoritmer innan de sparas i databasen.
@@ -139,8 +143,16 @@ För att säkerställa att data som överförs mellan användare och server är 
 Genom att använda SSL/TLS-certifikat kan data krypteras under överföringen, vilket skyddar känslig information som inloggningsuppgifter och betalningsinformation. 
 
 ***Felmeddelanden och undantagshantering*** bör hanteras på ett sätt som inte avslöjar känslig information om applikationen. 
-Att visa detaljerade felmeddelanden för användarna kan ge angripare insikt i applikationens struktur och potentiella svagheter
+Att visa detaljerade felmeddelanden för användarna kan ge angripare insikt i applikationens struktur och potentiella svagheter. Det är viktigt att endast logga detaljerade felmeddelanden internt och visa generella felmeddelanden för slutanvändarna.
 
+Otillräcklig loggning och övervakning
+När loggning och övervakning är bristfälliga kan attacker pågå oupptäckta under lång tid, vilket ger angripare möjlighet att manipulera, stjäla eller radera data utan att någon märker det. 
+Studier visar att det i genomsnitt tar över 200 dagar att upptäcka ett intrång, vilket ofta innebär att skadorna redan är omfattande.
+För att minimera risken bör applikationer ha robusta loggnings- och övervakningssystem på plats som kan identifiera och varna om misstänkta aktiviteter.
+
+---
+---
+---
 
 
 ### Applikatioinssäkerhet
@@ -163,10 +175,6 @@ Ett problem kan vara att din server supplier inte har php 8 eller senare.
 
 VPS- innebär att man får en server som man kan ställa in servern själv
 
-
-#### SQL-Injections
-Vad är det och hur undviker man det?
-föreläsning 16e januari
 
 ##### Hur gör man för att en lista på allas användernamn oc lösen ska bli oanvändbara?
 > HASHing innebär att göra en ny sträng av t.ex. ett lösen, som då inte går att hitta med hjälp av den strängen som gets. 
