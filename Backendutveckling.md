@@ -24,11 +24,78 @@ PHP kräver en medvetenhet om säkerhet och att skydda PHP-applikationer från a
 SQL-injektioner kan exempelvis förebyggas genom att använda förberedda uttalanden med PDO eller mysqli, vilket säkerställer att inmatade data behandlas som rena strängar och inte som körbar kod.
 Användningen av `password_hash()` för att säkra lösenord är också en grundläggande säkerhetsåtgärd.
 
-För att förhindra XSS-attacker bör all data som ska presenteras för användaren valideras och sanitiseras, ofta med hjälp av funktioner som htmlspecialchars(). 
+För att förhindra XSS-attacker bör all data som ska presenteras för användaren valideras och sanitiseras, ofta med hjälp av funktioner som `htmlspecialchars()`. 
 
+---
 
 ## BE 1.2 OOP i PHP
-Beskriv rubriken här
+Objektorienterad programmering (OOP) i PHP är ett sätt att organisera kod i objekt och klasser, vilket främjar bättre struktur, modularitet och återanvändbarhet.
+
+Istället för att använda procedurer eller funktioner för att hantera data och logik, använder OOP klasser för att skapa objekt som representerar olika delar av applikationen.
+
+En klass i PHP definierar egenskaper (attribut) och beteenden (metoder) för objekten. Ett objekt är en instans av en klass som innehåller specifika värden för dessa egenskaper.
+Till exempel kan en klass "User" innehålla egenskaper som namn, e-post och lösenord, samt metoder för att registrera, logga in och uppdatera användaruppgifter.
+
+OOP erbjuder flera fördelar som gör det lättare att hantera och underhålla stora kodbaser:
+
+- ***Återanvändbarhet:*** Genom att definiera generella klasser kan kod återanvändas i olika projekt, vilket minskar duplicering.
+- ***Modularitet:*** Kod kan organiseras i separata klasser och moduler, vilket gör den mer hanterbar och lättare att felsöka.
+- ***Enkel underhållning:*** Koden blir lättare att uppdatera och utöka när den är modulär och välstrukturerad.
+- ***Inbyggda funktioner:*** PHP erbjuder ett omfattande bibliotek av inbyggda funktioner och klasser, vilket underlättar utvecklingen.
+
+```php
+class User {
+    private $name;
+    private $email;
+
+    public function __construct($name, $email) {
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+}
+
+// Skapa ett nytt objekt av klassen User
+$user = new User("Emma", "emma@example.com");
+
+echo $user->getName(); // Output: Emma
+```
+*Här representerar klassen User en användare med egenskaperna name och email, samt metoder för att hämta dessa värden.*
+
+OOP i PHP möjliggör också **arv** och **inkapsling**, vilket innebär att en klass kan ärva egenskaper och metoder från en annan klass *(superklass)*, och att data kan kapslas in så att den bara är åtkomlig på ett kontrollerat sätt.
+
+```php
+class Admin extends User {
+    private $role;
+
+    public function __construct($name, $email, $role) {
+        parent::__construct($name, $email);
+        $this->role = $role;
+    }
+
+    public function getRole() {
+        return $this->role;
+    }
+}
+
+// Skapa ett nytt Admin-objekt
+$admin = new Admin("Emma", "emma@example.com", "Administrator");
+
+echo $admin->getRole(); // Output: Administrator
+```
+*Här är klassen Admin en subklass av User och ärver dess egenskaper och metoder. Admin lägger också till en ny egenskap, role, som är specifik för administratörer.*
+
+
+
+---
+
 
 ## BE 1.3 Säkerhet i PHP
 Beskriv rubriken här
