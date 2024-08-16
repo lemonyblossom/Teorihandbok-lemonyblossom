@@ -681,7 +681,71 @@ Flera asynkrona operationer samtidigt kan leda till bottle necks om resurser int
 ---
 
 ## JS 1.12 OAuth från frontend
-Beskriv rubriken här
+OAuth är en standardprotokoll för autentisering och auktorisering som används för att ge applikationer säker tillgång till användarresurser utan att behöva dela användarens inloggningsuppgifter direkt.
+Det är särskilt användbart för webbapplikationer som behöver interagera med externa tjänster och API
+, som exempelvis Google eller Facebook.
+
+I ett typiskt OAuth-flöde från frontend initierar applikationen processen genom att omdirigera användaren till en auktoriseringsserver, ofta av en tredjepartstjänst.
+Användaren loggar sedan in på denna server och ger applikationen tillstånd att få tillgång till specifika resurser, 
+till exempel deras profilinformation eller e-postadress. 
+När användaren har godkänt begäran, returnerar servern en åtkomstkod eller token tillbaka till applikationen. 
+Denna token används sedan av applikationen för att göra autentiserade API-anrop till den externa tjänsten.
+
+#### OAuth-flow exempel
+ **Initiera OAuth-processen:** 
+ Applikationen länkar användaren till authservern som begär åtkomst.
+```html
+<a href="https://auth.example.com/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=profile email&state=RANDOM_STRING&code_challenge=CODE_CHALLENGE&code_challenge_method=S256">Login with Example</a>
+```
+
+**Fånga upp auktoriseringskoden:**
+När användaren kommer tillbaka till applikationen efter att ha loggat in och godkänt åtkomst, authkoden hämtas från URL
+```js
+const params = new URLSearchParams(window.location.search);
+const authorizationCode = params.get('code');
+```
+
+
+**Byt ut authkod mot åtkomsttoken:**
+Applikationen skickar authkoden till authservern och får en åtkomsttoken i utbyte.
+```js
+const tokenResponse = await fetch('https://auth.example.com/token', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+        grant_type: 'authorization_code',
+        code: authorizationCode,
+        redirect_uri: 'YOUR_REDIRECT_URI',
+        client_id: 'YOUR_CLIENT_ID',
+        code_verifier: 'CODE_VERIFIER'
+    })
+});
+const tokenData = await tokenResponse.json();
+console.log(tokenData.access_token);
+```
+**Använd åtkomsttoken för API-anrop:**
+Med åtkomsttoken kan applikationen nu göra autentiserade anrop till API
+```js
+const userProfileResponse = await fetch('https://api.example.com/userinfo', {
+    headers: {
+        Authorization: `Bearer ${tokenData.access_token}`
+    }
+});
+const userProfile = await userProfileResponse.json();
+console.log(userProfile);
+```
+
+Ett av de mest använda flödena inom OAuth 2.0 är Authorization Code Flow med PKCE (Proof Key for Code Exchange). 
+Detta flöde är särskilt utformat för att förbättra säkerheten genom att förhindra attacker som kan uppstå när en auktoriseringskod fångas upp av en obehörig part.Användaren omdirigeras först till authservern där de loggar in och beviljar åtkomst. Därefter skickas en authkod tillbaka till klientapplikatioinen, som byter ut denna kod mot en åtkomsttoken via en säker kommunikation med servern.
+
+Med åtkomsttoken kan applikationen sedan göra förfrågningar till API
+för att få tillgång till användarens resurser, exempelvis för att hämta användarens profilinformation.
+Det är viktigt att använda HTTPS i detta flöde för att säkerställa att token och annan känslig information inte kan avlyssnas.
+
+---
+
 
 ## JS 1.13 Websockets
 Beskriv rubriken här
