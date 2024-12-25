@@ -1,17 +1,15 @@
 # Teorihandboken - Avancerad JavaScript (AJ)
-Studerande: Förnamn Efternamn
+Studerande: Emma Jensen
 
 ## AJ 1.1 Node.js
-Node.js är en open source plattform som gör det möjligt att köra JavaScript på serversidan, mao utanför webbläsaren. 
-Den skapades 2009 av Ryan Dahl och har sedan dess förändrat hur vi bygger webbapplikationer.
-Istället för att bara använda JavaScript för att skapa interaktivitet i webbläsare, kan man med Node.js bygga allt från enkla webbservrar till stora, komplexa applikationer.
-Grunden i Node.js är V8, en JavaScript-motor från Google som även används i Chrome.
+Node.js är en open source-plattform som låter JavaScript köras på serversidan, alltså utanför webbläsaren.
+Den skapades 2009 av Ryan Dahl och har sedan dess förändrat hur man bygger webbapplikationer. Istället för att bara använda JavaScript för att skapa interaktivitet i webbläsare, kan Node.js användas för att bygga allt från enkla webbservrar till stora, komplexa applikationer. Grunden i Node.js är V8, en JavaScript-motor från Google som även används i Chrome.
 
-Node.js bygger på en filosofi om enkelhet och hög prestanda, med fokus på asynkronitet och event-driven programmering.
-Med andra ord försöker Node.js göra så mycket som möjligt samtidigt utan att behöva vänta på att enskilda processer ska bli klara.
+Node.js är byggt på enkelhet och hög prestanda, med fokus på asynkronitet och event-driven programmering. Med andra ord försöker Node.js göra så mycket som möjligt samtidigt, utan att behöva vänta på att enskilda processer blir klara.
 
-I en typisk servermiljö kan varje request blockera servern tills den är klar, men i Node.js händer detta inte eftersom den hanterar varje request i bakgrunden och går vidare till nästa uppgift direkt.
-Det Node.js användbart för applikationer som behöver hantera många samtidiga användare, som till exempel realtidschat eller streaming tjänster.
+I en vanlig servermiljö kan varje request blockera servern tills den är färdig, men i Node.js hanteras varje request i bakgrunden medan nästa uppgift redan påbörjas. Det gör Node.js särskilt användbart för applikationer som hanterar många samtidiga användare, som realtidschat eller streamingtjänster.
+
+Ett annat kraftfullt verktyg i Node.js är npm (Node Package Manager), där man kan hitta ett enormt bibliotek av paket och moduler att integrera i sina projekt. Det förenklar utvecklingsprocessen avsevärt. Node.js är också perfekt för att skapa RESTful API:er, vilket är en standard för att låta olika delar av en applikation prata med varandra. Sammanfattningsvis har Node.js revolutionerat serverside-programmering med JavaScript.
 
 ## AJ 1.2 Express
 Beskriv rubriken här
