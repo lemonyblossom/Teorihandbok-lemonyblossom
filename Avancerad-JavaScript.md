@@ -2,35 +2,18 @@
 Studerande: Emma Jensen
 
 ## AJ 1.1 Node.js
-Node.js är en open source-plattform som låter JavaScript köras på serversidan, alltså utanför webbläsaren. Den skapades 2009 av Ryan Dahl och har sedan dess förändrat hur man bygger webbapplikationer. Istället för att bara använda JavaScript för att skapa interaktivitet i webbläsare, kan Node.js användas för att bygga allt från enkla webbservrar till stora, komplexa applikationer. Grunden i Node.js är V8, en JavaScript-motor från Google som även används i Chrome.
+Node.js är en plattform som gör det möjligt att köra JavaScript på serversidan istället för enbart i webbläsaren. Den släpptes 2009 av Ryan Dahl och har sedan dess blivit väldigt populär bland utvecklare. Till skillnad från vanliga program som körs i en webbläsare, används Node.js för att bygga både små och stora webbapplikationer.
+Grunden i Node.js är en snabb JavaScript-motor som kallas V8, vilken också används i webbläsaren Chrome.
 
-Node.js är byggt på enkelhet och hög prestanda, med fokus på asynkronitet och event-driven programmering. Med andra ord försöker Node.js göra så mycket som möjligt samtidigt, utan att behöva vänta på att enskilda processer blir klara.
+En av de största fördelarna med Node.js är att den är byggd för att vara snabb och effektiv. Den använder sig av asynkron programmering, vilket betyder att den kan hantera många saker samtidigt utan att vänta på att varje uppgift ska bli klar.
+I traditionella system kan varje begäran till servern blockera resten av arbetet tills den är klar, men med Node.js kan flera begärningar hanteras samtidigt, vilket gör systemet mycket snabbare och mer effektivt.
 
-I en vanlig servermiljö kan varje request blockera servern tills den är färdig, men i Node.js hanteras varje request i bakgrunden medan nästa uppgift redan påbörjas. Det gör Node.js särskilt användbart för applikationer som hanterar många samtidiga användare, som realtidschat eller streamingtjänster.
+Node.js kommer också med ett stort ekosystem genom npm (Node Package Manager), vilket är en samling av miljontals paket och moduler som gör det enklare att utveckla applikationer.
+Det betyder att utvecklare inte behöver bygga allt från grunden, utan kan använda färdiga lösningar och verktyg.
 
-Ett annat verktyg i Node.js är npm (Node Package Manager), där man kan hitta ett enormt bibliotek av paket och moduler att integrera i sina projekt. Det förenklar utvecklingsprocessen avsevärt. Node.js är också perfekt för att skapa RESTful API:er, vilket är en standard för att låta olika delar av en applikation prata med varandra.
+En annan fördel är att Node.js är plattformsoberoende. Det fungerar på olika operativsystem som Windows, macOS och Linux, vilket gör det enkelt att utveckla och distribuera applikationer på flera plattformar utan stora ändringar i koden.
 
-Node.js har också ett stort och aktivt community som bidrar med en mängd olika moduler och verktyg. Detta gör det enkelt att hitta lösningar på problem och att få hjälp när man stöter på hinder i utvecklingsprocessen. Dessutom finns det många resurser, som dokumentation, tutorials och kurser, som kan hjälpa både nybörjare och erfarna utvecklare att lära sig och förbättra sina färdigheter i Node.js.
-
-En annan fördel med Node.js är dess höga prestanda. Eftersom Node.js är byggt på V8-motorn, som är känd för sin snabbhet och effektivitet, kan Node.js-applikationer hantera många samtidiga anslutningar med låg latens. Detta gör det möjligt att bygga skalbara och responsiva applikationer som kan hantera stora mängder trafik.
-
-Node.js är också plattformsoberoende, vilket innebär att det kan köras på olika operativsystem som Windows, macOS och Linux. Detta gör det enkelt att utveckla och distribuera applikationer på olika plattformar utan att behöva göra några större ändringar i koden.
-
-Sammanfattningsvis har Node.js revolutionerat serverside-programmering med JavaScript och möjliggjort utveckling av både enkla och avancerade backend-lösningar. Med dess fokus på asynkronitet, hög prestanda och ett stort ekosystem av moduler och verktyg, är Node.js ett kraftfullt verktyg för att bygga moderna webbapplikationer.Node.js är en open source-plattform som låter JavaScript köras på serversidan, alltså utanför webbläsaren. Den skapades 2009 av Ryan Dahl och har sedan dess förändrat hur man bygger webbapplikationer. Istället för att bara använda JavaScript för att skapa interaktivitet i webbläsare, kan Node.js användas för att bygga allt från enkla webbservrar till stora, komplexa applikationer. Grunden i Node.js är V8, en JavaScript-motor från Google som även används i Chrome.
-
-Node.js är byggt på enkelhet och hög prestanda, med fokus på asynkronitet och event-driven programmering. Med andra ord försöker Node.js göra så mycket som möjligt samtidigt, utan att behöva vänta på att enskilda processer blir klara.
-
-I en vanlig servermiljö kan varje request blockera servern tills den är färdig, men i Node.js hanteras varje request i bakgrunden medan nästa uppgift redan påbörjas. Det gör Node.js särskilt användbart för applikationer som hanterar många samtidiga användare, som realtidschat eller streamingtjänster.
-
-Ett annat verktyg i Node.js är npm (Node Package Manager), där man kan hitta ett enormt bibliotek av paket och moduler att integrera i sina projekt. Det förenklar utvecklingsprocessen avsevärt. Node.js är också perfekt för att skapa RESTful API:er, vilket är en standard för att låta olika delar av en applikation prata med varandra.
-
-Node.js har också ett stort och aktivt community som bidrar med en mängd olika moduler och verktyg. Detta gör det enkelt att hitta lösningar på problem och att få hjälp när man stöter på hinder i utvecklingsprocessen. Dessutom finns det många resurser, som dokumentation, tutorials och kurser, som kan hjälpa både nybörjare och erfarna utvecklare att lära sig och förbättra sina färdigheter i Node.js.
-
-En annan fördel med Node.js är dess höga prestanda. Eftersom Node.js är byggt på V8-motorn, som är känd för sin snabbhet och effektivitet, kan Node.js-applikationer hantera många samtidiga anslutningar med låg latens. Detta gör det möjligt att bygga skalbara och responsiva applikationer som kan hantera stora mängder trafik.
-
-Node.js är också plattformsoberoende, vilket innebär att det kan köras på olika operativsystem som Windows, macOS och Linux. Detta gör det enkelt att utveckla och distribuera applikationer på olika plattformar utan att behöva göra några större ändringar i koden.
-
-Sammanfattningsvis har Node.js revolutionerat serverside-programmering med JavaScript och möjliggjort utveckling av både enkla och avancerade backend-lösningar. Med dess fokus på asynkronitet, hög prestanda och ett stort ekosystem av moduler och verktyg, är Node.js ett kraftfullt verktyg för att bygga moderna webbapplikationer.
+Sammanfattningsvis är Node.js en effektiv och flexibel plattform som gör det enklare att bygga skalbara och snabbare webbapplikationer. Den används av många stora företag och utvecklare världen över och erbjuder ett enkelt sätt att skapa både små och stora lösningar.
 
 ---
 
@@ -156,23 +139,28 @@ PWA är ett smart val för företag som vill förbättra användarupplevelsen ut
 ---
 
 ## AJ 1.4 Typningssystem för Javascript (ex TypeScript, Flow)
-JavaScript är dynamiskt typat, vilket ibland kan ställa till problem. För att undvika överraskningar använder man typningssystem som TypeScript eller Flow, som lägger till statiska typer och gör koden mer förutsägbar.
+JavaScript är ett dynamiskt typat språk, vilket innebär att man inte behöver specificera datatyper för variabler. Det gör språket väldigt flexibelt, men kan också leda till problem, särskilt när man arbetar med större projekt. Eftersom typer inte är fasta kan det vara svårt att veta vilka typer av data en funktion eller variabel ska hantera, och det kan orsaka fel som inte upptäcks förrän koden körs. För att förbättra detta finns det statiska typningssystem som TypeScript och Flow, som gör att utvecklare kan definiera och kontrollera datatyper redan under utvecklingen.
 
 #### TypeScript
 
-TypeScript är ett superset av JavaScript som inför statiska typer och kompileras ner till vanligt JavaScript. Det gör att man får bättre verktygsstöd, som autokomplettering och felkontroll direkt i editorn.
+TypeScript är ett superset av JavaScript, vilket betyder att det är baserat på JavaScript men med tillägg av funktioner, som statisk typning. TypeScript används för att få mer förutsägbar kod och för att upptäcka fel tidigare i utvecklingsprocessen. När du använder TypeScript skriver du typdeklarationer för funktioner och variabler, och dessa kontrolleras vid kompilering. Om något inte stämmer med typerna får du ett felmeddelande direkt i editorn. Detta minskar risken för buggar som kan vara svåra att hitta i stora kodbaser.
 
+```ts
 function greet(name: string): string {
     return `Hej, ${name}!`;
 }
 
-console.log(greet('Emma'));
+console.log(greet('Lemony Blossom')); //korrekt
+console.log(greet(123)); // fel, inkorrekt typat
+```
 
-TypeScript är särskilt användbart i större projekt med flera utvecklare, eftersom det hjälper till att strukturera och underhålla koden bättre. Man kan också använda gränssnitt och generiska typer för att skapa modulära lösningar.
+TypeScript är särskilt användbart i större team och projekt, där många utvecklare samarbetar och där det är viktigt att ha en tydlig struktur och typdefinition. TypeScript erbjuder dessutom funktioner som gränssnitt (interfaces) och generiska typer, vilket gör koden både mer flexibel och återanvändbar.
 
 #### Flow
 
-Flow är ett annat verktyg som analyserar JavaScript-kod för att hitta typfel. Det kräver inga större ändringar i koden och fungerar bra för gradvis införande.
+Flow är ett annat statiskt typningssystem, utvecklat av Facebook. Till skillnad från TypeScript är Flow inte ett superset av JavaScript, vilket betyder att du kan använda Flow utan att ändra på JavaScript-syntaxen. Det gör Flow enklare att införa gradvis i existerande projekt. Med Flow kan du lägga till typkontroller utan att behöva skriva om hela koden. Typdefinitionerna i Flow görs ofta via kommentarer i koden, vilket innebär att du inte måste ändra på själva kodens struktur.
+
+Flow använder annoteringar i form av kommentarer för att specificera typer:
 
 ```js
 // @flow
@@ -180,17 +168,24 @@ function square(n: number): number {
     return n * n;
 }
 
-console.log(square(4));
+console.log(square(4)); // korrekt
+console.log(square('a')); // fel
 ```
 
-Med både TypeScript och Flow blir koden mer robust och lättare att jobba med, särskilt i större team eller långsiktiga projekt. Valet mellan dessa verktyg handlar oftast om personliga preferenser och projektets behov.
+Flow är bra för utvecklare som vill ha ett mer flexibelt sätt att införa typkontroll i sina JavaScript-projekt. Eftersom Flow inte kräver att du skriver om stora delar av din kodbas, är det ett bra alternativ om du har ett pågående projekt och vill förbättra kodens kvalitet utan att behöva göra omfattande förändringar.
+
+#### Sammanfattning
+Både TypeScript och Flow hjälper till att förbättra kodens förutsägbarhet och felsökning, men de gör det på lite olika sätt. TypeScript kräver att du skriver typdeklarationer och kan ge mer detaljerad typkontroll, vilket gör det bra för större projekt och team. Flow är enklare att införa i befintliga projekt och fungerar bra om du vill ha ett mer gradvis tillvägagångssätt för att förbättra kodens typkontroll. Båda verktygen erbjuder fördelar som snabbare felsökning, bättre autokomplettering i editorer och en mer robust kodbas.
 
 ---
 
 
 ## AJ 1.5 Funktionell programmering i JavaScript
 
-Funktionell programmering är ett programmeringsmönster där man behandlar beräkningar som t.ex. uträkningar av matematiska funktioner och undviker förändringar av tillstånd och data. JavaScript stödjer funktionell programmering genom att behandla funktioner som vanliga värden, higher order functions och immutable data.
+Funktionell programmering är en stil inom programmering där man fokuserar på att använda funktioner för att lösa problem och undviker att förändra data eller tillstånd. Istället för att hela tiden uppdatera värden och objekt, behandlar man data som "oföränderlig", vilket kan göra koden enklare att förstå och underhålla. JavaScript stödjer funktionell programmering genom att låta funktioner vara första klassens objekt, vilket innebär att de kan användas precis som vanliga variabler. Man kan till exempel skicka funktioner som argument till andra funktioner eller få tillbaka funktioner som resultat
+
+#### Higher order functions
+En viktig del av funktionell programmering är higher order functions (HOF). En HOF är en funktion som antingen tar en annan funktion som argument eller returnerar en funktion. Ett vanligt exempel på en HOF i JavaScript är map. Den tar en funktion som argument och applicerar den på varje element i en array, vilket gör det enkelt att manipulera data utan att behöva skriva komplicerad looplogik.
 
 Ett exempel på en higher order function är `map`, som tar en funktion som argument och applicerar den på varje element i en array:
 
@@ -199,51 +194,53 @@ const numbers = [1, 2, 3, 4];
 const squared = numbers.map(n => n * n);
 console.log(squared); // [1, 4, 9, 16]
 ```
-Genom att använda funktionell programmering kan man skriva mer deklarativ och readable kod, vilket underlättar underhåll och testning. 
+Andra exempel på **HOF** är funktionerna *filter* och *reduce*.
 
+#### Immutabilitet
+En annan viktig princip inom funktionell programmering är immutabilitet, vilket betyder att data inte ska ändras när den väl är skapad. Istället för att uppdatera ett objekt, skapar man nya objekt med de förändringar man vill ha. Immutabilitet har flera fördelar, bland annat:
 
-Funktionell programmering främjar också immutabilitet, vilket innebär att data inte förändras efter att den har skapats. Detta kan minska buggar och göra koden mer förutsägbar på flera sätt:
->
-> **Ingen oavsiktlig förändring av data:** När data är immutable kan man vara säker på att den inte kommer att ändras av misstag någonstans i koden. Detta minskar risken för oavsiktliga sidoeffekter som kan leda till svårfunna buggar.
->
->**Enklare att förstå och resonera om koden:** När data är immutable är det lättare att förstå hur data flödar genom applikationen. Man kan vara säker på att en viss variabel alltid har samma värde efter att den har tilldelats, vilket gör koden mer förutsägbar och därför lättare att förutspå.
->
->**Enklare att testa:** Immutabla data gör det enklare att skriva enhetstester eftersom man kan vara säker på att testdata inte förändras under testets gång. Detta leder till mer pålitliga tester och enklare felsökning.
->
->**Tråd-säkerhet:** I miljöer där flera trådar kan komma åt samma data samtidigt, kan immutabilitet förhindra race conditions och andra trådrelaterade buggar eftersom data inte kan ändras av en tråd medan en annan tråd läser den.
->
-   > *<small>Race conditions är fel som uppstår i flertrådade system när flera trådar eller processer samtidigt försöker ändra delad data. Detta kan leda till oförutsägbara resultat och svårfunna buggar eftersom utfallet beror på den exakta tidpunkten för exekveringen.</small>*
->
->**Förutsägbara funktioner:** Funktioner som arbetar med immutabel data är ofta pure functions, vilket innebär att de alltid returnerar samma resultat givet samma indata och inte har några biverkningar. Detta gör dem enklare att förstå, testa och felsöka.
->
->Sammanfattningsvis bidrar immutabilitet till att minska buggar och göra koden mer förutsägbar genom att eliminera oavsiktliga förändringar av data, göra koden lättare att förstå och resonera om, förenkla testning och förbättra tråd-säkerhet.
+>**Mindre risk för buggar** 
+När data inte kan ändras oavsiktligt blir det lättare att följa och förstå flödet i koden.
 
-En annan viktig aspekt av funktionell programmering är användningen av pure functions/ rena funktioner. En *ren* funktion är en funktion som alltid returnerar samma resultat givet samma indata och inte har några biverkningar. 
-Detta gör det enklare att testa och felsöka koden.
+>**Enklare att testa** 
+Eftersom data inte förändras kan man vara säker på att tester inte påverkas av oönskade sidoeffekter.
 
+>**Tråd-säkerhet** 
+I flertrådade miljöer, där flera trådar kan försöka komma åt samma data samtidigt, förhindrar immutabilitet att data ändras av en tråd medan en annan läser det.
+
+#### Pure functions
+Funktionell programmering uppmuntrar också användningen av pure functions, vilket är funktioner som alltid returnerar samma resultat om de får samma indata. En ren funktion har ingen inverkan på något annat än dess resultat – den har inga biverkningar. Detta gör funktioner förutsägbara och enkla att testa.
 ```js
 function add(a, b) {
     return a + b;
 }
 console.log(add(2, 3)); // 5
 ```
-Higher order functions är funktioner som antingen tar en eller flera funktioner som argument eller returnerar en funktion. Förutom map finns det andra higher order functions som *filter* och *reduce*.
 
-*filter* används för att skapa en ny array med alla element som uppfyller ett visst villkor:
+Eftersom rena funktioner inte påverkar någon annan del av programmet, blir de lättare att förstå, felsöka och testa. De gör det också enklare att återanvända kod på olika ställen i applikationen.
 
+#### Exempel på högre ordningens funktioner
+Som nämnts tidigare finns det flera vanliga *HOF* i JavaScript:
+
+```filter``` Skapar en ny array med de element som uppfyller ett specifikt villkor.
 ```js
 const numbers = [1, 2, 3, 4, 5];
 const evenNumbers = numbers.filter(n => n % 2 === 0);
 console.log(evenNumbers); // [2, 4]
 ```
 
-*reduce* används för att reducera en array till ett enda värde genom att applicera en funktion på varje element i arrayen:
-
+```reduce``` Reducerar en array till enbart ett värde, till exempel genom att summera alla värden i en array.
 ```js
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce((acc, n) => acc + n, 0);
 console.log(sum); // 10
 ```
+Dessa funktioner används när man arbetar med data och behöver göra transformationer på den utan att påverka den ursprungliga datan. 
+De gör koden mer deklarativ, vilket innebär att den blir mer readable.
+
+#### Sammanfattning
+Funktionell programmering i JavaScript handlar om att skriva kod på ett sätt som gör den mer förutsägbar, testbar och underhållbar. Genom att använda funktioner som första klassens objekt, skriva rena funktioner, och använda högre ordningens funktioner som ```map```, ```filter``` och ```reduce```, kan utvecklare skapa kod som är både effektiv och lätt att förstå.
+ Immutabilitet och pure functions gör att koden blir mindre benägen att innehålla buggar och mer förutsägbar, vilket är en stor fördel när man jobbar med större applikationer.
 
 
 
