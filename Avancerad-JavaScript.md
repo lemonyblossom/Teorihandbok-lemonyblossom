@@ -61,7 +61,7 @@ const verifyToken = (req, res, next) => {
 
 // Route för inloggning och tokengenerering
 app.post('/login', (req, res) => {
-    const user = { id: 1, name: 'John Doe' }; // Här kan du hämta användardata från en databas
+    const user = { id: 1, name: 'Lemony Blossom' }; // Här hämtas användardata från en databas
     const token = jwt.sign(user, 'secretkey');
     res.json({ token });
 });
@@ -105,7 +105,7 @@ app.listen(3000, () => {
 ```
 
 
-Sammanfattningsvis är säkerhet en avgörande del av alla webbapplikationer, och Express gör det lätt att implementera autentisering, skydda rutter och lägga till säkerhetsåtgärder som CORS. Genom att använda middleware kan du snabbt och effektivt hantera dessa uppgifter, vilket gör att din applikation blir både säker och skalbar.
+Sammanfattningsvis är säkerhet en avgörande del av alla webbapplikationer, och Express gör det lätt att implementera autentisering, skydda rutter och lägga till säkerhetsåtgärder som CORS. Genom att använda middleware kan man snabbt och effektivt hantera dessa uppgifter, vilket gör att applikatioenn blir både säker och skalbar.
 
 ---
 
@@ -114,13 +114,18 @@ Progressive Web Apps (PWA) är en typ av webbapplikation som kombinerar det bäs
 
 De viktigaste egenskaperna hos en PWA är:
 
-Responsivitet - De fungerar lika bra på olika enheter och skärmstorlekar.
-
-Offline-funktionalitet - Genom Service Workers kan resurser cachelagras lokalt.
-
-Installationsbar - Man kan lägga till appen på hemskärmen utan att använda en appbutik.
+- Responsivitet - De fungerar lika bra på olika enheter och skärmstorlekar.
+- Offline-funktionalitet - Genom Service Workers kan resurser cachelagras lokalt.
+- Installationsbar - Man kan lägga till appen på hemskärmen utan att använda en appbutik.
 
 För att skapa en PWA använder man sig av teknologier som Service Workers och manifestfiler. Manifestet innehåller metadata som namn, ikoner och startadress, medan Service Workers tar hand om saker som caching och bakgrundsprocesser.
+
+PWA ger också en snabbare användarupplevelse, vilket är avgörande för att hålla användare engagerade och minska risken att användare lämnar appen. 
+Eftersom PWA:er fungerar offline eller med begränsad nätverksåtkomst tack vare cachelagring genom Service Workers, kan användare fortsätta interagera med appen även om de inte har en aktiv internetanslutning. Detta gör det särskilt användbart för användare i områden med svaga eller instabila nätverksanslutningar.
+
+En annan stor fördel med PWA är att de stödjer push-notiser, vilket ger företag möjlighet att återengagera användare genom att skicka påminnelser och uppdateringar. Push-notiser kan hjälpa till att öka användaraktiviteten och påminna användarna om att återvända till appen.
+
+PWA:er fungerar också väl på alla typer av enheter, vilket innebär att de kan anpassas till både smartphones, surfplattor och stationära datorer. Detta gör det möjligt för företag att erbjuda en enhetlig upplevelse oavsett plattform.
 
 Ett exempel på en enkel Service Worker:
 ```js
@@ -146,7 +151,7 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-PWA är ett smart val för företag som vill förbättra användarupplevelsen utan att behöva utveckla separata mobil- och webbappar. Tack vare snabb laddning och offline-stöd är PWA ett framtidssäkert sätt att skapa moderna applikationer. Twitter och Starbucks är exempel på företag som lyckats väl med sina PWA-satsningar.
+PWA är ett smart val för företag som vill förbättra användarupplevelsen utan att behöva utveckla separata mobil- och webbappar. Tack vare snabb laddning och offline-stöd är PWA ett sätt att skapa moderna applikationer som är långvarigt hållbara. 
 
 ---
 
