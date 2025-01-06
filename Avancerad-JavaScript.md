@@ -242,10 +242,154 @@ De gör koden mer deklarativ, vilket innebär att den blir mer readable.
 Funktionell programmering i JavaScript handlar om att skriva kod på ett sätt som gör den mer förutsägbar, testbar och underhållbar. Genom att använda funktioner som första klassens objekt, skriva rena funktioner, och använda högre ordningens funktioner som ```map```, ```filter``` och ```reduce```, kan utvecklare skapa kod som är både effektiv och lätt att förstå.
  Immutabilitet och pure functions gör att koden blir mindre benägen att innehålla buggar och mer förutsägbar, vilket är en stor fördel när man jobbar med större applikationer.
 
-
+---
 
 ## AJ 1.6 Avancerad funktionalitet i ES.next
-Beskriv rubriken här
+ES.next, eller ECMAScript 6 och senare versioner, har introducerat många nya funktioner som gör JavaScript mer kraftfullt och lättare att använda.
+Dessa nya funktioner förbättrar både kodens läsbarhet och underhållbarhet och gör det möjligt för utvecklare att skriva mer expressiv och effektiv kod.
+
+#### Pilarrow-funktioner (Arrow functions)
+En av de mest populära och ofta använda funktionerna i ES6 är arrow functions, som gör att funktioner kan skrivas på ett mer kortfattat sätt.De förenklar syntaxen och gör det lättare att läsa och skriva funktioner.
+
+I traditionella funktioner måste man använda function-nyckelordet, men med arrow functions kan man skriva funktioner på en rad:
+
+```js
+// Traditionell funktion
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+```
+Arrow functions har även en annan viktig fördel: de binder inte sitt eget ```this```-värde, vilket kan förenkla hanteringen av funktioner som används i objekt och klasser.
+
+####  Destructuring
+Destructuring är en funktion i ES6 som gör att man kan extrahera värden från objekt eller arrayer på ett mer intuitivt sätt, vilket gör koden mer readable.
+
+*Exempel för obejkt:*
+```js
+const person = {
+    name: 'Lemony Blossom',
+    age: 31,
+    occupation: 'developer student'
+};
+
+const { name, age } = person;
+console.log(name); // Lemony Blossom
+console.log(age);  // 31
+```
+
+*Exempelt för arrayer*
+```js
+const numbers = [1, 2, 3, 4];
+const [first, second] = numbers;
+console.log(first);  // 1
+console.log(second); // 2
+```
+
+Destructuring är användbart när man har komplexa objekt eller arrayer och vill extrahera specifika värden utan att behöva skriva upprepade referenser.
+
+####  Template literals (Mallsträngar)
+Template literals gör string handling mycket enklare och mer flexibel.
+Med det kan man enkelt infoga variabler eller expressions i en string, utan att behöva använda string-concatenations eller +-operators.
+
+```js
+const name = 'Lemony Blossom';
+const age = 31;
+
+// Traditionellt
+const greeting = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.';
+
+// Med template literals
+const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+console.log(greeting); // Hello, my name is Lemony Blossom and I am 31 years old.
+```
+Template literals gör koden mycket lättare att läsa, särskilt när man arbetar med längre strings som innehåller variabler och expressions.
+
+#### Spread och Rest Operators
+**Spread operator** (```...```) gör det enkelt att kopiera och kombinera objekt eller arrayer, medan rest operator används för att samla argument till en funktion eller för att extrahera en del av ett objekt eller array.
+
+*Spread operator- för arrays och objekt*
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // copy arr1 och addera new element
+console.log(arr2); // [1, 2, 3, 4, 5]
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 }; // copy obj1 och addera new key
+console.log(obj2); // { a: 1, b: 2, c: 3 }
+```
+*Rest operator - för funktioner och objekt*
+
+```js
+// För funktioner
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // 10
+
+// För objekt
+const { a, ...rest } = { a: 1, b: 2, c: 3 };
+console.log(a); // 1
+console.log(rest); // { b: 2, c: 3 }
+```
+Både **spread** och **rest** gör hantering av data mycket mer flexibel och lättförståelig, särskilt i situationer där man behöver kombinera eller extrahera delar av objekt eller arrayer.
+
+#### Klasser och Inheritance (Arv)
+ES6 introducerade ett mer strukturerat sätt att arbeta med objektorienterad programmering genom *klasser*.
+Med klasser kan du definiera objekt och dess beteenden på ett mer organiserat sätt än tidigare
+
+```js
+class Appliance {
+    constructor(name) {
+        this.name = name;
+    }
+
+    turnOn() {
+        console.log(`${this.name} is now on.`);
+    }
+}
+
+class Toaster extends Appliance {
+    turnOn() {
+        console.log(`${this.name} is toasting bread.`);
+    }
+}
+
+const toaster = new Toaster('Philips Toaster');
+toaster.turnOn(); // Philips Toaster is toasting bread.
+```
+Genom att använda klasser kan vi definiera funktioner som delar egenskaper med andra objekt, vilket gör det lättare att skapa komplexa applikationer.
+
+#### Async/Await (Asynkrona funktioner)
+Hantera asynkron kod har alltid varit en utmaning i JavaScript, men med **async/await** blir det mycket enklare. ```async``` gör en funktion asynkron, och ```await``` används för att vänta på att en asynkron operation ska slutföras innan vi fortsätter.
+
+```js
+function fetchData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('Data fetched');
+        }, 2000);
+    });
+}
+
+async function getData() {
+    const result = await fetchData();
+    console.log(result);
+}
+
+getData(); // Data fetched
+```
+Med ```async/await``` upplevs koden nästan som om den körs synkront, vilket gör det lättare att läsa och förstå, även om operationerna egentligen är asynkrona.
+
+#### Sammanfattning
+ES.next har gjort JavaScript mer flexibel och lättare att använda.
+Pilarrow-funktioner, destructuring, template literals, spread och rest operators, klasser och async/await har alla bidragit till att göra koden mer läsbar och lättare att underhålla.
+Genom att använda dessa funktioner kan utvecklare skriva kod som är mer uttrycksfull och effektiv, vilket leder till att utvecklingsprocessen blir enklare och snabbare.
+
 
 ## AJ 1.7 JavaScript i integrerade system
 Beskriv rubriken här
