@@ -248,7 +248,7 @@ Funktionell programmering i JavaScript handlar om att skriva kod på ett sätt s
 ES.next, eller ECMAScript 6 och senare versioner, har introducerat många nya funktioner som gör JavaScript mer kraftfullt och lättare att använda.
 Dessa nya funktioner förbättrar både kodens läsbarhet och underhållbarhet och gör det möjligt för utvecklare att skriva mer expressiv och effektiv kod.
 
-#### Pilarrow-funktioner (Arrow functions)
+#### Arrow functions
 En av de mest populära och ofta använda funktionerna i ES6 är arrow functions, som gör att funktioner kan skrivas på ett mer kortfattat sätt.De förenklar syntaxen och gör det lättare att läsa och skriva funktioner.
 
 I traditionella funktioner måste man använda function-nyckelordet, men med arrow functions kan man skriva funktioner på en rad:
@@ -365,7 +365,7 @@ toaster.turnOn(); // Philips Toaster is toasting bread.
 Genom att använda klasser kan vi definiera funktioner som delar egenskaper med andra objekt, vilket gör det lättare att skapa komplexa applikationer.
 
 #### Async/Await (Asynkrona funktioner)
-Hantera asynkron kod har alltid varit en utmaning i JavaScript, men med **async/await** blir det mycket enklare. ```async``` gör en funktion asynkron, och ```await``` används för att vänta på att en asynkron operation ska slutföras innan vi fortsätter.
+Att hantera asynkron kod har länge varit en utmaning i JavaScript, men med async/await blir det betydligt enklare. async gör en funktion asynkron, och await används för att vänta på att en asynkron operation ska slutföras innan koden fortsätter.
 
 ```js
 function fetchData() {
@@ -383,13 +383,18 @@ async function getData() {
 
 getData(); // Data fetched
 ```
-Med ```async/await``` upplevs koden nästan som om den körs synkront, vilket gör det lättare att läsa och förstå, även om operationerna egentligen är asynkrona.
+Med ```async/await``` ser koden ut att köras sekventiellt, vilket gör den mer linjär och lättare att följa. Trots detta sker de långsamma operationerna (som nätverksanrop eller databaskopplingar) faktiskt asynkront i bakgrunden. 
+Det innebär att JavaScript inte blockerar hela programflödet medan det väntar på att en långsam process ska avslutas, vilket gör att andra uppgifter kan fortsätta köras samtidigt.
+
+
+
 
 #### Sammanfattning
 ES.next har gjort JavaScript mer flexibel och lättare att använda.
-Pilarrow-funktioner, destructuring, template literals, spread och rest operators, klasser och async/await har alla bidragit till att göra koden mer läsbar och lättare att underhålla.
+Arrow-functions, destructuring, template literals, spread och rest operators, klasser och async/await har alla bidragit till att göra koden mer läsbar och lättare att underhålla.
 Genom att använda dessa funktioner kan utvecklare skriva kod som är mer uttrycksfull och effektiv, vilket leder till att utvecklingsprocessen blir enklare och snabbare.
 
+---
 
 ## AJ 1.7 JavaScript i integrerade system
 Beskriv rubriken här
