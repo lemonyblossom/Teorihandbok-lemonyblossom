@@ -11,6 +11,8 @@ I en vanlig servermiljö kan varje request blockera servern tills den är färdi
 
 Ett annat kraftfullt verktyg i Node.js är npm (Node Package Manager), där man kan hitta ett enormt bibliotek av paket och moduler att integrera i sina projekt. Det förenklar utvecklingsprocessen avsevärt. Node.js är också perfekt för att skapa RESTful API:er, vilket är en standard för att låta olika delar av en applikation prata med varandra. Sammanfattningsvis har Node.js revolutionerat serverside-programmering med JavaScript.
 
+---
+
 ## AJ 1.2 Express
 Express är ett minimalistiskt och flexibelt ramverk för Node.js, som gör det enklare att skapa webbapplikationer och API:er. Det erbjuder smarta funktioner för att hantera HTTP-förfrågningar, routing och middleware, vilket gör det till ett av de mest populära verktygen för backend-utveckling.
 
@@ -39,6 +41,8 @@ app.listen(3000, () => {
 ```
 
 En stor fördel med Express är att det är så flexibelt. Det passar lika bra för enkla webbplatser som för avancerade RESTful API:er. Med stöd för mallmotorer som Pug eller EJS kan man också skapa dynamiska sidor smidigt. Med  Express och Node.js-ekosystemet kan man snabbt utveckla allt från små till riktigt stora projekt
+
+---
 
 ## AJ 1.3 Progressive Web Apps
 Progressive Web Apps (PWA) är en typ av webbapplikation som kombinerar det bästa från webb och mobilappar. De använder moderna teknologier för att ge offline-stöd, push-notiser och möjligheten att installera appen direkt på enhetens hemskärm.
@@ -79,6 +83,7 @@ self.addEventListener('fetch', event => {
 
 PWA är ett smart val för företag som vill förbättra användarupplevelsen utan att behöva utveckla separata mobil- och webbappar. Tack vare snabb laddning och offline-stöd är PWA ett framtidssäkert sätt att skapa moderna applikationer. Twitter och Starbucks är exempel på företag som lyckats väl med sina PWA-satsningar.
 
+---
 
 ## AJ 1.4 Typningssystem för Javascript (ex TypeScript, Flow)
 JavaScript är dynamiskt typat, vilket ibland kan ställa till problem. För att undvika överraskningar använder man typningssystem som TypeScript eller Flow, som lägger till statiska typer och gör koden mer förutsägbar.
@@ -110,35 +115,41 @@ console.log(square(4));
 
 Med både TypeScript och Flow blir koden mer robust och lättare att jobba med, särskilt i större team eller långsiktiga projekt. Valet mellan dessa verktyg handlar oftast om personliga preferenser och projektets behov.
 
+---
+
 
 ## AJ 1.5 Funktionell programmering i JavaScript
 
-Funktionell programmering är ett programmeringsmönster där man behandlar beräkningar som t.ex. utvärderingar av matematiska funktioner och undviker förändringar av tillstånd och data. 
-JavaScript stödjer funktionell programmering genom funktioner som första klassens medborgare, högre ordningens funktioner och immutabilitet.
+Funktionell programmering är ett programmeringsmönster där man behandlar beräkningar som t.ex. uträkningar av matematiska funktioner och undviker förändringar av tillstånd och data. JavaScript stödjer funktionell programmering genom att behandla funktioner som vanliga värden, higher order functions och immutable data.
 
-Ett exempel på en högre ordningens funktion är `map`, som tar en funktion som argument och applicerar den på varje element i en array:
+Ett exempel på en higher order function är `map`, som tar en funktion som argument och applicerar den på varje element i en array:
 
 ```js
 const numbers = [1, 2, 3, 4];
 const squared = numbers.map(n => n * n);
 console.log(squared); // [1, 4, 9, 16]
 ```
-Genom att använda funktionell programmering kan man skriva mer deklarativ och läsbar kod, vilket underlättar underhåll och testning. 
+Genom att använda funktionell programmering kan man skriva mer deklarativ och readable kod, vilket underlättar underhåll och testning. 
+
+
 Funktionell programmering främjar också immutabilitet, vilket innebär att data inte förändras efter att den har skapats. Detta kan minska buggar och göra koden mer förutsägbar på flera sätt:
 >
-> **Ingen oavsiktlig förändring av data:** När data är oföränderlig kan man vara säker på att den inte kommer att ändras av misstag någonstans i koden. Detta minskar risken för oavsiktliga sidoeffekter som kan leda till svårfunna buggar.
+> **Ingen oavsiktlig förändring av data:** När data är immutable kan man vara säker på att den inte kommer att ändras av misstag någonstans i koden. Detta minskar risken för oavsiktliga sidoeffekter som kan leda till svårfunna buggar.
 >
->**Enklare att förstå och resonera om koden:** När data är oföränderlig är det lättare att förstå hur data flödar genom applikationen. Man kan vara säker på att en viss variabel alltid har samma värde efter att den har tilldelats, vilket gör koden mer förutsägbar och lättare att resonera om.
+>**Enklare att förstå och resonera om koden:** När data är immutable är det lättare att förstå hur data flödar genom applikationen. Man kan vara säker på att en viss variabel alltid har samma värde efter att den har tilldelats, vilket gör koden mer förutsägbar och därför lättare att förutspå.
 >
 >**Enklare att testa:** Immutabla data gör det enklare att skriva enhetstester eftersom man kan vara säker på att testdata inte förändras under testets gång. Detta leder till mer pålitliga tester och enklare felsökning.
 >
 >**Tråd-säkerhet:** I miljöer där flera trådar kan komma åt samma data samtidigt, kan immutabilitet förhindra race conditions och andra trådrelaterade buggar eftersom data inte kan ändras av en tråd medan en annan tråd läser den.
 >
->**Förutsägbara funktioner:** Funktioner som arbetar med immutabel data är ofta rena funktioner, vilket innebär att de alltid returnerar samma resultat givet samma indata och inte har några biverkningar. Detta gör dem enklare att förstå, testa och felsöka.
+   > *<small>Race conditions är fel som uppstår i flertrådade system när flera trådar eller processer samtidigt försöker ändra delad data. Detta kan leda till oförutsägbara resultat och svårfunna buggar eftersom utfallet beror på den exakta tidpunkten för exekveringen.</small>*
+>
+>**Förutsägbara funktioner:** Funktioner som arbetar med immutabel data är ofta pure functions, vilket innebär att de alltid returnerar samma resultat givet samma indata och inte har några biverkningar. Detta gör dem enklare att förstå, testa och felsöka.
 >
 >Sammanfattningsvis bidrar immutabilitet till att minska buggar och göra koden mer förutsägbar genom att eliminera oavsiktliga förändringar av data, göra koden lättare att förstå och resonera om, förenkla testning och förbättra tråd-säkerhet.
->
->En annan viktig aspekt av funktionell programmering är användningen av rena funktioner. En ren funktion är en funktion som alltid returnerar samma resultat givet samma indata och inte har några biverkningar. Detta gör det enklare att testa och felsöka koden.
+
+En annan viktig aspekt av funktionell programmering är användningen av pure functions/ rena funktioner. En *ren* funktion är en funktion som alltid returnerar samma resultat givet samma indata och inte har några biverkningar. 
+Detta gör det enklare att testa och felsöka koden.
 
 ```js
 function add(a, b) {
