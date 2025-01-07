@@ -73,7 +73,7 @@ const app = express();
 // Aktivera CORS för alla domäner
 app.use(cors());
 
-// Alternativt, tillåt endast specifika domäner
+// Eller tillåt endast specifika domäner
  app.use(cors({
 origin: 'https://enspecifikdoman.com',
  }));
@@ -142,7 +142,6 @@ PWA är ett smart val för företag som vill förbättra användarupplevelsen ut
 JavaScript är ett dynamiskt typat språk, vilket innebär att man inte behöver specificera datatyper för variabler. Det gör språket väldigt flexibelt, men kan också leda till problem, särskilt när man arbetar med större projekt. Eftersom typer inte är fasta kan det vara svårt att veta vilka typer av data en funktion eller variabel ska hantera, och det kan orsaka fel som inte upptäcks förrän koden körs. För att förbättra detta finns det statiska typningssystem som TypeScript och Flow, som gör att utvecklare kan definiera och kontrollera datatyper redan under utvecklingen.
 
 #### TypeScript
-
 TypeScript är ett superset av JavaScript, vilket betyder att det är baserat på JavaScript men med tillägg av funktioner, som statisk typning. TypeScript används för att få mer förutsägbar kod och för att upptäcka fel tidigare i utvecklingsprocessen. När du använder TypeScript skriver du typdeklarationer för funktioner och variabler, och dessa kontrolleras vid kompilering. Om något inte stämmer med typerna får du ett felmeddelande direkt i editorn. Detta minskar risken för buggar som kan vara svåra att hitta i stora kodbaser.
 
 ```ts
@@ -157,7 +156,6 @@ console.log(greet(123)); // fel, inkorrekt typat
 TypeScript är särskilt användbart i större team och projekt, där många utvecklare samarbetar och där det är viktigt att ha en tydlig struktur och typdefinition. TypeScript erbjuder dessutom funktioner som gränssnitt (interfaces) och generiska typer, vilket gör koden både mer flexibel och återanvändbar.
 
 #### Flow
-
 Flow är ett annat statiskt typningssystem, utvecklat av Facebook. Till skillnad från TypeScript är Flow inte ett superset av JavaScript, vilket betyder att du kan använda Flow utan att ändra på JavaScript-syntaxen. Det gör Flow enklare att införa gradvis i existerande projekt. Med Flow kan du lägga till typkontroller utan att behöva skriva om hela koden. Typdefinitionerna i Flow görs ofta via kommentarer i koden, vilket innebär att du inte måste ändra på själva kodens struktur.
 
 Flow använder annoteringar i form av kommentarer för att specificera typer:
@@ -181,7 +179,6 @@ Både TypeScript och Flow hjälper till att förbättra kodens förutsägbarhet 
 
 
 ## AJ 1.5 Funktionell programmering i JavaScript
-
 Funktionell programmering är en stil inom programmering där man fokuserar på att använda funktioner för att lösa problem och undviker att förändra data eller tillstånd. Istället för att hela tiden uppdatera värden och objekt, behandlar man data som "oföränderlig", vilket kan göra koden enklare att förstå och underhålla. JavaScript stödjer funktionell programmering genom att låta funktioner vara första klassens objekt, vilket innebär att de kan användas precis som vanliga variabler. Man kan till exempel skicka funktioner som argument till andra funktioner eller få tillbaka funktioner som resultat
 
 #### Higher order functions
@@ -397,7 +394,50 @@ Genom att använda dessa funktioner kan utvecklare skriva kod som är mer uttryc
 ---
 
 ## AJ 1.7 JavaScript i integrerade system
-Beskriv rubriken här
+JavaScript är inte bara till för webbsidor och appar. Det används också i integrerade system, där hårdvara och mjukvara samverkar. 
+Dessa system finns överallt, från smarta hem till industriella tillämpningar. Internet of Things (IoT) är ett av de vanligaste områdena där JavaScript spelar en stor roll. 
+IoT-enheter inkluderar saker som termometrar, lampor eller sensorer som skickar data till internet och kan styras via appar eller servrar. Ett exempel är en smart termostat som justerar temperaturen automatiskt eller via fjärrstyrning
+
+Med Node.js kan utvecklare bygga program som kommunicerar med sensorer och andra enheter. JavaScript gör det enkelt att hantera data från enheter och skicka information vidare till en server eller annan enhet. Ett exempel kan vara en temperatursensor som kontinuerligt skickar mätvärden till en server för att övervaka klimatet i ett rum.
+
+JavaScript används också för att skapa gränssnitt där du kan styra smarta hem-enheter, som lampor och lås, från en app eller webbsida. Genom protokoll som MQTT kan enheter kommunicera med varandra eller med en central server, vilket gör det möjligt att automatisera uppgifter, som att tända lampor när det blir mörkt eller låsa dörrar när ingen är hemma.
+
+| Enhet                  | Funktion                                                                                 | Exempel                        | JavaScript-användning                                                                                                                                             |
+|------------------------|-----------------------------------------------------------------------------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Smarta lampor**      | Tända, släcka eller ändra ljusstyrka och färg via en app eller röststyrning.            | Philips Hue, IKEA TRÅDFRI      | Med bibliotek som `node-hue-api` kan du kontrollera Philips Hue-lampor direkt från en Node.js-applikation.                                                       |
+| **Smarta termostater** | Justera hemmets temperatur automatiskt baserat på tid, närvaro eller väder.             | Nest, Ecobee                   | Termostater kan styras via API:er för att ändra temperaturen, läsa av energiförbrukning eller skapa automatiska regler.                                          |
+| **Smarta högtalare**   | Spela musik, svara på frågor och styra andra enheter via röststyrning.                  | Amazon Echo, Google Nest       | Bygg egna röststyrda funktioner eller integrationer med enheter som Alexa genom AWS Lambda eller Alexa Skills Kit i JavaScript.                                  |
+| **Smarta lås**         | Lås och lås upp dörrar via app, röststyrning eller ge tillfälliga koder till gäster.    | August Smart Lock, Yale Assure | Kontrollera lås med hjälp av deras API:er för att ge fjärråtkomst eller logga användning.                                                                         |
+| **Övervakningskameror**| Spela in och strömma video från hemmet för att öka säkerheten.                          | Ring, Arlo, Nest Cam           | Integrera kameror med smarta system för att skicka notifieringar eller hantera videoströmmar via Node.js.                                                        |
+| **Smarta uttag**       | Kontrollera eluttag via en app för att slå av och på anslutna apparater.                | TP-Link Kasa, Belkin Wemo      | Programmera scheman för uttag eller kontrollera energiförbrukning med bibliotek och API:er.                                                                      |
+| **Robotdammsugare**    | Automatisk städning av golv, som kan schemaläggas eller styras via en app.              | iRobot Roomba, Roborock        | Anpassa städscheman eller hantera kartor och rutter med tredjepartsbibliotek.                                                                                     |
+| **Smarta kylskåp**     | Visa innehållet i kylskåpet, spåra utgångsdatum eller skapa inköpslistor.               | Samsung Family Hub             | Integrera kylskåpet med andra enheter i hemmet via IoT-protokoll som MQTT.                                                                                       |
+| **Smarta bevattningssystem** | Styr och schemalägg vattning för trädgården baserat på väder och tid.              | Rachio, Gardena Smart System   | Automatisera bevattning baserat på sensordata som fuktighet och temperatur.                                                                                       |
+| **Smarta väderstationer** | Mät temperatur, luftfuktighet och andra väderförhållanden i realtid.                 | Netatmo, Ambient Weather       | Logga väderdata till en databas eller skapa grafer med hjälp av JavaScript-bibliotek.                                                                             |
+
+
+En av de stora fördelarna med JavaScript är att det fungerar på många plattformar, från enkla mikrokontrollerkort som Arduino till mer avancerade enheter som Raspberry Pi. Dess stora bibliotek av verktyg gör att utvecklare kan bygga både små och stora lösningar på kort tid. Det används därför i allt från hobbyprojekt till komplexa system inom smarta hem och IoT.
+
+
+#### Arduino - JS
+Arduino är en enkel mikrokontrollerplattform (kombination av hårdvarukort och mjukvara) som används för att styra elektronik som lysdioder, motorer och sensorer. Den är särskilt populär för nybörjare och hobbyprojekt tack vare sin användarvänlighet.
+
+Med JavaScript och bibliotek som Johnny-Five kan du programmera Arduino via Node.js. Detta gör det möjligt att hantera hårdvara smidigt och bygga automatiserade system.
+
+**IoT-användning:** Arduino används inom IoT för att hantera uppgifter som att skicka mätdata från sensorer eller styra olika typer av enheter, exempelvis smarta lås eller belysningssystem. Den kan kommunicera med andra system via protokoll som Wi-Fi, Bluetooth eller LoRa, beroende på vilka moduler som används.
+
+Ett vanligt exempel är att använda Arduino för att läsa av data från en temperatur- eller fuktsensor och skicka informationen vidare till en server. En annan typisk användning är att styra en ventil baserat på fuktnivån i jorden, vilket gör den särskilt användbar för smart jordbruk eller miljöövervakning.
+
+#### Raspberry Pi - Js
+Raspberry Pi är en inbäddad datorplattform, vilket innebär att den är en komplett dator i miniatyrformat. Den hanterar både mjukvara och hårdvara och kör ett operativsystem (vanligtvis Linux). Detta gör den väl lämpad för mer komplexa IoT-applikationer där beräkningskraft, nätverksanslutning och multitasking är viktigt.
+
+Raspberry Pi används ofta som en hubb för att hantera och styra flera IoT-enheter, bearbeta data lokalt och integrera med molntjänster.
+
+
+**IoT användning:** Ett vanligt användningsområde är att köra en webbserver för att hantera och visualisera data från anslutna sensorer och enheter. Raspberry Pi kan även bearbeta mer avancerad data, som bildanalys från en kamera för tillämpningar som ansiktsigenkänning eller rörelsedetektering.
+
+En annan vanlig användning är att fungera som en hubb som samlar in data från flera sensorer och vidarebefordrar informationen till en molntjänst för ytterligare analys eller lagring.
+
 
 ## AJ 1.8 Native bundeling av JavaScript för olika operativsystem och enheter
 Beskriv rubriken här
