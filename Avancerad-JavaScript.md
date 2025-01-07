@@ -504,7 +504,7 @@ app.whenReady().then(() => {
 
 
 #### React Native
-För mobilapplikationer används ofta React Native, ett ramverk som kombinerar JavaScript och React för att bygga appar för både iOS och Android. Med React Native kan utvecklare dela en stor del av koden mellan plattformarna, vilket påskyndar utvecklingsprocessen. React Native ger också tillgång till native funktioner, som kamera och GPS, via plugins.
+För mobilapplikationer används ofta **React Native**, ett ramverk som kombinerar JavaScript och React för att bygga appar för både iOS och Android. Med React Native kan utvecklare dela en stor del av koden mellan plattformarna, vilket påskyndar utvecklingsprocessen. React Native ger också tillgång till native funktioner, som kamera och GPS, via plugins.
 
 Exempel på en enkel React Native-applikation:
 
@@ -527,7 +527,7 @@ export default function App() {
  Du installerar och kör React Native med hjälp av ```expo``` eller ```react-native-cli```.
 
 #### NW.js
-Ett alternativ till Electron för skrivbordsapplikationer är NW.js, som också använder Node.js och webbläsarteknologier. 
+Ett alternativ till Electron för skrivbordsapplikationer är **NW.js**, som också använder Node.js och webbläsarteknologier. 
 NW.js (tidigare känt som *node-webkit*) gör det möjligt att bygga skrivbordsapplikationer genom att kombinera kraften hos Node.js och Chromium. Applikationer byggda med NW.js kan enkelt paketeras och distribueras som körbara filer för Windows, macOS och Linux.
 
 *exempel på en NW.js-applikation som öppnar en HTML-fil:*
