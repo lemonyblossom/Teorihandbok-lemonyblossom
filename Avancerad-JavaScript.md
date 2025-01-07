@@ -467,6 +467,98 @@ En annan vanlig användning är att fungera som en hubb som samlar in data från
 ![Raspberry Pi vs Arduino](Img/boxing-ring.png)
 
 ---
-## AJ 1.8 Native bundeling av JavaScript för olika operativsystem och enheter
-Beskriv rubriken här
 
+## AJ 1.8 Native bundeling av JavaScript för olika operativsystem och enheter
+
+ Med **native bundling** kan JavaScript-applikationer paketeras som
+ fristående program för olika plattformar, till exempel Windows, macOS, Linux, Android eller iOS. 
+ Detta gör det möjligt att använda JavaScript även för applikationer som traditionellt kräver specifika språk, som *Swift* för iOS eller Java för Android.
+
+#### **Vad är native bundling?**
+Native bundling innebär att en JavaScript-applikation paketeras med en runtime-miljö (exempelvis Node.js eller V8) och nödvändiga resurser för att fungera som en inbyggd applikation på en viss plattform. 
+Resultatet är ett körbart program (t.ex. `.exe` för Windows eller `.app` för macOS) som inte kräver att användaren har förinstallerade runtime-miljöer. 
+Denna metod möjliggör utveckling av applikationer som erbjuder både prestanda och tillgång till plattformsspecifika funktioner, som filsystem och notifikationer.
+
+
+#### Electron
+**Electron** är ett native bundelingverktyg som används för att bygga skrivbordsapplikationer med JavaScript, HTML och CSS.
+ Med Electron kan du skapa plattformsoberoende applikationer som fungerar på Windows, macOS och Linux.
+ Electron kombinerar Node.js och Chromium för att ge utvecklare tillgång till både native API:er (filsystem, notifikationer) och moderna webbteknologier. 
+ Program som Visual Studio Code och Slack är byggda med Electron, vilket visar dess flexibilitet och kraft.
+
+**Exempel på en enkel Electron-applikation:**
+```js
+const { app, BrowserWindow } = require('electron');
+
+app.whenReady().then(() => {
+    const win = new BrowserWindow({ width: 800, height: 600 });
+    win.loadFile('index.html');
+});
+```
+
+ *Installera Electron*
+ ```npm install electron --save-dev```
+
+ *Kör applikationen*
+ ```npx electron .```
+
+
+#### React Native
+För mobilapplikationer används ofta React Native, ett ramverk som kombinerar JavaScript och React för att bygga appar för både iOS och Android. Med React Native kan utvecklare dela en stor del av koden mellan plattformarna, vilket påskyndar utvecklingsprocessen. React Native ger också tillgång till native funktioner, som kamera och GPS, via plugins.
+
+Exempel på en enkel React Native-applikation:
+
+```js
+import React from 'react';
+import { View, Button, Alert } from 'react-native';
+
+export default function App() {
+    return (
+        <View>
+            <Button
+                title="Tryck här"
+                onPress={() => Alert.alert('Knappen trycktes!')}
+            />
+        </View>
+    );
+}
+```
+
+ Du installerar och kör React Native med hjälp av ```expo``` eller ```react-native-cli```.
+
+#### NW.js
+Ett alternativ till Electron för skrivbordsapplikationer är NW.js, som också använder Node.js och webbläsarteknologier. 
+NW.js (tidigare känt som *node-webkit*) gör det möjligt att bygga skrivbordsapplikationer genom att kombinera kraften hos Node.js och Chromium. Applikationer byggda med NW.js kan enkelt paketeras och distribueras som körbara filer för Windows, macOS och Linux.
+
+*exempel på en NW.js-applikation som öppnar en HTML-fil:*
+
+```package.json```:
+```json
+{
+  "name": "nwjs-app",
+  "main": "index.html",
+  "scripts": {
+    "start": "nw ."
+  }
+}
+```
+```index.html```
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NW.js App</title>
+    </head>
+    <body>
+        <h1>Hej från NW.js!</h1>
+    </body>
+</html>
+```
+
+*Kör*
+```npm start```
+
+#### Sammanfattning
+Native bundling erbjuder stora fördelar för utvecklare som vill skapa applikationer för flera plattformar utan att skriva om koden i olika språk. Genom att använda verktyg som Electron och React Native kan utvecklare dra nytta av sina befintliga JavaScript-kunskaper och samtidigt utnyttja native-funktioner i operativsystemen. Detta möjliggör snabbare utveckling, lägre kostnader och en mer enhetlig användarupplevelse.
+
+Samtidigt är det viktigt att förstå de potentiella nackdelarna. Native bundlade applikationer kan vara resurskrävande och ha större filstorlekar eftersom runtime-miljöer inkluderas i applikationen.
