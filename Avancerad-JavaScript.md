@@ -169,14 +169,12 @@ function square(n: number): number {
 console.log(square(4)); // korrekt
 console.log(square('a')); // fel
 ```
-
 Flow är bra för utvecklare som vill ha ett mer flexibelt sätt att införa typkontroll i sina JavaScript-projekt. Eftersom Flow inte kräver att du skriver om stora delar av din kodbas, är det ett bra alternativ om du har ett pågående projekt och vill förbättra kodens kvalitet utan att behöva göra omfattande förändringar.
 
 #### Sammanfattning
 Både TypeScript och Flow hjälper till att förbättra kodens förutsägbarhet och felsökning, men de gör det på lite olika sätt. TypeScript kräver att du skriver typdeklarationer och kan ge mer detaljerad typkontroll, vilket gör det bra för större projekt och team. Flow är enklare att införa i befintliga projekt och fungerar bra om du vill ha ett mer gradvis tillvägagångssätt för att förbättra kodens typkontroll. Båda verktygen erbjuder fördelar som snabbare felsökning, bättre autokomplettering i editorer och en mer robust kodbas.
 
 ---
-
 
 ## AJ 1.5 Funktionell programmering i JavaScript
 Funktionell programmering är en stil inom programmering där man fokuserar på att använda funktioner för att lösa problem och undviker att förändra data eller tillstånd. Istället för att hela tiden uppdatera värden och objekt, behandlar man data som "oföränderlig", vilket kan göra koden enklare att förstå och underhålla. JavaScript stödjer funktionell programmering genom att låta funktioner vara första klassens objekt, vilket innebär att de kan användas precis som vanliga variabler. Man kan till exempel skicka funktioner som argument till andra funktioner eller få tillbaka funktioner som resultat
@@ -365,25 +363,53 @@ Genom att använda klasser kan vi definiera funktioner som delar egenskaper med 
 Att hantera asynkron kod har länge varit en utmaning i JavaScript, men med async/await blir det betydligt enklare. async gör en funktion asynkron, och await används för att vänta på att en asynkron operation ska slutföras innan koden fortsätter.
 
 ```js
-function fetchData() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve('Data fetched');
-        }, 2000);
-    });
+//exempel på async/await
+async function fetchData() {
+  try {
+       // Fetch returnerar en Promise, och await pausar tills den är löst
+    const response = await fetch('https://api.getallthedata.com/data');
+    const data = await response.json();// Väntar på att JSON-parsningen ska bli klar
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-async function getData() {
-    const result = await fetchData();
-    console.log(result);
-}
-
-getData(); // Data fetched
+fetchData();
 ```
 Med ```async/await``` ser koden ut att köras sekventiellt, vilket gör den mer linjär och lättare att följa. Trots detta sker de långsamma operationerna (som nätverksanrop eller databaskopplingar) faktiskt asynkront i bakgrunden. 
 Det innebär att JavaScript inte blockerar hela programflödet medan det väntar på att en långsam process ska avslutas, vilket gör att andra uppgifter kan fortsätta köras samtidigt.
 
+DOCK! ```async/await``` gör asynkron kod enklare att läsa, men under ytan är det fortfarande *Promises* som styr. Om man inte förstår hur Promises fungerar kan async/await bli en bug trap.
 
+T.ex. att glömma ```try/catch``` för error handling, att använda await i loopar (vilket gör din kod lika snabb som snigelpost), och missa möjligheten att köra parallella uppgifter med ```Promise.all```.
+
+SÅ det är fullt möjligt att skapa kod som ser snygg ut men blockeras i onödan.
+
+![twitter post about a async/await joke](Img/async-await-flipped.webp)
+
+
+#### Hur Async/Await bygger på Promises
+För att förstå async/await behöver du först förstå hur Promises fungerar, eftersom await alltid väntar på att en Promise ska lösa sig. En Promise representerar ett värde som kommer att finnas i framtiden, och det kan vara i ett av tre tillstånd: pending (väntar), fulfilled (lyckades) eller rejected (misslyckades).
+
+
+```js
+//promise exempel
+
+fetch('https://api.getallthedata.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+ console.log(data)).catch((error) => console.error(error));
+```
+Detta är grunden för all asynkron hantering i JavaScript, och async/await gör att du kan skriva kod som bygger på dessa Promise, men som ser ut som vanlig, synkron kod.
+
+| **Funktion**          | **Promises**                                     | **Async/Await**                           |
+|------------------------|--------------------------------------------------|-------------------------------------------|
+| **Läsbarhet**         | Svårare att läsa vid långa kedjor av `.then()`.   | Ser linjärt ut, vilket gör koden enklare. |
+| **Felhantering**      | `.catch()` används.                              | Kräver `try/catch` eller `.catch()`.      |
+| **Parallell hantering**| Enkelt med `Promise.all`.                        | Kräver `Promise.all` inuti `async`-funktion. |
+| **Inlärningskurva**   | Kräver förståelse för kedjning.                   | Bygger på Promises, så grunderna behövs.  |
 
 
 #### Sammanfattning
@@ -420,11 +446,11 @@ En av de stora fördelarna med JavaScript är att det fungerar på många plattf
 
 
 #### Arduino - JS
-Arduino är en enkel mikrokontrollerplattform (kombination av hårdvarukort och mjukvara) som används för att styra elektronik som lysdioder, motorer och sensorer. Den är särskilt populär för nybörjare och hobbyprojekt tack vare sin användarvänlighet.
+Arduino är en enkel mikrokontrollerplattform *(kombination av hårdvarukort och mjukvara)* som används för att styra elektronik som lysdioder, motorer och sensorer. Den är särskilt populär för nybörjare och hobbyprojekt tack vare sin användarvänlighet.
 
 Med JavaScript och bibliotek som Johnny-Five kan du programmera Arduino via Node.js. Detta gör det möjligt att hantera hårdvara smidigt och bygga automatiserade system.
 
-**IoT-användning:** Arduino används inom IoT för att hantera uppgifter som att skicka mätdata från sensorer eller styra olika typer av enheter, exempelvis smarta lås eller belysningssystem. Den kan kommunicera med andra system via protokoll som Wi-Fi, Bluetooth eller LoRa, beroende på vilka moduler som används.
+**IoT-användning:** Arduino används inom IoT för att hantera uppgifter som att skicka mätdata från sensorer eller styra olika typer av enheter, exempelvis smarta lås eller belysningssystem. Den kan kommunicera med andra system via protokoll som Wi-Fi, Bluetooth eller LoRa *( long range )*, beroende på vilka moduler som används.
 
 Ett vanligt exempel är att använda Arduino för att läsa av data från en temperatur- eller fuktsensor och skicka informationen vidare till en server. En annan typisk användning är att styra en ventil baserat på fuktnivån i jorden, vilket gör den särskilt användbar för smart jordbruk eller miljöövervakning.
 
@@ -438,7 +464,9 @@ Raspberry Pi används ofta som en hubb för att hantera och styra flera IoT-enhe
 
 En annan vanlig användning är att fungera som en hubb som samlar in data från flera sensorer och vidarebefordrar informationen till en molntjänst för ytterligare analys eller lagring.
 
+![Raspberry Pi vs Arduino](Img/boxing-ring.png)
 
+---
 ## AJ 1.8 Native bundeling av JavaScript för olika operativsystem och enheter
 Beskriv rubriken här
 
